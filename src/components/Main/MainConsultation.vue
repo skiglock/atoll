@@ -2,19 +2,23 @@
   <section class="consultation">
     <div class="container">
       <div class="consultation__inner">
-        <div class="column" style="width: 50%">
-          <h1 class="consultation__title">С чего мне начать?</h1>
-          <p class="consultation__desc">
-            Оставьте заявку и наш эксперт расскажет обо всех возможностях
-            развития вашего отдела продаж
-          </p>
-          <main-button class="btn consultation__btn">Консультация</main-button>
-        </div>
-        <div class="column" style="width: 50%">
-          <g-image
-            class="consultation__img"
-            src="@/assets/img/consultation.png"
-          />
+        <div class="row">
+          <div class="column" style="width: 50%">
+            <h1 class="consultation__title">С чего мне начать?</h1>
+            <p class="consultation__desc">
+              Оставьте заявку и наш эксперт расскажет обо всех возможностях
+              развития вашего отдела продаж
+            </p>
+            <main-button class="btn consultation__btn"
+              >Консультация</main-button
+            >
+          </div>
+          <div class="column" style="width: 50%">
+            <g-image
+              class="consultation__img"
+              src="@/assets/img/consultation.png"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -31,11 +35,8 @@ export default {
 
 <style lang="scss">
 .consultation {
-  padding: 55px 85px 0;
-
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 55px 85px 0;
   }
   &__title {
     color: #222222;
@@ -49,6 +50,7 @@ export default {
     font-weight: $font_light;
   }
   &__img {
+    margin-bottom: -30px;
     max-width: 330px;
     max-height: 399px;
   }

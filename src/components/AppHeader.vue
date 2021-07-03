@@ -9,16 +9,16 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list-item">
-                <a href="#" class="nav__list-link">Продукты</a>
+                <g-link to="/" class="nav__list-link">Продукты</g-link>
               </li>
               <li class="nav__list-item">
                 <g-link to="/about" class="nav__list-link">О команде</g-link>
               </li>
               <li class="nav__list-item">
-                <a href="#" class="nav__list-link">Блог</a>
+                <g-link to="/blog" class="nav__list-link">Блог</g-link>
               </li>
               <li class="nav__list-item">
-                <a href="#" class="nav__list-link">Контакты</a>
+                <g-link to="/" class="nav__list-link">Контакты</g-link>
               </li>
             </ul>
           </nav>
@@ -42,6 +42,8 @@ export default {
   &__inner {
   }
   &__logo {
+    max-width: 113px;
+    max-height: 33px;
   }
   &__top {
     display: flex;

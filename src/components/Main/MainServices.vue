@@ -2,37 +2,39 @@
   <section class="services">
     <div class="container">
       <div class="services__inner">
-        <div class="column">
-          <div class="services__card">
-            <h1 class="services__card-title">
-              Аудит и стратегия развития amoCRM
-            </h1>
+        <div class="row">
+          <div class="column">
+            <div class="services__card">
+              <h1 class="services__card-title">
+                Аудит и стратегия развития amoCRM
+              </h1>
 
-            <p class="services__card-desc">
-              Проанализируем вашу систему продажи составим карту внедрения или
-              развития вашей amoCRM
-            </p>
-            <main-button class="services__card-btn">Подробнее</main-button>
+              <p class="services__card-desc">
+                Проанализируем вашу систему продажи составим карту внедрения или
+                развития вашей amoCRM
+              </p>
+              <main-button class="services__card-btn">Подробнее</main-button>
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="services__card">
-            <h1 class="services__card-title">Внедрение amoCRM</h1>
-            <p class="services__card-desc">
-              Изучим процессы вашей компании, настроим воронки продаж,
-              интеграции и обучим сотрудников работе с системой
-            </p>
-            <main-button class="services__card-btn">Подробнее</main-button>
+          <div class="column">
+            <div class="services__card">
+              <h1 class="services__card-title">Внедрение amoCRM</h1>
+              <p class="services__card-desc">
+                Изучим процессы вашей компании, настроим воронки продаж,
+                интеграции и обучим сотрудников работе с системой
+              </p>
+              <main-button class="services__card-btn">Подробнее</main-button>
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <div class="services__card">
-            <h1 class="services__card-title">Сопровождение amoCRM</h1>
-            <p class="services__card-desc">
-              Получите в распоряжение команду экспертов для ежемесячного
-              развития и гарантии работоспособности CRM-системы
-            </p>
-            <main-button class="services__card-btn">Подробнее</main-button>
+          <div class="column">
+            <div class="services__card">
+              <h1 class="services__card-title">Сопровождение amoCRM</h1>
+              <p class="services__card-desc">
+                Получите в распоряжение команду экспертов для ежемесячного
+                развития и гарантии работоспособности CRM-системы
+              </p>
+              <main-button class="services__card-btn">Подробнее</main-button>
+            </div>
           </div>
         </div>
       </div>
@@ -52,12 +54,9 @@ export default {
 
 <style lang="scss">
 .services {
-  padding: 50px 20px;
-
   // margin-top: 103px;
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 50px 20px;
   }
   &__card + &__card {
     margin-right: 100px;

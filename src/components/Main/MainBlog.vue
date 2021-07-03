@@ -43,7 +43,6 @@ export default {
 <style lang="scss">
 .blog {
   &__inner {
-    display: grid;
   }
   &__head {
     position: relative;

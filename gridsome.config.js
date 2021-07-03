@@ -17,7 +17,8 @@ module.exports = {
   siteName: 'Atollon',
   templates: {
     Index: '/',
-    About: '/about'
+    About: '/about',
+    Blog: '/blog'
   },
   transformers: {
     remark: {
@@ -43,6 +44,16 @@ module.exports = {
       options: {
         path: 'content/about.md',
         typeName: 'About',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog.md',
+        typeName: 'Blog',
         remark: {
           plugins: []
         }

@@ -1,22 +1,24 @@
 <template>
   <section class="team">
     <div class="container">
-      <h1 class="team__title">Наша команда экспертов</h1>
       <div class="team__inner">
-        <div class="column">
-          <team-person />
+        <h1 class="team__title">Наша команда экспертов</h1>
+        <div class="row">
+          <div class="column">
+            <team-person />
+          </div>
+          <div class="column">
+            <team-person />
+          </div>
+          <div class="column">
+            <team-person />
+          </div>
         </div>
-        <div class="column">
-          <team-person />
+        <div class="team__dots">
+          <div class="team__dots-item team__dots-item--active"></div>
+          <div class="team__dots-item"></div>
+          <div class="team__dots-item"></div>
         </div>
-        <div class="column">
-          <team-person />
-        </div>
-      </div>
-      <div class="team__dots">
-        <div class="team__dots-item team__dots-item--active"></div>
-        <div class="team__dots-item"></div>
-        <div class="team__dots-item"></div>
       </div>
     </div>
   </section>
@@ -32,11 +34,8 @@ export default {
 
 <style lang="scss">
 .team {
-  padding: 105px 0;
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 105px 0;
   }
   &__title {
     font-weight: $font_bold;

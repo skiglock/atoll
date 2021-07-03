@@ -1,25 +1,27 @@
 <template>
   <section class="clients">
     <div class="container">
-      <h1 class="clients__title">Наши клиенты</h1>
       <div class="clients__inner">
-        <div class="column" style="width: 50%">
-          <div class="clients__item">
-            <g-image
-              class="clients__item-img"
-              src="@/assets/img/clients/delight.png"
-            />
+        <h1 class="clients__title">Наши клиенты</h1>
+        <div class="row clients__row">
+          <div class="column" style="width: 50%">
+            <div class="clients__item">
+              <g-image
+                class="clients__item-img"
+                src="@/assets/img/clients/delight.png"
+              />
+            </div>
           </div>
-        </div>
-        <div class="column" style="width: 50%">
-          <div class="clients__item">
-            <g-image
-              class="clients__item-img"
-              src="@/assets/img/clients/Mesto.png"
-            />
+          <div class="column" style="width: 50%">
+            <div class="clients__item">
+              <g-image
+                class="clients__item-img"
+                src="@/assets/img/clients/Mesto.png"
+              />
+            </div>
           </div>
+          <main-button class="clients__btn">Все кейсы</main-button>
         </div>
-        <main-button class="clients__btn">Все кейсы</main-button>
       </div>
     </div>
   </section>
@@ -37,12 +39,11 @@ export default {
 
 <style lang="scss">
 .clients {
-  padding: 55px 90px;
-
-  &__inner {
-    display: flex;
-    flex-wrap: wrap;
+  &__row {
     justify-content: center;
+  }
+  &__inner {
+    padding: 55px 0;
   }
   &__title {
     text-align: center;

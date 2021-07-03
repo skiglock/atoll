@@ -2,43 +2,45 @@
   <section class="order">
     <div class="container">
       <div class="order__inner">
-        <div class="column">
-          <h1 class="order__title">Заказать интеграцию</h1>
-          <p class="order__desc">
-            Менеджер узнает про вашу задачу и подскажет что делать дальше
-          </p>
-        </div>
-        <div class="column">
-          <form class="order__form">
-            <div class="order__form-item">
-              <input
-                type="text"
-                class="order__form-input"
-                placeholder="Ваше имя"
-              />
-            </div>
-            <div class="order__form-item">
-              <input
-                type="text"
-                class="order__form-input"
-                placeholder="Телефон"
-              />
-            </div>
-            <div class="order__form-item">
-              <input
-                type="text"
-                class="order__form-input"
-                placeholder="E-mail"
-              />
-            </div>
-            <main-button type="submit" class="order__form-btn">
-              Оставить заявку
-            </main-button>
-            <p class="order__form-agree">
-              Нажимая на кнопку "Оставить заявку" вы даете свое согласие на
-              обработку персональных данных
+        <div class="row">
+          <div class="column">
+            <h1 class="order__title">Заказать интеграцию</h1>
+            <p class="order__desc">
+              Менеджер узнает про вашу задачу и подскажет что делать дальше
             </p>
-          </form>
+          </div>
+          <div class="column">
+            <form class="order__form">
+              <div class="order__form-item">
+                <input
+                  type="text"
+                  class="order__form-input"
+                  placeholder="Ваше имя"
+                />
+              </div>
+              <div class="order__form-item">
+                <input
+                  type="text"
+                  class="order__form-input"
+                  placeholder="Телефон"
+                />
+              </div>
+              <div class="order__form-item">
+                <input
+                  type="text"
+                  class="order__form-input"
+                  placeholder="E-mail"
+                />
+              </div>
+              <main-button type="submit" class="order__form-btn">
+                Оставить заявку
+              </main-button>
+              <p class="order__form-agree">
+                Нажимая на кнопку "Оставить заявку" вы даете свое согласие на
+                обработку персональных данных
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -59,9 +61,6 @@ export default {
 .order {
   margin-top: 222px;
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
   }
   &__title,
   &__desc {
