@@ -60,10 +60,9 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0 auto;
 }
 
-.services,
-.clients,
-.footer {
-    background-color: $section_color;
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -75,4 +74,10 @@ body::-webkit-scrollbar-thumb:hover {
     .column {
         width: 100%;
     }
+}
+
+.services,
+.clients,
+.footer {
+    background-color: $section_color;
 }

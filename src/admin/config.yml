@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  repo: skiglock/atoll
+  branch: main
+local_backend: true
+locale: 'ru'
+
+media_folder: 'static/uploads'
+public_folder: '/uploads'
+
+collections:
+  - name: 'main_pages'
+    label: 'Основные страницы'
+    create: false
+    files:
+      - label: 'Главная'
+        name: 'home'
+        file: 'content/home.md'
+        fields:
+          - { label: 'ID', name: 'id', widget: 'id' }
+          - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
+          - {
+              label: 'Мета-тэг описания',
+              name: 'description',
+              widget: 'string'
+            }
+      - label: 'О команде'
+        name: 'about'
+        file: 'content/about.md'
+        fields:
+          - { label: 'ID', name: 'id', widget: 'id' }
+          - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
+          - {
+              label: 'Мета-тэг описания',
+              name: 'description',
+              widget: 'string'
+            }
+      - label: 'Блог'
+        name: 'blog'
+        file: 'content/blog.md'
+        fields:
+          - { label: 'ID', name: 'id', widget: 'id' }
+          - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
+          - {
+              label: 'Мета-тэг описания',
+              name: 'description',
+              widget: 'string'
+            }
+      - label: 'Контакты'
+        name: 'contacts'
+        file: 'content/contacts.md'
+        fields:
+          - { label: 'ID', name: 'id', widget: 'id' }
+          - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
+          - {
+              label: 'Мета-тэг описания',
+              name: 'description',
+              widget: 'string'
+            }
+        

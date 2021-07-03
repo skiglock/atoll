@@ -15,9 +15,10 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: 'Atollon',
-  // templates: {
-  //   Index: '/'
-  // },
+  templates: {
+    Index: '/',
+    About: '/about'
+  },
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -27,6 +28,26 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/home.md',
+        typeName: 'Index',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/about.md',
+        typeName: 'About',
+        remark: {
+          plugins: []
+        }
+      }
+    },
     {
       use: 'gridsome-plugin-netlify-cms',
       options: {
