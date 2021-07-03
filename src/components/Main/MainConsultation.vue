@@ -8,10 +8,13 @@
             Оставьте заявку и наш эксперт расскажет обо всех возможностях
             развития вашего отдела продаж
           </p>
-          <button class="btn consultation__btn">Консультация</button>
+          <main-button class="btn consultation__btn">Консультация</main-button>
         </div>
         <div class="column" style="width: 50%">
-          <img class="consultation__img" src="img/consultation.png" />
+          <g-image
+            class="consultation__img"
+            src="@/assets/img/consultation.png"
+          />
         </div>
       </div>
     </div>
@@ -19,7 +22,9 @@
 </template>
 
 <script>
+import MainButton from '@/components/Common/MainButton.vue'
 export default {
+  components: { MainButton },
   name: 'MainConsultation'
 }
 </script>
@@ -42,6 +47,10 @@ export default {
     font-size: 20px;
     color: #222222;
     font-weight: $font_light;
+  }
+  &__img {
+    max-width: 330px;
+    max-height: 399px;
   }
   &__btn {
     margin-top: 30px;

@@ -5,23 +5,33 @@
       <div class="clients__inner">
         <div class="column" style="width: 50%">
           <div class="clients__item">
-            <img class="clients__item-img" src="./img/clients/delight.png" />
+            <g-image
+              class="clients__item-img"
+              src="@/assets/img/clients/delight.png"
+            />
           </div>
         </div>
         <div class="column" style="width: 50%">
           <div class="clients__item">
-            <img class="clients__item-img" src="./img/clients/Mesto.png" />
+            <g-image
+              class="clients__item-img"
+              src="@/assets/img/clients/Mesto.png"
+            />
           </div>
         </div>
-        <button class="btn clients__btn">Все кейсы</button>
+        <main-button class="clients__btn">Все кейсы</main-button>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import MainButton from '@/components/Common/MainButton'
 export default {
-  name: 'MainClients'
+  name: 'MainClients',
+  components: {
+    MainButton
+  }
 }
 </script>
 
@@ -48,7 +58,12 @@ export default {
     min-width: 364px;
     min-height: 249px;
     background-color: $white_color;
+    &-img {
+      max-width: 202px;
+      max-height: 48px;
+    }
   }
+
   &__btn {
     margin-top: 45px;
     width: 206px;

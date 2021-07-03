@@ -12,7 +12,7 @@
                 <a href="#" class="nav__list-link">Продукты</a>
               </li>
               <li class="nav__list-item">
-                <a href="#" class="nav__list-link">О команде</a>
+                <g-link to="/about" class="nav__list-link">О команде</g-link>
               </li>
               <li class="nav__list-item">
                 <a href="#" class="nav__list-link">Блог</a>

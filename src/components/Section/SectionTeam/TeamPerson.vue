@@ -1,11 +1,11 @@
 <template>
   <div class="person">
-    <div class="person-circle">
-      <img class="person-avatar" src="@/assets/img/team/1.png" alt="" />
+    <div class="person__circle">
+      <g-image class="person__avatar" src="@/assets/img/team/1.png" alt="" />
     </div>
-    <h2 class="person-name">Сергей Иванов</h2>
-    <h3 class="person-position">Руководитель проектов</h3>
-    <h4 class="person-practice">2 года опыта работы с amoCRM</h4>
+    <h2 class="person__name">Сергей Иванов</h2>
+    <h3 class="person__position">Руководитель проектов</h3>
+    <h4 class="person__practice">2 года опыта работы с amoCRM</h4>
   </div>
 </template>
 
@@ -16,21 +16,31 @@ export default {
 </script>
 
 <style lang="scss">
+.person + .person {
+  margin-bottom: 20px;
+}
 .person {
-  text-align: center;
-  &-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__avatar {
+    max-width: 147px;
+    max-height: 147px;
+  }
+  &__name {
     font-size: 20px;
     color: #222222;
     font-weight: $font_medium;
     margin-top: 29px;
   }
-  &-position {
+  &__position {
     font-size: 14px;
     color: #222222;
     font-weight: $font_light;
     margin-top: 4px;
   }
-  &-practice {
+  &__practice {
     margin-top: 9px;
     font-size: 10px;
     font-weight: $font_light;

@@ -31,9 +31,9 @@
                 placeholder="E-mail"
               />
             </div>
-            <button type="submit" class="btn order__form-btn">
+            <main-button type="submit" class="order__form-btn">
               Оставить заявку
-            </button>
+            </main-button>
             <p class="order__form-agree">
               Нажимая на кнопку "Оставить заявку" вы даете свое согласие на
               обработку персональных данных
@@ -46,14 +46,18 @@
 </template>
 
 <script>
+import MainButton from '@/components/Common/MainButton'
 export default {
-  name: 'MainOrder'
+  name: 'MainOrder',
+  components: {
+    MainButton
+  }
 }
 </script>
 
 <style lang="scss">
 .order {
-  padding: 222px 0;
+  margin-top: 222px;
   &__inner {
     display: flex;
     flex-wrap: wrap;

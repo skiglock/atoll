@@ -70,6 +70,7 @@ export default {
 
 <style lang="scss">
 .footer {
+  margin-top: 222px;
   &__inner {
     display: flex;
     flex-wrap: wrap;

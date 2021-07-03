@@ -63,17 +63,27 @@ body::-webkit-scrollbar-thumb:hover {
 .row {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.column + .column {
+    margin-bottom: 15px;
 }
 
 .column {
     flex-grow: 1;
     width: 33.33%;
-}
-
-@media screen and (max-width: 600px) {
-    .column {
+    @media screen and (min-width: 960px) {
+        padding: 15px 15px 15px 15px;
+    }
+    @media screen and (max-width: 600px) {
         width: 100%;
     }
+}
+
+img {
+    display: block;
+    width: 100%;
 }
 
 .services,

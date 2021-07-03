@@ -3,36 +3,36 @@
     <div class="container">
       <div class="services__inner">
         <div class="column">
-          <div class="services__item">
-            <h1 class="services__item-title">
+          <div class="services__card">
+            <h1 class="services__card-title">
               Аудит и стратегия развития amoCRM
             </h1>
 
-            <p class="services__item-desc">
+            <p class="services__card-desc">
               Проанализируем вашу систему продажи составим карту внедрения или
               развития вашей amoCRM
             </p>
-            <button class="btn services__item-btn">Подробнее</button>
+            <main-button class="services__card-btn">Подробнее</main-button>
           </div>
         </div>
         <div class="column">
-          <div class="services__item">
-            <h1 class="services__item-title">Внедрение amoCRM</h1>
-            <p class="services__item-desc">
+          <div class="services__card">
+            <h1 class="services__card-title">Внедрение amoCRM</h1>
+            <p class="services__card-desc">
               Изучим процессы вашей компании, настроим воронки продаж,
               интеграции и обучим сотрудников работе с системой
             </p>
-            <button class="btn services__item-btn">Подробнее</button>
+            <main-button class="services__card-btn">Подробнее</main-button>
           </div>
         </div>
         <div class="column">
-          <div class="services__item">
-            <h1 class="services__item-title">Сопровождение amoCRM</h1>
-            <p class="services__item-desc">
+          <div class="services__card">
+            <h1 class="services__card-title">Сопровождение amoCRM</h1>
+            <p class="services__card-desc">
               Получите в распоряжение команду экспертов для ежемесячного
               развития и гарантии работоспособности CRM-системы
             </p>
-            <button class="btn services__item-btn">Подробнее</button>
+            <main-button class="services__card-btn">Подробнее</main-button>
           </div>
         </div>
       </div>
@@ -41,8 +41,12 @@
 </template>
 
 <script>
+import MainButton from '@/components/Common/MainButton'
 export default {
-  name: 'MainServices'
+  name: 'MainServices',
+  components: {
+    MainButton
+  }
 }
 </script>
 
@@ -55,10 +59,10 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
-  &__item + &__item {
+  &__card + &__card {
     margin-right: 100px;
   }
-  &__item {
+  &__card {
     display: flex;
     flex-direction: column;
     align-items: center;

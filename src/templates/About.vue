@@ -67,6 +67,23 @@
               </div>
             </div>
           </div>
+          <div class="about__target">
+            <h1 class="text about__target-title">Наша большая цель</h1>
+            <h2 class="text">
+              поменять устаревший подход к управлению продажами и доказать, что
+              правильные инструменты позволяют системно выполнять план продаж с
+              минимальными затратами ресурсов.
+            </h2>
+            <div class="about__target-img">
+              <g-image src="@/assets/img/about/team-img-two.png" />
+            </div>
+          </div>
+          <div class="about__bottom">
+            <div class="text about__bottom-text">
+              Мы делаем смелые и нужные вещи вместе. Вы с нами?
+            </div>
+            <main-button class="about__bottom-btn">Стать клиентом</main-button>
+          </div>
         </div>
       </div>
     </section>
@@ -82,10 +99,12 @@ query ($id: ID!) {
 </page-query>
 
 <script>
+import MainButton from '@/components/Common/MainButton'
 import TeamPerson from '@/components/Section/SectionTeam/TeamPerson'
 
 export default {
   components: {
+    MainButton,
     TeamPerson
   },
   metaInfo() {
@@ -121,6 +140,7 @@ export default {
       font-size: 18px;
     }
     &-img {
+      display: inline-block;
       max-width: 791px;
     }
     &-subcircle {
@@ -152,6 +172,33 @@ export default {
       color: #222222;
     }
   }
+  &__target {
+    margin-top: 128px;
+    &-title {
+      font-weight: $font_bold;
+    }
+    &-img {
+      max-width: 921px;
+    }
+  }
+  &__bottom {
+    margin-top: 130px;
+    &-text {
+      font-size: 28px;
+      line-height: 1.324;
+    }
+    &-btn {
+      margin-top: 35px;
+    }
+  }
+}
+
+.text {
+  color: #242424;
+  font-size: 24px;
+  line-height: 1.628;
+  margin-top: 20px;
+  font-weight: $font_semibold;
 }
 
 .story {
