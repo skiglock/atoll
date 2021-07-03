@@ -18,7 +18,7 @@
                 <g-link to="/blog" class="nav__list-link">Блог</g-link>
               </li>
               <li class="nav__list-item">
-                <g-link to="/" class="nav__list-link">Контакты</g-link>
+                <g-link to="/contacts" class="nav__list-link">Контакты</g-link>
               </li>
             </ul>
           </nav>

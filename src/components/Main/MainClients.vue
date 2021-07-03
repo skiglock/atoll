@@ -4,7 +4,7 @@
       <div class="clients__inner">
         <h1 class="clients__title">Наши клиенты</h1>
         <div class="row clients__row">
-          <div class="column" style="width: 50%">
+          <div class="column column-50">
             <div class="clients__item">
               <g-image
                 class="clients__item-img"
@@ -12,7 +12,7 @@
               />
             </div>
           </div>
-          <div class="column" style="width: 50%">
+          <div class="column column-50">
             <div class="clients__item">
               <g-image
                 class="clients__item-img"

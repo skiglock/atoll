@@ -3,7 +3,7 @@
     <div class="container">
       <div class="consultation__inner">
         <div class="row">
-          <div class="column" style="width: 50%">
+          <div class="column column-50">
             <h1 class="consultation__title">С чего мне начать?</h1>
             <p class="consultation__desc">
               Оставьте заявку и наш эксперт расскажет обо всех возможностях
@@ -13,7 +13,7 @@
               >Консультация</main-button
             >
           </div>
-          <div class="column" style="width: 50%">
+          <div class="column column-50" style="width: 50%">
             <g-image
               class="consultation__img"
               src="@/assets/img/consultation.png"

@@ -1,6 +1,6 @@
 <template>
-  <Layout
-    ><section class="blog-page">
+  <Layout>
+    <section class="blog-page">
       <div class="container">
         <h1 class="blog-page__title">
           Блог о продажах, предпринимательстве и управлении
