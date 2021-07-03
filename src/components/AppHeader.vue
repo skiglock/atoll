@@ -3,9 +3,9 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__top">
-          <a class="header__logo" href="#" title="Atoll">
-            <img src="@/assets/img/logo-header.png" alt="" />
-          </a>
+          <g-link class="header__logo" to="/" title="Atoll">
+            <g-image src="@/assets/img/logo-header.png" alt="" />
+          </g-link>
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list-item">
@@ -23,13 +23,7 @@
             </ul>
           </nav>
         </div>
-        <div class="header__body">
-          <img class="header__body-img" src="@/assets/img/head.png" />
-          <div class="header__body-title">
-            <h1>Трансформация отдела продаж на основе amoCRM</h1>
-          </div>
-          <button class="btn header__body-btn">Подключить</button>
-        </div>
+        <slot />
       </div>
     </div>
   </header>
@@ -58,40 +52,6 @@ export default {
     @media screen and (max-height: 992px) {
       padding-top: 10px;
       padding-bottom: 10px;
-    }
-  }
-
-  &__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 82px 20px;
-    height: calc(100vh - 112px);
-    &-img {
-      max-width: 811px;
-      @media screen and (max-height: 992px) {
-        max-width: 70%;
-      }
-    }
-    &-title {
-      align-items: center;
-      h1 {
-        line-height: 1.261;
-        max-width: 475px;
-        color: #222222;
-        font-weight: $font_medium;
-        font-size: 30px;
-        text-align: center;
-        @media screen and (max-height: 992px) {
-          font-size: 25px;
-        }
-      }
-    }
-    &-btn {
-    }
-    @media screen and (max-height: 992px) {
-      padding: 20px;
     }
   }
 

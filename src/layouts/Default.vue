@@ -1,18 +1,5 @@
 <template>
-  <div class="wrapper">
-    <app-header />
-    <app-footer />
-  </div>
+  <main class="main">
+    <slot />
+  </main>
 </template>
-
-<script>
-import AppHeader from '@/components/AppHeader'
-import AppFooter from '@/components/AppFooter'
-
-export default {
-  components: {
-    AppHeader,
-    AppFooter
-  }
-}
-</script>

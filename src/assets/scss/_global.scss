@@ -66,20 +66,6 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: $section_color;
 }
 
-.btn {
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    font-size: 23px;
-    font-weight: $font_bold;
-    background-color: $main_color;
-    color: $white_color;
-    border-radius: $border_radius;
-    padding: 10px 15px;
-    height: 54px;
-    width: 272px;
-}
-
 .column {
     flex-grow: 1;
     width: 33.33%;

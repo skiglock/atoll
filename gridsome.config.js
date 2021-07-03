@@ -15,7 +15,26 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: 'Atollon',
-  plugins: [],
+  // templates: {
+  //   Index: '/'
+  // },
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: []
+    }
+  },
+  plugins: [
+    {
+      use: 'gridsome-plugin-netlify-cms',
+      options: {
+        publicPath: '/admin',
+        modulePath: 'src/admin/index.js'
+      }
+    }
+  ],
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
