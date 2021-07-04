@@ -2,6 +2,8 @@
   <Layout>
     <section class="other">
       <div class="container">
+        <head-block />
+        <card-block />
         <!-- <title-block /> -->
         <!-- <plans-block /> -->
         <price-block />
@@ -10,6 +12,7 @@
         <!-- <results-block /> -->
         <consultation-block />
         <form-block />
+        <contacts-block />
       </div>
     </section>
   </Layout>
@@ -32,6 +35,10 @@ import ResultsBlock from '@/components/Dynamic/ResultsBlock'
 import ConsultationBlock from '@/components/Dynamic/ConsultationBlock'
 import QuoteBlock from '@/components/Dynamic/QuoteBlock'
 import FormBlock from '@/components/Dynamic/FormBlock'
+//
+import HeadBlock from '@/components/Dynamic/HeadBlock'
+import CardBlock from '@/components/Dynamic/CardBlock'
+import ContactsBlock from '@/components/Dynamic/ContactsBlock'
 
 export default {
   components: {
@@ -42,7 +49,11 @@ export default {
     ResultsBlock,
     ConsultationBlock,
     QuoteBlock,
-    FormBlock
+    FormBlock,
+    //
+    HeadBlock,
+    CardBlock,
+    ContactsBlock
   },
   metaInfo() {
     return {

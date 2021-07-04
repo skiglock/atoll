@@ -8,67 +8,86 @@
         <div class="blog-page__list">
           <div class="blog-page__item">
             <div class="blog-page__item-category">Категория</div>
-            <div class="blog-page__item-left">
-              <div class="blog-page__item-img">
-                <g-image src="@/assets/img/blog/blog-item.png" />
+            <div class="row">
+              <div class="column column-50">
+                <div class="blog-page__item-left">
+                  <div class="blog-page__item-img">
+                    <g-image src="@/assets/img/blog/blog-item.png" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="blog-page__item-right">
-              <h1 class="blog-page__item-title">
-                Эффективное построение воронки продаж в amoCRM
-              </h1>
-              <p class="blog-page__item-desc">
-                Начинайте с самого начала - полученного обращения. Будем
-                рассматривать для данной воронки и направления работу с лояльным
-                клиентом, который готов купить. Представим у нас в компании
-                работает менеджер - Вася и мы должны выстроить ему дорожку,
-                чтобы он помог клиенту приобрести у нас продукт [...]
-              </p>
-              <g-link to="/" class="blog-page__item-link">Читать</g-link>
+              <div class="column column-50">
+                <div class="blog-page__item-right">
+                  <h1 class="blog-page__item-title">
+                    Эффективное построение воронки продаж в amoCRM
+                  </h1>
+                  <p class="blog-page__item-desc">
+                    Начинайте с самого начала - полученного обращения. Будем
+                    рассматривать для данной воронки и направления работу с
+                    лояльным клиентом, который готов купить. Представим у нас в
+                    компании работает менеджер - Вася и мы должны выстроить ему
+                    дорожку, чтобы он помог клиенту приобрести у нас продукт
+                    [...]
+                  </p>
+                  <g-link to="/" class="blog-page__item-link">Читать</g-link>
+                </div>
+              </div>
             </div>
           </div>
           <div class="blog-page__item">
             <div class="blog-page__item-category">Категория</div>
-
-            <div class="blog-page__item-left">
-              <div class="blog-page__item-img">
-                <g-image src="@/assets/img/blog/blog-item.png" />
+            <div class="row">
+              <div class="column column-50">
+                <div class="blog-page__item-left">
+                  <div class="blog-page__item-img">
+                    <g-image src="@/assets/img/blog/blog-item.png" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="blog-page__item-right">
-              <h1 class="blog-page__item-title">
-                Эффективное построение воронки продаж в amoCRM
-              </h1>
-              <p class="blog-page__item-desc">
-                Начинайте с самого начала - полученного обращения. Будем
-                рассматривать для данной воронки и направления работу с лояльным
-                клиентом, который готов купить. Представим у нас в компании
-                работает менеджер - Вася и мы должны выстроить ему дорожку,
-                чтобы он помог клиенту приобрести у нас продукт [...]
-              </p>
-              <g-link to="/" class="blog-page__item-link">Читать</g-link>
+              <div class="column column-50">
+                <div class="blog-page__item-right">
+                  <h1 class="blog-page__item-title">
+                    Эффективное построение воронки продаж в amoCRM
+                  </h1>
+                  <p class="blog-page__item-desc">
+                    Начинайте с самого начала - полученного обращения. Будем
+                    рассматривать для данной воронки и направления работу с
+                    лояльным клиентом, который готов купить. Представим у нас в
+                    компании работает менеджер - Вася и мы должны выстроить ему
+                    дорожку, чтобы он помог клиенту приобрести у нас продукт
+                    [...]
+                  </p>
+                  <g-link to="/" class="blog-page__item-link">Читать</g-link>
+                </div>
+              </div>
             </div>
           </div>
           <div class="blog-page__item">
             <div class="blog-page__item-category">Категория</div>
-
-            <div class="blog-page__item-left">
-              <div class="blog-page__item-img">
-                <g-image src="@/assets/img/blog/blog-item.png" />
+            <div class="row">
+              <div class="column column-50">
+                <div class="blog-page__item-left">
+                  <div class="blog-page__item-img">
+                    <g-image src="@/assets/img/blog/blog-item.png" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="blog-page__item-right">
-              <h1 class="blog-page__item-title">
-                Эффективное построение воронки продаж в amoCRM
-              </h1>
-              <p class="blog-page__item-desc">
-                Начинайте с самого начала - полученного обращения. Будем
-                рассматривать для данной воронки и направления работу с лояльным
-                клиентом, который готов купить. Представим у нас в компании
-                работает менеджер - Вася и мы должны выстроить ему дорожку,
-                чтобы он помог клиенту приобрести у нас продукт [...]
-              </p>
-              <g-link to="/" class="blog-page__item-link">Читать</g-link>
+              <div class="column column-50">
+                <div class="blog-page__item-right">
+                  <h1 class="blog-page__item-title">
+                    Эффективное построение воронки продаж в amoCRM
+                  </h1>
+                  <p class="blog-page__item-desc">
+                    Начинайте с самого начала - полученного обращения. Будем
+                    рассматривать для данной воронки и направления работу с
+                    лояльным клиентом, который готов купить. Представим у нас в
+                    компании работает менеджер - Вася и мы должны выстроить ему
+                    дорожку, чтобы он помог клиенту приобрести у нас продукт
+                    [...]
+                  </p>
+                  <g-link to="/" class="blog-page__item-link">Читать</g-link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -128,14 +147,11 @@ export default {
       z-index: 6;
     }
     &-left {
-      width: 40%;
     }
     &-right {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin-left: 63px;
-      width: 50%;
     }
     &-img {
       max-width: 317px;

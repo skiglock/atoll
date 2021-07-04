@@ -4,23 +4,25 @@
       <div class="container">
         <h1 class="contacts-page__title">{{ $page.contacts.title }}</h1>
         <div class="contacts-page__body">
-          <div class="column column-50">
-            <div class="contacts-page__connect">
-              <div class="contacts-page__location">
-                Адрес: Чебоксары, ул. Мичмана Павлова 8А
-              </div>
+          <div class="row">
+            <div class="column column-50">
+              <div class="contacts-page__connect">
+                <div class="contacts-page__location">
+                  Адрес: Чебоксары, ул. Мичмана Павлова 8А
+                </div>
 
-              <div class="contacts-page__number">
-                Телефон: +7 (495) 278 18 02
+                <div class="contacts-page__number">
+                  Телефон: +7 (495) 278 18 02
+                </div>
+                <div class="contacts-page__mail">Почта: hello@atollon.ru</div>
               </div>
-              <div class="contacts-page__mail">Почта: hello@atollon.ru</div>
             </div>
-          </div>
-          <div class="column column-50">
-            <div class="contacts-page__form">
-              <h1 class="contacts-page__form-title">Свяжитесь с нами!</h1>
-              <div class="contacts-page__block">
-                <main-form />
+            <div class="column column-50">
+              <div class="contacts-page__form">
+                <h1 class="contacts-page__form-title">Свяжитесь с нами!</h1>
+                <div class="contacts-page__block">
+                  <main-form />
+                </div>
               </div>
             </div>
           </div>
