@@ -30,7 +30,6 @@ export default {
 
 <style lang="scss">
 .form {
-  margin-left: 114px;
   &__item {
     margin-top: 30px;
   }

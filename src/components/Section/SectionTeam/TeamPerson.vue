@@ -27,6 +27,10 @@ export default {
   &__avatar {
     max-width: 147px;
     max-height: 147px;
+    border-radius: 50%;
+    img {
+      border-radius: 50%;
+    }
   }
   &__name {
     font-size: 20px;

@@ -131,6 +131,7 @@ export default {
       border-radius: $border_radius;
       top: -15px;
       right: -25px;
+      z-index: 6;
     }
     &-left {
       width: 40%;

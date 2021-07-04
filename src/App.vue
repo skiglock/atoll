@@ -1,7 +1,9 @@
 <template>
   <div class="wrapper">
     <app-header>
-      <header-body v-if="$route.path === '/'" />
+      <transition name="route">
+        <header-body v-if="$route.path === '/'" />
+      </transition>
     </app-header>
     <transition name="route">
       <router-view />

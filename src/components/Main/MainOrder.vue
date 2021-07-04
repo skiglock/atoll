@@ -10,7 +10,7 @@
             </p>
           </div>
           <div class="column">
-            <main-form />
+            <main-form :style="{ marginLeft: '114px' }" />
           </div>
         </div>
       </div>

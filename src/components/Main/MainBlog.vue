@@ -55,6 +55,7 @@ export default {
       top: 0px;
       left: -25px;
       border-radius: $border_radius;
+      z-index: 4;
     }
     margin-bottom: 87px;
   }

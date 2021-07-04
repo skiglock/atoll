@@ -20,7 +20,7 @@
             <div class="contacts-page__form">
               <h1 class="contacts-page__form-title">Свяжитесь с нами!</h1>
               <div class="contacts-page__block">
-                <main-form :style="{ marginLeft: '0px' }" />
+                <main-form />
               </div>
             </div>
           </div>

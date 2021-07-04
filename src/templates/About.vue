@@ -146,6 +146,7 @@ export default {
     &-subcircle {
       position: relative;
       &::before {
+        z-index: 5;
         position: absolute;
         content: '';
         border: 20px solid $main_color;
@@ -209,6 +210,7 @@ export default {
   &__item {
     position: relative;
     &::after {
+      z-index: 6;
       position: absolute;
       content: '';
       width: 11px;

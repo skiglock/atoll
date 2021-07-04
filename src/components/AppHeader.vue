@@ -8,8 +8,36 @@
           </g-link>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__list-item">
-                <g-link to="/" class="nav__list-link">Продукты</g-link>
+              <li class="nav__list-item" @click="open = !open">
+                <a href class="nav__list-link">Продукты</a>
+                <ul v-if="open" class="dropdown">
+                  <li class="dropdown__item">
+                    <g-link to="/" class="dropdown__link"
+                      >Аудит и стратегия развития amoCRM</g-link
+                    >
+                    <p class="dropdown__desc">
+                      Закажите анализ текущей системы и карту развития вашей CRM
+                    </p>
+                  </li>
+                  <li class="dropdown__item">
+                    <g-link to="/" class="dropdown__link"
+                      >Внедрение amoCRM</g-link
+                    >
+                    <p class="dropdown__desc">
+                      Доверьте настройку amoCRM и обучение сотрудников
+                      профессионалам
+                    </p>
+                  </li>
+                  <li class="dropdown__item">
+                    <g-link to="/" class="dropdown__link"
+                      >Сопровождение и развитие amoCRM</g-link
+                    >
+                    <p class="dropdown__desc">
+                      Получите в распоряжение команду экспертов для ежемесячного
+                      развития CRM
+                    </p>
+                  </li>
+                </ul>
               </li>
               <li class="nav__list-item">
                 <g-link to="/about" class="nav__list-link">О команде</g-link>
@@ -31,7 +59,12 @@
 
 <script>
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  data() {
+    return {
+      open: false
+    }
+  }
 }
 </script>
 
@@ -80,10 +113,58 @@ export default {
             left: 0;
             right: 0;
             bottom: 0;
+            z-index: 1;
           }
         }
       }
     }
+  }
+}
+
+.dropdown {
+  z-index: 2;
+  position: absolute;
+  top: 80px;
+  left: 360px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  background-color: $white_color;
+  width: 394px;
+  height: 283px;
+  border: 1px solid rgba($black_color, 0.18);
+  padding: 33px 50px;
+  &__item + &__item {
+    margin-top: 20px;
+  }
+  &__item {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgb(54, 54, 54);
+      top: 20px;
+      left: -20px;
+      z-index: 3;
+    }
+    flex-grow: 1;
+    width: 100%;
+  }
+  &__desc {
+    margin-top: 3px;
+    font-size: 10px;
+    color: rgba(24, 24, 24, 0.52);
+    line-height: 1.684;
+    font-weight: $font_light;
+  }
+  &__link {
+    font-size: 13px;
+    color: rgb(24, 24, 24);
+    line-height: 1.295;
+    font-weight: $font_semibold;
   }
 }
 </style>
