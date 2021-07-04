@@ -3,13 +3,13 @@
     <div class="container">
       <div class="order__inner">
         <div class="row">
-          <div class="column">
+          <div class="column column-50">
             <h1 class="order__title">Заказать интеграцию</h1>
             <p class="order__desc">
               Менеджер узнает про вашу задачу и подскажет что делать дальше
             </p>
           </div>
-          <div class="column">
+          <div class="column column-50">
             <main-form :style="{ marginLeft: '114px' }" />
           </div>
         </div>

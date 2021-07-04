@@ -9,6 +9,7 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 
 collections:
+# --------------------Основные страницы---------------------------
   - name: 'main_pages'
     label: 'Основные страницы'
     create: false
@@ -69,7 +70,19 @@ collections:
               widget: 'string'
             }
 
-  # --------------------БЛОГ---------------------------
+
+  # --------------------Динамические страницы---------------------------
+  - name: 'pages'
+    label: 'Допольнительные страницы'
+    folder: 'content/pages'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
+      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
+
+  # --------------------Блог---------------------------
   - name: 'blog'
     label: 'Блог'
     folder: 'content/blog'
@@ -77,10 +90,9 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: 'ID', name: 'id', widget: 'id' }
-      - { label: 'Заголовок работы', name: 'title', widget: 'string' }
+      - { label: 'Заголовок поста', name: 'title', widget: 'string' }
       - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
-      - { label: 'Дата', name: 'date', widget: 'datetime' }
-      - { name: slug, label: Slug, required: true, widget: string }
+      - { label: 'Дата', name: 'date', picker_utc: false, widget: 'datetime' }
       - {
           label: 'Опубликовано',
           name: 'published',

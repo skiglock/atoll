@@ -29,7 +29,9 @@
                     </p>
                   </li>
                   <li class="dropdown__item">
-                    <g-link to="/" class="dropdown__link"
+                    <g-link
+                      to="/effektivnoe-postroenie-voronki-prodazh-v-amocrm"
+                      class="dropdown__link"
                       >Сопровождение и развитие amoCRM</g-link
                     >
                     <p class="dropdown__desc">

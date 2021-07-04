@@ -55,6 +55,16 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
+        path: 'content/pages/*.md',
+        typeName: 'Dynamic',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
         path: 'content/blog.md',
         typeName: 'Blog',
         remark: {

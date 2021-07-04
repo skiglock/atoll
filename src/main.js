@@ -1,5 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import { getPath } from '~/utils/path.js'
+import marked from 'marked'
 
 export default function (Vue, { head }) {
   head.htmlAttrs = { lang: 'ru' }
@@ -18,4 +19,5 @@ export default function (Vue, { head }) {
   })
   Vue.component('Layout', DefaultLayout)
   Vue.prototype.$getPath = getPath
+  Vue.filter('markdown', (string) => marked(string))
 }

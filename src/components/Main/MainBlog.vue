@@ -2,11 +2,13 @@
   <section class="blog">
     <div class="container">
       <div class="blog__head">
-        <h1 class="blog__title">Полезные статьи в нашем блоге</h1>
-        <p class="blog__desc">
-          Регулярно пишем статьи о системах продажах, управлении проектами и
-          делимся собственным опытом трансформации процессов.
-        </p>
+        <blockquote>
+          <h1 class="blog__title">Полезные статьи в нашем блоге</h1>
+          <p class="blog__desc">
+            Регулярно пишем статьи о системах продажах, управлении проектами и
+            делимся собственным опытом трансформации процессов.
+          </p>
+        </blockquote>
       </div>
       <div class="blog__body">
         <div class="blog__inner">
@@ -45,18 +47,6 @@ export default {
   &__inner {
   }
   &__head {
-    position: relative;
-    &::after {
-      position: absolute;
-      content: '';
-      width: 11px;
-      height: 100%;
-      background-color: #487bfa;
-      top: 0px;
-      left: -25px;
-      border-radius: $border_radius;
-      z-index: 4;
-    }
     margin-bottom: 87px;
   }
   &__title {

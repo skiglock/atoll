@@ -58,12 +58,13 @@ body::-webkit-scrollbar-thumb:hover {
 .container {
     max-width: 920px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 15px;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     flex-direction: row;
 }
 
@@ -72,23 +73,24 @@ body::-webkit-scrollbar-thumb:hover {
 // }
 
 .column {
-    flex-grow: 1;
-    width: 33.33%;
+    flex: 0 1 33.33%;
     @media screen and (min-width: 960px) {
         padding: 15px;
     }
     @media screen and (max-width: 960px) {
         padding: 10px;
-
-        width: 50%;
+        flex: 50%;
     }
     @media screen and (max-width: 600px) {
-        width: 100%;
+        flex: 100%;
     }
 }
 
 .column-50 {
-    width: 50%;
+    flex: 0 1 50%;
+    @media screen and (max-width: 600px) {
+        flex: 100%;
+    }
 }
 
 img {
@@ -114,4 +116,32 @@ img {
     color: #232323;
     font-weight: 700;
     font-size: 21px;
+}
+
+.date {
+    font-weight: $font_regular;
+    color: #252525;
+    font-size: 15px;
+    opacity: 0.5;
+}
+
+blockquote {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 11px;
+        height: 100%;
+        background-color: #487bfa;
+        top: 0px;
+        left: -25px;
+        bottom: 0;
+        right: 0;
+        border-radius: $border_radius;
+        z-index: 8;
+    }
+}
+
+.block + .block {
+    margin-top: 60px;
 }

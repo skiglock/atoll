@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="contacts-page__title">{{ $page.contacts.title }}</h1>
         <div class="contacts-page__body">
-          <div class="contacts-page__left">
+          <div class="column column-50">
             <div class="contacts-page__connect">
               <div class="contacts-page__location">
                 Адрес: Чебоксары, ул. Мичмана Павлова 8А
@@ -16,7 +16,7 @@
               <div class="contacts-page__mail">Почта: hello@atollon.ru</div>
             </div>
           </div>
-          <div class="contacts-page__right">
+          <div class="column column-50">
             <div class="contacts-page__form">
               <h1 class="contacts-page__form-title">Свяжитесь с нами!</h1>
               <div class="contacts-page__block">
@@ -65,14 +65,6 @@ export default {
     margin-top: 57px;
     display: flex;
     justify-content: space-between;
-  }
-  &__left {
-    width: 45%;
-  }
-  &__right {
-    margin-left: 70px;
-
-    width: 55%;
   }
   &__connect {
     height: 100%;

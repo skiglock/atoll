@@ -65,7 +65,7 @@ export default {
 .services {
   // margin-top: 103px;
   &__inner {
-    padding: 50px 20px;
+    padding: 50px 0;
   }
   &__card {
     border-radius: 25px;

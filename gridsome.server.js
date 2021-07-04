@@ -12,14 +12,32 @@ module.exports = function (api) {
             }
           }
         }
+        allDynamic {
+          edges {
+            node {
+              id
+              path
+            }
+          }
+        }
       }
     `)
-
     data.allBlogPost.edges.forEach(({ node }) => {
       const newPath = node.path.replace('/content', '')
       createPage({
         path: newPath,
         component: './src/templates/BlogPost.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
+
+    data.allDynamic.edges.forEach(({ node }) => {
+      const newPath = node.path.replace('/content/pages', '')
+      createPage({
+        path: newPath,
+        component: './src/templates/Dynamic.vue',
         context: {
           id: node.id
         }

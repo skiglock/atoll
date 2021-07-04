@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss">
 .clients {
-  &__row {
+  .row {
     justify-content: center;
   }
   &__inner {
