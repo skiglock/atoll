@@ -1,4 +1,5 @@
 import DefaultLayout from '~/layouts/Default.vue'
+import { getPath } from '~/utils/path.js'
 
 export default function (Vue, { head }) {
   head.htmlAttrs = { lang: 'ru' }
@@ -16,4 +17,5 @@ export default function (Vue, { head }) {
     href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap'
   })
   Vue.component('Layout', DefaultLayout)
+  Vue.prototype.$getPath = getPath
 }

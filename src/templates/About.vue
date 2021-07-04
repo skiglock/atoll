@@ -4,7 +4,7 @@
       <div class="container">
         <div class="about__inner">
           <div class="about__head">
-            <h1 class="about__head-title">{{ $page.about.title }}</h1>
+            <h1 class="title">{{ $page.about.title }}</h1>
             <h2 class="about__head-subtitle">Atollon — интегратор amoCRM</h2>
             <p class="about__head-desc">
               специализирующийся на цифровой трансформации продаж. Мы
@@ -121,11 +121,6 @@ export default {
     text-align: center;
   }
   &__head {
-    &-title {
-      color: #222222;
-      font-size: 30px;
-      font-weight: $font_semibold;
-    }
     &-subtitle {
       margin-top: 48px;
       color: #222222;

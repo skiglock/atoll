@@ -19,6 +19,7 @@ module.exports = {
     Index: '/',
     About: '/about',
     Blog: '/blog',
+    // BlogPost: '/blog/:title',
     Contacts: '/contacts',
     Cases: '/cases'
   },
@@ -56,6 +57,16 @@ module.exports = {
       options: {
         path: 'content/blog.md',
         typeName: 'Blog',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog/*.md',
+        typeName: 'BlogPost',
         remark: {
           plugins: []
         }

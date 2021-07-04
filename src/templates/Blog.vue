@@ -2,7 +2,7 @@
   <Layout>
     <section class="blog-page">
       <div class="container">
-        <h1 class="blog-page__title">
+        <h1 class="title">
           {{ $page.blog.title }}
         </h1>
         <div class="blog-page__list">
@@ -89,7 +89,7 @@ query ($id: ID!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.about.title
+      title: this.$page.blog.title
     }
   }
 }
@@ -97,12 +97,6 @@ export default {
 
 <style lang="scss">
 .blog-page {
-  &__title {
-    text-align: center;
-    color: #232323;
-    font-weight: $font_semibold;
-    font-size: 21px;
-  }
   &__list {
     margin-top: 49px;
   }

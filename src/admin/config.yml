@@ -67,4 +67,26 @@ collections:
               label: 'Мета-тэг описания',
               name: 'description',
               widget: 'string'
-            }       
+            }
+
+  # --------------------БЛОГ---------------------------
+  - name: 'blog'
+    label: 'Блог'
+    folder: 'content/blog'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Заголовок работы', name: 'title', widget: 'string' }
+      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
+      - { label: 'Дата', name: 'date', widget: 'datetime' }
+      - { name: slug, label: Slug, required: true, widget: string }
+      - {
+          label: 'Опубликовано',
+          name: 'published',
+          widget: 'boolean',
+          default: false
+        }
+      - { label: 'Главная картинка', name: 'img', widget: 'image', default: '' }
+      - { label: 'Текст краткого описания', name: 'desc', widget: 'markdown' }
+      - { label: 'Текст полного описания', name: 'full', widget: 'markdown' }   

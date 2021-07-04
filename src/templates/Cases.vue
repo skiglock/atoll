@@ -2,7 +2,7 @@
   <Layout>
     <section class="cases-page">
       <div class="container">
-        <h1 class="cases-page__title">{{ $page.cases.title }}</h1>
+        <h1 class="title">{{ $page.cases.title }}</h1>
         <div class="cases-page__list">
           <div class="cases-page__item">
             <div class="cases-page__item-left">
@@ -62,12 +62,6 @@ export default {
 
 <style lang="scss">
 .cases-page {
-  &__title {
-    text-align: center;
-    color: #232323;
-    font-weight: 700;
-    font-size: 21px;
-  }
   &__list {
     margin-top: 49px;
   }
