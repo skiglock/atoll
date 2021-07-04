@@ -19,7 +19,8 @@ module.exports = {
     Index: '/',
     About: '/about',
     Blog: '/blog',
-    Contacts: '/contacts'
+    Contacts: '/contacts',
+    Cases: '/cases'
   },
   transformers: {
     remark: {
@@ -65,6 +66,16 @@ module.exports = {
       options: {
         path: 'content/contacts.md',
         typeName: 'Contacts',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/cases.md',
+        typeName: 'Cases',
         remark: {
           plugins: []
         }

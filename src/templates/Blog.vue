@@ -3,7 +3,7 @@
     <section class="blog-page">
       <div class="container">
         <h1 class="blog-page__title">
-          Блог о продажах, предпринимательстве и управлении
+          {{ $page.blog.title }}
         </h1>
         <div class="blog-page__list">
           <div class="blog-page__item">
