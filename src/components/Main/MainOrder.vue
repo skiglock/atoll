@@ -10,7 +10,7 @@
             </p>
           </div>
           <div class="column column-50">
-            <main-form :style="{ marginLeft: '114px' }" />
+            <main-form class="order__form" />
           </div>
         </div>
       </div>
@@ -40,6 +40,18 @@ export default {
   }
   &__text {
     margin-top: 21px;
+  }
+  &__form {
+    margin-left: 122px;
+    @media screen and (max-width: 992px) {
+      margin-left: 80px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-left: 15px;
+    }
+    @media screen and (max-width: 576px) {
+      margin-left: 0;
+    }
   }
 }
 </style>

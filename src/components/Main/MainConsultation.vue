@@ -52,7 +52,6 @@ export default {
   }
   &__btn {
     margin-top: 30px;
-    font-size: 18px;
     font-weight: $font_medium;
     // letter-spacing: 1.436px;
   }

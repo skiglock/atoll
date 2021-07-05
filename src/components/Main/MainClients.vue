@@ -68,8 +68,7 @@ export default {
 
   &__btn {
     margin-top: 45px;
-    width: 206px;
-    font-size: 20px;
+    max-width: 206px;
   }
 }
 </style>

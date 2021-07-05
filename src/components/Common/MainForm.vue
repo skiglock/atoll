@@ -50,8 +50,6 @@ export default {
   }
   &__btn {
     margin-top: 29px;
-    font-size: 14px;
-    width: 230px;
     height: 44px;
   }
   &__agree {

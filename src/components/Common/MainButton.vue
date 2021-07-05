@@ -28,7 +28,7 @@ export default {
     },
     padding: {
       type: String,
-      default: '10px 15px'
+      default: '10px 40px'
     },
     width: {
       type: Number,
@@ -44,7 +44,7 @@ export default {
     },
     fontsize: {
       type: Number,
-      default: 23
+      default: 20
     },
     fontweight: {
       type: Number,
@@ -91,8 +91,8 @@ export default {
   color: var(--color);
   border-radius: var(--borderradius);
   padding: var(--padding);
-  height: var(--height);
-  width: var(--width);
+  // max-height: var(--height);
+  // max-width: var(--width);
   &--link {
     cursor: pointer;
     text-decoration: none;
@@ -100,18 +100,22 @@ export default {
   }
   @media screen and (max-width: 992px) {
     font-size: 21px;
+    padding: 10px 37px;
   }
   @media screen and (max-width: 768px) {
     font-size: 19px;
+    padding: 10px 34px;
   }
   @media screen and (max-width: 576px) {
     font-size: 17px;
+    padding: 10px 31px;
   }
   @media screen and (max-width: 460px) {
     font-size: 15px;
+    padding: 10px 28px;
   }
   @media screen and (max-width: 320px) {
-    font-size: 13px;
+    padding: 11px 25px;
   }
 }
 </style>

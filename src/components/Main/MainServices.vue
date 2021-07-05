@@ -63,6 +63,9 @@ export default {
 
 <style lang="scss">
 .services {
+  .text {
+    font-size: 14px;
+  }
   // margin-top: 103px;
   &__inner {
     padding: 50px 0;
@@ -71,7 +74,7 @@ export default {
     border-radius: 25px;
     background-color: $white_color;
     min-height: 264px;
-    min-width: 254px;
+    min-width: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,13 +87,13 @@ export default {
       font-weight: $font_medium;
     }
     &-text {
+      color: #1f1f1f;
       font-weight: $font_light;
     }
     &-btn {
       margin-top: 10px;
-      font-weight: $font_semibold;
       font-size: 11px;
-      width: 105px;
+      text-align: center;
       height: 30px;
       align-self: flex-end;
     }

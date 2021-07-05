@@ -3,7 +3,7 @@
     <div class="person__circle">
       <g-image class="person__avatar" src="@/assets/img/team/1.png" alt="" />
     </div>
-    <h2 class="person__name">Сергей Иванов</h2>
+    <h2 class="title person__name">Сергей Иванов</h2>
     <h3 class="person__position">Руководитель проектов</h3>
     <h4 class="person__practice">2 года опыта работы с amoCRM</h4>
   </div>
@@ -33,8 +33,6 @@ export default {
     }
   }
   &__name {
-    font-size: 20px;
-    color: #222222;
     font-weight: $font_medium;
     margin-top: 29px;
   }
