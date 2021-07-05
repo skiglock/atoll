@@ -78,9 +78,10 @@ export default {
     justify-content: space-between;
 
     &-title {
+      min-height: 100px;
       padding: 30px;
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
       color: #222222;
       font-weight: $font_medium;
     }

@@ -50,11 +50,14 @@ export default {
     margin-bottom: 68px;
   }
   &__item {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     min-width: 364px;
     min-height: 249px;
+    border-radius: 28px;
+
     background-color: $white_color;
     &-img {
       max-width: 202px;

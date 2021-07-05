@@ -82,7 +82,6 @@ export default {
   &__body {
     margin-top: 57px;
     padding: 45px 18px;
-    background-color: $section_color;
   }
   .column {
     @media screen and (max-width: 768px) {

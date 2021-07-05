@@ -79,8 +79,8 @@ export default {
   &__inner {
   }
   &__top {
-    height: 112px;
-    padding: 53px 10px 38px;
+    height: 130px;
+    padding: 53px 10px 77px;
   }
 
   .navbar {
@@ -131,9 +131,9 @@ export default {
 
 .dropdown {
   z-index: 2;
+  margin-top: 20px;
+  margin-left: -115px;
   position: absolute;
-  top: 80px;
-  left: 360px;
   display: flex;
   flex-direction: column;
   border-radius: 28px;

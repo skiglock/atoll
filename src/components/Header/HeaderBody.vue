@@ -2,7 +2,7 @@
   <div class="header__body">
     <img class="header__body-img" src="@/assets/img/head.png" />
     <div class="header__body-title">
-      <h1>Трансформация отдела продаж на основе amoCRM</h1>
+      <h1 class="title">Трансформация отдела продаж на основе amoCRM</h1>
     </div>
     <main-button class="header__body-btn">Подключить</main-button>
   </div>
@@ -27,25 +27,22 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 82px 20px;
-    height: calc(100vh - 112px);
+    min-height: calc(100vh - 130px);
     &-img {
       max-width: 811px;
+      max-height: 511px;
       @media screen and (max-height: 992px) {
-        max-width: 70%;
+        max-width: 80%;
+        max-height: 400px;
       }
     }
     &-title {
       align-items: center;
-      h1 {
-        line-height: 1.261;
+      .title {
         max-width: 475px;
-        color: #222222;
         font-weight: $font_medium;
-        font-size: 30px;
         text-align: center;
-        @media screen and (max-height: 992px) {
-          font-size: 25px;
-        }
+        font-size: 30px;
       }
     }
     &-btn {
