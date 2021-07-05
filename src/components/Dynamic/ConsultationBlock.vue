@@ -13,7 +13,6 @@
           </div>
           <main-button
             class="consultation-block__btn"
-            :width="304"
             :fontsize="14"
             backgroundcolor="#000"
             color="#fff"

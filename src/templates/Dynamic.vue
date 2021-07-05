@@ -28,16 +28,16 @@ query ($id: ID!) {
 
 <script>
 import TitleBlock from '@/components/Dynamic/TitleBlock'
-import PlansBlock from '@/components/Dynamic/PlansBlock'
-import PriceBlock from '@/components/Dynamic/PriceBlock'
+import PlansBlock from '@/components/Dynamic/PlansBlock/PlansBlock'
+import PriceBlock from '@/components/Dynamic/PriceBlock/PriceBlock'
 import OtherBlock from '@/components/Dynamic/OtherBlock'
-import ResultsBlock from '@/components/Dynamic/ResultsBlock'
+import ResultsBlock from '@/components/Dynamic/ResultsBlock/ResultsBlock'
 import ConsultationBlock from '@/components/Dynamic/ConsultationBlock'
 import QuoteBlock from '@/components/Dynamic/QuoteBlock'
 import FormBlock from '@/components/Dynamic/FormBlock'
 //
 import HeadBlock from '@/components/Dynamic/HeadBlock'
-import CardsBlock from '@/components/Dynamic/CardsBlock'
+import CardsBlock from '@/components/Dynamic/CardsBlock/CardsBlock'
 import ContactsBlock from '@/components/Dynamic/ContactsBlock'
 
 export default {

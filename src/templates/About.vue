@@ -6,7 +6,7 @@
           <div class="about__head">
             <h1 class="title">{{ $page.about.title }}</h1>
             <h2 class="about__head-subtitle">Atollon — интегратор amoCRM</h2>
-            <p class="about__head-desc">
+            <p class="text about__head-text">
               специализирующийся на цифровой трансформации продаж. Мы
               фокусируемся исключительно на amoCRM как платформе,на базе которой
               делаем сложные проекты по внедрению и интеграции.
@@ -48,25 +48,25 @@
               <h1 class="title about__team-title">Команда</h1>
               <div class="row">
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
                 <div class="column column-30">
-                  <team-person />
+                  <main-team-person />
                 </div>
               </div>
             </div>
@@ -104,12 +104,12 @@ query ($id: ID!) {
 
 <script>
 import MainButton from '@/components/Common/MainButton'
-import TeamPerson from '@/components/Section/SectionTeam/TeamPerson'
+import MainTeamPerson from '@/components/Main/MainTeam/MainTeamPerson'
 
 export default {
   components: {
     MainButton,
-    TeamPerson
+    MainTeamPerson
   },
   metaInfo() {
     return {
@@ -131,12 +131,9 @@ export default {
       font-size: 24px;
       font-weight: $font_semibold;
     }
-    &-desc {
+    &-text {
       line-height: 1.547;
       margin-top: 14px;
-      color: #222222;
-      font-weight: $font_regular;
-      font-size: 18px;
     }
     &-img {
       display: inline-block;

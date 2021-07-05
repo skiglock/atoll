@@ -5,16 +5,18 @@
         <h1 class="title contacts-page__title">{{ $page.contacts.title }}</h1>
         <div class="contacts-page__body">
           <div class="row">
-            <div class="column column-50">
-              <div class="contacts-page__connect">
-                <div class="contacts-page__location">
-                  Адрес: Чебоксары, ул. Мичмана Павлова 8А
-                </div>
-
-                <div class="contacts-page__number">
-                  Телефон: +7 (495) 278 18 02
-                </div>
-                <div class="contacts-page__mail">Почта: hello@atollon.ru</div>
+            <div class="column column-50 contacts-page--column">
+              <div class="contacts-page__adress">
+                <h1 class="title">Адрес:</h1>
+                <p class="text">Чебоксары, ул. Мичмана Павлова 8А</p>
+              </div>
+              <div class="contacts-page__phone">
+                <h1 class="title">Телефон:</h1>
+                <p class="text">+7 (495) 278 18 02</p>
+              </div>
+              <div class="contacts-page__mail">
+                <h1 class="title">Почта:</h1>
+                <p class="text">hello@atollon.ru</p>
               </div>
             </div>
             <div class="column column-50">
@@ -60,25 +62,19 @@ export default {
   &__title {
     text-align: center;
   }
+  &--column {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
   &__body {
     margin-top: 57px;
-    display: flex;
-    justify-content: space-between;
   }
   &__connect {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-  }
-  &__location,
-  &__number,
-  &__mail {
-    color: #181818;
-    font-size: 26px;
-    font-weight: $font_regular;
-    line-height: 1.263;
-    font-weight: $font_semibold;
+    justify-content: space-between;
+    align-items: space-between;
   }
   &__form {
     &-title {

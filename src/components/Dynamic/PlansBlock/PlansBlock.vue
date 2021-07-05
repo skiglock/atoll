@@ -1,0 +1,56 @@
+<template>
+  <div class="block plans-block">
+    <div class="title">Вы должны регулярно заниматься своей CRM-системой</div>
+    <div class="text">
+      Вопросы и проблемы появляются регулярно, но их решение не влияет на успех
+      отдела продаж.
+    </div>
+    <div class="plans-block__steps">
+      <div class="row">
+        <div class="column column-30">
+          <plans-block-item />
+        </div>
+        <div class="column column-30">
+          <plans-block-item />
+        </div>
+        <div class="column column-30">
+          <plans-block-item />
+        </div>
+        <div class="column column-30">
+          <plans-block-item />
+        </div>
+        <div class="column column-30">
+          <plans-block-item />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import PlansBlockItem from '@/components/Dynamic/PlansBlock/PlansBlockItem'
+export default {
+  name: 'PlansBlock',
+  components: {
+    PlansBlockItem
+  }
+}
+</script>
+
+<style lang="scss">
+.plans-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .text {
+    margin-top: 23px;
+    line-height: 1.448;
+  }
+  &__steps {
+    .row {
+      justify-content: center;
+    }
+  }
+}
+</style>

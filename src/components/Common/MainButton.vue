@@ -70,8 +70,8 @@ export default {
         '--color': this.color,
         '--backgroundcolor': this.backgroundcolor,
         '--borderradius': `${this.borderradius}px`,
-        '--width': `${this.width}px`,
-        '--height': `${this.height}px`,
+        // '--width': `${this.width}px`,
+        // '--height': `${this.height}px`,
         '--padding': this.padding,
         '--hover': this.hover
       }
@@ -91,6 +91,9 @@ export default {
   color: var(--color);
   border-radius: var(--borderradius);
   padding: var(--padding);
+  &:hover {
+    background-color: #7397f3;
+  }
   // max-height: var(--height);
   // max-width: var(--width);
   &--link {

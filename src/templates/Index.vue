@@ -18,11 +18,11 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import MainServices from '@/components/Main/MainServices'
+import MainServices from '@/components/Main/MainServices/MainServices'
 import MainConsultation from '@/components/Main/MainConsultation'
-import MainClients from '@/components/Main/MainClients'
-import MainTeam from '@/components/Main/MainTeam'
-import MainBlog from '@/components/Main/MainBlog'
+import MainClients from '@/components/Main/MainClients/MainClients'
+import MainTeam from '@/components/Main/MainTeam/MainTeam'
+import MainBlog from '@/components/Main/MainBlog/MainBlog'
 import MainOrder from '@/components/Main/MainOrder'
 
 export default {

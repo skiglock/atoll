@@ -5,13 +5,13 @@
         <h1 class="title team__title">Наша команда экспертов</h1>
         <div class="row">
           <div class="column column-30">
-            <team-person />
+            <main-team-person />
           </div>
           <div class="column column-30">
-            <team-person />
+            <main-team-person />
           </div>
           <div class="column column-30">
-            <team-person />
+            <main-team-person />
           </div>
         </div>
         <div class="team__dots">
@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import TeamPerson from '@/components/Section/SectionTeam/TeamPerson'
+import MainTeamPerson from '@/components/Main/MainTeam/MainTeamPerson'
 export default {
   name: 'MainTeam',
-  components: { TeamPerson }
+  components: { MainTeamPerson }
 }
 </script>
 

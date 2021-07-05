@@ -16,7 +16,6 @@
                 backgroundcolor="#fff"
                 color="#000"
                 :fontsize="11"
-                :width="155"
                 :height="40"
                 class="price-block__card-btn"
                 >Выбрать</main-button
@@ -28,26 +27,9 @@
               <h1 class="title price-block__list-title">
                 В рамках тарифа вам доступно:
               </h1>
-
-              <div class="price-block__list-item">
-                <span class="price-block__list-number">1</span>
-                <p class="text price-block__list-text">
-                  Личный чат с Аналитиком
-                </p>
-              </div>
-              <div class="price-block__list-item">
-                <span class="price-block__list-number">2</span>
-                <p class="text price-block__list-text">
-                  Высокий приоритет на срочые запросы и сообщения в чате
-                </p>
-              </div>
-              <div class="price-block__list-item">
-                <span class="price-block__list-number">3</span>
-                <p class="text price-block__list-text">
-                  Персональная доска в Asana с бэклогом идеи минимум тремя
-                  задачами на реализацию
-                </p>
-              </div>
+              <price-block-item />
+              <price-block-item />
+              <price-block-item />
             </div>
           </div>
         </div>
@@ -57,10 +39,14 @@
 </template>
 
 <script>
+import PriceBlockItem from '@/components/Dynamic/PriceBlock/PriceBlockItem'
 import MainButton from '@/components/Common/MainButton'
 export default {
-  components: { MainButton },
-  name: 'PriceBlock'
+  name: 'PriceBlock',
+  components: {
+    MainButton,
+    PriceBlockItem
+  }
 }
 </script>
 
@@ -101,36 +87,6 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    &-item + &-item {
-      margin-top: 10px;
-    }
-    &-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      justify-content: center;
-    }
-    &-number {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background-color: $white_color;
-      box-shadow: 0px 3px 3px 0px rgba($black_color, 0.15);
-      width: 45px;
-      height: 45px;
-      font-size: 18px;
-      color: #131313;
-      font-weight: $font_light;
-    }
-    &-text {
-      width: 100%;
-      margin-left: 22px;
-    }
-    &-title {
-      margin-top: 18px;
-      margin-bottom: 25px;
-    }
   }
 }
 </style>
