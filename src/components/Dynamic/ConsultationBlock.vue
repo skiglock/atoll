@@ -59,6 +59,25 @@ export default {
     width: 70%;
     line-height: 1.4;
   }
+  &__img {
+    position: relative;
+    &::after {
+      z-index: 13;
+      position: absolute;
+      content: '';
+      border: 15px solid #487bfa;
+      max-width: 440px;
+      max-height: 144px;
+      border-radius: 50% / 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-top: 0;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      top: 345px;
+    }
+  }
   &__btn {
     margin-top: 35px;
   }

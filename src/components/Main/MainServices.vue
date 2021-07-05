@@ -3,7 +3,7 @@
     <div class="container">
       <div class="services__inner">
         <div class="row">
-          <div class="column">
+          <div class="column column-30">
             <div class="card services__card">
               <h1 class="services__card-title">
                 Аудит и стратегия развития amoCRM
@@ -19,7 +19,7 @@
               </div>
             </div>
           </div>
-          <div class="column">
+          <div class="column column-30">
             <div class="card services__card">
               <h1 class="services__card-title">Внедрение amoCRM</h1>
               <span class="separator"></span>
@@ -32,7 +32,7 @@
               </div>
             </div>
           </div>
-          <div class="column">
+          <div class="column column-30">
             <div class="card services__card">
               <h1 class="services__card-title">Сопровождение amoCRM</h1>
               <span class="separator"></span>

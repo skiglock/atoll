@@ -10,7 +10,7 @@
           CRM и получить пошаговый план усиления ее эффективности
         </p>
       </div>
-      <div class="column">
+      <div class="column column-30">
         <div class="head-block__img">
           <g-image src="@/assets/img/dynamic/girl-1.png" />
         </div>
@@ -42,19 +42,19 @@ export default {
   }
   &__img {
     max-width: 350px;
-    max-height: 382px;
     position: relative;
     &::after {
       position: absolute;
       z-index: 11;
-      content: ' ^';
-      width: 351px;
+      content: '.';
+      color: $main_color;
+      max-width: 351px;
       max-height: 20px;
       background-color: $main_color;
       border-radius: 30px;
-      bottom: 0;
       left: -35px;
       right: 0;
+      bottom: 0;
     }
   }
 }

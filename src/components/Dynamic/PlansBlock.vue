@@ -7,7 +7,7 @@
     </div>
     <div class="plans-block__steps">
       <div class="row">
-        <div class="column">
+        <div class="column column-30">
           <div class="plans-block__item">
             <h1 class="plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
@@ -15,7 +15,7 @@
             </p>
           </div>
         </div>
-        <div class="column">
+        <div class="column column-30">
           <div class="plans-block__item">
             <h1 class="plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
@@ -23,7 +23,7 @@
             </p>
           </div>
         </div>
-        <div class="column">
+        <div class="column column-30">
           <div class="plans-block__item">
             <h1 class="plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
@@ -31,7 +31,7 @@
             </p>
           </div>
         </div>
-        <div class="column">
+        <div class="column column-30">
           <div class="plans-block__item">
             <h1 class="plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
@@ -39,7 +39,7 @@
             </p>
           </div>
         </div>
-        <div class="column">
+        <div class="column column-30">
           <div class="plans-block__item">
             <h1 class="plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">

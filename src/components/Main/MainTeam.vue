@@ -4,13 +4,13 @@
       <div class="team__inner">
         <h1 class="team__title">Наша команда экспертов</h1>
         <div class="row">
-          <div class="column">
+          <div class="column column-30">
             <team-person />
           </div>
-          <div class="column">
+          <div class="column column-30">
             <team-person />
           </div>
-          <div class="column">
+          <div class="column column-30">
             <team-person />
           </div>
         </div>

@@ -2,60 +2,74 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <div class="column">
-          <div class="footer__about">
-            <img
-              class="footer__logo"
-              src="@/assets/img/logo-footer.png"
-              alt=""
-            />
-            <p class="footer__copyright">© 2021 Atollon</p>
-            <div class="footer__contacts">
-              <a href="tel:+74952781802" class="footer__contacts-number"
-                >+7 (495) 278 18 02</a
-              >
-              <a href="mailto:hello@atollon.ru" class="footer__contacts-mail"
-                >hello@atollon.ru</a
-              >
+        <div class="row">
+          <div class="column column-30">
+            <div class="footer__about">
+              <img
+                class="footer__logo"
+                src="@/assets/img/logo-footer.png"
+                alt=""
+              />
+              <p class="footer__copyright">© 2021 Atollon</p>
+              <div class="footer__contacts">
+                <a href="tel:+74952781802" class="footer__contacts-number"
+                  >+7 (495) 278 18 02</a
+                >
+                <a href="mailto:hello@atollon.ru" class="footer__contacts-mail"
+                  >hello@atollon.ru</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="column column-30">
+            <div class="footer__menu">
+              <h1 class="footer__menu-title">Продукт</h1>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">Atollon</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">Блог</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">О команде</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="column column-30">
+            <div class="footer__menu">
+              <h1 class="footer__menu-title">Интеграции</h1>
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">API</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a href="#" class="footer__menu-link">Webhooks</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="column">
-          <div class="footer__menu">
-            <h1 class="footer__menu-title">Продукт</h1>
-            <ul class="footer__menu-list">
-              <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Atollon</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Блог</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">О команде</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="column">
-          <div class="footer__menu">
-            <h1 class="footer__menu-title">Интеграции</h1>
-            <ul class="footer__menu-list">
-              <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">API</a>
-              </li>
-              <li class="footer__menu-item">
-                <a href="#" class="footer__menu-link">Webhooks</a>
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="footer__docs">
-          <a href="#" class="footer__docs-link">Политика конфедициальности</a>
-          <a href="#" class="footer__docs-link">Политика возврата средств</a>
-          <a href="#" class="footer__docs-link">Защита от мошенничества</a>
+          <div class="row">
+            <div class="column column-30">
+              <a href="#" class="footer__docs-link"
+                >Политика конфедициальности</a
+              >
+            </div>
+            <div class="column column-30">
+              <a href="#" class="footer__docs-link"
+                >Политика возврата средств</a
+              >
+            </div>
+            <div class="column column-30">
+              <a href="#" class="footer__docs-link">Защита от мошенничества</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -72,10 +86,7 @@ export default {
 .footer {
   margin-top: 222px;
   &__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 25px 0;
+    padding-top: 25px;
   }
   &__logo {
     width: 98px;
@@ -121,10 +132,11 @@ export default {
   &__docs {
     margin-top: 69px;
     &-link {
+      display: flex;
+      justify-content: center;
       font-weight: $font_regular;
       color: #1b1b1b;
       font-size: 15px;
-      margin-right: 45px;
       &:hover {
         color: $main_color;
       }

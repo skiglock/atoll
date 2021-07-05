@@ -47,25 +47,25 @@
             <div class="about__team">
               <h1 class="about__team-title">Команда</h1>
               <div class="row">
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
-                <div class="column">
+                <div class="column column-30">
                   <team-person />
                 </div>
               </div>
