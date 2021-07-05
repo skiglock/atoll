@@ -54,9 +54,10 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 364px;
-    min-height: 249px;
+    max-width: 364px;
+    max-height: 249px;
     border-radius: 28px;
+    padding: 106px 85px 95px 77px;
 
     background-color: $white_color;
     &-img {

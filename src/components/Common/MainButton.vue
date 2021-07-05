@@ -98,5 +98,20 @@ export default {
     text-decoration: none;
     text-align: center;
   }
+  @media screen and (max-width: 992px) {
+    font-size: 21px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 19px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 17px;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 13px;
+  }
 }
 </style>

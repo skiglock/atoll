@@ -5,13 +5,13 @@
         <div class="row">
           <div class="column column-30">
             <div class="card services__card">
-              <h1 class="services__card-title">
+              <h1 class="title services__card-title">
                 Аудит и стратегия развития amoCRM
               </h1>
               <span class="separator"></span>
 
               <div class="services__card-body">
-                <p class="services__card-desc">
+                <p class="text services__card-text">
                   Проанализируем вашу систему продажи составим карту внедрения
                   или развития вашей amoCRM
                 </p>
@@ -21,10 +21,10 @@
           </div>
           <div class="column column-30">
             <div class="card services__card">
-              <h1 class="services__card-title">Внедрение amoCRM</h1>
+              <h1 class="title services__card-title">Внедрение amoCRM</h1>
               <span class="separator"></span>
               <div class="services__card-body">
-                <p class="services__card-desc">
+                <p class="text services__card-text">
                   Изучим процессы вашей компании, настроим воронки продаж,
                   интеграции и обучим сотрудников работе с системой
                 </p>
@@ -34,10 +34,10 @@
           </div>
           <div class="column column-30">
             <div class="card services__card">
-              <h1 class="services__card-title">Сопровождение amoCRM</h1>
+              <h1 class="title services__card-title">Сопровождение amoCRM</h1>
               <span class="separator"></span>
               <div class="services__card-body">
-                <p class="services__card-desc">
+                <p class="text services__card-text">
                   Получите в распоряжение команду экспертов для ежемесячного
                   развития и гарантии работоспособности CRM-системы
                 </p>
@@ -81,13 +81,9 @@ export default {
       min-height: 100px;
       padding: 30px;
       text-align: center;
-      font-size: 22px;
-      color: #222222;
       font-weight: $font_medium;
     }
-    &-desc {
-      font-size: 14px;
-      color: #1f1f1f;
+    &-text {
       font-weight: $font_light;
     }
     &-btn {

@@ -42,7 +42,6 @@ export default {
         max-width: 475px;
         font-weight: $font_medium;
         text-align: center;
-        font-size: 30px;
       }
     }
     &-btn {

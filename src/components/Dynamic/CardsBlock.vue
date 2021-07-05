@@ -96,7 +96,7 @@ export default {
     justify-content: center;
     align-items: center;
     max-width: 442px;
-    max-height: 344px;
+    min-height: 344px;
     &-icon {
       display: flex;
       justify-content: center;

@@ -2,7 +2,7 @@
   <section class="team">
     <div class="container">
       <div class="team__inner">
-        <h1 class="team__title">Наша команда экспертов</h1>
+        <h1 class="title team__title">Наша команда экспертов</h1>
         <div class="row">
           <div class="column column-30">
             <team-person />
@@ -38,9 +38,6 @@ export default {
     padding: 105px 0;
   }
   &__title {
-    font-weight: $font_bold;
-    font-size: 26px;
-    color: #222222;
     text-align: center;
     margin-bottom: 51px;
   }

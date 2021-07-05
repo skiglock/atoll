@@ -31,7 +31,6 @@ export default {
     align-items: center;
   }
   &__title {
-    font-size: 33px;
     line-height: 1.147;
     text-align: left;
   }

@@ -4,12 +4,12 @@
       <div class="container">
         <head-block />
         <cards-block />
-        <!-- <title-block /> -->
-        <!-- <plans-block /> -->
+        <title-block />
+        <plans-block />
         <price-block />
         <other-block />
         <quote-block />
-        <!-- <results-block /> -->
+        <results-block />
         <consultation-block />
         <form-block />
         <contacts-block />

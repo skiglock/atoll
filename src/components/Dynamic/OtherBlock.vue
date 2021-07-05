@@ -32,7 +32,6 @@ export default {
 <style lang="scss">
 .other-block {
   &__inner {
-    display: flex;
     margin-top: 63px;
   }
   &__img {
@@ -45,7 +44,6 @@ export default {
     align-items: center;
     .text {
       text-align: right;
-      font-size: 18px;
       line-height: 1.859;
     }
   }

@@ -23,7 +23,7 @@
           </div>
           <div class="column column-30">
             <div class="footer__menu">
-              <h1 class="footer__menu-title">Продукт</h1>
+              <h1 class="title footer__menu-title">Продукт</h1>
               <ul class="footer__menu-list">
                 <li class="footer__menu-item">
                   <a href="#" class="footer__menu-link">Atollon</a>
@@ -42,7 +42,7 @@
           </div>
           <div class="column column-30">
             <div class="footer__menu">
-              <h1 class="footer__menu-title">Интеграции</h1>
+              <h1 class="title footer__menu-title">Интеграции</h1>
               <ul class="footer__menu-list">
                 <li class="footer__menu-item">
                   <a href="#" class="footer__menu-link">API</a>
@@ -112,9 +112,7 @@ export default {
   }
   &__menu {
     &-title {
-      font-size: 22px;
       color: #1b1b1b;
-      font-weight: $font_semibold;
       margin-bottom: 29px;
     }
     &-item {

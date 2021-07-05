@@ -1,6 +1,6 @@
 <template>
   <div class="block results-block">
-    <div class="title">Результаты сопровождения amoCRM</div>
+    <h1 class="title">Результаты сопровождения amoCRM</h1>
     <div
       class="results-block__item"
       :style="{ backgroundImage: `url(${getResult})` }"
@@ -46,7 +46,7 @@ export default {
     justify-content: flex-end;
     border-radius: 30px;
     margin-top: 32px;
-    width: 863px;
+    max-width: 863px;
     height: 644px;
     box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.17);
     background-repeat: no-repeat;

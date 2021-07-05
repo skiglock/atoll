@@ -6,8 +6,8 @@
     }"
   >
     <div class="title-block__inner">
-      <h1 class="title-block__text">Сопровождение amoCRM</h1>
-      <p class="title-block__desc">
+      <h1 class="title title-block__title">Сопровождение amoCRM</h1>
+      <p class="text title-block__text">
         Выделенный аналитик будет планомерно развивать вашу CRM-систему и станет
         единым окном для всех возникающих проблем и вопросов.
       </p>
@@ -41,16 +41,10 @@ export default {
     flex-direction: column;
     height: 100%;
   }
-  &__text {
-    font-size: 24px;
-    font-weight: $font_semibold;
-    color: #232323;
+  &__title {
   }
-  &__desc {
+  &__text {
     margin-top: 26px;
-    color: #232323;
-    font-weight: $font_regular;
-    font-size: 18px;
   }
   min-height: 400px;
   width: 100%;

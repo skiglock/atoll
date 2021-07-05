@@ -45,7 +45,7 @@
               </div>
             </div>
             <div class="about__team">
-              <h1 class="about__team-title">Команда</h1>
+              <h1 class="title about__team-title">Команда</h1>
               <div class="row">
                 <div class="column column-30">
                   <team-person />
@@ -170,9 +170,6 @@ export default {
     margin-top: 163px;
     &-title {
       margin-bottom: 61px;
-      font-size: 30px;
-      font-weight: $font_semibold;
-      color: #222222;
     }
   }
   &__target {

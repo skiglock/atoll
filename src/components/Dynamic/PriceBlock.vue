@@ -85,9 +85,7 @@ export default {
     border-radius: 37px;
     background-color: $main_color;
     &-title {
-      font-size: 31px;
       color: $white_color;
-      font-weight: $font_bold;
     }
     &-desc {
       margin-top: 7px;

@@ -13,7 +13,7 @@
               >Консультация</main-button
             >
           </div>
-          <div class="column column-50" style="width: 50%">
+          <div class="column column-50">
             <g-image
               class="consultation__img"
               src="@/assets/img/consultation.png"
@@ -54,7 +54,7 @@ export default {
     margin-top: 30px;
     font-size: 18px;
     font-weight: $font_medium;
-    letter-spacing: 1.436;
+    // letter-spacing: 1.436px;
   }
 }
 </style>

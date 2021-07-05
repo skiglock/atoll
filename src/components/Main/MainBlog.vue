@@ -56,6 +56,16 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(417px, 1fr));
     grid-gap: 27px;
+    @media screen and (max-width: 460px) {
+      grid-gap: 15px;
+
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    @media screen and (max-width: 320px) {
+      grid-gap: 10px;
+
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
   }
   &__card {
     display: flex;

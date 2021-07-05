@@ -2,7 +2,7 @@
   <Layout>
     <section class="contacts-page">
       <div class="container">
-        <h1 class="contacts-page__title">{{ $page.contacts.title }}</h1>
+        <h1 class="title contacts-page__title">{{ $page.contacts.title }}</h1>
         <div class="contacts-page__body">
           <div class="row">
             <div class="column column-50">
@@ -58,9 +58,6 @@ export default {
 <style lang="scss">
 .contacts-page {
   &__title {
-    font-size: 21px;
-    color: #232323;
-    font-weight: $font_semibold;
     text-align: center;
   }
   &__body {

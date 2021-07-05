@@ -9,7 +9,7 @@
       <div class="row">
         <div class="column column-30">
           <div class="plans-block__item">
-            <h1 class="plans-block__item-title">Грамотная архитектура</h1>
+            <h1 class="title plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
               Построим масштабируемую архитектуру отдела продаж на базе amoCRM
             </p>
@@ -17,7 +17,7 @@
         </div>
         <div class="column column-30">
           <div class="plans-block__item">
-            <h1 class="plans-block__item-title">Грамотная архитектура</h1>
+            <h1 class="title plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
               Построим масштабируемую архитектуру отдела продаж на базе amoCRM
             </p>
@@ -25,7 +25,7 @@
         </div>
         <div class="column column-30">
           <div class="plans-block__item">
-            <h1 class="plans-block__item-title">Грамотная архитектура</h1>
+            <h1 class="title plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
               Построим масштабируемую архитектуру отдела продаж на базе amoCRM
             </p>
@@ -33,7 +33,7 @@
         </div>
         <div class="column column-30">
           <div class="plans-block__item">
-            <h1 class="plans-block__item-title">Грамотная архитектура</h1>
+            <h1 class="title plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
               Построим масштабируемую архитектуру отдела продаж на базе amoCRM
             </p>
@@ -41,7 +41,7 @@
         </div>
         <div class="column column-30">
           <div class="plans-block__item">
-            <h1 class="plans-block__item-title">Грамотная архитектура</h1>
+            <h1 class="title plans-block__item-title">Грамотная архитектура</h1>
             <p class="plans-block__item-desc">
               Построим масштабируемую архитектуру отдела продаж на базе amoCRM
             </p>
@@ -74,15 +74,13 @@ export default {
     }
   }
   &__item {
-    max-width: 303px;
+    min-width: 303px;
     min-height: 236px;
     border-radius: 26px;
     background-color: $white_color;
     box-shadow: 0px 4px 7px 0px rgba($black_color, 0.17);
     padding: 40px 60px 60px 26px;
     &-title {
-      font-size: 25px;
-      color: #232323;
       font-weight: $font_medium;
     }
     &-desc {
