@@ -3,14 +3,14 @@
     <div class="row">
       <div class="column column-50">
         <div class="consultation-block__left">
-          <div class="title consultation-block__title">
+          <h1 class="title consultation-block__title">
             Примените экспертизу нашей команды, чтобы усилить вашу систему
             продаж
-          </div>
-          <div class="text consultation-block__text">
+          </h1>
+          <p class="text consultation-block__text">
             Оставьте заявку, чтобы получить приглашение на бесплатную
             консультацию
-          </div>
+          </p>
           <main-button
             class="consultation-block__btn"
             :fontsize="14"
@@ -47,16 +47,25 @@ export default {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    @media screen and (max-width: 576px) {
+      align-items: center;
+    }
   }
   &__title {
     width: 100%;
     text-align: left;
     line-height: 1.5;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
   &__text {
     margin-top: 19px;
     width: 70%;
     line-height: 1.4;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
   &__img {
     position: relative;

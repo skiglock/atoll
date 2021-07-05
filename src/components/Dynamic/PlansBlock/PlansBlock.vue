@@ -1,7 +1,9 @@
 <template>
   <div class="block plans-block">
-    <div class="title">Вы должны регулярно заниматься своей CRM-системой</div>
-    <div class="text">
+    <div class="title plans-block__title">
+      Вы должны регулярно заниматься своей CRM-системой
+    </div>
+    <div class="text plans-block__text">
       Вопросы и проблемы появляются регулярно, но их решение не влияет на успех
       отдела продаж.
     </div>
@@ -39,11 +41,17 @@ export default {
 
 <style lang="scss">
 .plans-block {
+  &__title,
+  &__text {
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .text {
+  &__text {
     margin-top: 23px;
     line-height: 1.448;
   }

@@ -40,9 +40,16 @@ export default {
     margin-bottom: 20px;
   }
   &__item {
+    @media screen and (max-width: 768px) {
+      height: 400px;
+    }
+    @media screen and (max-width: 576px) {
+      height: 300px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
     border-radius: 30px;
     margin-top: 32px;
     max-width: 863px;
@@ -57,12 +64,31 @@ export default {
       z-index: 10;
       background-color: $white_color;
       top: 102px;
-      right: 373px;
+      right: 313px;
       border-radius: 50%;
       width: 940px;
-      height: 605px;
+      height: 567px;
       img {
         border-radius: 30px;
+      }
+      @media screen and (max-width: 768px) {
+        top: 20px;
+        right: 193px;
+        width: 640px;
+        height: 405px;
+      }
+      @media screen and (max-width: 576px) {
+        top: 20px;
+        right: 40px;
+        height: 305px;
+      }
+      @media screen and (max-width: 460px) {
+        top: 20px;
+        right: 10px;
+      }
+      @media screen and (max-width: 320px) {
+        top: 30px;
+        right: 0;
       }
     }
 
@@ -70,17 +96,42 @@ export default {
       z-index: 11;
       margin-left: 12px;
       width: 38%;
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+      @media screen and (max-width: 460px) {
+        width: 280px;
+      }
     }
     &-logo {
       max-width: 156px;
       max-height: 37px;
+      @media screen and (max-width: 460px) {
+        max-width: 100px;
+        max-height: 37px;
+      }
     }
     &-text {
       margin-top: 44px;
       line-height: 2;
+      @media screen and (max-width: 768px) {
+        line-height: 1;
+      }
+      @media screen and (max-width: 576px) {
+        margin-top: 14px;
+      }
+      @media screen and (max-width: 460px) {
+        width: 76%;
+      }
+      @media screen and (max-width: 320px) {
+        width: 70%;
+      }
     }
     &-btn {
       margin-top: 41px;
+      @media screen and (max-width: 576px) {
+        margin-top: 14px;
+      }
     }
   }
 }

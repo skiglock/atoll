@@ -29,6 +29,10 @@ export default {
   &__inner {
     text-align: right;
     margin-right: 70px;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+      margin-right: 0;
+    }
   }
   &__title {
     text-align: inherit;
@@ -36,6 +40,9 @@ export default {
   }
   &__text {
     margin-top: 27px;
+    @media screen and (max-width: 576px) {
+      margin-top: 5px;
+    }
   }
 }
 </style>

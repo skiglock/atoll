@@ -26,6 +26,14 @@ export default {
 .contacts-block {
   &__inner {
     margin-top: 71px;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
+  }
+  .title {
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
   .text {
     margin-top: 15px;

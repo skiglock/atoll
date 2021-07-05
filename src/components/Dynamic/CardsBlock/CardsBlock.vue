@@ -47,10 +47,22 @@ export default {
   &__body {
     margin-top: 57px;
     padding: 45px 18px;
+    @media screen and (max-width: 576px) {
+      margin-top: 10px;
+      padding: 0;
+    }
   }
   .column {
     @media screen and (max-width: 768px) {
       padding: 20px;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 10px;
+    }
+  }
+  .column + .column {
+    @media screen and (max-width: 576px) {
+      margin-top: 20px;
     }
   }
 }

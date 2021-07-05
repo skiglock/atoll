@@ -31,6 +31,9 @@ export default {
 
 <style lang="scss">
 .other-block {
+  .title {
+    text-align: center;
+  }
   &__inner {
     margin-top: 63px;
   }

@@ -22,6 +22,9 @@ export default {
   &__card {
     position: relative;
     padding: 52px 66px 40px 69px;
+    @media screen and (max-width: 576px) {
+      padding: 40px;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;

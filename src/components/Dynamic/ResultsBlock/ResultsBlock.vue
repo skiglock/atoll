@@ -20,6 +20,9 @@ export default {
 
 <style lang="scss">
 .results-block {
+  .title {
+    text-align: center;
+  }
   &__inner {
   }
 }

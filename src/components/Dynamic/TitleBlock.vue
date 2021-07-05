@@ -2,7 +2,7 @@
   <div
     class="block title-block"
     :style="{
-      backgroundImage: `url(${getImage})`
+      background: `url(${getImage}) 50% 50% no-repeat`
     }"
   >
     <div class="title-block__inner">
@@ -40,6 +40,11 @@ export default {
     align-items: flex-start;
     flex-direction: column;
     height: 100%;
+    @media screen and (max-width: 576px) {
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
   }
   &__title {
   }
@@ -48,7 +53,5 @@ export default {
   }
   min-height: 400px;
   width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 </style>

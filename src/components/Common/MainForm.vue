@@ -30,6 +30,9 @@ export default {
 
 <style lang="scss">
 .form {
+  @media screen and (max-width: 576px) {
+    justify-self: center;
+  }
   &__item {
     margin-top: 30px;
   }
