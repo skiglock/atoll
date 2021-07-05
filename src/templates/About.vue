@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="about__target">
-            <h1 class="text about__target-title">Наша большая цель</h1>
+            <h1 class="title about__target-title">Наша большая цель</h1>
             <h2 class="text">
               поменять устаревший подход к управлению продажами и доказать, что
               правильные инструменты позволяют системно выполнять план продаж с
@@ -144,13 +144,16 @@ export default {
     }
     &-subcircle {
       position: relative;
+      img {
+        border-radius: 50% / 100%;
+      }
       &::before {
         z-index: 5;
         position: absolute;
         content: '';
         border: 20px solid $main_color;
-        width: 900px;
-        height: 360px;
+        max-width: 900px;
+        max-height: 360px;
         border-radius: 50% / 100%;
         border-top-left-radius: 0;
         border-top-right-radius: 0;

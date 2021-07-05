@@ -3,7 +3,7 @@
     <section class="other">
       <div class="container">
         <head-block />
-        <card-block />
+        <cards-block />
         <!-- <title-block /> -->
         <!-- <plans-block /> -->
         <price-block />
@@ -37,7 +37,7 @@ import QuoteBlock from '@/components/Dynamic/QuoteBlock'
 import FormBlock from '@/components/Dynamic/FormBlock'
 //
 import HeadBlock from '@/components/Dynamic/HeadBlock'
-import CardBlock from '@/components/Dynamic/CardBlock'
+import CardsBlock from '@/components/Dynamic/CardsBlock'
 import ContactsBlock from '@/components/Dynamic/ContactsBlock'
 
 export default {
@@ -52,7 +52,7 @@ export default {
     FormBlock,
     //
     HeadBlock,
-    CardBlock,
+    CardsBlock,
     ContactsBlock
   },
   metaInfo() {

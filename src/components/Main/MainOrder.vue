@@ -4,8 +4,8 @@
       <div class="order__inner">
         <div class="row">
           <div class="column column-50">
-            <h1 class="order__title">Заказать интеграцию</h1>
-            <p class="order__desc">
+            <h1 class="title order__title">Заказать интеграцию</h1>
+            <p class="text order__text">
               Менеджер узнает про вашу задачу и подскажет что делать дальше
             </p>
           </div>
@@ -35,18 +35,10 @@ export default {
   &__inner {
   }
   &__title,
-  &__desc {
+  &__text {
     text-align: right;
   }
-  &__title {
-    font-size: 28px;
-    color: #1b1b1b;
-    font-weight: $font_bold;
-  }
-  &__desc {
-    font-size: 18px;
-    color: #1b1b1b;
-    font-weight: $font_regular;
+  &__text {
     margin-top: 21px;
   }
 }

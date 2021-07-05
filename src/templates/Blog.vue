@@ -2,26 +2,26 @@
   <Layout>
     <section class="blog-page">
       <div class="container">
-        <h1 class="title">
+        <h1 class="title blog-page__title">
           {{ $page.blog.title }}
         </h1>
         <div class="blog-page__list">
-          <div class="blog-page__item">
-            <div class="blog-page__item-category">Категория</div>
+          <div class="card blog-page__card">
+            <div class="blog-page__card-category">Категория</div>
             <div class="row">
               <div class="column column-50">
-                <div class="blog-page__item-left">
-                  <div class="blog-page__item-img">
+                <div class="blog-page__card-left">
+                  <div class="blog-page__card-img">
                     <g-image src="@/assets/img/blog/blog-item.png" />
                   </div>
                 </div>
               </div>
               <div class="column column-50">
-                <div class="blog-page__item-right">
-                  <h1 class="blog-page__item-title">
+                <div class="blog-page__card-right">
+                  <h1 class="blog-page__card-title">
                     Эффективное построение воронки продаж в amoCRM
                   </h1>
-                  <p class="blog-page__item-desc">
+                  <p class="blog-page__card-desc">
                     Начинайте с самого начала - полученного обращения. Будем
                     рассматривать для данной воронки и направления работу с
                     лояльным клиентом, который готов купить. Представим у нас в
@@ -29,27 +29,27 @@
                     дорожку, чтобы он помог клиенту приобрести у нас продукт
                     [...]
                   </p>
-                  <g-link to="/" class="blog-page__item-link">Читать</g-link>
+                  <g-link to="/" class="blog-page__card-link">Читать</g-link>
                 </div>
               </div>
             </div>
           </div>
-          <div class="blog-page__item">
-            <div class="blog-page__item-category">Категория</div>
+          <div class="card blog-page__card">
+            <div class="blog-page__card-category">Категория</div>
             <div class="row">
               <div class="column column-50">
-                <div class="blog-page__item-left">
-                  <div class="blog-page__item-img">
+                <div class="blog-page__card-left">
+                  <div class="blog-page__card-img">
                     <g-image src="@/assets/img/blog/blog-item.png" />
                   </div>
                 </div>
               </div>
               <div class="column column-50">
-                <div class="blog-page__item-right">
-                  <h1 class="blog-page__item-title">
+                <div class="blog-page__card-right">
+                  <h1 class="blog-page__card-title">
                     Эффективное построение воронки продаж в amoCRM
                   </h1>
-                  <p class="blog-page__item-desc">
+                  <p class="blog-page__card-desc">
                     Начинайте с самого начала - полученного обращения. Будем
                     рассматривать для данной воронки и направления работу с
                     лояльным клиентом, который готов купить. Представим у нас в
@@ -57,27 +57,27 @@
                     дорожку, чтобы он помог клиенту приобрести у нас продукт
                     [...]
                   </p>
-                  <g-link to="/" class="blog-page__item-link">Читать</g-link>
+                  <g-link to="/" class="blog-page__card-link">Читать</g-link>
                 </div>
               </div>
             </div>
           </div>
-          <div class="blog-page__item">
-            <div class="blog-page__item-category">Категория</div>
+          <div class="card blog-page__card">
+            <div class="blog-page__card-category">Категория</div>
             <div class="row">
               <div class="column column-50">
-                <div class="blog-page__item-left">
-                  <div class="blog-page__item-img">
+                <div class="blog-page__card-left">
+                  <div class="blog-page__card-img">
                     <g-image src="@/assets/img/blog/blog-item.png" />
                   </div>
                 </div>
               </div>
               <div class="column column-50">
-                <div class="blog-page__item-right">
-                  <h1 class="blog-page__item-title">
+                <div class="blog-page__card-right">
+                  <h1 class="blog-page__card-title">
                     Эффективное построение воронки продаж в amoCRM
                   </h1>
-                  <p class="blog-page__item-desc">
+                  <p class="blog-page__card-desc">
                     Начинайте с самого начала - полученного обращения. Будем
                     рассматривать для данной воронки и направления работу с
                     лояльным клиентом, который готов купить. Представим у нас в
@@ -85,7 +85,7 @@
                     дорожку, чтобы он помог клиенту приобрести у нас продукт
                     [...]
                   </p>
-                  <g-link to="/" class="blog-page__item-link">Читать</g-link>
+                  <g-link to="/" class="blog-page__card-link">Читать</g-link>
                 </div>
               </div>
             </div>
@@ -116,19 +116,19 @@ export default {
 
 <style lang="scss">
 .blog-page {
+  &__title {
+    text-align: center;
+  }
   &__list {
     margin-top: 49px;
   }
-  &__item + &__item {
+  &__card + &__card {
     margin-top: 50px;
   }
-  &__item {
+  &__card {
     display: flex;
     justify-content: space-between;
     padding: 61px 32px 35px;
-    border-radius: 26px;
-    background-color: $white_color;
-    box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
     position: relative;
     &-category {
       display: flex;
@@ -149,6 +149,7 @@ export default {
     &-left {
     }
     &-right {
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

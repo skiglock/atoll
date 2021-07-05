@@ -3,8 +3,8 @@
     <div class="container">
       <div class="blog__head">
         <blockquote>
-          <h1 class="blog__title">Полезные статьи в нашем блоге</h1>
-          <p class="blog__desc">
+          <h1 class="title blog__title">Полезные статьи в нашем блоге</h1>
+          <p class="text blog__text">
             Регулярно пишем статьи о системах продажах, управлении проектами и
             делимся собственным опытом трансформации процессов.
           </p>
@@ -12,20 +12,20 @@
       </div>
       <div class="blog__body">
         <div class="blog__inner">
-          <div class="blog__item">
-            <h2 class="blog__item-title">
+          <div class="card blog__card">
+            <h2 class="title blog__item-title">
               Эффективное построение воронки продаж в amoCRM
             </h2>
             <a class="blog__item-link">Открыть</a>
           </div>
-          <div class="blog__item">
-            <h2 class="blog__item-title">
+          <div class="card blog__card">
+            <h2 class="title blog__item-title">
               Предприниматели о том, зачем бизнесу нужна CRM-система
             </h2>
             <a class="blog__item-link">Открыть</a>
           </div>
-          <div class="blog__item">
-            <h2 class="blog__item-title">
+          <div class="card blog__card">
+            <h2 class="title blog__item-title">
               Интервью с Анной Ивановой, коммерчиским директором amoCRM
             </h2>
             <a class="blog__item-link">Открыть</a>
@@ -50,24 +50,14 @@ export default {
     margin-bottom: 87px;
   }
   &__title {
-    color: #222222;
-    font-size: 30px;
-    font-weight: $font_medium;
   }
-  &__desc {
-    font-size: 15px;
-    color: #222222;
-    font-weight: $font_light;
+  &__text {
     margin-top: 23px;
   }
-  &__item {
+  &__card {
     border-radius: 20px;
-    background-color: $white_color;
-    box-shadow: 0px 2px 5px 0px rgba($black_color, 0.27);
+
     &-title {
-      font-size: 30px;
-      color: #222222;
-      font-weight: $font_semibold;
     }
     &-link {
       font-size: 20px;

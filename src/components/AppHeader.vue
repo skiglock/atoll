@@ -3,13 +3,13 @@
     <div class="container">
       <div class="header__inner">
         <div class="header__top">
-          <g-link class="header__logo" to="/" title="Atoll">
-            <g-image src="@/assets/img/logo-header.png" alt="" />
-          </g-link>
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__list-item" @click="open = !open">
-                <a href class="nav__list-link">Продукты</a>
+          <nav class="navbar">
+            <g-link class="navbar__logo" to="/" title="Atoll">
+              <g-image src="@/assets/img/logo-header.png" alt="" />
+            </g-link>
+            <ul class="navbar__list">
+              <li class="navbar__list-item" @click="open = !open">
+                <a href class="navbar__list-link">Продукты</a>
                 <ul v-if="open" class="dropdown">
                   <li class="dropdown__item">
                     <g-link to="/" class="dropdown__link"
@@ -41,14 +41,16 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav__list-item">
-                <g-link to="/about" class="nav__list-link">О команде</g-link>
+              <li class="navbar__list-item">
+                <g-link to="/about" class="navbar__list-link">О команде</g-link>
               </li>
-              <li class="nav__list-item">
-                <g-link to="/blog" class="nav__list-link">Блог</g-link>
+              <li class="navbar__list-item">
+                <g-link to="/blog" class="navbar__list-link">Блог</g-link>
               </li>
-              <li class="nav__list-item">
-                <g-link to="/contacts" class="nav__list-link">Контакты</g-link>
+              <li class="navbar__list-item">
+                <g-link to="/contacts" class="navbar__list-link"
+                  >Контакты</g-link
+                >
               </li>
             </ul>
           </nav>
@@ -76,31 +78,35 @@ export default {
   min-height: -webkit-fill-available;
   &__inner {
   }
-  &__logo {
-    max-width: 113px;
-    max-height: 33px;
-  }
   &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 112px;
-    padding: 54px 10px 22px;
-    @media screen and (max-height: 992px) {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+    padding: 53px 10px 38px;
   }
 
-  .nav {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    &__logo {
+      display: inline-block;
+      width: 113px;
+      height: 33px;
+      margin-right: 188px;
+    }
     &__list {
-      &-item {
-        margin-right: 75px;
-      }
       display: flex;
+      flex-direction: row;
+      flex: 1;
+      justify-content: space-between;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      &-item {
+      }
       &-link {
         color: $text_color;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 2.269px;
         font-weight: $font_medium;
         position: relative;

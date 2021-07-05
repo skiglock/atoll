@@ -4,8 +4,8 @@
       <div class="consultation__inner">
         <div class="row">
           <div class="column column-50">
-            <h1 class="consultation__title">С чего мне начать?</h1>
-            <p class="consultation__desc">
+            <h1 class="title consultation__title">С чего мне начать?</h1>
+            <p class="text consultation__text">
               Оставьте заявку и наш эксперт расскажет обо всех возможностях
               развития вашего отдела продаж
             </p>
@@ -35,22 +35,18 @@ export default {
 
 <style lang="scss">
 .consultation {
+  .column {
+    padding-bottom: 0;
+  }
   &__inner {
     padding: 55px 85px 0;
   }
   &__title {
-    color: #222222;
-    font-weight: $font_bold;
-    font-size: 33px;
   }
-  &__desc {
+  &__text {
     margin-top: 24px;
-    font-size: 20px;
-    color: #222222;
-    font-weight: $font_light;
   }
   &__img {
-    margin-bottom: -30px;
     max-width: 330px;
     max-height: 399px;
   }

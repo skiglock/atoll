@@ -58,7 +58,9 @@ body::-webkit-scrollbar-thumb:hover {
 .container {
     max-width: 920px;
     margin: 0 auto;
-    padding: 0 15px;
+    @media screen and (max-width: 992px) {
+        padding: 0 30px;
+    }
 }
 
 .row {
@@ -66,6 +68,9 @@ body::-webkit-scrollbar-thumb:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
+    @media screen and (max-width: 768px) {
+        flex-direction: row-reverse;
+    }
 }
 
 // .column + .column {
@@ -81,14 +86,27 @@ body::-webkit-scrollbar-thumb:hover {
         padding: 10px;
         flex: 50%;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
         flex: 100%;
     }
 }
 
 .column-50 {
     flex: 0 1 50%;
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
+        flex: 100%;
+    }
+}
+
+.column-60 {
+    flex: 0 1 60%;
+    @media screen and (max-width: 768px) {
+        flex: 100%;
+    }
+}
+.column-70 {
+    flex: 0 1 70%;
+    @media screen and (max-width: 768px) {
         flex: 100%;
     }
 }
@@ -112,10 +130,17 @@ img {
 }
 
 .title {
-    text-align: center;
     color: #232323;
     font-weight: 700;
     font-size: 21px;
+    line-height: 1.147;
+}
+
+.text {
+    font-size: 18px;
+    color: #242424;
+    line-height: 1.38;
+    font-weight: $font_regular;
 }
 
 .date {
@@ -144,4 +169,10 @@ blockquote {
 
 .block + .block {
     margin-top: 60px;
+}
+
+.card {
+    border-radius: 26px;
+    background-color: $white_color;
+    box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
 }

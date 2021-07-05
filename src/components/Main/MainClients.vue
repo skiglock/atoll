@@ -2,7 +2,7 @@
   <section class="clients">
     <div class="container">
       <div class="clients__inner">
-        <h1 class="clients__title">Наши клиенты</h1>
+        <h1 class="title clients__title">Наши клиенты</h1>
         <div class="row">
           <div class="column column-50">
             <div class="clients__item">
@@ -47,9 +47,6 @@ export default {
   }
   &__title {
     text-align: center;
-    color: #222222;
-    font-size: 26px;
-    font-weight: $font_bold;
     margin-bottom: 68px;
   }
   &__item {

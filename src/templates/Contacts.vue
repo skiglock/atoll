@@ -20,7 +20,7 @@
             <div class="column column-50">
               <div class="contacts-page__form">
                 <h1 class="contacts-page__form-title">Свяжитесь с нами!</h1>
-                <div class="contacts-page__block">
+                <div class="card contacts-page__card">
                   <main-form />
                 </div>
               </div>
@@ -92,11 +92,8 @@ export default {
       font-weight: $font_medium;
     }
   }
-  &__block {
+  &__card {
     padding: 50px;
-    background-color: $white_color;
-    border-radius: 36px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.23);
     &-title {
     }
   }
