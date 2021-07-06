@@ -1,5 +1,5 @@
 <template>
-  <section class="order">
+  <section class="block order">
     <div class="container">
       <div class="order__inner">
         <div class="row">
@@ -31,7 +31,6 @@ export default {
 
 <style lang="scss">
 .order {
-  margin-top: 222px;
   &__inner {
   }
   &__title,

@@ -1,8 +1,8 @@
 <template>
-  <section class="block contacts-block">
+  <section class="block contacts">
     <div class="container">
       <h1 class="title">Контакты</h1>
-      <div class="contacts-block__inner">
+      <div class="contacts__inner">
         <div class="row">
           <div class="column column-50">
             <h1 class="title">Отдел продаж:</h1>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-.contacts-block {
+.contacts {
   &__inner {
     margin-top: 71px;
     @media screen and (max-width: 576px) {

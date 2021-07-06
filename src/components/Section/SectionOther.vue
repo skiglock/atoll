@@ -1,16 +1,16 @@
 <template>
-  <section class="block other-block">
+  <section class="block other">
     <div class="container">
       <div class="title">Мы думали, что CRM можно внедрить раз и навсегда</div>
-      <div class="other-block__inner">
+      <div class="other__inner">
         <div class="row">
           <div class="column column-50">
-            <div class="other-block__img">
+            <div class="other__img">
               <g-image src="@/assets/img/dynamic/notebook.png" />
             </div>
           </div>
           <div class="column column-50">
-            <div class="other-block__text">
+            <div class="other__text">
               <p class="text">
                 Сейчас мы понимаем, что развитие CRM схоже с развитием
                 маркетинга, всегда нужно обновлять рекламные компании, смотреть
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-.other-block {
+.other {
   .title {
     text-align: center;
   }

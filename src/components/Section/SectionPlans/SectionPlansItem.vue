@@ -1,7 +1,7 @@
 <template>
-  <div class="plans-block__item">
-    <h1 class="title plans-block__item-title">Грамотная архитектура</h1>
-    <p class="text plans-block__item-text">
+  <div class="plans__item">
+    <h1 class="title plans__item-title">Грамотная архитектура</h1>
+    <p class="text plans__item-text">
       Построим масштабируемую архитектуру отдела продаж на базе amoCRM
     </p>
   </div>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style lang="scss">
-.plans-block {
+.plans {
   &__item {
     max-width: 303px;
     min-height: 236px;

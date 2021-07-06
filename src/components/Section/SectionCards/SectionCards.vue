@@ -1,13 +1,13 @@
 <template>
-  <section class="block cards-block">
+  <section class="block cards">
     <div class="container">
-      <div class="cards-block__head">
+      <div class="cards__head">
         <h1 class="title">Что такое технический аудит</h1>
-        <p class="text cards-block__text">
+        <p class="text cards__text">
           Проанализируем вашу систему продаж и составим карту внедрения или
           развития вашей amoCRM
         </p>
-        <div class="cards-block__body">
+        <div class="cards__body">
           <div class="row">
             <div class="column column-50">
               <section-cards-item />
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
-.cards-block {
+.cards {
   &__head {
     text-align: center;
   }

@@ -1,19 +1,19 @@
 <template>
-  <section class="block head-block">
+  <section class="block head">
     <div class="container">
-      <div class="head-block__inner">
+      <div class="head__inner">
         <div class="row">
           <div class="column column-60">
-            <h1 class="title head-block__title">
+            <h1 class="title head__title">
               Проведем аудит и создадим стратегию развития вашей CRM-систем
             </h1>
-            <p class="text head-block__text">
+            <p class="text head__text">
               Воспользуйтесь нашей экспертизой, чтобы увидеть слабые места
               текущей CRM и получить пошаговый план усиления ее эффективности
             </p>
           </div>
           <div class="column column-30">
-            <div class="head-block__img">
+            <div class="head__img">
               <g-image src="@/assets/img/dynamic/girl-1.png" />
             </div>
           </div>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss">
-.head-block {
+.head {
   .row {
     align-items: center;
   }

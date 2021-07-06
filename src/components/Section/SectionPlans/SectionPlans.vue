@@ -1,14 +1,14 @@
 <template>
-  <section class="block plans-block">
+  <section class="block plans">
     <div class="container">
-      <div class="title plans-block__title">
+      <div class="title plans__title">
         Вы должны регулярно заниматься своей CRM-системой
       </div>
-      <div class="text plans-block__text">
+      <div class="text plans__text">
         Вопросы и проблемы появляются регулярно, но их решение не влияет на
         успех отдела продаж.
       </div>
-      <div class="plans-block__steps">
+      <div class="plans__steps">
         <div class="row">
           <div class="column column-30">
             <section-plans-item />
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
-.plans-block {
+.plans {
   &__title,
   &__text {
     @media screen and (max-width: 576px) {

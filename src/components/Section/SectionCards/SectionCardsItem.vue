@@ -1,10 +1,10 @@
 <template>
-  <div class="card cards-block__card">
-    <span class="cards-block__card-icon"
+  <div class="card cards__card">
+    <span class="cards__card-icon"
       ><g-image src="@/assets/img/dynamic/icon_1.png"
     /></span>
     <h1 class="title">Потенциал прибыли от текущих клиентов.</h1>
-    <p class="text text cards-block__card-text">
+    <p class="text cards__card-text">
       Часто компании делают ставку на новых клиентов и не работают с текущей
       базой.
     </p>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-.cards-block {
+.cards {
   &__card {
     position: relative;
     padding: 52px 66px 40px 69px;

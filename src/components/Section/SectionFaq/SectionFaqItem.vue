@@ -1,9 +1,9 @@
 <template>
-  <div class="faq-block__item">
-    <div class="card faq-block__item-question">
+  <div class="faq__item">
+    <div class="card faq__item-question">
       <p class="text">Какое отношение Atoll имеет к amoCRM?</p>
     </div>
-    <div class="card faq-block__item-answer">
+    <div class="card faq__item-answer">
       <p class="text">Мы сертифицированные партнеры amoCRM.</p>
     </div>
   </div>
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-.faq-block {
+.faq {
   background-color: $section_color;
   &__item {
     display: flex;

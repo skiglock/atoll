@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section class="block services">
     <div class="container">
       <div class="services__inner">
         <div class="row">

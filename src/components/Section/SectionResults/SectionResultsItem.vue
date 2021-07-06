@@ -1,19 +1,16 @@
 <template>
-  <div
-    class="results-block__item"
-    :style="{ backgroundImage: `url(${getResult})` }"
-  >
-    <div class="results-block__item-inner">
-      <div class="results-block__item-logo">
+  <div class="results__item" :style="{ backgroundImage: `url(${getResult})` }">
+    <div class="results__item-inner">
+      <div class="results__item-logo">
         <g-image src="@/assets/img/clients/Mesto.png" />
       </div>
-      <p class="text results-block__item-text">
+      <p class="text results__item-text">
         Спустя две недели мы полностью проанализировали процессы от прихода
         анкеты до приглашения или отклонения в сообщество. Также мы внедрили
         цифровую воронку, которая позволила волонтерам не забывать о заявках и
         вовремя их обрабатывать.
       </p>
-      <main-button class="results-block__item-btn">Подробнее</main-button>
+      <main-button class="results__item-btn">Подробнее</main-button>
     </div>
   </div>
 </template>
@@ -35,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-.results-block {
+.results {
   &__item + &__item {
     margin-bottom: 20px;
   }

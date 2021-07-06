@@ -21,7 +21,7 @@
             </div>
             <div class="column column-50">
               <div class="contacts-page__form">
-                <h1 class="contacts-page__form-title">Свяжитесь с нами!</h1>
+                <h1 class="title">Свяжитесь с нами!</h1>
                 <div class="card contacts-page__card">
                   <main-form />
                 </div>

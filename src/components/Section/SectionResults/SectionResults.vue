@@ -1,8 +1,8 @@
 <template>
-  <section class="block results-block">
+  <section class="block results">
     <div class="container">
       <h1 class="title">Результаты сопровождения amoCRM</h1>
-      <div class="results-block__inner">
+      <div class="results__inner">
         <section-results-item />
         <section-results-item />
       </div>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
-.results-block {
+.results {
   .title {
     text-align: center;
   }

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section-title />
+    <section-head-two />
     <section-head />
     <section-faq />
     <section-other />
@@ -24,7 +24,7 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import SectionTitle from '@/components/Section/SectionTitle'
+import SectionHeadTwo from '@/components/Section/SectionHeadTwo'
 import SectionPlans from '@/components/Section/SectionPlans/SectionPlans'
 import SectionPrice from '@/components/Section/SectionPrice/SectionPrice'
 import SectionOther from '@/components/Section/SectionOther'
@@ -39,7 +39,7 @@ import SectionFaq from '@/components/Section/SectionFaq/SectionFaq'
 
 export default {
   components: {
-    SectionTitle,
+    SectionHeadTwo,
     SectionPlans,
     SectionPrice,
     SectionOther,

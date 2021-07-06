@@ -1,7 +1,7 @@
 <template>
-  <div class="price-block__list-item">
-    <span class="price-block__list-number">1</span>
-    <p class="text price-block__list-text">Личный чат с Аналитиком</p>
+  <div class="price__list-item">
+    <span class="price__list-number">1</span>
+    <p class="text price__list-text">Личный чат с Аналитиком</p>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-.price-block {
+.price {
   &__list {
     &-item + &-item {
       margin-top: 10px;

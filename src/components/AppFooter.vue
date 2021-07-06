@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss">
 .footer {
-  margin-top: 222px;
+  margin-top: 180px;
   &__inner {
     padding-top: 25px;
   }

@@ -10,7 +10,9 @@
           <div class="column column-50">
             <section-clients-item />
           </div>
-          <main-button class="clients__btn">Все кейсы</main-button>
+        </div>
+        <div class="clients__bottom">
+          <main-button class="btn">Все кейсы</main-button>
         </div>
       </div>
     </div>
@@ -18,7 +20,7 @@
 </template>
 
 <script>
-import SectionClientsItem from './SectionClientsItem.vue'
+import SectionClientsItem from './SectionClientsItem'
 import MainButton from '@/components/Common/MainButton'
 export default {
   name: 'SectionClients',
@@ -31,9 +33,6 @@ export default {
 
 <style lang="scss">
 .clients {
-  .row {
-    justify-content: center;
-  }
   &__inner {
     padding: 55px 0;
   }
@@ -42,9 +41,9 @@ export default {
     margin-bottom: 68px;
   }
 
-  &__btn {
+  &__bottom {
+    text-align: center;
     margin-top: 45px;
-    max-width: 206px;
   }
 }
 </style>
