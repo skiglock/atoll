@@ -1,11 +1,13 @@
 <template>
   <div class="container">
     <div class="header__body">
-      <img class="header__body-img" src="@/assets/img/head.png" />
-      <div class="header__body-title">
-        <h1 class="title">Трансформация отдела продаж на основе amoCRM</h1>
+      <div class="header__body-img">
+        <g-image src="@/assets/img/head.png" />
       </div>
-      <main-button class="header__body-btn">Подключить</main-button>
+      <div class="header__body-description">
+        <h1 class="title">Трансформация отдела продаж на основе amoCRM</h1>
+        <main-button class="header__body-btn">Подключить</main-button>
+      </div>
     </div>
   </div>
 </template>
@@ -26,42 +28,36 @@ export default {
   &__body {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-around;
     padding-bottom: 30px;
-    @media screen and (max-width: 576px) {
-      justify-content: space-evenly;
-    }
-    @media screen and (min-height: 1080px) {
-      justify-content: space-evenly;
+    @media screen and (orientation: landscape) and (max-width: 576px) {
+      flex-direction: row;
     }
     &-img {
-      max-width: 811px;
+      max-width: 800px;
       max-height: 511px;
-      @media screen and (max-height: 900px) {
-        max-width: 711px;
-      }
-      @media screen and (max-height: 800px) {
-        max-width: 611px;
-      }
-      @media screen and (max-height: 700px) {
-        max-width: 511px;
-      }
-      @media screen and (max-height: 600px) {
-        max-width: 411px;
+      @media screen and (max-width: 992px) {
+        width: 650px;
       }
     }
-    &-title {
+    &-description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .title {
+        text-align: center;
         max-width: 475px;
         font-weight: $font_medium;
-        text-align: center;
         @media screen and (min-height: 1080px) {
           font-size: 30px;
         }
       }
     }
+
     &-btn {
+      margin-top: 40px;
     }
   }
 }

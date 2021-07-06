@@ -9,7 +9,7 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 
 collections:
-# --------------------Основные страницы---------------------------
+  # --------------------Основные страницы---------------------------
   - name: 'main_pages'
     label: 'Основные страницы'
     create: false
@@ -70,7 +70,6 @@ collections:
               widget: 'string'
             }
 
-
   # --------------------Динамические страницы---------------------------
   - name: 'pages'
     label: 'Допольнительные страницы'
@@ -81,6 +80,208 @@ collections:
       - { label: 'ID', name: 'id', widget: 'id' }
       - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
       - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
+      - label: 'Компоненты страницы'
+        name: 'layout'
+        widget: 'list'
+        types:
+          # SectionHead
+          - label: 'Секция с заголовком и описанием 1'
+            name: 'head'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'head'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Картинка', name: 'img', widget: image }
+
+          # SectionHeadTwo
+          - label: 'Секция с заголовком и описанием 2'
+            name: 'head-two'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'head-two'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Картинка', name: 'img', widget: image }
+
+          # SectionHeadThree
+          - label: 'Секция с заголовком и описанием 3'
+            name: 'head-three'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'head-three'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Картинка', name: 'img', widget: image }
+
+          # SectionOther
+          - label: 'Секция с историей'
+            name: 'other'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'other'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Картинка', name: 'img', widget: image }
+
+          # SectionConsultation
+          - label: 'Секция с консультацией'
+            name: 'consultation'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'consultation'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Картинка', name: 'img', widget: image }
+              - { label: 'Цвет кнопки', name: 'color', widget: color } # new
+              - {
+                  # new
+                  label: 'Куда введет кнопка',
+                  name: 'link',
+                  widget: 'relation',
+                  collection: 'pages',
+                  value_field: 'id',
+                  search_fields: ['title'],
+                  display_fields: ['title']
+                }
+
+          # SectionMessage
+          - label: 'Секция заголовок с кнопкой'
+            name: 'message'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'message'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Цвет кнопки', name: 'color', widget: color } # new
+              - {
+                  # new
+                  label: 'Куда введет кнопка',
+                  name: 'link',
+                  widget: 'relation',
+                  collection: 'pages',
+                  value_field: 'id',
+                  search_fields: ['title'],
+                  display_fields: ['title']
+                }
+
+          # SectionQuote
+          - label: 'Секция с цитатой'
+            name: 'quote'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'quote'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Описание', name: 'desc', widget: string }
+
+          # SectionContacts
+          - label: 'Секция с контактами'
+            name: 'contacts'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'contacts'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+
+          # SectionOrder
+          - label: 'Секция с формой'
+            name: 'order'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'order'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - {
+                  # new
+                  label: 'Страница в случае удачной отправки',
+                  name: 'link',
+                  widget: 'relation',
+                  collection: 'pages',
+                  value_field: 'id',
+                  search_fields: ['title'],
+                  display_fields: ['title']
+                }
+
+          # SectionTarget
+          - label: 'Секция с общей фоткой и текстом'
+            name: 'target'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'target'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Картинка', name: 'img', widget: image }
+
+          # SectionTeam
+          - label: 'Секция с командой'
+            name: 'team'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'team'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Количество челов', name: 'number', widget: number }
 
   # --------------------Блог---------------------------
   - name: 'blog'
@@ -101,4 +302,8 @@ collections:
         }
       - { label: 'Главная картинка', name: 'img', widget: 'image', default: '' }
       - { label: 'Текст краткого описания', name: 'desc', widget: 'markdown' }
-      - { label: 'Текст полного описания', name: 'full', widget: 'markdown' }   
+      - {
+          label: 'Текст полного описания',
+          name: 'desc_full',
+          widget: 'markdown'
+        }

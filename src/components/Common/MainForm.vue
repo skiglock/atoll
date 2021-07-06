@@ -1,13 +1,46 @@
 <template>
-  <form class="form">
+  <form @submit.prevent="handleSubmit" class="form" autocomplete="off">
     <div class="form__item">
-      <input type="text" class="form__input" placeholder="Ваше имя" />
+      <input
+        name="name"
+        type="text"
+        class="form__input"
+        placeholder="Ваше имя"
+        v-model="formData.name"
+        @focus="clearValidation('name')"
+        autocomplete="false"
+      />
+      <p class="form__error" v-if="errors.name">
+        {{ errors.name }}
+      </p>
     </div>
     <div class="form__item">
-      <input type="text" class="form__input" placeholder="Телефон" />
+      <input
+        name="phone"
+        type="text"
+        class="form__input"
+        placeholder="Телефон"
+        v-model="formData.phone"
+        @focus="clearValidation('phone')"
+        autocomplete="false"
+      />
+      <p class="form__error" v-if="errors.phone">
+        {{ errors.phone }}
+      </p>
     </div>
     <div class="form__item">
-      <input type="text" class="form__input" placeholder="E-mail" />
+      <input
+        name="mail"
+        type="text"
+        class="form__input"
+        placeholder="E-mail"
+        v-model="formData.email"
+        @focus="clearValidation('email')"
+        autocomplete="false"
+      />
+      <p class="form__error" v-if="errors.email">
+        {{ errors.email }}
+      </p>
     </div>
     <main-button type="submit" class="form__btn"> Оставить заявку </main-button>
     <p class="form__agree">
@@ -18,12 +51,85 @@
 </template>
 
 <script>
+import {
+  isRequired,
+  isValidPhone,
+  minLength,
+  isString,
+  validEmail
+} from '@/utils/validate.js'
 import MainButton from '@/components/Common/MainButton'
 
 export default {
   name: 'MainForm',
   components: {
     MainButton
+  },
+  data() {
+    return {
+      formData: {
+        name: '',
+        phone: '',
+        email: '',
+        from: '',
+        ref: ''
+      },
+      errors: {}
+    }
+  },
+  computed: {
+    checkName() {
+      return (
+        isRequired(this.formData.name) ||
+        isString(this.formData.name) ||
+        minLength(this.formData.name, 2)
+      )
+    },
+    checkPhone() {
+      return (
+        isRequired(this.formData.phone) || isValidPhone(this.formData.phone)
+      )
+    },
+    checkEmail() {
+      return isRequired(this.formData.email) || validEmail(this.formData.email)
+    }
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&')
+    },
+    handleSubmit(e) {
+      if (this.checkName || this.checkPhone || this.checkEmail) {
+        this.errors.name = this.checkName
+        this.errors.phone = this.checkPhone
+        this.errors.email = this.checkEmail
+      } else {
+        e.preventDefault()
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.formData
+          })
+        })
+          .then(() => this.$router.push(`/${this.content.link}`))
+          .catch((error) => alert(error))
+      }
+      this.$forceUpdate()
+    },
+    clearValidation(field) {
+      this.errors[field] = undefined
+      this.$forceUpdate()
+    }
+  },
+  mounted() {
+    this.formData.from = `https://atollon.ru${this.$route.path}`
+    this.formData.ref = document.referrer
   }
 }
 </script>
@@ -61,6 +167,13 @@ export default {
     font-weight: $font_light;
     color: #404040;
     opacity: 0.5;
+  }
+  &__error {
+    font-weight: $font_bold;
+    color: red;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 10px;
   }
 }
 </style>

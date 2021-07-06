@@ -28,8 +28,13 @@
 <script>
 import MainButton from '@/components/Common/MainButton.vue'
 export default {
-  components: { MainButton },
-  name: 'SectionConsultation'
+  name: 'SectionConsultation',
+  components: {
+    MainButton
+  },
+  props: {
+    content: Object
+  }
 }
 </script>
 

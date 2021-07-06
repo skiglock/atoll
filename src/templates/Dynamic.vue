@@ -1,5 +1,11 @@
 <template>
   <Layout>
+    <component
+      :is="'main-' + component.name"
+      v-for="component in $page.dynamic.layout"
+      :key="component.id"
+      :content="component"
+    />
     <section-head-two />
     <section-head />
     <section-faq />
@@ -52,6 +58,7 @@ export default {
     SectionContacts,
     SectionFaq
   },
+  props: ['components'],
   metaInfo() {
     return {
       title: this.$page.dynamic.title
