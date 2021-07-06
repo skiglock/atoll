@@ -4,7 +4,7 @@
       <div class="container">
         <div class="about__inner">
           <div class="about__head">
-            <h1 class="title">{{ $page.about.title }}</h1>
+            <h1 class="title">{{ $page.about.title }}!</h1>
             <h2 class="about__head-subtitle">Atollon — интегратор amoCRM</h2>
             <p class="text about__head-text">
               специализирующийся на цифровой трансформации продаж. Мы
