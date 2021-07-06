@@ -1,5 +1,5 @@
 <template>
-  <section class="block order">
+  <section class="section order">
     <div class="container">
       <div class="order__inner">
         <div class="row">

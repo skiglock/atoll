@@ -36,7 +36,9 @@ export default {
   },
   methods: {
     getWindowHeight() {
-      return window.innerHeight
+      if (typeof window !== 'undefined') {
+        return window.innerHeight
+      }
     },
     convertStyle() {
       const windowHeight = this.getWindowHeight()
@@ -61,10 +63,14 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('resize', this.updateStyle)
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', this.updateStyle)
+    }
   },
   beforeDestroy() {
-    window.removeEventListener('resize', this.updateStyle)
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('resize', this.updateStyle)
+    }
   }
 }
 </script>

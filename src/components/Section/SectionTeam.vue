@@ -1,5 +1,5 @@
 <template>
-  <section class="team">
+  <section class="section team">
     <div class="container">
       <div class="team__inner">
         <h1 class="title team__title">Наша команда экспертов</h1>
@@ -37,7 +37,7 @@ export default {
 <style lang="scss">
 .team {
   &__inner {
-    padding: 105px 0;
+    padding: 60px 0;
   }
   &__title {
     text-align: center;

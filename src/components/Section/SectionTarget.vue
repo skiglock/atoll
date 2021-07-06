@@ -1,5 +1,5 @@
 <template>
-  <section class="target">
+  <section class="section target">
     <div class="container">
       <h1 class="title target-title">Наша большая цель</h1>
       <h2 class="text">
@@ -22,7 +22,6 @@ export default {
 
 <style lang="scss">
 .target {
-  padding: 128px 0px;
   text-align: center;
   &-title {
     font-weight: $font_bold;

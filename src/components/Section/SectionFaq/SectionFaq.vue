@@ -1,5 +1,5 @@
 <template>
-  <section class="block faq">
+  <section class="section faq">
     <div class="faq__inner">
       <div class="container">
         <div class="title">Отвечаем на частые вопросы</div>

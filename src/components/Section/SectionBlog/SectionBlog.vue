@@ -1,19 +1,21 @@
 <template>
-  <section class="blog">
+  <section class="section blog">
     <div class="container">
-      <div class="blog__head">
-        <blockquote>
-          <h1 class="title blog__title">Полезные статьи в нашем блоге</h1>
-          <p class="text blog__text">
-            Регулярно пишем статьи о системах продажах, управлении проектами и
-            делимся собственным опытом трансформации процессов.
-          </p>
-        </blockquote>
-      </div>
-      <div class="blog__body">
-        <section-blog-item />
-        <section-blog-item />
-        <section-blog-item />
+      <div class="blog__inner">
+        <div class="blog__head">
+          <blockquote>
+            <h1 class="title blog__title">Полезные статьи в нашем блоге</h1>
+            <p class="text blog__text">
+              Регулярно пишем статьи о системах продажах, управлении проектами и
+              делимся собственным опытом трансформации процессов.
+            </p>
+          </blockquote>
+        </div>
+        <div class="blog__body">
+          <section-blog-item />
+          <section-blog-item />
+          <section-blog-item />
+        </div>
       </div>
     </div>
   </section>

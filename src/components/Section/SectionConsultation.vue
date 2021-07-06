@@ -39,7 +39,7 @@ export default {
     padding-bottom: 0;
   }
   &__inner {
-    padding: 55px 0 0 0;
+    padding-top: 55px;
   }
   &__title {
   }

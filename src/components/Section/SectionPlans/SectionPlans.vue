@@ -1,5 +1,5 @@
 <template>
-  <section class="block plans">
+  <section class="section plans">
     <div class="container">
       <div class="title plans__title">
         Вы должны регулярно заниматься своей CRM-системой
@@ -45,9 +45,7 @@ export default {
 .plans {
   &__title,
   &__text {
-    @media screen and (max-width: 576px) {
-      text-align: center;
-    }
+    text-align: center;
   }
   display: flex;
   flex-direction: column;

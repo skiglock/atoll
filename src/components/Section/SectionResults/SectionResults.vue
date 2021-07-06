@@ -1,5 +1,5 @@
 <template>
-  <section class="block results">
+  <section class="section results">
     <div class="container">
       <h1 class="title">Результаты сопровождения amoCRM</h1>
       <div class="results__inner">

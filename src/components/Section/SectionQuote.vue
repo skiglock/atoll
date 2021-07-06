@@ -1,5 +1,5 @@
 <template>
-  <section class="block quote">
+  <section class="section quote">
     <div class="container">
       <blockquote>
         <p class="text">

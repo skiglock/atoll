@@ -1,5 +1,5 @@
 <template>
-  <section class="clients">
+  <section class="section clients">
     <div class="container">
       <div class="clients__inner">
         <h1 class="title clients__title">Наши клиенты</h1>

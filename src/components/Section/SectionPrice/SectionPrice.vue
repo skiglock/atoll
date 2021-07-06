@@ -1,5 +1,5 @@
 <template>
-  <section class="block price">
+  <section class="section price">
     <div class="container">
       <h1 class="title price__title">Стоимость и формат сопровождения.</h1>
       <p class="text price__text">
@@ -7,7 +7,7 @@
         единым окном для всех возникающих проблем и вопросов.
       </p>
       <div class="price__services">
-        <div class="row price__row">
+        <div class="row">
           <div class="column column-50">
             <div class="price__card">
               <h1 class="price__card-title">35000 руб.</h1>
@@ -52,9 +52,6 @@ export default {
 
 <style lang="scss">
 .price {
-  &__row {
-    justify-content: inherit;
-  }
   &__text,
   &__title {
     text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <section class="head-three">
+  <section class="section head-three">
     <div class="container">
       <div class="head-three__inner">
         <h1 class="title">Заголовок</h1>

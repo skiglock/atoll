@@ -1,6 +1,6 @@
 <template>
   <section
-    class="block head-two"
+    class="section head-two"
     :style="{
       background: `url(${getImage}) 50% 50% no-repeat`
     }"

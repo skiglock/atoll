@@ -1,5 +1,5 @@
 <template>
-  <section class="block head">
+  <section class="section head">
     <div class="container">
       <div class="head__inner">
         <div class="row">

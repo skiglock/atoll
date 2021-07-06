@@ -1,5 +1,5 @@
 <template>
-  <section class="block cards">
+  <section class="section cards">
     <div class="container">
       <div class="cards__head">
         <h1 class="title">Что такое технический аудит</h1>

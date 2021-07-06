@@ -1,5 +1,5 @@
 <template>
-  <section class="message">
+  <section class="section message">
     <div class="container">
       <div class="title message__title">
         Мы делаем смелые и нужные вещи вместе. Вы с нами?
@@ -23,7 +23,6 @@ export default {
 <style lang="scss">
 .message {
   text-align: center;
-  padding: 130px 0;
   &__title {
     line-height: 1.324;
     font-weight: $font_semibold;

@@ -1,5 +1,5 @@
 <template>
-  <section class="block other">
+  <section class="section other">
     <div class="container">
       <div class="title">Мы думали, что CRM можно внедрить раз и навсегда</div>
       <div class="other__inner">
