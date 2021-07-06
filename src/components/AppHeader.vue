@@ -23,8 +23,6 @@ export default {
 
 <style lang="scss">
 .header {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
   &__inner {
   }
   &__top {

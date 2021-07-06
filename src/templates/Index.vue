@@ -1,11 +1,11 @@
 <template>
   <Layout>
-    <main-services />
-    <main-consultation />
-    <main-clients />
-    <main-team />
-    <main-blog />
-    <main-order />
+    <section-services />
+    <section-consultation />
+    <section-clients />
+    <section-team />
+    <section-blog />
+    <section-order />
   </Layout>
 </template>
 
@@ -18,21 +18,21 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import MainServices from '@/components/Main/MainServices/MainServices'
-import MainConsultation from '@/components/Main/MainConsultation'
-import MainClients from '@/components/Main/MainClients/MainClients'
-import MainTeam from '@/components/Main/MainTeam/MainTeam'
-import MainBlog from '@/components/Main/MainBlog/MainBlog'
-import MainOrder from '@/components/Main/MainOrder'
+import SectionServices from '@/components/Section/SectionServices/SectionServices'
+import SectionConsultation from '@/components/Section/SectionConsultation'
+import SectionClients from '@/components/Section/SectionClients/SectionClients'
+import SectionTeam from '@/components/Section/SectionTeam'
+import SectionBlog from '@/components/Section/SectionBlog/SectionBlog'
+import SectionOrder from '@/components/Section/SectionOrder'
 
 export default {
   components: {
-    MainServices,
-    MainConsultation,
-    MainClients,
-    MainTeam,
-    MainBlog,
-    MainOrder
+    SectionServices,
+    SectionConsultation,
+    SectionClients,
+    SectionTeam,
+    SectionBlog,
+    SectionOrder
   },
   metaInfo() {
     return {

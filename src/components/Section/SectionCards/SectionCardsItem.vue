@@ -1,0 +1,58 @@
+<template>
+  <div class="card cards-block__card">
+    <span class="cards-block__card-icon"
+      ><g-image src="@/assets/img/dynamic/icon_1.png"
+    /></span>
+    <h1 class="title">Потенциал прибыли от текущих клиентов.</h1>
+    <p class="text text cards-block__card-text">
+      Часто компании делают ставку на новых клиентов и не работают с текущей
+      базой.
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SectionCardsItem'
+}
+</script>
+
+<style lang="scss">
+.cards-block {
+  &__card {
+    position: relative;
+    padding: 52px 66px 40px 69px;
+    @media screen and (max-width: 576px) {
+      padding: 40px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 442px;
+    min-height: 344px;
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 12;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background-color: $white_color;
+      box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.18);
+      top: -22px;
+      left: -5px;
+      img {
+        width: 42px;
+        height: 42px;
+        border-radius: 10%;
+      }
+    }
+    &-text {
+      margin-top: 33px;
+    }
+  }
+}
+</style>

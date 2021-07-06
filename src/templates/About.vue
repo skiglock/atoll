@@ -48,25 +48,25 @@
               <h1 class="title about__team-title">Команда</h1>
               <div class="row">
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
                 <div class="column column-30">
-                  <main-team-person />
+                  <main-person />
                 </div>
               </div>
             </div>
@@ -104,12 +104,12 @@ query ($id: ID!) {
 
 <script>
 import MainButton from '@/components/Common/MainButton'
-import MainTeamPerson from '@/components/Main/MainTeam/MainTeamPerson'
+import MainPerson from '@/components/Common/MainPerson'
 
 export default {
   components: {
     MainButton,
-    MainTeamPerson
+    MainPerson
   },
   metaInfo() {
     return {

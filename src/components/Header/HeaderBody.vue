@@ -32,8 +32,6 @@ export default {
       max-width: 811px;
       max-height: 511px;
       @media screen and (max-height: 992px) {
-        max-width: 80%;
-        max-height: 400px;
       }
     }
     &-title {

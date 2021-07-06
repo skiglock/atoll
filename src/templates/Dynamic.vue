@@ -1,23 +1,17 @@
 <template>
   <Layout>
-    <section class="other">
-      <div class="container">
-        <!-- <title-block /> -->
-
-        <head-block />
-        <faq-block />
-        <other-block />
-
-        <!-- <cards-block />
-        <plans-block />
-        <price-block />
-        <quote-block />
-        <results-block />
-        <consultation-block />
-        <form-block />
-        <contacts-block /> -->
-      </div>
-    </section>
+    <section-title />
+    <section-head />
+    <section-faq />
+    <section-other />
+    <section-cards />
+    <section-plans />
+    <section-price />
+    <section-quote />
+    <section-results />
+    <section-consultation />
+    <section-order />
+    <section-contacts />
   </Layout>
 </template>
 
@@ -30,36 +24,33 @@ query ($id: ID!) {
 </page-query>
 
 <script>
-import TitleBlock from '@/components/Dynamic/TitleBlock'
-import PlansBlock from '@/components/Dynamic/PlansBlock/PlansBlock'
-import PriceBlock from '@/components/Dynamic/PriceBlock/PriceBlock'
-import OtherBlock from '@/components/Dynamic/OtherBlock'
-import ResultsBlock from '@/components/Dynamic/ResultsBlock/ResultsBlock'
-import ConsultationBlock from '@/components/Dynamic/ConsultationBlock'
-import QuoteBlock from '@/components/Dynamic/QuoteBlock'
-import FormBlock from '@/components/Dynamic/FormBlock'
-//
-import HeadBlock from '@/components/Dynamic/HeadBlock'
-import CardsBlock from '@/components/Dynamic/CardsBlock/CardsBlock'
-import ContactsBlock from '@/components/Dynamic/ContactsBlock'
-//
-import FaqBlock from '@/components/Dynamic/FaqBlock/FaqBlock'
+import SectionTitle from '@/components/Section/SectionTitle'
+import SectionPlans from '@/components/Section/SectionPlans/SectionPlans'
+import SectionPrice from '@/components/Section/SectionPrice/SectionPrice'
+import SectionOther from '@/components/Section/SectionOther'
+import SectionResults from '@/components/Section/SectionResults/SectionResults'
+import SectionConsultation from '@/components/Section/SectionConsultation'
+import SectionQuote from '@/components/Section/SectionQuote'
+import SectionOrder from '@/components/Section/SectionOrder'
+import SectionHead from '@/components/Section/SectionHead'
+import SectionCards from '@/components/Section/SectionCards/SectionCards'
+import SectionContacts from '@/components/Section/SectionContacts'
+import SectionFaq from '@/components/Section/SectionFaq/SectionFaq'
 
 export default {
   components: {
-    TitleBlock,
-    PlansBlock,
-    PriceBlock,
-    OtherBlock,
-    ResultsBlock,
-    ConsultationBlock,
-    QuoteBlock,
-    FormBlock,
-    //
-    HeadBlock,
-    CardsBlock,
-    ContactsBlock,
-    FaqBlock
+    SectionTitle,
+    SectionPlans,
+    SectionPrice,
+    SectionOther,
+    SectionResults,
+    SectionConsultation,
+    SectionQuote,
+    SectionOrder,
+    SectionHead,
+    SectionCards,
+    SectionContacts,
+    SectionFaq
   },
   metaInfo() {
     return {

@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <app-header>
+    <app-header :style="$route.path === '/' ? internalStyle : ''">
       <transition name="route">
         <header-body v-if="$route.path === '/'" />
       </transition>
@@ -15,12 +15,56 @@
 <script>
 import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
-import HeaderBody from './components/Header/HeaderBody'
+import HeaderBody from '@/components/Header/HeaderBody'
 export default {
   components: {
     AppHeader,
     AppFooter,
     HeaderBody
+  },
+  data() {
+    return {
+      forceRecompute: 0
+    }
+  },
+  computed: {
+    internalStyle() {
+      const recompute = this.forceRecompute // eslint-disable-line
+
+      return this.convertStyle()
+    }
+  },
+  methods: {
+    getWindowHeight() {
+      return window.innerHeight
+    },
+    convertStyle() {
+      const windowHeight = this.getWindowHeight()
+      const usedStyle = { height: '100vvh' }
+      const convertedStyle = {}
+      Object.keys(usedStyle).forEach((key) => {
+        convertedStyle[key] =
+          typeof usedStyle[key] === 'string'
+            ? this.replaceVvhWithPx(usedStyle[key], windowHeight)
+            : usedStyle[key]
+      })
+      return convertedStyle
+    },
+    replaceVvhWithPx(propertyStringValue, windowHeight) {
+      const vvhRegex = /(\d+(\.\d*)?)vvh(?!\w)/g
+      return propertyStringValue.replace(vvhRegex, (_, vvh) => {
+        return `${(windowHeight * parseFloat(vvh)) / 100}px`
+      })
+    },
+    updateStyle() {
+      this.forceRecompute++
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.updateStyle)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.updateStyle)
   }
 }
 </script>
