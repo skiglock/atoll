@@ -3,7 +3,7 @@
     <div class="container">
       <div class="header__top">
         <header-navbar />
-        <transition name="sidebar">
+        <transition name="fade">
           <header-sidebar v-if="sidebar" />
         </transition>
 
@@ -44,12 +44,12 @@ export default {
 </script>
 
 <style lang="scss">
-.sidebar-enter-active,
-.sidebar-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.2s;
 }
-.sidebar-enter,
-.modal-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 
