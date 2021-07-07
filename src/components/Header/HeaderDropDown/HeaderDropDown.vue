@@ -1,17 +1,17 @@
 <template>
   <ul class="dropdown">
-    <drop-down-item />
-    <drop-down-item />
-    <drop-down-item />
+    <header-drop-down-item />
+    <header-drop-down-item />
+    <header-drop-down-item />
   </ul>
 </template>
 
 <script>
-import DropDownItem from '@/components/Header/HeaderNavbar/DropDown/DropDownItem'
+import HeaderDropDownItem from './HeaderDropDownItem'
 export default {
-  name: 'DropDown',
+  name: 'HeaderDropDown',
   components: {
-    DropDownItem
+    HeaderDropDownItem
   }
 }
 </script>

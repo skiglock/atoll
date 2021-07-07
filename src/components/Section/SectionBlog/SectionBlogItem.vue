@@ -21,6 +21,9 @@ export default {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 28px 0 39px;
+    @media screen and (max-width: 576px) {
+      padding: 0 20px;
+    }
     border-radius: 20px;
     min-height: 165px;
     border: 1px solid #ccc;
@@ -48,10 +51,16 @@ export default {
         grid-column: inherit;
         grid-row: inherit;
       }
+      @media screen and (max-width: 576px) {
+        padding: 0 20px;
+      }
     }
     &-title {
       width: 80%;
       line-height: 1.356;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
     }
     &-link {
       align-self: flex-end;

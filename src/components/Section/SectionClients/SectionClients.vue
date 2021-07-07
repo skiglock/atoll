@@ -39,6 +39,9 @@ export default {
   &__title {
     text-align: center;
     margin-bottom: 68px;
+    @media screen and (max-width: 576px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__bottom {

@@ -24,6 +24,7 @@ export default {
   display: flex;
   justify-content: center;
   blockquote {
+    padding: 0 30px;
     position: relative;
     &::after {
       position: absolute;
@@ -31,24 +32,12 @@ export default {
       width: 11px;
       height: 100%;
       background-color: #487bfa;
-      top: 0px;
-      left: -25px;
+      top: 0;
+      left: 0;
       bottom: 0;
       right: 0;
       border-radius: $border_radius;
       z-index: 8;
-      @media screen and (max-width: 992px) {
-        width: 9px;
-        left: -20px;
-      }
-      @media screen and (max-width: 768px) {
-        font-size: 7px;
-        left: -18px;
-      }
-      @media screen and (max-width: 576px) {
-        font-size: 5px;
-        left: -16px;
-      }
     }
   }
 }

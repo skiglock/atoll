@@ -26,12 +26,12 @@ export default {
     &-question {
       padding: 15px;
       z-index: 14;
-      min-height: 76px;
-      border-radius: $border_radius;
+      max-height: 76px;
+      border-radius: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-width: 415px;
+      max-width: 415px;
       box-shadow: 0px 5px 5px 0px rgba($black_color, 0.09);
     }
     &-answer {

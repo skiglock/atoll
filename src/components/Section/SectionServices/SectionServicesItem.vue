@@ -32,6 +32,9 @@ export default {
     background-color: $white_color;
     min-height: 264px;
     min-width: 260px;
+    @media screen and (max-width: 320px) {
+      min-width: 100%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;

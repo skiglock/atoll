@@ -38,6 +38,9 @@ export default {
 .team {
   &__inner {
     padding: 60px 0;
+    @media screen and (max-width: 576px) {
+      padding: 20px 0;
+    }
   }
   &__title {
     text-align: center;

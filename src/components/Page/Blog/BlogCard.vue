@@ -11,10 +11,10 @@
       </div>
       <div class="column column-50">
         <div class="blog-page__card-right">
-          <h1 class="blog-page__card-title">
+          <h1 class="title blog-page__card-title">
             Эффективное построение воронки продаж в amoCRM
           </h1>
-          <p class="blog-page__card-desc">
+          <p class="text blog-page__card-text">
             Начинайте с самого начала - полученного обращения. Будем
             рассматривать для данной воронки и направления работу с лояльным
             клиентом, который готов купить. Представим у нас в компании работает
@@ -43,7 +43,13 @@ export default {
     display: flex;
     justify-content: space-between;
     padding: 61px 32px 35px;
+    @media screen and (max-width: 576px) {
+      padding: 30px;
+    }
     position: relative;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
     &-category {
       display: flex;
       justify-content: center;
@@ -57,8 +63,11 @@ export default {
       background-color: $main_color;
       border-radius: $border_radius;
       top: -15px;
-      right: -25px;
+      right: -15px;
       z-index: 6;
+      @media screen and (max-width: 992px) {
+        right: 0;
+      }
     }
     &-left {
     }
@@ -69,20 +78,12 @@ export default {
       justify-content: space-between;
     }
     &-img {
-      max-width: 317px;
-      max-height: 285px;
+      width: 100%;
     }
     &-title {
-      font-size: 27px;
-      color: #232323;
-      font-weight: $font_semibold;
     }
-    &-desc {
+    &-text {
       margin-top: 40px;
-      font-size: 14px;
-      color: #232323;
-      font-weight: $font_regular;
-      line-height: 1.648;
     }
     &-link {
       text-align: right;

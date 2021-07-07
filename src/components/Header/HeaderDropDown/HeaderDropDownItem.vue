@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'DropDownItem',
+  name: 'HeaderDropDownItem',
   data() {
     return {
       open: false

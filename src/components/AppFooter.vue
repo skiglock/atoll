@@ -63,6 +63,9 @@ export default {
 <style lang="scss">
 .footer {
   margin-top: 150px;
+  @media screen and (max-width: 576px) {
+    margin-top: 80px;
+  }
   &__inner {
     padding-top: 25px;
   }

@@ -25,6 +25,7 @@ export default {
   text-align: center;
   &-title {
     font-weight: $font_bold;
+    margin-bottom: 20px;
   }
   &-img {
     max-width: 921px;

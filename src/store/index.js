@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import height from './modules/height'
+import navbar from './modules/navbar'
 
 Vue.use(Vuex)
 
@@ -10,7 +10,7 @@ const debug = process.env.NODE_ENV !== 'production'
 var store = {
   plugins: [],
   modules: {
-    height
+    navbar
   },
   strict: debug
 }

@@ -95,6 +95,12 @@ export default {
     align-items: flex-start;
     @media screen and (max-width: 576px) {
       text-align: center;
+      align-items: center;
+    }
+    &-title {
+      @media screen and (max-width: 576px) {
+        text-align: center;
+      }
     }
   }
 }

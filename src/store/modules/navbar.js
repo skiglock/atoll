@@ -1,5 +1,5 @@
 const state = () => ({
-  windowHeight: null
+  isNavOpen: false
 })
 
 const getters = {}
@@ -7,8 +7,11 @@ const getters = {}
 const actions = {}
 
 const mutations = {
-  setWindowHeight(state, height) {
-    state.windowHeight = height
+  setIsNavOpen(state, status) {
+    state.isNavOpen = status
+  },
+  toggleNav(state) {
+    state.isNavOpen = !state.isNavOpen
   }
 }
 

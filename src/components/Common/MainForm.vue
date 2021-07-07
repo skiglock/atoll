@@ -1,5 +1,7 @@
 <template>
   <form @submit.prevent="handleSubmit" class="form" autocomplete="off">
+    <input type="hidden" name="from" v-model="formData.from" />
+    <input type="hidden" name="ref" v-model="formData.ref" />
     <div class="form__item">
       <input
         name="name"
@@ -137,7 +139,7 @@ export default {
 <style lang="scss">
 .form {
   @media screen and (max-width: 576px) {
-    justify-self: center;
+    text-align: center;
   }
   &__item {
     margin-top: 30px;

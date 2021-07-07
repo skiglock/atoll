@@ -36,7 +36,10 @@ export default {
   &__inner {
   }
   &__head {
-    margin-bottom: 87px;
+    margin-bottom: 10%;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
   &__title {
   }

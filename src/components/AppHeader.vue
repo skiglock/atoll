@@ -3,6 +3,8 @@
     <div class="container">
       <div class="header__top">
         <header-navbar />
+        <header-sidebar v-if="sidebar"></header-sidebar>
+        <header-burger @click.native="sidebar = !sidebar" :active="sidebar" />
       </div>
     </div>
     <slot />
@@ -11,10 +13,29 @@
 
 <script>
 import HeaderNavbar from '@/components/Header/HeaderNavbar/HeaderNavbar'
+import HeaderSidebar from '@/components/Header/HeaderSidebar'
+import HeaderBurger from '@/components/Header/HeaderBurger'
+
 export default {
   name: 'AppHeader',
   components: {
-    HeaderNavbar
+    HeaderNavbar,
+    HeaderSidebar,
+    HeaderBurger
+  },
+  data() {
+    return {
+      sidebar: false
+    }
+  },
+  watch: {
+    sidebar() {
+      if (this.sidebar) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = null
+      }
+    }
   }
 }
 </script>
@@ -26,6 +47,15 @@ export default {
   }
   &__top {
     padding: 30px 10px 67px;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media screen and (max-width: 576px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
   &__body {
     min-height: calc(100vh - 130px);

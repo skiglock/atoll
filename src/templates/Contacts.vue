@@ -21,7 +21,9 @@
             </div>
             <div class="column column-50">
               <div class="contacts-page__form">
-                <h1 class="title">Свяжитесь с нами!</h1>
+                <h1 class="contacts-page__form-title title">
+                  Свяжитесь с нами!
+                </h1>
                 <div class="card contacts-page__card">
                   <main-form />
                 </div>
@@ -69,25 +71,33 @@ export default {
   }
   &__body {
     margin-top: 57px;
-  }
-  &__connect {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
+    @media screen and (max-width: 576px) {
+      margin-top: 30px;
+    }
   }
   &__form {
+    @media screen and (max-width: 576px) {
+      margin-top: 30px;
+    }
     &-title {
       text-align: center;
       margin-bottom: 19px;
-      font-size: 20px;
-      color: #181818;
-      font-weight: $font_medium;
+      @media screen and (max-width: 576px) {
+        margin-bottom: 0;
+      }
     }
   }
   &__card {
     padding: 50px;
     &-title {
+    }
+  }
+  &__adress,
+  &__phone,
+  &__mail {
+    @media screen and (max-width: 576px) {
+      text-align: center;
+      margin-top: 20px;
     }
   }
 }

@@ -6,7 +6,7 @@
     <ul class="navbar__list">
       <li class="navbar__list-item" @click="open = !open">
         <a href class="navbar__list-link">Продукты</a>
-        <drop-down v-if="open" />
+        <header-drop-down v-if="open" />
       </li>
       <li class="navbar__list-item">
         <g-link to="/about" class="navbar__list-link">О команде</g-link>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import DropDown from '@/components/Header/HeaderNavbar/DropDown/DropDown'
+import HeaderDropDown from '@/components/Header/HeaderDropDown/HeaderDropDown'
 export default {
   name: 'HeaderNavbar',
   data() {
@@ -31,7 +31,7 @@ export default {
     }
   },
   components: {
-    DropDown
+    HeaderDropDown
   }
 }
 </script>
@@ -44,9 +44,15 @@ export default {
   flex-flow: row nowrap;
   &__logo {
     display: inline-block;
-    width: 113px;
-    height: 33px;
+    max-width: 113px;
+    max-height: 33px;
     margin-right: 188px;
+    @media screen and (max-width: 992px) {
+      margin-right: 130px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100px;
+    }
   }
   &__list {
     display: flex;

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import MainButton from '@/components/Common/MainButton.vue'
+import MainButton from '@/components/Common/MainButton'
 
 export default {
   name: 'HeaderBody',
@@ -31,14 +31,11 @@ export default {
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 30px;
-    @media screen and (orientation: landscape) and (max-width: 576px) {
-      flex-direction: row;
-    }
     &-img {
       max-width: 800px;
       max-height: 511px;
       @media screen and (max-width: 992px) {
-        width: 650px;
+        max-width: 650px;
       }
     }
     &-description {

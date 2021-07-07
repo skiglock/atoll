@@ -45,6 +45,9 @@ export default {
   }
   &__inner {
     padding-top: 55px;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
   &__title {
   }
@@ -54,6 +57,9 @@ export default {
   &__img {
     max-width: 330px;
     max-height: 399px;
+    @media screen and (max-width: 576px) {
+      padding-top: 20px;
+    }
   }
   &__btn {
     margin-top: 30px;
