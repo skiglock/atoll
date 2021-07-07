@@ -3,7 +3,10 @@
     <div class="container">
       <div class="header__top">
         <header-navbar />
-        <header-sidebar v-if="sidebar"></header-sidebar>
+        <transition name="sidebar">
+          <header-sidebar v-if="sidebar" />
+        </transition>
+
         <header-burger @click.native="sidebar = !sidebar" :active="sidebar" />
       </div>
     </div>
@@ -41,6 +44,15 @@ export default {
 </script>
 
 <style lang="scss">
+.sidebar-enter-active,
+.sidebar-leave-active {
+  transition: opacity 0.2s;
+}
+.sidebar-enter,
+.modal-leave-to {
+  opacity: 0;
+}
+
 .header {
   &__inner {
     min-height: 100vh;

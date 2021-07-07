@@ -30,19 +30,5 @@ export default {
   height: 283px;
   border: 1px solid rgba($black_color, 0.18);
   padding: 33px 50px;
-
-  &__desc {
-    margin-top: 3px;
-    font-size: 10px;
-    color: rgba(24, 24, 24, 0.52);
-    line-height: 1.684;
-    font-weight: $font_light;
-  }
-  &__link {
-    font-size: 13px;
-    color: rgb(24, 24, 24);
-    line-height: 1.295;
-    font-weight: $font_semibold;
-  }
 }
 </style>

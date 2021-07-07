@@ -1,68 +1,68 @@
 <template>
-  <transition name="sidebar">
-    <div class="sidebar">
-      <div class="sidebar__panel">
-        <div class="sidebar__body">
-          <slot></slot>
-          <p class="sidebar__copyright">© 2021 Atollon</p>
-        </div>
-      </div>
-    </div>
-  </transition>
+  <div class="sidebar">
+    <ul class="sidebar__menu">
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link">Продукты</a>
+        <header-drop-down-item />
+        <header-drop-down-item />
+        <header-drop-down-item />
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link">О команде</a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link">Блог </a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link">Контакты</a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
+import HeaderDropDownItem from './HeaderDropDown/HeaderDropDownItem'
 export default {
-  name: 'HeaderSidebar'
+  name: 'HeaderSidebar',
+  components: {
+    HeaderDropDownItem
+  }
 }
 </script>
 
 <style lang="scss">
-.sidebar-enter-active,
-.sidebar-leave-active {
-  transition: transform 0.3s ease;
-}
-.sidebar-enter,
-.sidebar-leave-to {
-  transition: translateX(100%);
-  transition: all 300ms ease-in 0s;
-}
 .sidebar {
-  &__panel {
-    overflow-y: auto;
-    background-color: $section_color;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 30;
-    height: 100%;
-    padding: 35px 25px 15px;
-    width: 100%;
-    height: 100%;
-    @media screen and (max-width: 576px) {
+  overflow-y: auto;
+  background-color: $section_color;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 30;
+  padding: 80px 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    .dropdown__item {
+      margin-top: 20px;
+    }
+    .dropdown__desc {
     }
   }
-  &__close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease-in-out;
-  }
-  &__body {
-    margin-top: 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - 25px);
-  }
-  &__copyright {
-    font-size: 14px;
+  &__menu {
+    &-item + &-item {
+      margin-top: 10%;
+    }
+    &-link {
+      font-size: 30px;
+      font-weight: $font_bold;
+      color: $text_color;
+      &:hover {
+      }
+    }
   }
 }
 </style>

@@ -41,5 +41,18 @@ export default {
     flex-grow: 1;
     width: 100%;
   }
+  &__desc {
+    margin-top: 3px;
+    font-size: 12px;
+    color: rgba(24, 24, 24, 0.52);
+    line-height: 1.684;
+    font-weight: $font_regular;
+  }
+  &__link {
+    font-size: 13px;
+    color: rgb(24, 24, 24);
+    line-height: 1.295;
+    font-weight: $font_semibold;
+  }
 }
 </style>

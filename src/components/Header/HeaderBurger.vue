@@ -19,14 +19,16 @@ export default {
 .burger {
   height: 28px;
   width: 32px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   z-index: 40;
   &:hover {
     cursor: pointer;
   }
-
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
   &__item {
     border-radius: 5px;
     height: 4px;
