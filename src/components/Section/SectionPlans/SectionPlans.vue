@@ -56,6 +56,8 @@ export default {
     line-height: 1.448;
   }
   &__steps {
+    margin-top: 47px;
+
     .row {
       justify-content: center;
     }
