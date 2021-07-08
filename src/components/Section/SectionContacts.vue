@@ -1,7 +1,7 @@
 <template>
   <section class="section contacts">
     <div class="container">
-      <h1 class="title">Контакты</h1>
+      <h1 class="title">{{ content.title }}</h1>
       <div class="contacts__inner">
         <div class="row">
           <div class="column column-50">
@@ -20,7 +20,10 @@
 
 <script>
 export default {
-  name: 'SectionContacts'
+  name: 'SectionContacts',
+  props: {
+    content: Object
+  }
 }
 </script>
 

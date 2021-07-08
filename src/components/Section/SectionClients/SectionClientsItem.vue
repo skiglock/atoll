@@ -1,12 +1,15 @@
 <template>
   <div class="clients__item">
-    <g-image class="clients__item-img" src="@/assets/img/clients/delight.png" />
+    <g-image class="clients__item-img" :src="logo" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionClientsItem'
+  name: 'SectionClientsItem',
+  props: {
+    logo: String
+  }
 }
 </script>
 

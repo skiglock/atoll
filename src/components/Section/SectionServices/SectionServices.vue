@@ -19,9 +19,12 @@
 </template>
 
 <script>
-import SectionServicesItem from './SectionServicesItem.vue'
+import SectionServicesItem from './SectionServicesItem'
 export default {
   name: 'SectionServices',
+  props: {
+    content: Object
+  },
   components: {
     SectionServicesItem
   }

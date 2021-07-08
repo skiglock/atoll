@@ -2,7 +2,7 @@
   <section class="section plans">
     <div class="container">
       <div class="title plans__title">
-        Вы должны регулярно заниматься своей CRM-системой
+        {{ content.title }}
       </div>
       <div class="text plans__text">
         Вопросы и проблемы появляются регулярно, но их решение не влияет на
@@ -10,20 +10,12 @@
       </div>
       <div class="plans__steps">
         <div class="row">
-          <div class="column column-30">
-            <section-plans-item />
-          </div>
-          <div class="column column-30">
-            <section-plans-item />
-          </div>
-          <div class="column column-30">
-            <section-plans-item />
-          </div>
-          <div class="column column-30">
-            <section-plans-item />
-          </div>
-          <div class="column column-30">
-            <section-plans-item />
+          <div
+            class="column column-30"
+            v-for="item in content.elements"
+            :key="item.id"
+          >
+            <section-plans-item :title="item.title" :desc="item.desc" />
           </div>
         </div>
       </div>
@@ -32,9 +24,12 @@
 </template>
 
 <script>
-import SectionPlansItem from './SectionPlansItem.vue'
+import SectionPlansItem from './SectionPlansItem'
 export default {
   name: 'SectionPlans',
+  props: {
+    content: Object
+  },
   components: {
     SectionPlansItem
   }

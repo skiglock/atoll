@@ -2,24 +2,22 @@
   <section class="section cards">
     <div class="container">
       <div class="cards__head">
-        <h1 class="title">Что такое технический аудит</h1>
+        <h1 class="title">{{ content.title }}</h1>
         <p class="text cards__text">
-          Проанализируем вашу систему продаж и составим карту внедрения или
-          развития вашей amoCRM
+          {{ content.desc }}
         </p>
         <div class="cards__body">
           <div class="row">
-            <div class="column column-50">
-              <section-cards-item />
-            </div>
-            <div class="column column-50">
-              <section-cards-item />
-            </div>
-            <div class="column column-50">
-              <section-cards-item />
-            </div>
-            <div class="column column-50">
-              <section-cards-item />
+            <div
+              class="column column-50"
+              v-for="item in content.elements"
+              :key="item.id"
+            >
+              <section-cards-item
+                :img="item.img"
+                :title="item.title"
+                :desc="item.desc"
+              />
             </div>
           </div>
         </div>
@@ -32,6 +30,9 @@
 import SectionCardsItem from './SectionCardsItem.vue'
 export default {
   name: 'SectionCards',
+  props: {
+    content: Object
+  },
   components: {
     SectionCardsItem
   }

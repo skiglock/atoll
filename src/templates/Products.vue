@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <h1 class="page-title">{{ $page.dynamic.title }}</h1>
+    <h1 class="page-title">{{ $page.products.title }}</h1>
     <component
       :is="'section-' + component.name"
-      v-for="component in $page.dynamic.layout"
+      v-for="component in $page.products.layout"
       :key="component.id"
       :content="component"
     />
@@ -12,11 +12,19 @@
 
 <page-query>
 query ($id: ID!) {
-  dynamic (id: $id) {
+  products (id: $id) {
     title
     layout {
+      id
       name
       title
+      desc
+      elements {
+        id
+        title
+        desc
+        img
+      }
     }
   }
 }
@@ -64,7 +72,7 @@ export default {
   props: ['components'],
   metaInfo() {
     return {
-      title: this.$page.dynamic.title
+      title: this.$page.products.title
     }
   }
 }

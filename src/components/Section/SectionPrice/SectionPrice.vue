@@ -1,7 +1,7 @@
 <template>
   <section class="section price">
     <div class="container">
-      <h1 class="title price__title">Стоимость и формат сопровождения.</h1>
+      <h1 class="title price__title">{{ content.title }}</h1>
       <p class="text price__text">
         Выделенный аналитик будет планомерно развивать вашу CRM-систему и станет
         единым окном для всех возникающих проблем и вопросов.
@@ -27,9 +27,12 @@
               <h1 class="title price__list-title">
                 В рамках тарифа вам доступно:
               </h1>
-              <section-price-item />
-              <section-price-item />
-              <section-price-item />
+              <section-price-item
+                v-for="(item, index) in content.elements"
+                :key="item.id"
+                :title="item.title"
+                :number="index + 1"
+              />
             </div>
           </div>
         </div>
@@ -39,10 +42,13 @@
 </template>
 
 <script>
-import SectionPriceItem from './SectionPriceItem.vue'
+import SectionPriceItem from './SectionPriceItem'
 import MainButton from '@/components/Common/MainButton'
 export default {
   name: 'SectionPrice',
+  props: {
+    content: Object
+  },
   components: {
     MainButton,
     SectionPriceItem

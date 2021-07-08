@@ -2,7 +2,7 @@
   <section class="section head-three">
     <div class="container">
       <div class="head-three__inner">
-        <h2 class="head-three__subtitle">Atollon — интегратор amoCRM</h2>
+        <h2 class="head-three__subtitle">{{ content.title }}</h2>
         <p class="text head-three__text">
           специализирующийся на цифровой трансформации продаж. Мы фокусируемся
           исключительно на amoCRM как платформе,на базе которой делаем сложные
@@ -21,7 +21,10 @@
 
 <script>
 export default {
-  name: 'SectionHeadThree'
+  name: 'SectionHeadThree',
+  props: {
+    content: Object
+  }
 }
 </script>
 

@@ -2,16 +2,14 @@
   <section class="section faq">
     <div class="faq__inner">
       <div class="container">
-        <div class="title">Отвечаем на частые вопросы</div>
+        <div class="title">{{ content.title }}</div>
         <div class="row">
-          <div class="column column-50">
-            <section-faq-item />
-          </div>
-          <div class="column column-50">
-            <section-faq-item />
-          </div>
-          <div class="column column-50">
-            <section-faq-item />
+          <div
+            class="column column-50"
+            v-for="item in content.elements"
+            :key="item.id"
+          >
+            <section-faq-item :question="item.title" :answer="item.desc" />
           </div>
         </div>
       </div>
@@ -20,9 +18,12 @@
 </template>
 
 <script>
-import SectionFaqItem from './SectionFaqItem.vue'
+import SectionFaqItem from './SectionFaqItem'
 export default {
   name: 'SectionFaq',
+  props: {
+    content: Object
+  },
   components: {
     SectionFaqItem
   }

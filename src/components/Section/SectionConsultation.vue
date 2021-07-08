@@ -4,7 +4,7 @@
       <div class="consultation__inner">
         <div class="row">
           <div class="column column-50">
-            <h1 class="title consultation__title">С чего мне начать?</h1>
+            <h1 class="title consultation__title">{{ content.title }}</h1>
             <p class="text consultation__text">
               Оставьте заявку и наш эксперт расскажет обо всех возможностях
               развития вашего отдела продаж
@@ -29,11 +29,11 @@
 import MainButton from '@/components/Common/MainButton.vue'
 export default {
   name: 'SectionConsultation',
-  components: {
-    MainButton
-  },
   props: {
     content: Object
+  },
+  components: {
+    MainButton
   }
 }
 </script>

@@ -1,15 +1,19 @@
 <template>
   <div class="card blog__card">
     <h2 class="title blog__card-title">
-      Эффективное построение воронки продаж в amoCRM
+      {{ title }}
     </h2>
-    <a class="blog__card-link">Открыть</a>
+    <g-link :to="$getPath(url)" class="blog__card-link">Открыть</g-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MainBlogCard'
+  name: 'MainBlogCard',
+  props: {
+    title: String,
+    url: String
+  }
 }
 </script>
 

@@ -2,15 +2,17 @@
   <section class="section team">
     <div class="container">
       <div class="team__inner">
-        <h1 class="title team__title">Наша команда экспертов</h1>
+        <h1 class="title team__title">{{ content.title }}</h1>
         <div class="row">
-          <div class="column column-30">
-            <main-person />
-          </div>
-          <div class="column column-30">
-            <main-person />
-          </div>
-          <div class="column column-30">
+          <div
+            class="column column-30"
+            v-for="{ node } in $static.allTeam.edges"
+            :key="node.id"
+            :avatar="node.avatar"
+            :name="node.name"
+            :position="node.position"
+            :practice="node.practice"
+          >
             <main-person />
           </div>
         </div>
@@ -24,10 +26,29 @@
   </section>
 </template>
 
+<static-query>
+query {
+  allTeam {
+    edges {
+      node {
+        id
+        avatar
+        name
+        position
+        practice
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 import MainPerson from '@/components/Common/MainPerson'
 export default {
   name: 'SectionTeam',
+  props: {
+    content: Object
+  },
   components: {
     MainPerson
   }

@@ -1,15 +1,19 @@
 <template>
   <div class="plans__item">
-    <h1 class="title plans__item-title">Грамотная архитектура</h1>
+    <h1 class="title plans__item-title">{{ title }}</h1>
     <p class="text plans__item-text">
-      Построим масштабируемую архитектуру отдела продаж на базе amoCRM
+      {{ desc }}
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionPlansItem'
+  name: 'SectionPlansItem',
+  props: {
+    title: String,
+    desc: String
+  }
 }
 </script>
 

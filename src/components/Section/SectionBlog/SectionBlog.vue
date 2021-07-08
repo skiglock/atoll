@@ -4,7 +4,7 @@
       <div class="blog__inner">
         <div class="blog__head">
           <blockquote>
-            <h1 class="title blog__title">Полезные статьи в нашем блоге</h1>
+            <h1 class="title blog__title">{{ content.title }}</h1>
             <p class="text blog__text">
               Регулярно пишем статьи о системах продажах, управлении проектами и
               делимся собственным опытом трансформации процессов.
@@ -12,14 +12,31 @@
           </blockquote>
         </div>
         <div class="blog__body">
-          <section-blog-item />
-          <section-blog-item />
-          <section-blog-item />
+          <section-blog-item
+            v-for="{ node } in $static.allBlogPost.edges"
+            :key="node.id"
+            :title="node.title"
+            :url="node.path"
+          />
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<static-query>
+query {
+  allBlogPost {
+    edges {
+      node {
+        id
+        title
+        path
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 import SectionBlogItem from './SectionBlogItem.vue'

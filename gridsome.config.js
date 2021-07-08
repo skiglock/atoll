@@ -55,8 +55,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/pages/*.md',
-        typeName: 'Dynamic',
+        path: 'content/products/*.md',
+        typeName: 'Products',
         remark: {
           plugins: []
         }
@@ -113,6 +113,16 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/team/*.md',
+        typeName: 'Team',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
       use: 'gridsome-plugin-netlify-cms',
       options: {
         publicPath: '/admin',
@@ -124,6 +134,20 @@ module.exports = {
       options: {
         contentTypes: ['BlogPost', 'CasesPost'],
         coverField: 'img'
+      }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['CasesPost'],
+        coverField: 'logo'
+      }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['Team'],
+        coverField: 'avatar'
       }
     }
   ],

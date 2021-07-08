@@ -1,7 +1,7 @@
 <template>
   <section class="section target">
     <div class="container">
-      <h1 class="title target-title">Наша большая цель</h1>
+      <h1 class="title target-title">{{ content.title }}</h1>
       <h2 class="text">
         поменять устаревший подход к управлению продажами и доказать, что
         правильные инструменты позволяют системно выполнять план продаж с
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'SectionTarget'
+  name: 'SectionTarget',
+  props: {
+    content: Object
+  }
 }
 </script>
 

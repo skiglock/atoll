@@ -1,19 +1,21 @@
 <template>
   <div class="card cards__card">
-    <span class="cards__card-icon"
-      ><g-image src="@/assets/img/dynamic/icon_1.png"
-    /></span>
-    <h1 class="title">Потенциал прибыли от текущих клиентов.</h1>
+    <span class="cards__card-icon"><g-image :src="img" /></span>
+    <h1 class="title">{{ title }}</h1>
     <p class="text cards__card-text">
-      Часто компании делают ставку на новых клиентов и не работают с текущей
-      базой.
+      {{ desc }}
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionCardsItem'
+  name: 'SectionCardsItem',
+  props: {
+    img: String,
+    title: String,
+    desc: String
+  }
 }
 </script>
 

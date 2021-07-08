@@ -1,7 +1,7 @@
 <template>
   <section class="section results">
     <div class="container">
-      <h1 class="title">Результаты сопровождения amoCRM</h1>
+      <h1 class="title">{{ content.title }}</h1>
       <div class="results__inner">
         <section-results-item />
         <section-results-item />
@@ -11,9 +11,12 @@
 </template>
 
 <script>
-import SectionResultsItem from './SectionResultsItem.vue'
+import SectionResultsItem from './SectionResultsItem'
 export default {
   name: 'SectionResults',
+  props: {
+    content: Object
+  },
   components: {
     SectionResultsItem
   }

@@ -1,7 +1,7 @@
 <template>
   <section class="section other">
     <div class="container">
-      <div class="title">Мы думали, что CRM можно внедрить раз и навсегда</div>
+      <h1 class="title">{{ content.title }}</h1>
       <div class="other__inner">
         <div class="row">
           <div class="column column-50">
@@ -27,7 +27,10 @@
 
 <script>
 export default {
-  name: 'SectionOther'
+  name: 'SectionOther',
+  props: {
+    content: Object
+  }
 }
 </script>
 

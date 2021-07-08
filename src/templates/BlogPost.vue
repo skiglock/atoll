@@ -69,12 +69,6 @@ export default {
     margin: inherit;
     padding: inherit;
   }
-  p {
-    img {
-      width: inherit;
-      text-align: center;
-    }
-  }
   blockquote {
     padding: 0 0 0 10px;
     position: relative;

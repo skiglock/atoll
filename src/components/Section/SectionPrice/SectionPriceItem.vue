@@ -1,13 +1,17 @@
 <template>
   <div class="price__list-item">
-    <span class="price__list-number">1</span>
-    <p class="text price__list-text">Личный чат с Аналитиком</p>
+    <span class="price__list-number">{{ number }}</span>
+    <p class="text price__list-text">{{ title }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionPriceItem'
+  name: 'SectionPriceItem',
+  props: {
+    title: String,
+    number: Number
+  }
 }
 </script>
 

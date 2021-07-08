@@ -12,7 +12,7 @@ module.exports = function (api) {
             }
           }
         }
-        allDynamic {
+        allProducts {
           edges {
             node {
               id
@@ -41,11 +41,11 @@ module.exports = function (api) {
       })
     })
 
-    data.allDynamic.edges.forEach(({ node }) => {
-      const newPath = node.path.replace('/content/pages', '')
+    data.allProducts.edges.forEach(({ node }) => {
+      const newPath = node.path.replace('/content', '')
       createPage({
         path: newPath,
-        component: './src/templates/Dynamic.vue',
+        component: './src/templates/Products.vue',
         context: {
           id: node.id
         }

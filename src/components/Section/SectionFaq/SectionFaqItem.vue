@@ -1,17 +1,21 @@
 <template>
   <div class="faq__item">
     <div class="card faq__item-question">
-      <p class="text">Какое отношение Atoll имеет к amoCRM?</p>
+      <p class="text">{{ question }}</p>
     </div>
     <div class="card faq__item-answer">
-      <p class="text">Мы сертифицированные партнеры amoCRM.</p>
+      <p class="text">{{ answer }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionFaqItem'
+  name: 'SectionFaqItem',
+  props: {
+    question: String,
+    answer: String
+  }
 }
 </script>
 

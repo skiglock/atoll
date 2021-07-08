@@ -15,7 +15,10 @@
 
 <script>
 export default {
-  name: 'SectionQuote'
+  name: 'SectionQuote',
+  props: {
+    content: Object
+  }
 }
 </script>
 

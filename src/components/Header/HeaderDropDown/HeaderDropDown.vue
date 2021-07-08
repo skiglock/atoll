@@ -1,10 +1,27 @@
 <template>
   <ul class="dropdown">
-    <header-drop-down-item />
-    <header-drop-down-item />
-    <header-drop-down-item />
+    <header-drop-down-item
+      v-for="{ node } in $static.allProducts.edges"
+      :key="node.id"
+      :title="node.title"
+      :subtitle="node.subtitle"
+    />
   </ul>
 </template>
+
+<static-query>
+query {
+  allProducts {
+    edges {
+      node {
+        id
+        title
+        subtitle
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 import HeaderDropDownItem from './HeaderDropDownItem'

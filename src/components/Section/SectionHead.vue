@@ -5,7 +5,7 @@
         <div class="row">
           <div class="column column-60">
             <h1 class="title head__title">
-              Проведем аудит и создадим стратегию развития вашей CRM-систем
+              {{ content.title }}
             </h1>
             <p class="text head__text">
               Воспользуйтесь нашей экспертизой, чтобы увидеть слабые места
@@ -25,7 +25,10 @@
 
 <script>
 export default {
-  name: 'SectionHead'
+  name: 'SectionHead',
+  props: {
+    content: Object
+  }
 }
 </script>
 

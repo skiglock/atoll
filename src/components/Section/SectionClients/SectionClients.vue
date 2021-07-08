@@ -1,29 +1,49 @@
 <template>
-  <section class="section clients">
+  <section
+    class="section clients"
+    :class="$route.path !== '/' ? 'clients--white' : ''"
+  >
     <div class="container">
       <div class="clients__inner">
-        <h1 class="title clients__title">Наши клиенты</h1>
+        <h1 class="title clients__title">{{ content.title }}</h1>
         <div class="row">
-          <div class="column column-50">
-            <section-clients-item />
-          </div>
-          <div class="column column-50">
-            <section-clients-item />
+          <div
+            class="column column-50"
+            v-for="{ node } in $static.allCasesPost.edges"
+            :key="node.id"
+          >
+            <section-clients-item :logo="node.logo" />
           </div>
         </div>
         <div class="clients__bottom">
-          <main-button class="btn">Все кейсы</main-button>
+          <main-button to="/cases" class="btn">Все кейсы</main-button>
         </div>
       </div>
     </div>
   </section>
 </template>
 
+<static-query>
+query {
+  allCasesPost {
+    edges {
+      node {
+        id
+        logo
+      }
+    }
+  }
+}
+</static-query>
+
 <script>
 import SectionClientsItem from './SectionClientsItem'
 import MainButton from '@/components/Common/MainButton'
 export default {
   name: 'SectionClients',
+  props: {
+    content: Object
+  },
   components: {
     SectionClientsItem,
     MainButton
@@ -33,6 +53,9 @@ export default {
 
 <style lang="scss">
 .clients {
+  &--white {
+    background-color: $white_color;
+  }
   &__inner {
     padding: 55px 0;
   }
