@@ -103,11 +103,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'Фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -152,11 +152,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -201,11 +201,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -250,11 +250,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -299,11 +299,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -348,11 +348,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -397,11 +397,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -446,11 +446,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -495,11 +495,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -544,11 +544,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -593,11 +593,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
@@ -748,11 +748,11 @@ collections:
               ######################
               - label: 'elements'
                 name: 'elements'
-                widget: 'object'
-                fields:
-                  - label: 'item'
+                widget: 'list'
+                types:
+                  - label: 'фейковый элемент'
                     name: 'item'
-                    widget: 'object'
+                    widget: 'list'
                     fields:
                       - {
                           label: 'id',
