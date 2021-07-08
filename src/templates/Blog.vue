@@ -1,14 +1,17 @@
 <template>
   <Layout>
+    <h1 class="page-title">{{ $page.blog.title }}</h1>
     <section class="blog-page">
       <div class="container">
-        <h1 class="title blog-page__title">
-          {{ $page.blog.title }}
-        </h1>
         <div class="blog-page__list">
-          <blog-card />
-          <blog-card />
-          <blog-card />
+          <blog-card
+            v-for="{ node } in $page.allBlogPost.edges"
+            :key="node.id"
+            :title="node.title"
+            :img="node.img"
+            :desc="node.desc"
+            :url="node.path"
+          />
         </div>
       </div>
     </section>
@@ -19,6 +22,17 @@
 query ($id: ID!) {
   blog (id: $id) {
     title
+  }
+  allBlogPost {
+    edges {
+      node {
+        id
+        title
+        img
+        desc
+        path
+      }
+    }
   }
 }
 </page-query>
@@ -39,9 +53,6 @@ export default {
 
 <style lang="scss">
 .blog-page {
-  &__title {
-    text-align: center;
-  }
   &__list {
     margin-top: 49px;
   }

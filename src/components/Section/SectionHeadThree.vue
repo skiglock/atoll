@@ -2,7 +2,6 @@
   <section class="section head-three">
     <div class="container">
       <div class="head-three__inner">
-        <h1 class="title">Заголовок</h1>
         <h2 class="head-three__subtitle">Atollon — интегратор amoCRM</h2>
         <p class="text head-three__text">
           специализирующийся на цифровой трансформации продаж. Мы фокусируемся

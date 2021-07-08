@@ -19,10 +19,10 @@ module.exports = {
     Index: '/',
     About: '/about',
     Blog: '/blog',
-    // BlogPost: '/blog/:title',
     Contacts: '/contacts',
     Cases: '/cases'
   },
+
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -103,10 +103,27 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/cases/*.md',
+        typeName: 'CasesPost',
+        remark: {
+          plugins: []
+        }
+      }
+    },
+    {
       use: 'gridsome-plugin-netlify-cms',
       options: {
         publicPath: '/admin',
         modulePath: 'src/admin/index.js'
+      }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['BlogPost', 'CasesPost'],
+        coverField: 'img'
       }
     }
   ],

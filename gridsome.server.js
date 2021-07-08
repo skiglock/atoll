@@ -20,6 +20,14 @@ module.exports = function (api) {
             }
           }
         }
+        allCasesPost {
+          edges {
+            node {
+              id
+              path
+            }
+          }
+        }
       }
     `)
     data.allBlogPost.edges.forEach(({ node }) => {
@@ -38,6 +46,17 @@ module.exports = function (api) {
       createPage({
         path: newPath,
         component: './src/templates/Dynamic.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
+
+    data.allCasesPost.edges.forEach(({ node }) => {
+      const newPath = node.path.replace('/content', '')
+      createPage({
+        path: newPath,
+        component: './src/templates/CasesPost.vue',
         context: {
           id: node.id
         }

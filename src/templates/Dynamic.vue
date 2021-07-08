@@ -1,23 +1,12 @@
 <template>
   <Layout>
+    <h1 class="page-title">{{ $page.dynamic.title }}</h1>
     <component
-      :is="'main-' + component.name"
+      :is="'section-' + component.name"
       v-for="component in $page.dynamic.layout"
       :key="component.id"
       :content="component"
     />
-    <section-head-two />
-    <section-head />
-    <section-faq />
-    <section-other />
-    <section-cards />
-    <section-plans />
-    <section-price />
-    <section-quote />
-    <section-results />
-    <section-consultation />
-    <section-order />
-    <section-contacts />
   </Layout>
 </template>
 
@@ -25,12 +14,15 @@
 query ($id: ID!) {
   dynamic (id: $id) {
     title
+    layout {
+      name
+      title
+    }
   }
 }
 </page-query>
 
 <script>
-import SectionHeadTwo from '@/components/Section/SectionHeadTwo'
 import SectionPlans from '@/components/Section/SectionPlans/SectionPlans'
 import SectionPrice from '@/components/Section/SectionPrice/SectionPrice'
 import SectionOther from '@/components/Section/SectionOther'
@@ -39,9 +31,15 @@ import SectionConsultation from '@/components/Section/SectionConsultation'
 import SectionQuote from '@/components/Section/SectionQuote'
 import SectionOrder from '@/components/Section/SectionOrder'
 import SectionHead from '@/components/Section/SectionHead'
+import SectionHeadTwo from '@/components/Section/SectionHeadTwo'
+import SectionHeadThree from '@/components/Section/SectionHeadThree'
+import SectionMessage from '@/components/Section/SectionMessage'
 import SectionCards from '@/components/Section/SectionCards/SectionCards'
 import SectionContacts from '@/components/Section/SectionContacts'
 import SectionFaq from '@/components/Section/SectionFaq/SectionFaq'
+import SectionTarget from '@/components/Section/SectionTarget'
+import SectionTeam from '@/components/Section/SectionTeam'
+import SectionClients from '@/components/Section/SectionClients/SectionClients'
 
 export default {
   components: {
@@ -56,7 +54,12 @@ export default {
     SectionHead,
     SectionCards,
     SectionContacts,
-    SectionFaq
+    SectionFaq,
+    SectionHeadThree,
+    SectionMessage,
+    SectionTarget,
+    SectionTeam,
+    SectionClients
   },
   props: ['components'],
   metaInfo() {

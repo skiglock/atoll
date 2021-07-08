@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <h1 class="page-title">{{ $page.about.title }}</h1>
     <section-head-three />
     <section-quote />
     <section-quote />

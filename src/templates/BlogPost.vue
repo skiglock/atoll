@@ -3,9 +3,9 @@
     <section class="blog-post">
       <div class="container">
         <div class="blog-post__top">
-          <h1 class="title">{{ $page.blogPost.title }}</h1>
+          <div class="title">{{ $page.blogPost.title }}</div>
 
-          <h2 class="date">{{ formatDate }}</h2>
+          <div class="date">{{ formatDate }}</div>
         </div>
         <div
           class="blog-post__body"
@@ -56,6 +56,41 @@ export default {
   &__body {
     padding: 20px;
     font-weight: $font_regular;
+  }
+  p,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  img {
+    margin: inherit;
+    padding: inherit;
+  }
+  p {
+    img {
+      width: inherit;
+      text-align: center;
+    }
+  }
+  blockquote {
+    padding: 0 0 0 10px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 100%;
+      background-color: #487bfa;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: $border_radius;
+      z-index: 8;
+    }
   }
 }
 </style>

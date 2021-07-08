@@ -1,12 +1,18 @@
 <template>
   <Layout>
+    <h1 class="page-title">{{ $page.cases.title }}</h1>
     <section class="cases-page">
       <div class="container">
-        <h1 class="title cases-page__title">{{ $page.cases.title }}</h1>
         <div class="cases-page__list">
-          <cases-item />
-          <cases-item />
-          <cases-item />
+          <cases-item
+            v-for="{ node } in $page.allCasesPost.edges"
+            :key="node.id"
+            :title="node.title"
+            :img="node.img"
+            :logo="node.logo"
+            :desc="node.desc"
+            :url="node.path"
+          />
         </div>
       </div>
     </section>
@@ -17,6 +23,18 @@
 query ($id: ID!) {
   cases (id: $id) {
     title
+  }
+  allCasesPost {
+    edges {
+      node {
+        id
+        title
+        img
+        logo
+        desc
+        path
+      }
+    }
   }
 }
 </page-query>

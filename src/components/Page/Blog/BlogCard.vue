@@ -5,23 +5,21 @@
       <div class="column column-50">
         <div class="blog-page__card-left">
           <div class="blog-page__card-img">
-            <g-image src="@/assets/img/blog/blog-item.png" />
+            <g-image :src="img" />
           </div>
         </div>
       </div>
       <div class="column column-50">
         <div class="blog-page__card-right">
           <h1 class="title blog-page__card-title">
-            Эффективное построение воронки продаж в amoCRM
+            {{ title }}
           </h1>
           <p class="text blog-page__card-text">
-            Начинайте с самого начала - полученного обращения. Будем
-            рассматривать для данной воронки и направления работу с лояльным
-            клиентом, который готов купить. Представим у нас в компании работает
-            менеджер - Вася и мы должны выстроить ему дорожку, чтобы он помог
-            клиенту приобрести у нас продукт [...]
+            {{ desc }}
           </p>
-          <g-link to="/" class="blog-page__card-link">Читать</g-link>
+          <g-link :to="$getPath(url)" class="blog-page__card-link"
+            >Читать</g-link
+          >
         </div>
       </div>
     </div>
@@ -30,7 +28,13 @@
 
 <script>
 export default {
-  name: 'BlogCard'
+  name: 'BlogCard',
+  props: {
+    title: String,
+    img: String,
+    desc: String,
+    url: String
+  }
 }
 </script>
 

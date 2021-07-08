@@ -1,8 +1,8 @@
 <template>
   <Layout>
+    <h1 class="page-title">{{ $page.contacts.title }}</h1>
     <section class="contacts-page">
       <div class="container">
-        <h1 class="title contacts-page__title">{{ $page.contacts.title }}</h1>
         <div class="contacts-page__body">
           <div class="row">
             <div class="column column-50 contacts-page--column">

@@ -97,8 +97,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
 
           # SectionHeadTwo
           - label: 'Секция с заголовком и описанием 2'
@@ -113,8 +111,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
 
           # SectionHeadThree
           - label: 'Секция с заголовком и описанием 3'
@@ -129,8 +125,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
 
           # SectionOther
           - label: 'Секция с историей'
@@ -145,8 +139,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
 
           # SectionConsultation
           - label: 'Секция с консультацией'
@@ -161,19 +153,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
-              - { label: 'Цвет кнопки', name: 'color', widget: color } # new
-              - {
-                  # new
-                  label: 'Куда введет кнопка',
-                  name: 'link',
-                  widget: 'relation',
-                  collection: 'pages',
-                  value_field: 'id',
-                  search_fields: ['title'],
-                  display_fields: ['title']
-                }
 
           # SectionMessage
           - label: 'Секция заголовок с кнопкой'
@@ -188,17 +167,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Цвет кнопки', name: 'color', widget: color } # new
-              - {
-                  # new
-                  label: 'Куда введет кнопка',
-                  name: 'link',
-                  widget: 'relation',
-                  collection: 'pages',
-                  value_field: 'id',
-                  search_fields: ['title'],
-                  display_fields: ['title']
-                }
 
           # SectionQuote
           - label: 'Секция с цитатой'
@@ -212,7 +180,7 @@ collections:
                   default: 'quote'
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Описание', name: 'desc', widget: string }
+              - { label: 'Заголовок', name: 'title', widget: string }
 
           # SectionContacts
           - label: 'Секция с контактами'
@@ -226,6 +194,7 @@ collections:
                   default: 'contacts'
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
 
           # SectionOrder
           - label: 'Секция с формой'
@@ -240,17 +209,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - {
-                  # new
-                  label: 'Страница в случае удачной отправки',
-                  name: 'link',
-                  widget: 'relation',
-                  collection: 'pages',
-                  value_field: 'id',
-                  search_fields: ['title'],
-                  display_fields: ['title']
-                }
 
           # SectionTarget
           - label: 'Секция с общей фоткой и текстом'
@@ -265,8 +223,6 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
 
           # SectionTeam
           - label: 'Секция с командой'
@@ -281,7 +237,90 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Количество челов', name: 'number', widget: number }
+
+          # SectionResults
+          - label: 'Секция результаты'
+            name: 'results'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'results'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+
+          # SectionCards
+          - label: 'Секция с карточками'
+            name: 'cards'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'cards'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+
+          # SectionPrice
+          - label: 'Секция цена'
+            name: 'price'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'price'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+
+          # SectionFaq
+          - label: 'Секция вопросы/ответы'
+            name: 'faq'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'faq'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+
+          # SectionClients
+          - label: 'Секция клиенты'
+            name: 'clients'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'clients'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+
+          # SectionPlans
+          - label: 'Секция планы'
+            name: 'plans'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'plans'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
 
   # --------------------Блог---------------------------
   - name: 'blog'
@@ -300,10 +339,32 @@ collections:
           widget: 'boolean',
           default: false
         }
-      - { label: 'Главная картинка', name: 'img', widget: 'image', default: '' }
+      - { label: 'Главная картинка', name: 'img', widget: 'image' }
       - { label: 'Текст краткого описания', name: 'desc', widget: 'markdown' }
+      - { label: 'Текст полного описания', name: 'full', widget: 'markdown' }
+
+  # --------------------Кейсы---------------------------
+  - name: 'cases'
+    label: 'Кейсы'
+    folder: 'content/cases'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Заголовок', name: 'title', widget: 'string' }
+      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
+      - { label: 'Дата', name: 'date', picker_utc: false, widget: 'datetime' }
       - {
-          label: 'Текст полного описания',
-          name: 'desc_full',
-          widget: 'markdown'
+          label: 'Опубликовано',
+          name: 'published',
+          widget: 'boolean',
+          default: false
         }
+      - { label: 'Категория', name: 'category', widget: 'string' }
+      - { label: 'Картинка', name: 'img', widget: 'image' }
+      - { label: 'Логотип', name: 'logo', widget: 'image' }
+      - { label: 'Краткое описание', name: 'desc', widget: markdown }
+      - { label: 'О компании', name: 'about', widget: 'markdown' }
+      - { label: 'История', name: 'history', widget: 'markdown' }
+      - { label: 'Что мы сделали?', name: 'made', widget: 'markdown' }
+      - { label: 'Результат', name: 'result', widget: 'markdown' }

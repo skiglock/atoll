@@ -34,7 +34,7 @@ export default {
 <style lang="scss">
 .results {
   &__item + &__item {
-    margin-bottom: 20px;
+    margin-top: 40px;
   }
   &__item {
     @media screen and (max-width: 768px) {
