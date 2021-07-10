@@ -17,6 +17,7 @@ layout:
         title: ""
         desc: ""
         img: ""
+    img: /uploads/title-image.png
   - type: other
     name: other
     id: 3c02396b-959b-40a6-9a6d-49b2666f7bc1
@@ -32,6 +33,7 @@ layout:
         desc: ""
         img: ""
     variant: true
+    img: /uploads/layer-5-1x.png
   - type: clients
     name: clients
     desc: ""
@@ -57,6 +59,7 @@ layout:
         desc: ""
         img: ""
     variant: true
+    img: /uploads/layer-7-1x-2-.png
   - type: faq
     name: faq
     desc: ""

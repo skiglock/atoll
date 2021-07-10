@@ -9,7 +9,7 @@
         >
           <div class="column column-50">
             <div class="other__img">
-              <g-image src="@/assets/img/dynamic/notebook.png" />
+              <g-image :src="content.img" />
             </div>
           </div>
           <div class="column column-50">

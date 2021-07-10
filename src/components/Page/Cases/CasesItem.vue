@@ -1,21 +1,29 @@
 <template>
-  <g-link class="cases-page__item" :to="$getPath(url)">
-    <div class="column column-50">
-      <div class="cases-page__item-img">
-        <g-image :src="img" />
-      </div>
-    </div>
+  <div class="cases-page__item">
+    <g-link :to="$getPath(url)">
+      <div class="row">
+        <div class="column column-50">
+          <div class="cases-page__item-left">
+            <div class="cases-page__item-img">
+              <g-image :src="img" />
+            </div>
+          </div>
+        </div>
 
-    <div class="column column-50 cases-page--column">
-      <div class="cases-page__item-client">
-        <g-image :src="logo" />
+        <div class="column column-50 cases-page--column">
+          <div class="cases-page__item-right">
+            <div class="cases-page__item-client">
+              <g-image :src="logo" />
+            </div>
+            <h2 class="title cases-page__item-title">{{ category }}</h2>
+            <p class="text cases-page__item-text">
+              {{ desc }}
+            </p>
+          </div>
+        </div>
       </div>
-      <h2 class="title cases-page__item-title">{{ category }}</h2>
-      <p class="text cases-page__item-text">
-        {{ desc }}
-      </p>
-    </div>
-  </g-link>
+    </g-link>
+  </div>
 </template>
 
 <script>
@@ -36,12 +44,18 @@ export default {
   &__item + &__item {
     margin-top: 100px;
   }
-  &--column {
-    margin-left: 49px;
-  }
-  &__item {
-    display: flex;
 
+  &__item {
+    &-left,
+    &-right {
+      @media screen and (max-width: 576px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
     &-img {
       max-width: 413px;
       height: 221px;
@@ -53,6 +67,10 @@ export default {
     &-client {
       max-width: 194px;
       height: 48px;
+      img {
+        @media screen and (max-width: 576px) {
+        }
+      }
     }
     &-title {
       margin-top: 9px;

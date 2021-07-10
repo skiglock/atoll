@@ -20,6 +20,7 @@ query ($id: ID!) {
       title
       desc
       variant
+      img
       elements {
         id
         title

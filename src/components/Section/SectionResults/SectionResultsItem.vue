@@ -1,16 +1,13 @@
 <template>
-  <div class="results__item" :style="{ backgroundImage: `url(${getResult})` }">
+  <div class="results__item" :style="{ backgroundImage: `url(${img})` }">
     <div class="results__item-inner">
       <div class="results__item-logo">
-        <g-image src="@/assets/img/clients/Mesto.png" />
+        <g-image :src="logo" />
       </div>
       <p class="text results__item-text">
-        Спустя две недели мы полностью проанализировали процессы от прихода
-        анкеты до приглашения или отклонения в сообщество. Также мы внедрили
-        цифровую воронку, которая позволила волонтерам не забывать о заявках и
-        вовремя их обрабатывать.
+        {{ desc }}
       </p>
-      <main-button class="results__item-btn">Подробнее</main-button>
+      <main-button :to="url" class="results__item-btn">Подробнее</main-button>
     </div>
   </div>
 </template>
@@ -21,7 +18,12 @@ import notebook from '@/assets/img/dynamic/result.png'
 
 export default {
   name: 'SectionResultsItem',
-
+  props: {
+    logo: String,
+    desc: String,
+    img: String,
+    url: String
+  },
   components: { MainButton },
   computed: {
     getResult() {

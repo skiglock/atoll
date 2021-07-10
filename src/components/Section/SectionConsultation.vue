@@ -1,5 +1,5 @@
 <template>
-  <section class="consultation">
+  <section class="consultation" :class="$route.path === '/' ? '' : 'section'">
     <div class="container">
       <div class="consultation__inner">
         <div class="row" :class="content.variant ? 'row--variant' : ''">
@@ -7,8 +7,7 @@
             <div :class="content.variant ? 'consultation__left' : ''">
               <h1 class="title consultation__title">{{ content.title }}</h1>
               <p class="text consultation__text" v-if="!content.variant">
-                Оставьте заявку и наш эксперт расскажет обо всех возможностях
-                развития вашего отдела продаж
+                {{ content.desc }}
               </p>
               <main-button
                 class="consultation__btn"
@@ -23,7 +22,7 @@
                 class="consultation__img"
                 :class="content.variant ? 'consultation__img--subcircle' : ''"
               >
-                <g-image src="@/assets/img/consultation.png" />
+                <g-image :src="content.img" />
               </div>
             </div>
           </div>
@@ -65,6 +64,9 @@ export default {
   }
   &__left {
     text-align: right;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
   }
   &__right {
     display: flex;

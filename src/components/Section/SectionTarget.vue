@@ -3,12 +3,10 @@
     <div class="container">
       <h1 class="title target-title">{{ content.title }}</h1>
       <h2 class="text">
-        поменять устаревший подход к управлению продажами и доказать, что
-        правильные инструменты позволяют системно выполнять план продаж с
-        минимальными затратами ресурсов.
+        {{ content.desc }}
       </h2>
       <div class="target-img">
-        <g-image src="@/assets/img/about/team-img-two.png" />
+        <g-image :src="content.img" />
       </div>
     </div>
   </section>

@@ -8,13 +8,12 @@
               {{ content.title }}
             </h1>
             <p class="text head__text">
-              Воспользуйтесь нашей экспертизой, чтобы увидеть слабые места
-              текущей CRM и получить пошаговый план усиления ее эффективности
+              {{ content.desc }}
             </p>
           </div>
           <div class="column column-30">
             <div class="head__img">
-              <g-image src="@/assets/img/dynamic/girl-1.png" />
+              <g-image :src="content.img" />
             </div>
           </div>
         </div>

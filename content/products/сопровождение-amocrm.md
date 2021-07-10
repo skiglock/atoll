@@ -16,6 +16,7 @@ layout:
         title: ""
         desc: ""
         img: ""
+    img: /uploads/title-img.png
   - type: plans
     name: plans
     desc: ""
@@ -91,16 +92,21 @@ layout:
         desc: ""
         img: ""
     variant: true
+    img: /uploads/notebook.png
   - type: results
     name: results
     desc: ""
     id: 0fc4fd7d-c57a-4a62-ab06-01ce28159e32
     elements:
       - type: item
-        id: ""
-        title: ""
-        desc: ""
-        img: ""
+        id: 03e24fe9-21a1-4490-9cce-3b62de1e0f2b
+        title: /uploads/mesto.png
+        desc: Спустя две недели мы полностью проанализировали процессы от прихода анкеты
+          до приглашения или отклонения в сообщество. Также мы внедрили цифровую
+          воронку, которая позволила волонтерам не забывать о заявках и вовремя
+          их обрабатывать.
+        img: /uploads/result.png
+        link: 2ad6af27-fdbb-4624-8a83-8ae491a6470b
     title: Результаты сопровождения amoCRM
   - type: consultation
     name: consultation
@@ -114,4 +120,5 @@ layout:
         desc: ""
         img: ""
     variant: true
+    img: /uploads/girl.png
 ---

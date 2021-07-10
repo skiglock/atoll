@@ -4,13 +4,12 @@
       <div
         class="head-two__inner"
         :style="{
-          background: `url(${getImage}) no-repeat`
+          background: `url(${content.img}) no-repeat`
         }"
       >
         <h1 class="title head-two__title">{{ content.title }}</h1>
         <p class="text head-two__text">
-          Выделенный аналитик будет планомерно развивать вашу CRM-систему и
-          станет единым окном для всех возникающих проблем и вопросов.
+          {{ content.desc }}
         </p>
       </div>
     </div>
@@ -35,7 +34,7 @@ export default {
 <style lang="scss">
 .head-two {
   &__inner {
-    padding: 176px 24px;
+    padding: 126px 24px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -43,15 +42,17 @@ export default {
     min-height: 400px;
     width: 100%;
     @media screen and (max-width: 576px) {
-      width: 100%;
       padding: 40px;
     }
   }
   &__title {
   }
   &__text {
-    width: 60%;
     margin-top: 26px;
+  }
+  &__title,
+  &__text {
+    width: 50%;
     @media screen and (max-width: 576px) {
       width: 100%;
     }

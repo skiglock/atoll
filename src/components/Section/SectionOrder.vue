@@ -6,7 +6,7 @@
           <div class="column column-50">
             <h1 class="title order__title">{{ content.title }}</h1>
             <p class="text order__text">
-              Менеджер узнает про вашу задачу и подскажет что делать дальше
+              {{ content.desc }}
             </p>
           </div>
           <div class="column column-50">

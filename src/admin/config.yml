@@ -104,6 +104,7 @@ collections:
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
               - { label: 'Описание', name: 'desc', widget: markdown }
+              - { label: 'Картинка', name: 'img', widget: image }
               ######################
               - {
                   label: 'variant',
@@ -141,6 +142,12 @@ collections:
                           label: 'img',
                           name: 'img',
                           widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
                           default: ''
                         }
 
@@ -158,6 +165,7 @@ collections:
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
               - { label: 'Описание', name: 'desc', widget: markdown }
+              - { label: 'Картинка', name: 'img', widget: image }
               ######################
               - {
                   label: 'variant',
@@ -197,6 +205,12 @@ collections:
                           widget: 'hidden',
                           default: ''
                         }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
 
           # SectionHeadThree
           - label: 'Секция с заголовком и описанием 3'
@@ -212,6 +226,7 @@ collections:
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
               - { label: 'Описание', name: 'desc', widget: markdown }
+              - { label: 'Картинка', name: 'img', widget: image }
 
               ######################
               - {
@@ -252,6 +267,12 @@ collections:
                           widget: 'hidden',
                           default: ''
                         }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
 
           # SectionOther
           - label: 'Секция с историей'
@@ -267,6 +288,7 @@ collections:
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
               - { label: 'Описание', name: 'desc', widget: markdown }
+              - { label: 'Картинка', name: 'img', widget: image }
               - {
                   label: 'Вариант',
                   name: 'variant',
@@ -307,6 +329,12 @@ collections:
                           widget: 'hidden',
                           default: ''
                         }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
 
           # SectionConsultation
 
@@ -322,7 +350,7 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'Картинка', name: 'img', widget: image }
               - {
                   label: 'Черная кнопка и обвести фото кругом',
                   name: 'variant',
@@ -330,7 +358,7 @@ collections:
                   default: false
                 }
               ######################
-
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - label: 'elements'
                 name: 'elements'
                 widget: 'list'
@@ -361,6 +389,12 @@ collections:
                           label: 'img',
                           name: 'img',
                           widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
                           default: ''
                         }
 
@@ -377,9 +411,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, defailt: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -416,6 +451,12 @@ collections:
                           label: 'img',
                           name: 'img',
                           widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
                           default: ''
                         }
 
@@ -431,10 +472,11 @@ collections:
                   default: 'quote'
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: markdown }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'Текст', name: 'title', widget: markdown }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -471,6 +513,12 @@ collections:
                           label: 'img',
                           name: 'img',
                           widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
                           default: ''
                         }
 
@@ -487,9 +535,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -526,6 +575,12 @@ collections:
                           label: 'img',
                           name: 'img',
                           widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
                           default: ''
                         }
 
@@ -545,6 +600,7 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
 
               ######################
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -581,6 +637,12 @@ collections:
                           label: 'img',
                           name: 'img',
                           widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
                           default: ''
                         }
 
@@ -597,9 +659,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'Описание', name: 'desc', widget: markdown }
 
               ######################
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -638,7 +701,12 @@ collections:
                           widget: 'hidden',
                           default: ''
                         }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
           # SectionTeam
           - label: 'Секция с командой'
             name: 'team'
@@ -652,9 +720,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -693,7 +762,12 @@ collections:
                           widget: 'hidden',
                           default: ''
                         }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
           # SectionResults
           - label: 'Секция результаты'
             name: 'results'
@@ -707,48 +781,37 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
                   widget: hidden,
                   default: false
                 }
-              - label: 'elements'
+              - label: 'Элементы'
                 name: 'elements'
                 widget: 'list'
                 types:
-                  - label: 'фейковый элемент'
+                  - label: 'Карточка'
                     name: 'item'
-                    widget: 'list'
+                    widget: list,
                     fields:
+                      - { label: 'ID', name: 'id', widget: 'id' }
+                      - { label: 'Лого', name: 'title', widget: image }
+                      - { label: 'Описание', name: 'desc', widget: markdown }
+                      - { label: 'Картинка', name: 'img', widget: image }
                       - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
+                          label: 'Ссылка',
+                          name: 'link',
+                          widget: 'relation',
+                          collection: 'cases',
+                          value_field: 'id',
+                          search_fields: ['title'],
+                          display_fields: ['title']
                         }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-
           # SectionCards
           - label: 'Секция с карточками'
             name: 'cards'
@@ -765,6 +828,7 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
 
               ######################
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -781,9 +845,14 @@ collections:
                     fields:
                       - { label: 'ID', name: 'id', widget: 'id' }
                       - { label: 'Заголовок', name: 'title', widget: string }
-                      - { label: 'Описание', name: 'desc', widget: string }
+                      - { label: 'Описание', name: 'desc', widget: markdown }
                       - { label: 'Картинка', name: 'img', widget: image }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
           # SectionPrice
           - label: 'Секция цена'
             name: 'price'
@@ -800,6 +869,7 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
 
               ######################
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -818,7 +888,7 @@ collections:
                       - {
                           label: 'Название услуги',
                           name: 'title',
-                          widget: string
+                          widget: markdown
                         }
                       - {
                           label: 'desc',
@@ -832,7 +902,12 @@ collections:
                           widget: hidden,
                           default: ''
                         }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
           # SectionFaq
           - label: 'Секция вопросы/ответы'
             name: 'faq'
@@ -846,9 +921,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -865,14 +941,19 @@ collections:
                     fields:
                       - { label: 'ID', name: 'id', widget: 'id' }
                       - { label: 'Вопрос', name: 'title', widget: string }
-                      - { label: 'Ответ', name: 'desc', widget: string }
+                      - { label: 'Ответ', name: 'desc', widget: markdown }
                       - {
                           label: 'img',
                           name: 'img',
                           widget: hidden,
                           default: ''
                         }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
           # SectionClients
           - label: 'Секция клиенты'
             name: 'clients'
@@ -886,9 +967,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -927,7 +1009,12 @@ collections:
                           widget: 'hidden',
                           default: ''
                         }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
           # SectionPlans
           - label: 'Секция планы'
             name: 'plans'
@@ -941,9 +1028,10 @@ collections:
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
 
               ######################
+              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+              - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -960,14 +1048,19 @@ collections:
                     fields:
                       - { label: 'ID', name: 'id', widget: 'id' }
                       - { label: 'Заголовок', name: 'title', widget: string }
-                      - { label: 'Описание', name: 'desc', widget: string }
+                      - { label: 'Описание', name: 'desc', widget: markdown }
                       - {
                           label: 'img',
                           name: 'img',
                           widget: hidden,
                           default: ''
                         }
-
+                      - {
+                          label: 'link',
+                          name: 'link',
+                          widget: hidden,
+                          default: ''
+                        }
   # --------------------Блог---------------------------
   - name: 'blog'
     label: 'Блог'

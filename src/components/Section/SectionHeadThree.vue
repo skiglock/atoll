@@ -4,12 +4,10 @@
       <div class="head-three__inner">
         <h2 class="head-three__subtitle">{{ content.title }}</h2>
         <p class="text head-three__text">
-          специализирующийся на цифровой трансформации продаж. Мы фокусируемся
-          исключительно на amoCRM как платформе,на базе которой делаем сложные
-          проекты по внедрению и интеграции.
+          {{ content.desc }}
         </p>
         <div class="head-three__subcircle">
-          <g-image src="@/assets/img/about/team-img.png" />
+          <g-image :src="content.img" />
         </div>
       </div>
     </div>
