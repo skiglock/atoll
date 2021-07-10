@@ -7,7 +7,7 @@
           <cases-item
             v-for="{ node } in $page.allCasesPost.edges"
             :key="node.id"
-            :title="node.title"
+            :category="node.category"
             :img="node.img"
             :logo="node.logo"
             :desc="node.desc"
@@ -28,7 +28,7 @@ query ($id: ID!) {
     edges {
       node {
         id
-        title
+        category
         img
         logo
         desc

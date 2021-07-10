@@ -1,5 +1,5 @@
 <template>
-  <div class="cases-page__item">
+  <g-link class="cases-page__item" :to="$getPath(url)">
     <div class="column column-50">
       <div class="cases-page__item-img">
         <g-image :src="img" />
@@ -10,21 +10,19 @@
       <div class="cases-page__item-client">
         <g-image :src="logo" />
       </div>
-      <g-link :to="$getPath(url)"
-        ><h2 class="title cases-page__item-title">{{ title }}</h2></g-link
-      >
+      <h2 class="title cases-page__item-title">{{ category }}</h2>
       <p class="text cases-page__item-text">
         {{ desc }}
       </p>
     </div>
-  </div>
+  </g-link>
 </template>
 
 <script>
 export default {
   name: 'CasesItem',
   props: {
-    title: String,
+    category: String,
     img: String,
     logo: String,
     desc: String,
@@ -58,7 +56,7 @@ export default {
     }
     &-title {
       margin-top: 9px;
-      font-weight: $font_regular;
+      opacity: 0.67;
     }
     &-text {
       margin-top: 30px;

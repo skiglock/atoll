@@ -1,6 +1,6 @@
 <template>
   <div class="card blog-page__card">
-    <div class="blog-page__card-category">Категория</div>
+    <div class="blog-page__card-category">{{ category }}</div>
     <div class="row">
       <div class="column column-50">
         <div class="blog-page__card-left">
@@ -33,7 +33,8 @@ export default {
     title: String,
     img: String,
     desc: String,
-    url: String
+    url: String,
+    category: String
   }
 }
 </script>

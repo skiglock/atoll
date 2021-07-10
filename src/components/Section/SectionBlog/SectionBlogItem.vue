@@ -1,6 +1,9 @@
 <template>
   <div class="card blog__card">
-    <h2 class="title blog__card-title">
+    <h2
+      class="title blog__card-title"
+      :class="first ? 'blog__card-title--first' : ''"
+    >
       {{ title }}
     </h2>
     <g-link :to="$getPath(url)" class="blog__card-link">Открыть</g-link>
@@ -12,7 +15,8 @@ export default {
   name: 'MainBlogCard',
   props: {
     title: String,
-    url: String
+    url: String,
+    first: Boolean
   }
 }
 </script>
@@ -39,6 +43,9 @@ export default {
       }
       .blog__card-title {
         margin-top: 100px;
+      }
+      .blog__card-title--first {
+        margin-top: 0;
       }
       padding: 30px 31px 31px 39px;
       grid-column: span 1;

@@ -1,11 +1,11 @@
 <template>
   <Layout>
     <section-services />
-    <section-consultation />
-    <section-clients />
-    <section-team />
-    <section-blog />
-    <section-order />
+    <section-consultation :content="{ title: 'Заголовок ' }" />
+    <section-clients :content="{ title: 'Заголовок ' }" />
+    <section-team :content="{ title: 'Заголовок ' }" />
+    <section-blog :content="{ title: 'Заголовок ' }" />
+    <section-order :content="{ title: 'Заголовок ' }" />
   </Layout>
 </template>
 

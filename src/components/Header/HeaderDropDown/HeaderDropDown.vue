@@ -4,7 +4,8 @@
       v-for="{ node } in $static.allProducts.edges"
       :key="node.id"
       :title="node.title"
-      :subtitle="node.subtitle"
+      :desc="node.description"
+      :url="$getPath(node.path)"
     />
   </ul>
 </template>
@@ -16,7 +17,8 @@ query {
       node {
         id
         title
-        subtitle
+        description
+        path
       }
     }
   }
@@ -43,8 +45,8 @@ export default {
   flex-direction: column;
   border-radius: 28px;
   background-color: $white_color;
-  width: 394px;
-  height: 283px;
+  max-width: 394px;
+  min-height: 283px;
   border: 1px solid rgba($black_color, 0.18);
   padding: 33px 50px;
 }

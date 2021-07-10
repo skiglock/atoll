@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <h1 class="page-title">{{ $page.about.title }}</h1>
-    <section-head-three />
-    <section-quote />
-    <section-quote />
-    <section-team />
-    <section-target />
-    <section-message />
+    <section-head-three :content="{ title: 'Заголовок ' }" />
+    <section-quote :content="{ title: 'Заголовок ' }" />
+    <section-quote :content="{ title: 'Заголовок ' }" />
+    <section-team :content="{ title: 'Заголовок ' }" />
+    <section-target :content="{ title: 'Заголовок ' }" />
+    <section-message :content="{ title: 'Заголовок ' }" />
   </Layout>
 </template>
 

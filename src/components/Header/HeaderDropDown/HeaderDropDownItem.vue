@@ -1,10 +1,8 @@
 <template>
   <li class="dropdown__item">
-    <g-link to="/" class="dropdown__link"
-      >Аудит и стратегия развития amoCRM</g-link
-    >
+    <g-link :to="url" class="dropdown__link">{{ title }}</g-link>
     <p class="dropdown__desc">
-      Закажите анализ текущей системы и карту развития вашей CRM
+      {{ desc }}
     </p>
   </li>
 </template>
@@ -12,6 +10,11 @@
 <script>
 export default {
   name: 'HeaderDropDownItem',
+  props: {
+    title: String,
+    url: String,
+    desc: String
+  },
   data() {
     return {
       open: false

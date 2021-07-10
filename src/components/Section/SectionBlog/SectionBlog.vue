@@ -17,6 +17,7 @@
             :key="node.id"
             :title="node.title"
             :url="node.path"
+            :first="checkBlogLength"
           />
         </div>
       </div>
@@ -39,11 +40,19 @@ query {
 </static-query>
 
 <script>
-import SectionBlogItem from './SectionBlogItem.vue'
+import SectionBlogItem from './SectionBlogItem'
 export default {
   name: 'SectionBlog',
   components: {
     SectionBlogItem
+  },
+  props: {
+    content: Object
+  },
+  computed: {
+    checkBlogLength() {
+      return this.$static.allBlogPost.edges.length === 1
+    }
   }
 }
 </script>

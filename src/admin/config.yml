@@ -80,8 +80,12 @@ collections:
     fields:
       - { label: 'ID', name: 'id', widget: 'id' }
       - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
-      - { label: 'Описание для меню', name: 'subtitle', widget: 'string' }
-      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
+      - {
+          label: 'Описание для страницы (меню и мета-тег)',
+          name: 'description',
+          widget: 'string'
+        }
+      - { label: 'Краткое описание', name: 'desc', widget: 'markdown' }
       - label: 'Компоненты страницы'
         name: 'layout'
         widget: 'list'
@@ -96,6 +100,54 @@ collections:
                   name: 'name',
                   widget: 'hidden',
                   default: 'head'
+                }
+              - { label: 'ID', name: 'id', widget: 'id' }
+              - { label: 'Заголовок', name: 'title', widget: string }
+              - { label: 'Описание', name: 'desc', widget: markdown }
+              ######################
+              - label: 'elements'
+                name: 'elements'
+                widget: 'list'
+                types:
+                  - label: 'Фейковый элемент'
+                    name: 'item'
+                    widget: 'list'
+                    fields:
+                      - {
+                          label: 'id',
+                          name: 'id',
+                          widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'title',
+                          name: 'title',
+                          widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'desc',
+                          name: 'desc',
+                          widget: 'hidden',
+                          default: ''
+                        }
+                      - {
+                          label: 'img',
+                          name: 'img',
+                          widget: 'hidden',
+                          default: ''
+                        }
+
+          # SectionHeadTwo
+          - label: 'Секция с заголовком и описанием 2'
+            name: 'head-two'
+            widget: object,
+            fields:
+              - {
+                  label: 'name',
+                  name: 'name',
+                  widget: 'hidden',
+                  default: 'head-two'
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
@@ -822,7 +874,6 @@ collections:
     fields:
       - { label: 'ID', name: 'id', widget: 'id' }
       - { label: 'Заголовок поста', name: 'title', widget: 'string' }
-      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
       - { label: 'Дата', name: 'date', picker_utc: false, widget: 'datetime' }
       - {
           label: 'Опубликовано',
@@ -830,9 +881,28 @@ collections:
           widget: 'boolean',
           default: false
         }
+      - {
+          label: 'Категория',
+          name: 'category',
+          widget: 'relation',
+          collection: 'blog-categories',
+          value_field: 'title',
+          search_fields: ['title'],
+          display_fields: ['title']
+        }
       - { label: 'Главная картинка', name: 'img', widget: 'image' }
       - { label: 'Текст краткого описания', name: 'desc', widget: 'markdown' }
       - { label: 'Текст полного описания', name: 'full', widget: 'markdown' }
+
+  # --------------------Категории блога---------------------------
+  - name: 'blog-categories'
+    label: 'Категории блога'
+    folder: 'content/blog/categories'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Категория', name: 'title', widget: 'string' }
 
   # --------------------Кейсы---------------------------
   - name: 'cases'
@@ -843,7 +913,6 @@ collections:
     fields:
       - { label: 'ID', name: 'id', widget: 'id' }
       - { label: 'Заголовок', name: 'title', widget: 'string' }
-      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
       - { label: 'Дата', name: 'date', picker_utc: false, widget: 'datetime' }
       - {
           label: 'Опубликовано',
@@ -851,7 +920,15 @@ collections:
           widget: 'boolean',
           default: false
         }
-      - { label: 'Категория', name: 'category', widget: 'string' }
+      - {
+          label: 'Категория',
+          name: 'category',
+          widget: 'relation',
+          collection: 'cases-categories',
+          value_field: 'title',
+          search_fields: ['title'],
+          display_fields: ['title']
+        }
       - { label: 'Картинка', name: 'img', widget: 'image' }
       - { label: 'Логотип', name: 'logo', widget: 'image' }
       - { label: 'Краткое описание', name: 'desc', widget: markdown }
@@ -859,6 +936,16 @@ collections:
       - { label: 'История', name: 'history', widget: 'markdown' }
       - { label: 'Что мы сделали?', name: 'made', widget: 'markdown' }
       - { label: 'Результат', name: 'result', widget: 'markdown' }
+
+  # --------------------Категории кейсов---------------------------
+  - name: 'cases-categories'
+    label: 'Категории кейсов'
+    folder: 'content/cases/categories'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Категория', name: 'title', widget: 'string' }
 
   # --------------------Команда---------------------------
   - name: 'team'

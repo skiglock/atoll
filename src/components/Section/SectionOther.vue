@@ -11,12 +11,10 @@
           </div>
           <div class="column column-50">
             <div class="other__text">
-              <p class="text">
-                Сейчас мы понимаем, что развитие CRM схоже с развитием
-                маркетинга, всегда нужно обновлять рекламные компании, смотреть
-                конверсию переходов. CRM сопровождение - это планомерное
-                развитие системы для отдела продаж.
-              </p>
+              <p
+                class="text"
+                v-html="$options.filters.markdown(content.desc)"
+              ></p>
             </div>
           </div>
         </div>

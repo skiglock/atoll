@@ -1,16 +1,15 @@
 <template>
   <div class="card services__card">
     <h1 class="title services__card-title">
-      Аудит и стратегия развития amoCRM
+      {{ title }}
     </h1>
     <span class="separator"></span>
 
     <div class="services__card-body">
       <p class="text services__card-text">
-        Проанализируем вашу систему продажи составим карту внедрения или
-        развития вашей amoCRM
+        {{ desc }}
       </p>
-      <main-button class="services__card-btn">Подробнее</main-button>
+      <main-button :to="url" class="services__card-btn">Подробнее</main-button>
     </div>
   </div>
 </template>
@@ -21,6 +20,11 @@ export default {
   name: 'MainServicesCard',
   components: {
     MainButton
+  },
+  props: {
+    title: String,
+    desc: String,
+    url: String
   }
 }
 </script>

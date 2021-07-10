@@ -11,6 +11,7 @@
             :img="node.img"
             :desc="node.desc"
             :url="node.path"
+            :category="node.category"
           />
         </div>
       </div>
@@ -28,6 +29,7 @@ query ($id: ID!) {
       node {
         id
         title
+        category
         img
         desc
         path

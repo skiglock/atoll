@@ -34,8 +34,8 @@ export default {
     &-img {
       max-width: 800px;
       max-height: 511px;
-      @media screen and (max-width: 992px) {
-        max-width: 650px;
+      @media (max-height: 900px) and (max-width: 1440px) {
+        max-width: 550px;
       }
     }
     &-description {
