@@ -3,9 +3,12 @@
     <ul class="sidebar__menu">
       <li class="sidebar__menu-item">
         <a class="sidebar__menu-link">Продукты</a>
-        <header-drop-down-item />
-        <header-drop-down-item />
-        <header-drop-down-item />
+        <header-drop-down-item
+          v-for="{ node } in $static.allProducts.edges"
+          :title="node.title"
+          :desc="node.description"
+          :url="$getPath(node.path)"
+        />
       </li>
       <li class="sidebar__menu-item">
         <a class="sidebar__menu-link">О команде</a>
@@ -19,6 +22,21 @@
     </ul>
   </div>
 </template>
+
+<static-query>
+query {
+  allProducts {
+    edges {
+      node {
+        id
+        title
+        description
+        path
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 import HeaderDropDownItem from './HeaderDropDown/HeaderDropDownItem'
@@ -38,7 +56,7 @@ export default {
   right: 0;
   top: 0;
   z-index: 30;
-  padding: 80px 60px;
+  padding: 60px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -52,14 +70,32 @@ export default {
     .dropdown__desc {
     }
   }
+  @media screen and (max-width: 360px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__menu {
-    &-item + &-item {
-      margin-top: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    @media screen and (max-width: 320px) {
+      justify-content: space-between;
     }
     &-link {
-      font-size: 30px;
-      font-weight: $font_bold;
+      font-size: 40px;
       color: $text_color;
+      font-weight: $font_bold;
+      @media screen and (max-width: 768px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 460px) {
+        font-size: 25px;
+      }
+
       &:hover {
       }
     }

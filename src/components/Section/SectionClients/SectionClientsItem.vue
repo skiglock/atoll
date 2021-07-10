@@ -1,14 +1,15 @@
 <template>
-  <div class="clients__item">
+  <g-link :to="url" class="clients__item">
     <g-image class="clients__item-img" :src="logo" />
-  </div>
+  </g-link>
 </template>
 
 <script>
 export default {
   name: 'SectionClientsItem',
   props: {
-    logo: String
+    logo: String,
+    url: String
   }
 }
 </script>

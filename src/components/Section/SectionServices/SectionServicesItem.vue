@@ -34,7 +34,7 @@ export default {
   &__card {
     border-radius: 25px;
     background-color: $white_color;
-    min-height: 264px;
+    min-height: 280px;
     min-width: 260px;
     @media screen and (max-width: 320px) {
       min-width: 100%;
@@ -45,7 +45,7 @@ export default {
     justify-content: space-between;
 
     &-title {
-      min-height: 100px;
+      min-height: 110px;
       padding: 30px;
       text-align: center;
       font-weight: $font_medium;
@@ -66,7 +66,8 @@ export default {
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 27px;
+      padding: 37px;
+      min-height: 210px;
     }
   }
 }

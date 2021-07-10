@@ -12,7 +12,10 @@
             v-for="{ node } in $static.allCasesPost.edges"
             :key="node.id"
           >
-            <section-clients-item :logo="node.logo" />
+            <section-clients-item
+              :logo="node.logo"
+              :url="$getPath(node.path)"
+            />
           </div>
         </div>
         <div class="clients__bottom">
@@ -30,6 +33,7 @@ query {
       node {
         id
         logo
+        path
       }
     }
   }
