@@ -1,5 +1,5 @@
 <template>
-  <g-link :to="url" class="clients__item">
+  <g-link :to="url" class="card clients__item">
     <g-image class="clients__item-img" :src="logo" />
   </g-link>
 </template>

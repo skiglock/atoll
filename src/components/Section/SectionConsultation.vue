@@ -2,22 +2,30 @@
   <section class="consultation">
     <div class="container">
       <div class="consultation__inner">
-        <div class="row">
+        <div class="row" :class="content.variant ? 'row--variant' : ''">
           <div class="column column-50">
-            <h1 class="title consultation__title">{{ content.title }}</h1>
-            <p class="text consultation__text">
-              Оставьте заявку и наш эксперт расскажет обо всех возможностях
-              развития вашего отдела продаж
-            </p>
-            <main-button class="btn consultation__btn"
-              >Консультация</main-button
-            >
+            <div :class="content.variant ? 'consultation__left' : ''">
+              <h1 class="title consultation__title">{{ content.title }}</h1>
+              <p class="text consultation__text" v-if="!content.variant">
+                Оставьте заявку и наш эксперт расскажет обо всех возможностях
+                развития вашего отдела продаж
+              </p>
+              <main-button
+                class="consultation__btn"
+                :backgroundcolor="content.variant ? '#000' : '#487bfa'"
+                >{{ setButtonTitle }}</main-button
+              >
+            </div>
           </div>
           <div class="column column-50">
-            <g-image
-              class="consultation__img"
-              src="@/assets/img/consultation.png"
-            />
+            <div :class="content.variant ? 'consultation__right' : ''">
+              <div
+                class="consultation__img"
+                :class="content.variant ? 'consultation__img--subcircle' : ''"
+              >
+                <g-image src="@/assets/img/consultation.png" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -34,6 +42,15 @@ export default {
   },
   components: {
     MainButton
+  },
+  computed: {
+    setButtonTitle() {
+      let buttonTitle = 'Консультация'
+      if (this.content.variant) {
+        buttonTitle = 'Мне интересно'
+      }
+      return buttonTitle
+    }
   }
 }
 </script>
@@ -42,6 +59,16 @@ export default {
 .consultation {
   .column {
     padding-bottom: 0;
+  }
+  .row--variant {
+    align-items: center;
+  }
+  &__left {
+    text-align: right;
+  }
+  &__right {
+    display: flex;
+    justify-content: center;
   }
   &__inner {
     padding-top: 55px;
@@ -55,16 +82,43 @@ export default {
     margin-top: 24px;
   }
   &__img {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      justify-content: center;
+    }
     max-width: 330px;
     max-height: 399px;
-    @media screen and (max-width: 576px) {
-      padding-top: 20px;
+    align-self: center;
+    position: relative;
+    &--subcircle {
+      &::after {
+        position: absolute;
+        content: '';
+        z-index: 35;
+        border: 15px solid $main_color;
+        width: 100%;
+        height: 15%;
+        border-radius: 50% / 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top: 0;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        @media screen and (max-width: 576px) {
+          border-width: 10px;
+          bottom: -4px;
+        }
+      }
     }
   }
   &__btn {
     margin-top: 30px;
     font-weight: $font_medium;
     // letter-spacing: 1.436px;
+    &--black {
+      background-color: $black_color;
+    }
   }
 }
 </style>

@@ -5,6 +5,7 @@
         <a class="sidebar__menu-link">Продукты</a>
         <header-drop-down-item
           v-for="{ node } in $static.allProducts.edges"
+          :key="node.id"
           :title="node.title"
           :desc="node.description"
           :url="$getPath(node.path)"

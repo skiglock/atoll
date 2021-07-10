@@ -19,6 +19,7 @@ query ($id: ID!) {
       name
       title
       desc
+      variant
       elements {
         id
         title

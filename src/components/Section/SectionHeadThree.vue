@@ -9,10 +9,7 @@
           проекты по внедрению и интеграции.
         </p>
         <div class="head-three__subcircle">
-          <g-image
-            src="@/assets/img/about/team-img.png"
-            class="head-three__img"
-          />
+          <g-image src="@/assets/img/about/team-img.png" />
         </div>
       </div>
     </div>
@@ -43,30 +40,32 @@ export default {
     line-height: 1.547;
     margin-top: 14px;
   }
-  &__img {
-    display: inline-block;
-    max-width: 791px;
-  }
   &__subcircle {
     position: relative;
-    img {
-      border-radius: 50% / 100%;
-    }
-    &::before {
-      z-index: 5;
+    &::after {
       position: absolute;
       content: '';
+      z-index: 35;
       border: 20px solid $main_color;
-      max-width: 900px;
-      max-height: 360px;
+      width: 100%;
+      height: 45%;
       border-radius: 50% / 100%;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-top: 0;
-      top: 190px;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: -8px;
+      @media screen and (max-width: 768px) {
+        border-width: 15px;
+      }
+      @media screen and (max-width: 576px) {
+        border-width: 10px;
+        bottom: -4px;
+      }
+    }
+    img {
+      border-radius: 50% / 100%;
     }
   }
 }

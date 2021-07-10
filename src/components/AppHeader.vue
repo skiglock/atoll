@@ -4,7 +4,7 @@
       <div class="header__top">
         <header-navbar />
         <transition name="fade">
-          <header-sidebar v-if="sidebar" />
+          <header-sidebar v-if="sidebar" @click.native="sidebar = false" />
         </transition>
 
         <header-burger @click.native="sidebar = !sidebar" :active="sidebar" />

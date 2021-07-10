@@ -20,12 +20,13 @@ export default {
 <style lang="scss">
 .plans {
   &__item {
-    max-width: 303px;
-    min-height: 236px;
+    max-width: 280px;
+    min-height: 280px;
     border-radius: 26px;
     background-color: $white_color;
     box-shadow: 0px 4px 7px 0px rgba($black_color, 0.17);
-    padding: 40px 60px 60px 26px;
+    padding: 20px 20px 26px;
+
     @media screen and (max-width: 576px) {
       padding: 40px 60px 60px 26px;
       max-width: 100%;

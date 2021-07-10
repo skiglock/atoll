@@ -57,17 +57,28 @@ export default {
     padding: 20px;
     font-weight: $font_regular;
   }
-  p,
-  blockquote,
   h1,
   h2,
   h3,
   h4,
   h5,
   h6,
-  img {
+  p,
+  blockquote,
+  pre,
+  a {
     margin: inherit;
     padding: inherit;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  code {
+    text-align: center;
+    display: block;
   }
   blockquote {
     padding: 0 0 0 10px;

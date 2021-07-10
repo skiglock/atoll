@@ -1,12 +1,12 @@
 <template>
-  <section
-    class="section head-two"
-    :style="{
-      background: `url(${getImage}) 50% 50% no-repeat`
-    }"
-  >
+  <section class="section head-two">
     <div class="container">
-      <div class="head-two__inner">
+      <div
+        class="head-two__inner"
+        :style="{
+          background: `url(${getImage}) no-repeat`
+        }"
+      >
         <h1 class="title head-two__title">{{ content.title }}</h1>
         <p class="text head-two__text">
           Выделенный аналитик будет планомерно развивать вашу CRM-систему и
@@ -34,29 +34,27 @@ export default {
 
 <style lang="scss">
 .head-two {
-  z-index: 9;
-  position: relative;
   &__inner {
-    width: 55%;
     padding: 176px 24px;
-    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    height: 100%;
+    background-size: contain;
+    min-height: 400px;
+    width: 100%;
     @media screen and (max-width: 576px) {
-      align-items: center;
-      text-align: center;
       width: 100%;
+      padding: 40px;
     }
   }
   &__title {
   }
   &__text {
+    width: 60%;
     margin-top: 26px;
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
   }
-  min-height: 400px;
-  width: 100%;
 }
 </style>

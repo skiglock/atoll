@@ -31,6 +31,7 @@ layout:
         title: ""
         desc: ""
         img: ""
+    variant: true
   - type: clients
     name: clients
     desc: ""
@@ -55,6 +56,7 @@ layout:
         title: ""
         desc: ""
         img: ""
+    variant: true
   - type: faq
     name: faq
     desc: ""

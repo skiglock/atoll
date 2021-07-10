@@ -1,9 +1,12 @@
 <template>
   <section class="section other">
     <div class="container">
-      <h1 class="title">{{ content.title }}</h1>
+      <h1 class="title" v-if="!content.variant">{{ content.title }}</h1>
       <div class="other__inner">
-        <div class="row">
+        <div
+          class="row"
+          :style="content.variant ? { flexDirection: 'row-reverse' } : ''"
+        >
           <div class="column column-50">
             <div class="other__img">
               <g-image src="@/assets/img/dynamic/notebook.png" />
@@ -11,7 +14,10 @@
           </div>
           <div class="column column-50">
             <div class="other__text">
+              <h1 class="title" v-if="content.variant">{{ content.title }}</h1>
+
               <p
+                :style="content.variant ? { marginTop: '10px' } : ''"
                 class="text"
                 v-html="$options.filters.markdown(content.desc)"
               ></p>
@@ -41,13 +47,22 @@ export default {
     margin-top: 63px;
   }
   &__img {
-    max-width: 359px;
-    max-height: 302px;
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 359px;
+      max-height: 302px;
+      @media screen and (max-width: 576px) {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
   }
   &__text {
     height: 100%;
     display: flex;
     align-items: center;
+    flex-direction: column;
     .text {
       text-align: right;
       line-height: 1.859;

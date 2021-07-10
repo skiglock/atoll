@@ -94,17 +94,18 @@ export default {
     &-btn {
       margin-top: 23px;
     }
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
+    }
   }
   &__list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @media screen and (max-width: 576px) {
-      text-align: center;
-      align-items: center;
-    }
+
     &-title {
       @media screen and (max-width: 576px) {
+        align-self: center;
         text-align: center;
       }
     }
