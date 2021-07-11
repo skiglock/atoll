@@ -22,7 +22,7 @@ export default {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  z-index: 40;
+  z-index: 60;
   &:hover {
     cursor: pointer;
   }

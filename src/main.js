@@ -1,5 +1,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import { getPath } from '~/utils/path.js'
+import { shade } from '~/utils/shade.js'
+
 import marked from 'marked'
 import Vuex from 'vuex'
 import store from '~/store'
@@ -21,6 +23,7 @@ export default function (Vue, { head, appOptions }) {
   })
   Vue.component('Layout', DefaultLayout)
   Vue.prototype.$getPath = getPath
+  Vue.prototype.$shade = shade
   Vue.filter('markdown', (string) => marked(string))
   Vue.use(Vuex)
   appOptions.store = store

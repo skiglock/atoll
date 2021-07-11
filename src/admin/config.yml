@@ -25,7 +25,1193 @@ collections:
               name: 'description',
               widget: 'string'
             }
+          - label: 'Компоненты страницы'
+            name: 'layout'
+            widget: 'list'
+            types:
+              # SectionServices
+              - label: 'Секция сервисы'
+                name: 'services'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'services'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - {
+                      label: 'title',
+                      name: 'title',
+                      widget: hidden,
+                      default: ''
+                    }
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionHead
+              - label: 'Секция с заголовком и описанием 1'
+                name: 'head'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
+              # SectionHeadTwo
+              - label: 'Секция с заголовком и описанием 2'
+                name: 'head-two'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head-two'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionHeadThree
+              - label: 'Секция с заголовком и описанием 3'
+                name: 'head-three'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head-three'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionBlog
+              - label: 'Секция блог'
+                name: 'blog'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'blog'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'img', name: 'img', widget: 'hidden', default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  ######################
+
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionOther
+              - label: 'Секция с историей'
+                name: 'other'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'other'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  - {
+                      label: 'Вариант',
+                      name: 'variant',
+                      widget: boolean,
+                      default: false
+                    }
+                  ######################
+
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionConsultation
+
+              - label: 'Секция с консультацией'
+                name: 'consultation'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'consultation'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - {
+                      label: 'Черная кнопка и обвести фото кругом',
+                      name: 'variant',
+                      widget: 'boolean',
+                      default: false
+                    }
+                  ######################
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionMessage
+              - label: 'Секция заголовок с кнопкой'
+                name: 'message'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'message'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, defailt: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionQuote
+              - label: 'Секция с цитатой'
+                name: 'quote'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'quote'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Текст', name: 'title', widget: markdown }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionContacts
+              - label: 'Секция с контактами'
+                name: 'contacts'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'contacts'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionOrder
+              - label: 'Секция с формой'
+                name: 'order'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'order'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionTarget
+              - label: 'Секция с общей фоткой и текстом'
+                name: 'target'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'target'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionTeam
+              - label: 'Секция с командой'
+                name: 'team'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'team'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionResults
+              - label: 'Секция результаты'
+                name: 'results'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'results'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Карточка'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              ''
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - { label: 'Фон', name: 'img', widget: image }
+                          - {
+                              label: 'Кейс',
+                              name: 'link',
+                              widget: 'relation',
+                              collection: 'cases',
+                              value_field: 'id',
+                              search_fields: ['title'],
+                              display_fields: ['title']
+                            }
+              # SectionCards
+              - label: 'Секция с карточками'
+                name: 'cards'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'cards'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Карточка'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Заголовок',
+                              name: 'title',
+                              widget: string
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - { label: 'Картинка', name: 'img', widget: image }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionPrice
+              - label: 'Секция цена'
+                name: 'price'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'price'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Услуга'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Название услуги',
+                              name: 'title',
+                              widget: markdown
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionFaq
+              - label: 'Секция вопросы/ответы'
+                name: 'faq'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'faq'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Вопрос/Ответ'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - { label: 'Вопрос', name: 'title', widget: string }
+                          - { label: 'Ответ', name: 'desc', widget: markdown }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionClients
+              - label: 'Секция клиенты'
+                name: 'clients'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'clients'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionPlans
+              - label: 'Секция планы'
+                name: 'plans'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'plans'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'План'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Заголовок',
+                              name: 'title',
+                              widget: string
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionDemonstration
+              - label: 'Секция демонстрация'
+                name: 'demonstration'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'demonstration'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
       - label: 'О команде'
         name: 'about'
         file: 'content/about.md'
@@ -37,6 +1223,1193 @@ collections:
               name: 'description',
               widget: 'string'
             }
+          - label: 'Компоненты страницы'
+            name: 'layout'
+            widget: 'list'
+            types:
+              # SectionServices
+              - label: 'Секция сервисы'
+                name: 'services'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'services'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - {
+                      label: 'title',
+                      name: 'title',
+                      widget: hidden,
+                      default: ''
+                    }
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionHead
+              - label: 'Секция с заголовком и описанием 1'
+                name: 'head'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionHeadTwo
+              - label: 'Секция с заголовком и описанием 2'
+                name: 'head-two'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head-two'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionHeadThree
+              - label: 'Секция с заголовком и описанием 3'
+                name: 'head-three'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head-three'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionBlog
+              - label: 'Секция блог'
+                name: 'blog'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'blog'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'img', name: 'img', widget: 'hidden', default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  ######################
+
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionOther
+              - label: 'Секция с историей'
+                name: 'other'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'other'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  - {
+                      label: 'Вариант',
+                      name: 'variant',
+                      widget: boolean,
+                      default: false
+                    }
+                  ######################
+
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionConsultation
+
+              - label: 'Секция с консультацией'
+                name: 'consultation'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'consultation'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - {
+                      label: 'Черная кнопка и обвести фото кругом',
+                      name: 'variant',
+                      widget: 'boolean',
+                      default: false
+                    }
+                  ######################
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionMessage
+              - label: 'Секция заголовок с кнопкой'
+                name: 'message'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'message'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, defailt: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionQuote
+              - label: 'Секция с цитатой'
+                name: 'quote'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'quote'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Текст', name: 'title', widget: markdown }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionContacts
+              - label: 'Секция с контактами'
+                name: 'contacts'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'contacts'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionOrder
+              - label: 'Секция с формой'
+                name: 'order'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'order'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
+              # SectionTarget
+              - label: 'Секция с общей фоткой и текстом'
+                name: 'target'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'target'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionTeam
+              - label: 'Секция с командой'
+                name: 'team'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'team'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionResults
+              - label: 'Секция результаты'
+                name: 'results'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'results'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Карточка'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              ''
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - { label: 'Фон', name: 'img', widget: image }
+                          - {
+                              label: 'Кейс',
+                              name: 'link',
+                              widget: 'relation',
+                              collection: 'cases',
+                              value_field: 'id',
+                              search_fields: ['title'],
+                              display_fields: ['title']
+                            }
+              # SectionCards
+              - label: 'Секция с карточками'
+                name: 'cards'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'cards'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Карточка'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Заголовок',
+                              name: 'title',
+                              widget: string
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - { label: 'Картинка', name: 'img', widget: image }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionPrice
+              - label: 'Секция цена'
+                name: 'price'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'price'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Услуга'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Название услуги',
+                              name: 'title',
+                              widget: markdown
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionFaq
+              - label: 'Секция вопросы/ответы'
+                name: 'faq'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'faq'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Вопрос/Ответ'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - { label: 'Вопрос', name: 'title', widget: string }
+                          - { label: 'Ответ', name: 'desc', widget: markdown }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionClients
+              - label: 'Секция клиенты'
+                name: 'clients'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'clients'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionPlans
+              - label: 'Секция планы'
+                name: 'plans'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'plans'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'План'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Заголовок',
+                              name: 'title',
+                              widget: string
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionDemonstration
+              - label: 'Секция демонстрация'
+                name: 'demonstration'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'demonstration'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
       - label: 'Блог'
         name: 'blog'
         file: 'content/blog.md'
@@ -102,977 +2475,1194 @@ collections:
         name: 'layout'
         widget: 'list'
         types:
-          # SectionHead
-          - label: 'Секция с заголовком и описанием 1'
-            name: 'head'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'head'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
-              - { label: 'Картинка', name: 'img', widget: image }
-              ######################
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'Фейковый элемент'
-                    name: 'item'
+          - label: 'Компоненты страницы'
+            name: 'layout'
+            widget: 'list'
+            types:
+              # SectionServices
+              - label: 'Секция сервисы'
+                name: 'services'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'services'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - {
+                      label: 'title',
+                      name: 'title',
+                      widget: hidden,
+                      default: ''
+                    }
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-
-          # SectionHeadTwo
-          - label: 'Секция с заголовком и описанием 2'
-            name: 'head-two'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'head-two'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
-              - { label: 'Картинка', name: 'img', widget: image }
-              ######################
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'Фейковый элемент'
-                    name: 'item'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionHead
+              - label: 'Секция с заголовком и описанием 1'
+                name: 'head'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionHeadThree
-          - label: 'Секция с заголовком и описанием 3'
-            name: 'head-three'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'head-three'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
-              - { label: 'Картинка', name: 'img', widget: image }
-
-              ######################
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+              # SectionHeadTwo
+              - label: 'Секция с заголовком и описанием 2'
+                name: 'head-two'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head-two'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionOther
-          - label: 'Секция с историей'
-            name: 'other'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'other'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
-              - { label: 'Картинка', name: 'img', widget: image }
-              - {
-                  label: 'Вариант',
-                  name: 'variant',
-                  widget: boolean,
-                  default: false
-                }
-              ######################
+              # SectionHeadThree
+              - label: 'Секция с заголовком и описанием 3'
+                name: 'head-three'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'head-three'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
 
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionConsultation
+              # SectionBlog
+              - label: 'Секция блог'
+                name: 'blog'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'blog'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'img', name: 'img', widget: 'hidden', default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  ######################
 
-          - label: 'Секция с консультацией'
-            name: 'consultation'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'consultation'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Картинка', name: 'img', widget: image }
-              - {
-                  label: 'Черная кнопка и обвести фото кругом',
-                  name: 'variant',
-                  widget: 'boolean',
-                  default: false
-                }
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionMessage
-          - label: 'Секция заголовок с кнопкой'
-            name: 'message'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'message'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
+              # SectionOther
+              - label: 'Секция с историей'
+                name: 'other'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'other'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  - {
+                      label: 'Вариант',
+                      name: 'variant',
+                      widget: boolean,
+                      default: false
+                    }
+                  ######################
 
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, defailt: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionQuote
-          - label: 'Секция с цитатой'
-            name: 'quote'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'quote'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Текст', name: 'title', widget: markdown }
+              # SectionConsultation
 
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+              - label: 'Секция с консультацией'
+                name: 'consultation'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'consultation'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - {
+                      label: 'Черная кнопка и обвести фото кругом',
+                      name: 'variant',
+                      widget: 'boolean',
+                      default: false
+                    }
+                  ######################
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionContacts
-          - label: 'Секция с контактами'
-            name: 'contacts'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'contacts'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
+              # SectionMessage
+              - label: 'Секция заголовок с кнопкой'
+                name: 'message'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'message'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
 
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, defailt: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionOrder
-          - label: 'Секция с формой'
-            name: 'order'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'order'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
+              # SectionQuote
+              - label: 'Секция с цитатой'
+                name: 'quote'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'quote'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Текст', name: 'title', widget: markdown }
 
-              ######################
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-          # SectionTarget
-          - label: 'Секция с общей фоткой и текстом'
-            name: 'target'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'target'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
+              # SectionContacts
+              - label: 'Секция с контактами'
+                name: 'contacts'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'contacts'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
 
-              ######################
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-          # SectionTeam
-          - label: 'Секция с командой'
-            name: 'team'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'team'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+              # SectionOrder
+              - label: 'Секция с формой'
+                name: 'order'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'order'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-          # SectionResults
-          - label: 'Секция результаты'
-            name: 'results'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'results'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
 
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'Элементы'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'Карточка'
-                    name: 'item'
-                    widget: list,
-                    fields:
-                      - { label: 'ID', name: 'id', widget: 'id' }
-                      - { label: 'title', name: 'title', widget: 'hidden', '' }
-                      - { label: 'Описание', name: 'desc', widget: markdown }
-                      - { label: 'Фон', name: 'img', widget: image }
-                      - {
-                          label: 'Кейс',
-                          name: 'link',
-                          widget: 'relation',
-                          collection: 'cases',
-                          value_field: 'id',
-                          search_fields: ['title'],
-                          display_fields: ['title']
-                        }
-          # SectionCards
-          - label: 'Секция с карточками'
-            name: 'cards'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'cards'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
+              # SectionTarget
+              - label: 'Секция с общей фоткой и текстом'
+                name: 'target'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'target'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
 
-              ######################
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'Элементы'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'Карточка'
-                    name: 'item'
-                    widget: list,
-                    fields:
-                      - { label: 'ID', name: 'id', widget: 'id' }
-                      - { label: 'Заголовок', name: 'title', widget: string }
-                      - { label: 'Описание', name: 'desc', widget: markdown }
-                      - { label: 'Картинка', name: 'img', widget: image }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-          # SectionPrice
-          - label: 'Секция цена'
-            name: 'price'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'price'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-              - { label: 'Описание', name: 'desc', widget: markdown }
-
-              ######################
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'Элементы'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'Услуга'
-                    name: 'item'
-                    widget: list,
-                    fields:
-                      - { label: 'ID', name: 'id', widget: 'id' }
-                      - {
-                          label: 'Название услуги',
-                          name: 'title',
-                          widget: markdown
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: hidden,
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: hidden,
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-          # SectionFaq
-          - label: 'Секция вопросы/ответы'
-            name: 'faq'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'faq'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'Элементы'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'Вопрос/Ответ'
-                    name: 'item'
-                    widget: list,
-                    fields:
-                      - { label: 'ID', name: 'id', widget: 'id' }
-                      - { label: 'Вопрос', name: 'title', widget: string }
-                      - { label: 'Ответ', name: 'desc', widget: markdown }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: hidden,
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-          # SectionClients
-          - label: 'Секция клиенты'
-            name: 'clients'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'clients'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
-
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'elements'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'фейковый элемент'
-                    name: 'item'
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
                     widget: 'list'
-                    fields:
-                      - {
-                          label: 'id',
-                          name: 'id',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'title',
-                          name: 'title',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'desc',
-                          name: 'desc',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: 'hidden',
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
-          # SectionPlans
-          - label: 'Секция планы'
-            name: 'plans'
-            widget: object,
-            fields:
-              - {
-                  label: 'name',
-                  name: 'name',
-                  widget: 'hidden',
-                  default: 'plans'
-                }
-              - { label: 'ID', name: 'id', widget: 'id' }
-              - { label: 'Заголовок', name: 'title', widget: string }
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionTeam
+              - label: 'Секция с командой'
+                name: 'team'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'team'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
 
-              ######################
-              - { label: 'desc', name: 'desc', widget: hidden, default: '' }
-              - { label: 'img', name: 'img', widget: hidden, default: '' }
-              - {
-                  label: 'variant',
-                  name: 'variant',
-                  widget: hidden,
-                  default: false
-                }
-              - label: 'Элементы'
-                name: 'elements'
-                widget: 'list'
-                types:
-                  - label: 'План'
-                    name: 'item'
-                    widget: list,
-                    fields:
-                      - { label: 'ID', name: 'id', widget: 'id' }
-                      - { label: 'Заголовок', name: 'title', widget: string }
-                      - { label: 'Описание', name: 'desc', widget: markdown }
-                      - {
-                          label: 'img',
-                          name: 'img',
-                          widget: hidden,
-                          default: ''
-                        }
-                      - {
-                          label: 'link',
-                          name: 'link',
-                          widget: hidden,
-                          default: ''
-                        }
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionResults
+              - label: 'Секция результаты'
+                name: 'results'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'results'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Карточка'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              ''
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - { label: 'Фон', name: 'img', widget: image }
+                          - {
+                              label: 'Кейс',
+                              name: 'link',
+                              widget: 'relation',
+                              collection: 'cases',
+                              value_field: 'id',
+                              search_fields: ['title'],
+                              display_fields: ['title']
+                            }
+              # SectionCards
+              - label: 'Секция с карточками'
+                name: 'cards'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'cards'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Карточка'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Заголовок',
+                              name: 'title',
+                              widget: string
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - { label: 'Картинка', name: 'img', widget: image }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionPrice
+              - label: 'Секция цена'
+                name: 'price'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'price'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Услуга'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Название услуги',
+                              name: 'title',
+                              widget: markdown
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionFaq
+              - label: 'Секция вопросы/ответы'
+                name: 'faq'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'faq'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Вопрос/Ответ'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - { label: 'Вопрос', name: 'title', widget: string }
+                          - { label: 'Ответ', name: 'desc', widget: markdown }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionClients
+              - label: 'Секция клиенты'
+                name: 'clients'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'clients'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionPlans
+              - label: 'Секция планы'
+                name: 'plans'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'plans'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+
+                  ######################
+                  - { label: 'desc', name: 'desc', widget: hidden, default: '' }
+                  - { label: 'img', name: 'img', widget: hidden, default: '' }
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'Элементы'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'План'
+                        name: 'item'
+                        widget: list,
+                        fields:
+                          - { label: 'ID', name: 'id', widget: 'id' }
+                          - {
+                              label: 'Заголовок',
+                              name: 'title',
+                              widget: string
+                            }
+                          - {
+                              label: 'Описание',
+                              name: 'desc',
+                              widget: markdown
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: hidden,
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+              # SectionDemonstration
+              - label: 'Секция демонстрация'
+                name: 'demonstration'
+                widget: object,
+                fields:
+                  - {
+                      label: 'name',
+                      name: 'name',
+                      widget: 'hidden',
+                      default: 'demonstration'
+                    }
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - { label: 'Описание', name: 'desc', widget: markdown }
+                  - { label: 'Картинка', name: 'img', widget: image }
+                  ######################
+                  - {
+                      label: 'variant',
+                      name: 'variant',
+                      widget: hidden,
+                      default: false
+                    }
+                  - label: 'elements'
+                    name: 'elements'
+                    widget: 'list'
+                    types:
+                      - label: 'Фейковый элемент'
+                        name: 'item'
+                        widget: 'list'
+                        fields:
+                          - {
+                              label: 'id',
+                              name: 'id',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'title',
+                              name: 'title',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'desc',
+                              name: 'desc',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'img',
+                              name: 'img',
+                              widget: 'hidden',
+                              default: ''
+                            }
+                          - {
+                              label: 'link',
+                              name: 'link',
+                              widget: hidden,
+                              default: ''
+                            }
+
   # --------------------Блог---------------------------
   - name: 'blog'
     label: 'Блог'

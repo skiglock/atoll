@@ -8,12 +8,13 @@
             class="column column-30"
             v-for="{ node } in $static.allTeam.edges"
             :key="node.id"
-            :avatar="node.avatar"
-            :name="node.name"
-            :position="node.position"
-            :practice="node.practice"
           >
-            <main-person />
+            <main-person
+              :avatar="node.avatar"
+              :name="node.name"
+              :position="node.position"
+              :practice="node.practice"
+            />
           </div>
         </div>
         <div class="team__dots">

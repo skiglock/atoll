@@ -1,7 +1,9 @@
 <template>
   <section class="section other">
     <div class="container">
-      <h1 class="title" v-if="!content.variant">{{ content.title }}</h1>
+      <h1 class="title title-center" v-if="!content.variant">
+        {{ content.title }}
+      </h1>
       <div class="other__inner">
         <div
           class="row"
@@ -14,7 +16,13 @@
           </div>
           <div class="column column-50">
             <div class="other__text">
-              <h1 class="title" v-if="content.variant">{{ content.title }}</h1>
+              <h1
+                class="title"
+                :style="{ marginBottom: '15px' }"
+                v-if="content.variant"
+              >
+                {{ content.title }}
+              </h1>
 
               <p
                 :style="content.variant ? { marginTop: '10px' } : ''"
@@ -40,11 +48,14 @@ export default {
 
 <style lang="scss">
 .other {
-  .title {
-    text-align: center;
-  }
   &__inner {
     margin-top: 63px;
+  }
+  .title-center {
+    text-align: center;
+  }
+  .title-left {
+    text-align: left;
   }
   &__img {
     display: flex;
@@ -63,8 +74,8 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
+
     .text {
-      text-align: right;
       line-height: 1.859;
     }
   }

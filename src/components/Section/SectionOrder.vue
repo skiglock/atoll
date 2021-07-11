@@ -10,7 +10,7 @@
             </p>
           </div>
           <div class="column column-50">
-            <main-form class="order__form" />
+            <main-form :title="content.title" class="order__form" />
           </div>
         </div>
       </div>

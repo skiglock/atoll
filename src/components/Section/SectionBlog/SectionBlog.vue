@@ -6,8 +6,7 @@
           <blockquote>
             <h1 class="title blog__title">{{ content.title }}</h1>
             <p class="text blog__text">
-              Регулярно пишем статьи о системах продажах, управлении проектами и
-              делимся собственным опытом трансформации процессов.
+              {{ content.desc }}
             </p>
           </blockquote>
         </div>

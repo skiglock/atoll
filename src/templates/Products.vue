@@ -34,6 +34,7 @@ query ($id: ID!) {
 </page-query>
 
 <script>
+import SectionServices from '@/components/Section/SectionServices/SectionServices'
 import SectionPlans from '@/components/Section/SectionPlans/SectionPlans'
 import SectionPrice from '@/components/Section/SectionPrice/SectionPrice'
 import SectionOther from '@/components/Section/SectionOther'
@@ -51,9 +52,12 @@ import SectionFaq from '@/components/Section/SectionFaq/SectionFaq'
 import SectionTarget from '@/components/Section/SectionTarget'
 import SectionTeam from '@/components/Section/SectionTeam'
 import SectionClients from '@/components/Section/SectionClients/SectionClients'
+import SectionDemonstration from '@/components/Section/SectionDemonstration'
+import SectionBlog from '@/components/Section/SectionBlog/SectionBlog'
 
 export default {
   components: {
+    SectionServices,
     SectionHeadTwo,
     SectionPlans,
     SectionPrice,
@@ -70,7 +74,9 @@ export default {
     SectionMessage,
     SectionTarget,
     SectionTeam,
-    SectionClients
+    SectionClients,
+    SectionDemonstration,
+    SectionBlog
   },
   props: ['components'],
   metaInfo() {

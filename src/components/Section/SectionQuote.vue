@@ -24,4 +24,11 @@ export default {
   display: flex;
   justify-content: center;
 }
+.quote + .quote {
+  blockquote {
+    &::before {
+      right: 0;
+    }
+  }
+}
 </style>

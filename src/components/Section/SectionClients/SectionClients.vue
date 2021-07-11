@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="clients__bottom">
-          <main-button to="/cases" class="btn">Все кейсы</main-button>
+          <main-button to="/cases">Все кейсы</main-button>
         </div>
       </div>
     </div>

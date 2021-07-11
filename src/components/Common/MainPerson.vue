@@ -1,17 +1,23 @@
 <template>
   <div class="person">
     <div class="person__circle">
-      <g-image class="person__avatar" src="@/assets/img/team/1.png" alt="" />
+      <g-image class="person__avatar" :src="avatar" alt="" />
     </div>
-    <h2 class="title person__name">Сергей Иванов</h2>
-    <h3 class="person__position">Руководитель проектов</h3>
-    <h4 class="person__practice">2 года опыта работы с amoCRM</h4>
+    <h2 class="title person__name">{{ name }}</h2>
+    <h3 class="person__position">{{ posititon }}</h3>
+    <h4 class="person__practice">{{ practice }}</h4>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SectionTeamItem'
+  name: 'SectionTeamItem',
+  props: {
+    avatar: String,
+    name: String,
+    posititon: String,
+    practice: String
+  }
 }
 </script>
 

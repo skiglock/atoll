@@ -30,17 +30,9 @@ export default {
       type: String,
       default: '10px 40px'
     },
-    width: {
-      type: Number,
-      default: 272
-    },
-    height: {
-      type: Number,
-      default: 54
-    },
     hover: {
       type: String,
-      default: '#E76E55'
+      default: '#7397f3'
     },
     fontsize: {
       type: Number,
@@ -70,8 +62,6 @@ export default {
         '--color': this.color,
         '--backgroundcolor': this.backgroundcolor,
         '--borderradius': `${this.borderradius}px`,
-        // '--width': `${this.width}px`,
-        // '--height': `${this.height}px`,
         '--padding': this.padding,
         '--hover': this.hover
       }
@@ -92,10 +82,8 @@ export default {
   border-radius: var(--borderradius);
   padding: var(--padding);
   &:hover {
-    background-color: #7397f3;
+    background-color: var(--hover);
   }
-  // max-height: var(--height);
-  // max-width: var(--width);
   &--link {
     cursor: pointer;
     text-decoration: none;

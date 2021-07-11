@@ -32,7 +32,7 @@ layout:
         title: ""
         desc: ""
         img: ""
-    variant: true
+    variant: false
     img: /uploads/layer-5-1x.png
   - type: clients
     name: clients
@@ -51,7 +51,7 @@ layout:
     title: "Цитата партнера: "
     desc: "> “Мы делаем продажи системными за счет технологий. На внедрении CRM вы
       получаете в распоряжение целую команду специалистов разного плана. Мы
-      готовы начать работу над вашим проектом уже сегодня.”"
+      готовы начать работу над вашим проектом уже сегодня.”1"
     elements:
       - type: item
         id: ""
@@ -60,6 +60,21 @@ layout:
         img: ""
     variant: true
     img: /uploads/layer-7-1x-2-.png
+  - type: demonstration
+    name: demonstration
+    variant: false
+    id: c8c58d69-20cd-4edc-8f7d-4d5881623214
+    title: "Запишитесь на демонстрацию готовой CRM-системы "
+    desc: Мы покажем, как amoCRM работает в нашей компании и расскажем, как она
+      может работать в вашей. Это бесплатно.
+    img: /uploads/layer-0-copy-1x-1-.png
+    elements:
+      - type: item
+        id: ""
+        title: ""
+        desc: ""
+        img: ""
+        link: ""
   - type: faq
     name: faq
     desc: ""

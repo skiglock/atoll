@@ -31,7 +31,7 @@
                   Свяжитесь с нами!
                 </h1>
                 <div class="card contacts-page__card">
-                  <main-form />
+                  <main-form :title="$page.contacts.title" />
                 </div>
               </div>
             </div>

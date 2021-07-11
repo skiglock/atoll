@@ -1,5 +1,18 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="form" autocomplete="off">
+  <form
+    :name="title"
+    method="post"
+    @submit.prevent="handleSubmit"
+    :action="`/politika-konfediczialnosti`"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    class="form"
+    autocomplete="off"
+  >
+    <input type="hidden" name="form-name" :value="title" />
+    <p hidden>
+      <label> Don’t fill this out: <input name="bot-field" /> </label>
+    </p>
     <input type="hidden" name="from" v-model="formData.from" />
     <input type="hidden" name="ref" v-model="formData.ref" />
     <div class="form__item">
@@ -67,6 +80,9 @@ export default {
   components: {
     MainButton
   },
+  props: {
+    title: String
+  },
   data() {
     return {
       formData: {
@@ -119,7 +135,7 @@ export default {
             ...this.formData
           })
         })
-          .then(() => this.$router.push(`/${this.content.link}`))
+          .then(() => this.$router.push('/politika-konfediczialnosti'))
           .catch((error) => alert(error))
       }
       this.$forceUpdate()

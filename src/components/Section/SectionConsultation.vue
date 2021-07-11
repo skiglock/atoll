@@ -12,6 +12,7 @@
               <main-button
                 class="consultation__btn"
                 :backgroundcolor="content.variant ? '#000' : '#487bfa'"
+                :hover="content.variant ? '#4c4c4c' : '#7397f3'"
                 >{{ setButtonTitle }}</main-button
               >
             </div>
