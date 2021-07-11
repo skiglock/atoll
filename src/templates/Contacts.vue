@@ -8,15 +8,21 @@
             <div class="column column-50 contacts-page--column">
               <div class="contacts-page__adress">
                 <h1 class="title">Адрес:</h1>
-                <p class="text">Чебоксары, ул. Мичмана Павлова 8А</p>
+                <p class="text">
+                  {{ this.$store.state.settings.allSettings.adress }}
+                </p>
               </div>
               <div class="contacts-page__phone">
                 <h1 class="title">Телефон:</h1>
-                <p class="text">+7 (495) 278 18 02</p>
+                <p class="text">
+                  {{ this.$store.state.settings.allSettings.phone }}
+                </p>
               </div>
               <div class="contacts-page__mail">
                 <h1 class="title">Почта:</h1>
-                <p class="text">hello@atollon.ru</p>
+                <p class="text">
+                  {{ this.$store.state.settings.allSettings.mail }}
+                </p>
               </div>
             </div>
             <div class="column column-50">

@@ -1167,3 +1167,34 @@ collections:
       - { label: 'Имя', name: 'name', widget: 'string' }
       - { label: 'Должность', name: 'position', widget: 'string' }
       - { label: 'Опыт', name: 'practice', widget: 'string' }
+
+  # --------------------Настройки сайта---------------------------
+  - name: 'settings'
+    label: 'Настройки сайта'
+    files:
+      - label: 'Основные настройки'
+        name: 'settings'
+        file: 'src/data/global_settings.yaml'
+        fields:
+          - { label: 'Почта', name: 'mail', widget: 'string' }
+          - { label: 'Номер телефона', name: 'phone', widget: 'string' }
+          - { label: 'Адрес', name: 'adress', widget: 'string' }
+          - label: 'Всякие документы снизу (политика и т.д)'
+            name: 'docs'
+            widget: 'list'
+            types:
+              - label: 'Документ'
+                name: 'docs_item'
+                widget: object,
+                fields:
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - {
+                      label: 'Страница',
+                      name: 'link',
+                      widget: 'relation',
+                      collection: 'pages',
+                      value_field: 'id',
+                      search_fields: ['title'],
+                      display_fields: ['title']
+                    }

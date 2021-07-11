@@ -6,11 +6,15 @@
         <div class="row">
           <div class="column column-50">
             <h1 class="title">Отдел продаж:</h1>
-            <p class="text">hello@atollon.ru</p>
+            <p class="text">
+              {{ this.$store.state.settings.allSettings.mail }}
+            </p>
           </div>
           <div class="column column-50">
             <h1 class="title">Телефон:</h1>
-            <p class="text">+7 (495) 278 18 02</p>
+            <p class="text">
+              {{ this.$store.state.settings.allSettings.phone }}
+            </p>
           </div>
         </div>
       </div>

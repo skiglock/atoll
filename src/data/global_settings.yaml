@@ -1,0 +1,16 @@
+mail: hello@atollon.ru
+phone: +7 (495) 278 18 02
+adress: Чебоксары, ул. Мичмана Павлова 8А
+docs:
+  - type: docs_item
+    id: f9e82207-338a-4daf-ad84-a74370b986f4
+    title: Политика конфедициальности
+    link: 80c1b7bd-6a3e-4433-a668-80b85af8aa30
+  - type: docs_item
+    id: 2f998a41-27f6-493a-b143-2b1d522b0a91
+    title: Политика возврата средств
+    link: 82d2874a-e11e-4cd5-84b3-5f330e71f6d1
+  - type: docs_item
+    id: 7053480b-8a8a-4a93-8bd4-2cd96374275a
+    title: Защита от мошенничества
+    link: a95933c0-0191-439a-b171-92d4f59d09fe

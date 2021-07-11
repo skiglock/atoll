@@ -30,18 +30,16 @@
         </div>
         <div class="footer__docs">
           <div class="row">
-            <div class="column column-30">
-              <a href="#" class="footer__docs-link"
-                >Политика конфедициальности</a
+            <div
+              class="column column-30"
+              v-for="{ node } in findDocsOnAllPages"
+              :key="node.id"
+            >
+              <g-link
+                :to="$getPath(node.path).replace('/pages', '')"
+                class="footer__docs-link"
+                >{{ node.title }}</g-link
               >
-            </div>
-            <div class="column column-30">
-              <a href="#" class="footer__docs-link"
-                >Политика возврата средств</a
-              >
-            </div>
-            <div class="column column-30">
-              <a href="#" class="footer__docs-link">Защита от мошенничества</a>
             </div>
           </div>
         </div>
@@ -50,12 +48,36 @@
   </footer>
 </template>
 
+<static-query>
+query {
+  allPages {
+    edges {
+      node {
+        id
+        title
+        path
+      }
+    }
+
+  }
+}
+</static-query>
+
 <script>
 import FooterMenu from '@/components/Footer/FooterMenu'
 export default {
   name: 'AppFooter',
   components: {
     FooterMenu
+  },
+  computed: {
+    findDocsOnAllPages() {
+      return this.$static.allPages.edges.filter((ap) =>
+        this.$store.state.settings.allSettings.docs.some(
+          (as) => as.link === ap.node.id
+        )
+      )
+    }
   }
 }
 </script>

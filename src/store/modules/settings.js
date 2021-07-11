@@ -1,5 +1,5 @@
 const state = () => ({
-  isNavOpen: false
+  allSettings: {}
 })
 
 const getters = {}
@@ -7,11 +7,8 @@ const getters = {}
 const actions = {}
 
 const mutations = {
-  setIsNavOpen(state, status) {
-    state.isNavOpen = status
-  },
-  toggleNav(state) {
-    state.isNavOpen = !state.isNavOpen
+  setSettings(state, settings) {
+    state.allSettings = settings
   }
 }
 

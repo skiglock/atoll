@@ -16,11 +16,20 @@
 import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
 import HeaderBody from '@/components/Header/HeaderBody'
+import Settings from '@/data/global_settings.yaml'
 export default {
   components: {
     AppHeader,
     AppFooter,
     HeaderBody
+  },
+  computed: {
+    Settings() {
+      return Settings
+    }
+  },
+  created() {
+    this.$store.commit('setSettings', this.Settings)
   }
 }
 </script>
