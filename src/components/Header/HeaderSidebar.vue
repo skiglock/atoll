@@ -56,7 +56,7 @@ export default {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 30;
+  z-index: 50;
   padding: 60px;
   width: 100%;
   height: 100%;

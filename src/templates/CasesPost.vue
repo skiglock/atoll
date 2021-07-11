@@ -10,27 +10,31 @@
           <div class="cases-post__body">
             <div class="cases-post__item">
               <h2 class="title cases-post__item-title">О компании</h2>
-              <p class="text cases-post__item-text">
-                {{ $page.casesPost.about }}
-              </p>
+              <div
+                class="cases-post__item-text"
+                v-html="$options.filters.markdown($page.casesPost.about)"
+              ></div>
             </div>
             <div class="cases-post__item">
               <h2 class="title cases-post__item-title">История</h2>
-              <p class="text cases-post__item-text">
-                {{ $page.casesPost.history }}
-              </p>
+              <div
+                class="cases-post__item-text"
+                v-html="$options.filters.markdown($page.casesPost.history)"
+              ></div>
             </div>
             <div class="cases-post__item">
               <h2 class="title cases-post__item-title">Что мы сделали?</h2>
-              <p class="text cases-post__item-text">
-                {{ $page.casesPost.made }}
-              </p>
+              <div
+                class="cases-post__item-text"
+                v-html="$options.filters.markdown($page.casesPost.made)"
+              ></div>
             </div>
             <div class="cases-post__item">
               <h2 class="title cases-post__item-title">Результат</h2>
-              <p class="text cases-post__item-text">
-                {{ $page.casesPost.result }}
-              </p>
+              <div
+                class="cases-post__item-text"
+                v-html="$options.filters.markdown($page.casesPost.result)"
+              ></div>
             </div>
           </div>
         </div>
@@ -65,6 +69,29 @@ export default {
 
 <style lang="scss">
 .cases-post {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a {
+    margin: inherit;
+    padding: inherit;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  code {
+    text-align: center;
+    display: block;
+  }
   &__inner {
     padding: 0 145px;
     @media screen and (max-width: 768px) {

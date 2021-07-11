@@ -28,10 +28,18 @@ module.exports = function (api) {
             }
           }
         }
+        allPages {
+          edges {
+            node {
+              id
+              path
+            }
+          }
+        }
       }
     `)
     data.allBlogPost.edges.forEach(({ node }) => {
-      const newPath = node.path.replace('/content', '')
+      const newPath = node.path.replace('/content', '').slice(0, -1)
       createPage({
         path: newPath,
         component: './src/templates/BlogPost.vue',
@@ -42,7 +50,7 @@ module.exports = function (api) {
     })
 
     data.allProducts.edges.forEach(({ node }) => {
-      const newPath = node.path.replace('/content', '')
+      const newPath = node.path.replace('/content', '').slice(0, -1)
       createPage({
         path: newPath,
         component: './src/templates/Products.vue',
@@ -53,10 +61,20 @@ module.exports = function (api) {
     })
 
     data.allCasesPost.edges.forEach(({ node }) => {
-      const newPath = node.path.replace('/content', '')
+      const newPath = node.path.replace('/content', '').slice(0, -1)
       createPage({
         path: newPath,
         component: './src/templates/CasesPost.vue',
+        context: {
+          id: node.id
+        }
+      })
+    })
+    data.allPages.edges.forEach(({ node }) => {
+      const newPath = node.path.replace('/content/pages', '').slice(0, -1)
+      createPage({
+        path: newPath,
+        component: './src/templates/Page.vue',
         context: {
           id: node.id
         }

@@ -26,6 +26,7 @@ query ($id: ID!) {
         title
         desc
         img
+        link
       }
     }
   }

@@ -106,7 +106,7 @@ export default {
         border-top: 0;
         left: 0;
         right: 0;
-        bottom: -15px;
+        bottom: 0;
         @media screen and (max-width: 576px) {
           border-width: 10px;
           bottom: -4px;

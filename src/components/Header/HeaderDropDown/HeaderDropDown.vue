@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 .dropdown {
-  z-index: 30;
+  z-index: 60;
   margin-top: 20px;
   margin-left: -115px;
   position: absolute;

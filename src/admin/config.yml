@@ -71,6 +71,18 @@ collections:
               widget: 'string'
             }
 
+  # --------------------Дополнительные страницы---------------------------
+  - name: 'pages'
+    label: 'Дополнительные страницы'
+    folder: 'content/pages'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Заголовок', name: 'title', widget: 'string' }
+      - { label: 'Мета-тэг описания', name: 'description', widget: 'string' }
+      - { label: 'Текст', name: 'text', widget: 'markdown' }
+
   # --------------------Динамические страницы---------------------------
   - name: 'products'
     label: 'Продукты'
@@ -800,11 +812,11 @@ collections:
                     widget: list,
                     fields:
                       - { label: 'ID', name: 'id', widget: 'id' }
-                      - { label: 'Лого', name: 'title', widget: image }
+                      - { label: 'title', name: 'title', widget: 'hidden', '' }
                       - { label: 'Описание', name: 'desc', widget: markdown }
-                      - { label: 'Картинка', name: 'img', widget: image }
+                      - { label: 'Фон', name: 'img', widget: image }
                       - {
-                          label: 'Ссылка',
+                          label: 'Кейс',
                           name: 'link',
                           widget: 'relation',
                           collection: 'cases',

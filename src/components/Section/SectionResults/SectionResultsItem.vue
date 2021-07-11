@@ -14,7 +14,6 @@
 
 <script>
 import MainButton from '@/components/Common/MainButton'
-import notebook from '@/assets/img/dynamic/result.png'
 
 export default {
   name: 'SectionResultsItem',
@@ -24,12 +23,7 @@ export default {
     img: String,
     url: String
   },
-  components: { MainButton },
-  computed: {
-    getResult() {
-      return notebook
-    }
-  }
+  components: { MainButton }
 }
 </script>
 
