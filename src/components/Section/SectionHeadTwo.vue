@@ -17,16 +17,10 @@
 </template>
 
 <script>
-import image from '../../assets/img/dynamic/title-img.png'
 export default {
   name: 'SectionHeadTwo',
   props: {
     content: Object
-  },
-  computed: {
-    getImage() {
-      return image
-    }
   }
 }
 </script>

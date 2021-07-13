@@ -5,7 +5,9 @@
         <div class="cases-post__inner">
           <div class="cases-post__top">
             <g-image :src="$page.casesPost.logo" class="cases-post__img" />
-            <h1 class="title cases-post__title">{{ $page.casesPost.title }}</h1>
+            <div class="title cases-post__title">
+              {{ $page.casesPost.title }}
+            </div>
           </div>
           <div class="cases-post__body">
             <div class="cases-post__item">

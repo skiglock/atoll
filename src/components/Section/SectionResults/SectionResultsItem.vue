@@ -18,7 +18,7 @@ import MainButton from '@/components/Common/MainButton'
 export default {
   name: 'SectionResultsItem',
   props: {
-    logo: String,
+    logo: Object,
     desc: String,
     img: String,
     url: String

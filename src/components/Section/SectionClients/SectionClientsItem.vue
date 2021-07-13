@@ -8,7 +8,7 @@
 export default {
   name: 'SectionClientsItem',
   props: {
-    logo: String,
+    logo: Object,
     url: String
   }
 }

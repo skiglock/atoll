@@ -1,11 +1,11 @@
 <template>
   <section class="section target">
     <div class="container">
-      <h1 class="title target-title">{{ content.title }}</h1>
+      <h1 class="title target__title">{{ content.title }}</h1>
       <h2 class="text">
         {{ content.desc }}
       </h2>
-      <div class="target-img">
+      <div class="target__img">
         <g-image :src="content.img" />
       </div>
     </div>
@@ -24,11 +24,11 @@ export default {
 <style lang="scss">
 .target {
   text-align: center;
-  &-title {
+  &__title {
     font-weight: $font_bold;
     margin-bottom: 20px;
   }
-  &-img {
+  &__img {
     max-width: 921px;
   }
 }

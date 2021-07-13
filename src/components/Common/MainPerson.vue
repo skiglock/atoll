@@ -4,7 +4,7 @@
       <g-image class="person__avatar" :src="avatar" alt="" />
     </div>
     <h2 class="title person__name">{{ name }}</h2>
-    <h3 class="person__position">{{ posititon }}</h3>
+    <h3 class="person__position">{{ position }}</h3>
     <h4 class="person__practice">{{ practice }}</h4>
   </div>
 </template>
@@ -13,9 +13,9 @@
 export default {
   name: 'SectionTeamItem',
   props: {
-    avatar: String,
+    avatar: Object,
     name: String,
-    posititon: String,
+    position: String,
     practice: String
   }
 }

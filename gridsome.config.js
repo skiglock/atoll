@@ -142,6 +142,20 @@ module.exports = {
     {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
+        contentTypes: ['Index', 'About', 'Products'],
+        coverField: 'img'
+      }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['Index', 'About', 'Products'],
+        coverField: 'layout.img'
+      }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
         contentTypes: ['BlogPost', 'CasesPost'],
         coverField: 'img'
       }
