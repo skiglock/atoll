@@ -1,7 +1,9 @@
 /* eslint-disable no-undef */
 
 export default createClass({
-  render: () => {
+  render: function () {
+    const { title, desc, img } = this.props
+
     return h(
       'section',
       { className: 'section head' },
@@ -17,13 +19,13 @@ export default createClass({
             h(
               'div',
               { className: 'column column-60' },
-              h('h1', { className: 'title head__title' }),
-              h('p', { className: 'text head__text' })
+              h('h1', { className: 'title head__title' }, title),
+              h('p', { className: 'text head__text' }, desc)
             ),
             h(
               'div',
               { className: 'column column-30' },
-              h('div', { className: 'head__img' }, h('img', {}))
+              h('div', { className: 'head__img' }, h('img', { src: img }))
             )
           )
         )

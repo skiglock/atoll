@@ -3,7 +3,9 @@ import faqItem from './faqitem'
 /* eslint-disable no-undef */
 
 export default createClass({
-  render: () => {
+  render: function () {
+    const { title, elements } = this.props
+
     return h(
       'section',
       { className: 'section faq' },
@@ -13,8 +15,18 @@ export default createClass({
         h(
           'div',
           { className: 'container' },
-          h('div', { className: 'title' }),
-          h('div', { className: 'row' }, h(faqItem, {}, null))
+          h('div', { className: 'title' }, title),
+          h(
+            'div',
+            { className: 'row' },
+            elements.map((el) => {
+              return h(
+                faqItem,
+                { title: el.getIn(['title']), desc: el.getIn(['desc']) },
+                null
+              )
+            })
+          )
         )
       )
     )

@@ -3,7 +3,7 @@ import teamItem from './teamitem'
 /* eslint-disable no-undef */
 
 export default createClass({
-  render: () => {
+  render: function () {
     return h(
       'section',
       { className: 'section team' },
@@ -13,7 +13,7 @@ export default createClass({
         h(
           'div',
           { className: 'team__inner' },
-          h('h1', { className: 'title team__title' }),
+          h('h1', { className: 'title team__title' }, title),
           h('div', { className: 'row' }, h(teamItem, {})),
           h(
             'div',

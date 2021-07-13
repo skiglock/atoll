@@ -1,7 +1,8 @@
 /* eslint-disable no-undef */
 
 export default createClass({
-  render: () => {
+  render: function () {
+    const { title, desc, img } = this.props
     return h(
       'section',
       { className: 'section consultation' },
@@ -20,8 +21,8 @@ export default createClass({
               h(
                 'div',
                 { className: 'consultation__left' },
-                h('h1', { className: 'title consultation__title' }),
-                h('p', { className: 'text consultation__text' }),
+                h('h1', { className: 'title consultation__title' }, title),
+                h('p', { className: 'text consultation__text' }, desc),
                 h('button', { className: 'btn consultation__btn' })
               )
             ),
@@ -31,7 +32,11 @@ export default createClass({
               h(
                 'div',
                 { className: 'consultation__right' },
-                h('div', { className: 'consultation__img' }, h('img', {}))
+                h(
+                  'div',
+                  { className: 'consultation__img' },
+                  h('img', { src: img })
+                )
               )
             )
           )

@@ -3,15 +3,16 @@ import priceItem from './priceItem'
 /* eslint-disable no-undef */
 
 export default createClass({
-  render: () => {
+  render: function () {
+    const { title, desc } = this.props
     return h(
       'section',
       { className: 'section price' },
       h(
         'div',
         { className: 'container' },
-        h('h1', { className: 'title price__title' }),
-        h('p', { className: 'text price__text' }),
+        h('h1', { className: 'title price__title' }, title),
+        h('p', { className: 'text price__text' }, desc),
         h(
           'div',
           { className: 'price__services' },

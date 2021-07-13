@@ -12,3 +12,7 @@ CMS.registerWidget('id', IdControl, IdPreview)
 CMS.registerPreviewStyle('/preview/style.css')
 
 CMS.registerPreviewTemplate('products', products)
+
+CMS.registerPreviewTemplate('home', products)
+
+CMS.registerPreviewTemplate('about', products)

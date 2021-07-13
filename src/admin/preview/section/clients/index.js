@@ -3,7 +3,8 @@ import clientsItem from './clientsitem'
 /* eslint-disable no-undef */
 
 export default createClass({
-  render: () => {
+  render: function () {
+    const { title } = this.props
     return h(
       'section',
       { className: 'section clients' },
@@ -13,7 +14,7 @@ export default createClass({
         h(
           'div',
           { className: 'clients__inner' },
-          h('h1', { className: 'title clients__title' }),
+          h('h1', { className: 'title clients__title' }, title),
           h('div', { className: 'row' }, h(clientsItem, {}, null))
         )
       )
