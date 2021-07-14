@@ -8,7 +8,7 @@ import store from '~/store'
 
 import InfiniteLoading from 'vue-infinite-loading'
 
-export default function (Vue, { head, appOptions }) {
+export default function (Vue, { head, appOptions, isClient }) {
   head.htmlAttrs = { lang: 'ru' }
   head.link.push({
     rel: 'preconnect',
@@ -28,7 +28,8 @@ export default function (Vue, { head, appOptions }) {
   Vue.prototype.$shade = shade
   Vue.filter('markdown', (string) => marked(string))
   Vue.use(Vuex)
-  Vue.use(InfiniteLoading)
-
+  if (isClient) {
+    Vue.use(InfiniteLoading)
+  }
   appOptions.store = store
 }
