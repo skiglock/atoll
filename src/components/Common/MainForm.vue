@@ -83,8 +83,7 @@ export default {
     MainButton
   },
   props: {
-    title: String,
-    modalName: String
+    title: String
   },
   data() {
     return {
@@ -114,6 +113,9 @@ export default {
     },
     checkEmail() {
       return isRequired(this.formData.email) || validEmail(this.formData.email)
+    },
+    modalName() {
+      return this.$store.state.modal.modalName
     }
   },
   methods: {

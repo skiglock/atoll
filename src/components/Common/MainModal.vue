@@ -11,11 +11,7 @@
         <p class="text" :style="{ marginTop: '10px' }">
           Менеджер свяжется с вами в ближайшее время!
         </p>
-        <main-form
-          :modal-name="modalName"
-          title="Modal"
-          class="modal__form modal__form--center"
-        />
+        <main-form title="Modal" class="modal__form modal__form--center" />
       </div>
     </div>
   </div>
@@ -34,9 +30,6 @@ export default {
   computed: {
     modalTitle() {
       return this.$store.state.modal.modalTitle
-    },
-    modalName() {
-      return this.$store.state.modal.modalName
     }
   }
 }
