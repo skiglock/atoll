@@ -29,15 +29,15 @@ export default createClass({
       { className: 'main' },
       entry.getIn(['data', 'layout'])
         ? widgetsFor('layout').map((layout) => {
-            if (layout.getIn(['data', 'name']) === 'blog') {
-              return h(
-                blog,
-                {
-                  title: layout.getIn(['data', 'title']),
-                  desc: layout.getIn(['data', 'desc'])
-                },
-                null
-              )
+            // if (layout.getIn(['data', 'name']) === 'blog') {
+            //   return h(
+            //     blog,
+            //     {
+            //       title: layout.getIn(['data', 'title']),
+            //       desc: layout.getIn(['data', 'desc'])
+            //     },
+            //     null
+            //   )
             // } else if (layout.getIn(['data', 'name']) === 'cards') {
             //   return h(
             //     cards,
@@ -94,100 +94,100 @@ export default createClass({
             //   )
             // } else if (layout.getIn(['data', 'name']) === 'services') {
             //   return h(services, {}, null)
-            // } else if (layout.getIn(['data', 'name']) === 'consultation') {
-            //   return h(
-            //     consultation,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'contacts') {
-            //   return h(contacts, {}, null)
-            // } else if (layout.getIn(['data', 'name']) === 'demonstration') {
-            //   return h(
-            //     demonstration,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'head') {
-            //   return h(
-            //     head,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'head-three') {
-            //   return h(
-            //     headthree,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'head-two') {
-            //   return h(
-            //     headtwo,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'message') {
-            //   return h(
-            //     message,
-            //     {
-            //       title: layout.getIn(['data', 'title'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'order') {
-            //   return h(
-            //     order,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'other') {
-            //   return h(
-            //     other,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'quote') {
-            //   return h(quote, { title: layout.getIn(['data', 'title']) }, null)
-            // } else if (layout.getIn(['data', 'name']) === 'target') {
-            //   return h(
-            //     target,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'team') {
-            //   return h(team, { title: layout.getIn(['data', 'title']) }, null)
-            // }
+            } else if (layout.getIn(['data', 'name']) === 'consultation') {
+              return h(
+                consultation,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'contacts') {
+              return h(contacts, {}, null)
+            } else if (layout.getIn(['data', 'name']) === 'demonstration') {
+              return h(
+                demonstration,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'head') {
+              return h(
+                head,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'head-three') {
+              return h(
+                headthree,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'head-two') {
+              return h(
+                headtwo,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'message') {
+              return h(
+                message,
+                {
+                  title: layout.getIn(['data', 'title'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'order') {
+              return h(
+                order,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'other') {
+              return h(
+                other,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'quote') {
+              return h(quote, { title: layout.getIn(['data', 'title']) }, null)
+            } else if (layout.getIn(['data', 'name']) === 'target') {
+              return h(
+                target,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'team') {
+              return h(team, { title: layout.getIn(['data', 'title']) }, null)
+            }
           })
         : h(
             'div',
