@@ -6,6 +6,8 @@ import marked from 'marked'
 import Vuex from 'vuex'
 import store from '~/store'
 
+import InfiniteLoading from 'vue-infinite-loading'
+
 export default function (Vue, { head, appOptions }) {
   head.htmlAttrs = { lang: 'ru' }
   head.link.push({
@@ -26,5 +28,7 @@ export default function (Vue, { head, appOptions }) {
   Vue.prototype.$shade = shade
   Vue.filter('markdown', (string) => marked(string))
   Vue.use(Vuex)
+  Vue.use(InfiniteLoading)
+
   appOptions.store = store
 }

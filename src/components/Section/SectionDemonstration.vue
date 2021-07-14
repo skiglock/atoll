@@ -15,13 +15,16 @@
             <div class="text">
               {{ content.desc }}
             </div>
-            <main-button :fontsize="15">Заказать проект внедрения</main-button>
+            <main-button :fontsize="15" @click.native="setModalIntroduction"
+              >Заказать проект внедрения</main-button
+            >
             <main-button
               class="card"
               :fontsize="15"
               color="#000"
               backgroundcolor="#fff"
               hover="#e5e5e5"
+              @click.native="setModalDemonstration"
               >Записаться на демонстрацию</main-button
             >
           </div>
@@ -38,6 +41,16 @@ export default {
   components: { MainButton },
   props: {
     content: Object
+  },
+  methods: {
+    setModalDemonstration() {
+      this.$store.commit('setModalTitle', 'демонстрацию')
+      this.$store.commit('setIsModalOpen', true)
+    },
+    setModalIntroduction() {
+      this.$store.commit('setModalTitle', 'внедрение')
+      this.$store.commit('setIsModalOpen', true)
+    }
   }
 }
 </script>

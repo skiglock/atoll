@@ -3,9 +3,18 @@
     <div class="container">
       <div class="team__inner">
         <h1 class="title team__title">{{ content.title }}</h1>
-        <div class="row">
-          <div
-            class="column column-30"
+        <carousel
+          class="row"
+          :perPage="3"
+          :perPageCustom="[
+            [
+              [480, 3],
+              [780, 4]
+            ]
+          ]"
+        >
+          <slide
+            class=""
             v-for="{ node } in $static.allTeam.edges"
             :key="node.id"
           >
@@ -15,13 +24,8 @@
               :position="node.position"
               :practice="node.practice"
             />
-          </div>
-        </div>
-        <div class="team__dots">
-          <div class="team__dots-item team__dots-item--active"></div>
-          <div class="team__dots-item"></div>
-          <div class="team__dots-item"></div>
-        </div>
+          </slide>
+        </carousel>
       </div>
     </div>
   </section>
@@ -44,6 +48,8 @@ query {
 </static-query>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel'
+
 import MainPerson from '@/components/Common/MainPerson'
 export default {
   name: 'SectionTeam',
@@ -51,8 +57,11 @@ export default {
     content: Object
   },
   components: {
-    MainPerson
-  }
+    MainPerson,
+    Carousel,
+    Slide
+  },
+  methods: {}
 }
 </script>
 

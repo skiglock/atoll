@@ -42,12 +42,12 @@ export default {
     }
   },
   watch: {
-    isModalOpen() {
-      if (this.isModalOpen) {
+    isModal() {
+      if (this.isModal) {
         document.body.style.overflow = 'hidden'
-        return
+      } else {
+        document.body.style.overflow = ''
       }
-      document.body.style.overflow = null
     }
   },
   created() {

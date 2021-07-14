@@ -43,6 +43,7 @@ export default {
   right: 0;
   bottom: 0;
   background-color: rgba($black_color, 0.3);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;

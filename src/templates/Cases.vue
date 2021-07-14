@@ -4,27 +4,48 @@
     <section class="cases-page">
       <div class="container">
         <div class="cases-page__list">
-          <cases-item
-            v-for="{ node } in $page.allCasesPost.edges"
-            :key="node.id"
-            :category="node.category"
-            :img="node.img"
-            :logo="node.logo"
-            :desc="node.desc"
-            :url="node.path"
-          />
+          <transition-group name="fade">
+            <cases-item
+              v-for="{ node } in $page.allCasesPost.edges"
+              :key="node.id"
+              :category="node.category"
+              :img="node.img"
+              :logo="node.logo"
+              :desc="node.desc"
+              :url="node.path"
+            />
+          </transition-group>
         </div>
+        <h1
+          class="title"
+          :style="{
+            textAlign: 'center'
+          }"
+          v-if="loadedPosts.length === 0"
+        >
+          На данный момент кейсы еще не добавлены :(
+        </h1>
+        <ClientOnly>
+          <infinite-loading @infinite="infiniteHandler" spinner="spiral">
+            <span slot="no-more"></span>
+            <span slot="no-results"></span>
+          </infinite-loading>
+        </ClientOnly>
       </div>
     </section>
   </Layout>
 </template>
 
 <page-query>
-query ($id: ID!) {
+query ($id: ID!, $page: Int) {
   cases (id: $id) {
     title
   }
-  allCasesPost {
+  allCasesPost(perPage: 2, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
@@ -44,6 +65,31 @@ import CasesItem from '@/components/Page/Cases/CasesItem'
 export default {
   components: {
     CasesItem
+  },
+  data() {
+    return {
+      loadedPosts: [],
+      currentPage: 1
+    }
+  },
+  created() {
+    this.loadedPosts.push(...this.$page.allCasesPost.edges)
+  },
+  methods: {
+    async infiniteHandler($state) {
+      if (this.currentPage + 1 > this.$page.allCasesPost.pageInfo.totalPages) {
+        $state.complete()
+      } else {
+        const { data } = await this.$fetch(`/cases/${this.currentPage + 1}`)
+        if (data.allCasesPost.edges.length) {
+          this.currentPage = data.allCasesPost.pageInfo.currentPage
+          this.loadedPosts.push(...data.allCasesPost.edges)
+          $state.loaded()
+        } else {
+          $state.complete()
+        }
+      }
+    }
   },
   metaInfo() {
     return {
