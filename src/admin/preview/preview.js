@@ -94,7 +94,7 @@ export default createClass({
             //   )
             // } else if (layout.getIn(['data', 'name']) === 'services') {
             //   return h(services, {}, null)
-            } else if (layout.getIn(['data', 'name']) === 'consultation') {
+            if (layout.getIn(['data', 'name']) === 'consultation') {
               return h(
                 consultation,
                 {
