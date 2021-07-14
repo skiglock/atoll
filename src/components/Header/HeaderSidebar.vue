@@ -12,13 +12,13 @@
         />
       </li>
       <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link">О команде</a>
+        <g-link to="/about" class="sidebar__menu-link">О команде</g-link>
       </li>
       <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link">Блог </a>
+        <g-link to="/about" class="sidebar__menu-link">Блог</g-link>
       </li>
       <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link">Контакты</a>
+        <g-link to="/contacts" class="sidebar__menu-link">Контакты</g-link>
       </li>
     </ul>
   </div>
