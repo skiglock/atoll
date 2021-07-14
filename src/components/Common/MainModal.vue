@@ -13,7 +13,7 @@
         </p>
         <main-form
           :modal-name="modalName"
-          :title="name"
+          title="Modal"
           class="modal__form modal__form--center"
         />
       </div>

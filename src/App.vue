@@ -10,7 +10,7 @@
     </transition>
     <app-footer />
     <transition name="fade">
-      <main-modal :name="setModalName" v-show="isModal" @close="closeModal" />
+      <main-modal v-show="isModal" @close="closeModal" />
     </transition>
   </div>
 </template>
