@@ -9,6 +9,9 @@
       <router-view />
     </transition>
     <app-footer />
+    <transition name="fade">
+      <main-modal :name="setModalName" v-show="isModal" @close="closeModal" />
+    </transition>
   </div>
 </template>
 
@@ -17,15 +20,37 @@ import AppHeader from '@/components/AppHeader'
 import AppFooter from '@/components/AppFooter'
 import HeaderBody from '@/components/Header/HeaderBody'
 import Settings from '@/data/global_settings.yaml'
+import MainModal from '@/components/Common/MainModal'
 export default {
   components: {
     AppHeader,
     AppFooter,
-    HeaderBody
+    HeaderBody,
+    MainModal
   },
   computed: {
     Settings() {
       return Settings
+    },
+    isModal() {
+      return this.$store.state.modal.isModalOpen
+    },
+    setModalName() {
+      return this.$store.state.modal.modalName
+    }
+  },
+  methods: {
+    closeModal() {
+      this.$store.commit('setIsModalOpen', false)
+    }
+  },
+  watch: {
+    isModalOpen() {
+      if (this.isModalOpen) {
+        document.body.style.overflow = 'hidden'
+        return
+      }
+      document.body.style.overflow = null
     }
   },
   created() {

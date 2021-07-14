@@ -191,7 +191,7 @@ export default createClass({
           })
         : h(
             'div',
-            { style: { textAlign: 'center' } },
+            { className: 'title', style: { textAlign: 'center' } },
             'Добавьте какую нибудь секцию'
           )
     )

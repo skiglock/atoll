@@ -148,6 +148,10 @@ export default {
   mounted() {
     this.formData.from = `https://atollon.ru${this.$route.path}`
     this.formData.ref = document.referrer
+  },
+  destroyed() {
+    this.errors[0] = undefined
+    this.$forceUpdate()
   }
 }
 </script>

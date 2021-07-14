@@ -13,6 +13,7 @@
                 class="consultation__btn"
                 :backgroundcolor="content.variant ? '#000' : '#487bfa'"
                 :hover="content.variant ? '#4c4c4c' : '#7397f3'"
+                @click.native="setModalConsultation"
                 >{{ setButtonTitle }}</main-button
               >
             </div>
@@ -50,6 +51,13 @@ export default {
         buttonTitle = 'Мне интересно'
       }
       return buttonTitle
+    }
+  },
+  methods: {
+    setModalConsultation() {
+      this.$store.commit('setModalName', 'Консультация')
+      this.$store.commit('setModalTitle', 'консультацию')
+      this.$store.commit('setIsModalOpen', true)
     }
   }
 }

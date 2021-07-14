@@ -4,7 +4,9 @@
       <div class="title message__title">
         {{ content.title }}
       </div>
-      <main-button class="message__btn">Стать клиентом</main-button>
+      <main-button class="message__btn" @click.native="setModalMessage"
+        >Стать клиентом</main-button
+      >
     </div>
   </section>
 </template>
@@ -19,6 +21,13 @@ export default {
   },
   components: {
     MainButton
+  },
+  methods: {
+    setModalMessage() {
+      this.$store.commit('setModalName', 'Подключение')
+      this.$store.commit('setModalTitle', 'подключение')
+      this.$store.commit('setIsModalOpen', true)
+    }
   }
 }
 </script>

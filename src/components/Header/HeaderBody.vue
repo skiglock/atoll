@@ -6,7 +6,9 @@
       </div>
       <div class="header__body-description">
         <h1 class="title">Трансформация отдела продаж на основе amoCRM</h1>
-        <main-button class="header__body-btn">Подключить</main-button>
+        <main-button class="header__body-btn" @click.native="setModalConnect"
+          >Подключить</main-button
+        >
       </div>
     </div>
   </div>
@@ -19,6 +21,13 @@ export default {
   name: 'HeaderBody',
   components: {
     MainButton
+  },
+  methods: {
+    setModalConnect() {
+      this.$store.commit('setModalName', 'Подключение')
+      this.$store.commit('setModalTitle', 'подключение')
+      this.$store.commit('setIsModalOpen', true)
+    }
   }
 }
 </script>

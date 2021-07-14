@@ -4,6 +4,7 @@ import teamItem from './teamitem'
 
 export default createClass({
   render: function () {
+    const { title } = this.props
     return h(
       'section',
       { className: 'section team' },
@@ -14,7 +15,7 @@ export default createClass({
           'div',
           { className: 'team__inner' },
           h('h1', { className: 'title team__title' }, title),
-          h('div', { className: 'row' }, h(teamItem, {})),
+          h('div', { className: 'row' }, JSON.stringify(this.props)),
           h(
             'div',
             { className: 'team__dots' },
