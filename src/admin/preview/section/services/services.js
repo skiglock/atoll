@@ -13,7 +13,13 @@ export default createClass({
         h(
           'div',
           { className: 'services__inner' },
-          h('div', { className: 'row' }, h(servicesItem, {}, null))
+          h(
+            'div',
+            { className: 'row' },
+            h(servicesItem, {}, null),
+            h(servicesItem, {}, null),
+            h(servicesItem, {}, null)
+          )
         )
       )
     )

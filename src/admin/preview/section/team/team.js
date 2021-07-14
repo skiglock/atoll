@@ -15,7 +15,13 @@ export default createClass({
           'div',
           { className: 'team__inner' },
           h('h1', { className: 'title team__title' }, title),
-          h('div', { className: 'row' }, JSON.stringify(this.props)),
+          h(
+            'div',
+            { className: 'row' },
+            h(teamItem, {}),
+            h(teamItem, {}),
+            h(teamItem, {})
+          ),
           h(
             'div',
             { className: 'team__dots' },
