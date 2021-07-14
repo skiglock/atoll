@@ -12,6 +12,8 @@ function addStyleResource(rule) {
       ]
     })
 }
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   siteName: 'Atollon',
@@ -176,11 +178,15 @@ module.exports = {
       }
     }
   ],
+
   chainWebpack(config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
     types.forEach((type) => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
+    config
+      .plugin('BundleAnalyzerPlugin')
+      .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
   }
 }
