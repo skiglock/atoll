@@ -64,8 +64,6 @@ query {
 </static-query>
 
 <script>
-import { Carousel, Slide } from 'vue-carousel'
-
 import MainPerson from '@/components/Common/MainPerson'
 export default {
   name: 'SectionTeam',
@@ -74,8 +72,14 @@ export default {
   },
   components: {
     MainPerson,
-    Carousel,
-    Slide
+    Carousel: () =>
+      import('vue-carousel')
+        .then((m) => m.Carousel)
+        .catch(),
+    Slide: () =>
+      import('vue-carousel')
+        .then((m) => m.Slide)
+        .catch()
   },
   methods: {}
 }
