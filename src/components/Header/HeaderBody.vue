@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     setModalConnect() {
-      this.$store.commit('setModalName', 'Подключение')
       this.$store.commit('setModalTitle', 'подключение')
       this.$store.commit('setIsModalOpen', true)
     }

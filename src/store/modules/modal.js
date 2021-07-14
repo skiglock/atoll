@@ -1,6 +1,5 @@
 const state = () => ({
   isModalOpen: false,
-  modalName: '',
   modalTitle: ''
 })
 

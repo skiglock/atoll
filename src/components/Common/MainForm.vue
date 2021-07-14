@@ -15,7 +15,6 @@
     </p>
     <input type="hidden" name="from" v-model="formData.from" />
     <input type="hidden" name="ref" v-model="formData.ref" />
-    <input type="hidden" name="modal" v-model="formData.modal" />
 
     <div class="form__item">
       <input
@@ -92,8 +91,7 @@ export default {
         phone: '',
         email: '',
         from: '',
-        ref: '',
-        modal: ''
+        ref: ''
       },
       errors: {}
     }
@@ -113,9 +111,6 @@ export default {
     },
     checkEmail() {
       return isRequired(this.formData.email) || validEmail(this.formData.email)
-    },
-    modalName() {
-      return this.$store.state.modal.modalName
     }
   },
   methods: {
@@ -154,7 +149,6 @@ export default {
   mounted() {
     this.formData.from = `https://atollon.ru${this.$route.path}`
     this.formData.ref = document.referrer
-    this.formData.modal = this.modalName
   },
   destroyed() {
     this.errors[0] = undefined

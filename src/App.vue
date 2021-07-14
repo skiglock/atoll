@@ -34,9 +34,6 @@ export default {
     },
     isModal() {
       return this.$store.state.modal.isModalOpen
-    },
-    setModalName() {
-      return this.$store.state.modal.modalName
     }
   },
   methods: {

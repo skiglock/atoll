@@ -55,7 +55,6 @@ export default {
   },
   methods: {
     setModalConsultation() {
-      this.$store.commit('setModalName', 'Консультация')
       this.$store.commit('setModalTitle', 'консультацию')
       this.$store.commit('setIsModalOpen', true)
     }

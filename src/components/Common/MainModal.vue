@@ -80,7 +80,7 @@ export default {
 }
 .close:before {
   content: '+';
-  color: $main_color;
+  color: $black_color;
   position: absolute;
   z-index: 2;
   transform: rotate(45deg);
@@ -98,7 +98,7 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-  background: $main_color;
+  background: $black_color;
   z-index: 1;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
   transform: scale(0.01);
