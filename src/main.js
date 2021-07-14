@@ -7,11 +7,12 @@ import Vuex from 'vuex'
 import store from '~/store'
 
 import InfiniteLoading from 'vue-infinite-loading'
-import ralewaylight from '@/assets/fonts/ralewaylight.woff2"'
+import ralewaylight from '@/assets/fonts/ralewaylight.woff2'
 import ralewayregular from '@/assets/fonts/ralewayregular.woff2'
 import ralewaymedium from '@/assets/fonts/ralewaymedium.woff2'
 import ralewaysemibold from '@/assets/fonts/ralewaysemibold.woff2'
 import ralewaybold from '@/assets/fonts/ralewaybold.woff2'
+import headimg from '@/assets/img/head.png'
 
 export default function (Vue, { head, appOptions }) {
   head.htmlAttrs = { lang: 'ru' }
@@ -43,6 +44,12 @@ export default function (Vue, { head, appOptions }) {
     rel: 'preload',
     href: ralewaybold,
     as: 'font',
+    crossorigin: true
+  })
+  head.link.push({
+    rel: 'preload',
+    href: headimg,
+    as: 'image',
     crossorigin: true
   })
   Vue.component('Layout', DefaultLayout)
