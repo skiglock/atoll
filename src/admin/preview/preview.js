@@ -6,6 +6,7 @@ import plans from './section/plans/plans'
 import price from './section/price/price'
 import results from './section/results/results'
 import services from './section/services/services'
+import team from './section/team/team'
 import consultation from './section/consultation'
 import contacts from './section/contacts'
 import demonstration from './section/demonstration'
@@ -17,7 +18,6 @@ import order from './section/order'
 import other from './section/other'
 import quote from './section/quote'
 import target from './section/target'
-import team from './section/team/team'
 
 /* eslint-disable no-undef */
 
@@ -29,72 +29,72 @@ export default createClass({
       { className: 'main' },
       entry.getIn(['data', 'layout'])
         ? widgetsFor('layout').map((layout) => {
-            // if (layout.getIn(['data', 'name']) === 'blog') {
-            //   return h(
-            //     blog,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'cards') {
-            //   return h(
-            //     cards,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       elements: layout.getIn(['data', 'elements'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'clients') {
-            //   return h(
-            //     clients,
-            //     {
-            //       title: layout.getIn(['data', 'title'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'faq') {
-            //   return h(
-            //     faq,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       elements: layout.getIn(['data', 'elements'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'plans') {
-            //   return h(
-            //     plans,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       elements: layout.getIn(['data', 'elements'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'price') {
-            //   return h(
-            //     price,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'results') {
-            //   return h(
-            //     results,
-            //     {
-            //       title: layout.getIn(['data', 'title'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'services') {
-            //   return h(services, {}, null)
-            if (layout.getIn(['data', 'name']) === 'consultation') {
+            if (layout.getIn(['data', 'name']) === 'blog') {
+              return h(
+                blog,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'cards') {
+              return h(
+                cards,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  elements: layout.getIn(['data', 'elements'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'clients') {
+              return h(
+                clients,
+                {
+                  title: layout.getIn(['data', 'title'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'faq') {
+              return h(
+                faq,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  elements: layout.getIn(['data', 'elements'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'plans') {
+              return h(
+                plans,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  elements: layout.getIn(['data', 'elements'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'price') {
+              return h(
+                price,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'results') {
+              return h(
+                results,
+                {
+                  title: layout.getIn(['data', 'title'])
+                },
+                null
+              )
+            } else if (layout.getIn(['data', 'name']) === 'services') {
+              return h(services, {}, null)
+            } else if (layout.getIn(['data', 'name']) === 'consultation') {
               return h(
                 consultation,
                 {

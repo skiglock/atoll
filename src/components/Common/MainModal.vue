@@ -57,7 +57,7 @@ export default {
   border-radius: 20px;
   padding: 40px 60px 20px;
   @media screen and (max-width: 576px) {
-    padding: 20px;
+    padding: 60px 25px 20px;
   }
   margin: 20px;
   max-width: 450px;
