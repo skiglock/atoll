@@ -12,11 +12,13 @@
               />
               <p class="footer__copyright">© 2021 Atollon</p>
               <div class="footer__contacts">
-                <a href="tel:+74952781802" class="footer__contacts-number"
-                  >+7 (495) 278 18 02</a
-                >
-                <a href="mailto:hello@atollon.ru" class="footer__contacts-mail"
-                  >hello@atollon.ru</a
+                <a href="tel:+74952781802" class="footer__contacts-number">{{
+                  $store.state.settings.allSettings.phone
+                }}</a>
+                <a
+                  href="mailto:hello@atollon.ru"
+                  class="footer__contacts-mail"
+                  >{{ $store.state.settings.allSettings.mail }}</a
                 >
               </div>
             </div>
@@ -88,14 +90,34 @@ export default {
   @media screen and (max-width: 576px) {
     margin-top: 80px;
   }
+  &__about {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   &__inner {
     padding-top: 25px;
+    @media screen and (max-width: 576px) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
   }
   &__logo {
     width: 98px;
   }
   &__copyright {
     margin-top: 12px;
+    color: $text_color;
+    font-size: 14px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 25px;
+    }
   }
   &__contacts {
     display: flex;
@@ -105,12 +127,18 @@ export default {
       font-size: 15px;
       color: #232323;
       font-weight: $font_semibold;
+      @media screen and (max-width: 576px) {
+        font-size: 25px;
+      }
     }
     &-mail {
       margin-top: 13px;
       font-size: 14px;
       color: #1b1b1b;
       font-weight: $font_light;
+      @media screen and (max-width: 576px) {
+        font-size: 25px;
+      }
     }
   }
   &__docs {
@@ -121,6 +149,9 @@ export default {
       font-weight: $font_regular;
       color: #1b1b1b;
       font-size: 14px;
+      @media screen and (max-width: 576px) {
+        font-size: 20px;
+      }
       &:hover {
         color: $main_color;
       }

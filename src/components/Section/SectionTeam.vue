@@ -3,18 +3,34 @@
     <div class="container">
       <div class="team__inner">
         <h1 class="title team__title">{{ content.title }}</h1>
-        <carousel
-          class="row"
-          :perPage="3"
-          :perPageCustom="[
-            [
-              [480, 3],
-              [780, 4]
-            ]
-          ]"
-        >
-          <slide
-            class=""
+        <ClientOnly>
+          <carousel
+            v-if="$route.path === '/'"
+            class="row"
+            :per-page-custom="[
+              [280, 1],
+              [576, 2],
+              [768, 3]
+            ]"
+            pagination-active-color="#487bfa"
+          >
+            <slide
+              class=""
+              v-for="{ node } in $static.allTeam.edges"
+              :key="node.id"
+            >
+              <main-person
+                :avatar="node.avatar"
+                :name="node.name"
+                :position="node.position"
+                :practice="node.practice"
+              />
+            </slide>
+          </carousel>
+        </ClientOnly>
+        <div v-if="$route.path !== '/'" class="row">
+          <div
+            class="column column-30"
             v-for="{ node } in $static.allTeam.edges"
             :key="node.id"
           >
@@ -24,8 +40,8 @@
               :position="node.position"
               :practice="node.practice"
             />
-          </slide>
-        </carousel>
+          </div>
+        </div>
       </div>
     </div>
   </section>

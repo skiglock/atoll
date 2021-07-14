@@ -56,6 +56,10 @@ export default {
   flex-direction: column;
   border-radius: 20px;
   padding: 40px 60px 20px;
+  @media screen and (max-width: 576px) {
+    padding: 20px;
+  }
+  margin: 20px;
   max-width: 450px;
   .center {
     text-align: center;
@@ -76,8 +80,8 @@ export default {
   height: 30px;
   border-radius: 30px;
   position: relative;
-  z-index: 1;
   cursor: pointer;
+  z-index: 102;
 }
 .close:before {
   content: '+';

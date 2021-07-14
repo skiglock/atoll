@@ -31,8 +31,8 @@ export default {
   name: 'CasesItem',
   props: {
     category: String,
-    img: String,
-    logo: String,
+    img: Object,
+    logo: Object,
     desc: String,
     url: String
   }

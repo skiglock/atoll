@@ -182,7 +182,6 @@ export default {
   }
   &__btn {
     margin-top: 29px;
-    height: 44px;
   }
   &__agree {
     margin-top: 9px;

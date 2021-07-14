@@ -67,7 +67,6 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: space-between;
     flex-direction: row;
     @media screen and (max-width: 576px) {
-        flex-direction: row-reverse;
         align-items: center;
     }
 }
@@ -86,9 +85,12 @@ body::-webkit-scrollbar-thumb:hover {
     }
     @media screen and (max-width: 992px) {
         padding: 10px;
-        flex: 50% !important;
+        flex: 33.33% !important;
     }
     @media screen and (max-width: 576px) {
+        flex: 50% !important;
+    }
+    @media screen and (max-width: 500px) {
         flex: 100% !important;
     }
 }

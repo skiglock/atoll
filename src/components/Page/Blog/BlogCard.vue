@@ -31,7 +31,7 @@ export default {
   name: 'BlogCard',
   props: {
     title: String,
-    img: String,
+    img: Object,
     desc: String,
     url: String,
     category: String

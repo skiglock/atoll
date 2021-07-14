@@ -3754,3 +3754,26 @@ collections:
                       search_fields: ['title'],
                       display_fields: ['title']
                     }
+      - label: 'Настройки меню интеграции'
+        name: 'menu'
+        file: 'src/data/integration_menu_settings.yaml'
+        fields:
+          - label: 'Добавить меню'
+            name: 'add_menu'
+            widget: 'list'
+            types:
+              - label: 'Меню'
+                name: 'link'
+                widget: list,
+                fields:
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок', name: 'title', widget: string }
+                  - {
+                      label: 'Ссылка',
+                      name: 'link',
+                      widget: 'relation',
+                      collection: 'products',
+                      value_field: 'id',
+                      search_fields: ['title'],
+                      display_fields: ['title']
+                    }
