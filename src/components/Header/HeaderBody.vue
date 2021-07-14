@@ -40,7 +40,7 @@ export default {
     align-items: center;
     padding-bottom: 30px;
     &-img {
-      width: 800px;
+      max-width: 800px;
       max-height: 511px;
       @media (max-height: 900px) and (max-width: 1440px) {
         max-width: 550px;

@@ -12,8 +12,6 @@ function addStyleResource(rule) {
       ]
     })
 }
-const BundleAnalyzerPlugin =
-  require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   siteName: 'Atollon',
@@ -185,8 +183,5 @@ module.exports = {
     types.forEach((type) => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
-    config
-      .plugin('BundleAnalyzerPlugin')
-      .use(BundleAnalyzerPlugin, [{ analyzerMode: 'static' }])
   }
 }
