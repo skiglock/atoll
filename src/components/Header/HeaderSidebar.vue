@@ -11,14 +11,10 @@
           :url="$getPath(node.path)"
         />
       </li>
-      <li class="sidebar__menu-item">
-        <g-link to="/about" class="sidebar__menu-link">О команде</g-link>
-      </li>
-      <li class="sidebar__menu-item">
-        <g-link to="/about" class="sidebar__menu-link">Блог</g-link>
-      </li>
-      <li class="sidebar__menu-item">
-        <g-link to="/contacts" class="sidebar__menu-link">Контакты</g-link>
+      <li class="sidebar__menu-item" v-for="item in menu" :key="item.id">
+        <g-link :to="item.link" class="sidebar__menu-link">{{
+          item.title
+        }}</g-link>
       </li>
     </ul>
   </div>
@@ -43,9 +39,13 @@ query {
 import HeaderDropDownItem from './HeaderDropDown/HeaderDropDownItem'
 export default {
   name: 'HeaderSidebar',
+  props: {
+    menu: Array
+  },
   components: {
     HeaderDropDownItem
-  }
+  },
+  computed: {}
 }
 </script>
 
@@ -64,6 +64,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
   @media screen and (max-width: 768px) {
     .dropdown__item {
       margin-top: 20px;
@@ -82,6 +85,11 @@ export default {
     justify-content: space-evenly;
     @media screen and (max-width: 320px) {
       justify-content: space-between;
+    }
+    &-item + &-item {
+      @media screen and (max-width: 576px) {
+        margin-top: 20px;
+      }
     }
     &-link {
       font-size: 40px;

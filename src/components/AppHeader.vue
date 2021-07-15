@@ -2,9 +2,13 @@
   <header class="header">
     <div class="container">
       <div class="header__top">
-        <header-navbar />
+        <header-navbar :menu="MainMenu" />
         <transition name="fade">
-          <header-sidebar v-if="sidebar" @click.native="sidebar = false" />
+          <header-sidebar
+            :menu="MainMenu"
+            v-if="sidebar"
+            @click.native="sidebar = false"
+          />
         </transition>
 
         <header-burger @click.native="sidebar = !sidebar" :active="sidebar" />
@@ -18,6 +22,7 @@
 import HeaderNavbar from '@/components/Header/HeaderNavbar/HeaderNavbar'
 import HeaderSidebar from '@/components/Header/HeaderSidebar'
 import HeaderBurger from '@/components/Header/HeaderBurger'
+import MainMenu from '@/data/menu_settings.yaml'
 
 export default {
   name: 'AppHeader',
@@ -38,6 +43,11 @@ export default {
       } else {
         document.body.style.overflow = null
       }
+    }
+  },
+  computed: {
+    MainMenu() {
+      return MainMenu.menu_list
     }
   }
 }

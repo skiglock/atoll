@@ -1,18 +1,11 @@
 <template>
   <div class="footer__menu">
-    <h1 class="footer__menu-title">Продукт</h1>
+    <h1 class="footer__menu-title">{{ title }}</h1>
     <ul class="footer__menu-list">
-      <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">Atollon</a>
-      </li>
-      <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">Блог</a>
-      </li>
-      <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">О команде</a>
-      </li>
-      <li class="footer__menu-item">
-        <a href="#" class="footer__menu-link">Контакты</a>
+      <li class="footer__menu-item" v-for="item in menu" :key="item.id">
+        <g-link :to="item.link" class="footer__menu-link">{{
+          item.title
+        }}</g-link>
       </li>
     </ul>
   </div>
@@ -20,7 +13,11 @@
 
 <script>
 export default {
-  name: 'FooterMenu'
+  name: 'FooterMenu',
+  props: {
+    menu: Array,
+    title: String
+  }
 }
 </script>
 
@@ -34,9 +31,6 @@ export default {
       color: #1b1b1b;
       font-size: 20px;
       margin-bottom: 29px;
-      @media screen and (max-width: 576px) {
-        font-size: 35px;
-      }
     }
     &-item {
       margin-top: 30px;
@@ -44,9 +38,6 @@ export default {
     &-link {
       font-size: 18px;
       color: #1b1b1b;
-      @media screen and (max-width: 576px) {
-        font-size: 30px;
-      }
       font-weight: $font_regular;
       &:hover {
         color: $main_color;

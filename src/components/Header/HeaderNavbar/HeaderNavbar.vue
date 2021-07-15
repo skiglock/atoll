@@ -14,28 +14,12 @@
           <header-drop-down v-if="open" />
         </transition>
       </li>
-      <li class="navbar__list-item">
+      <li class="navbar__list-item" v-for="item in menu" :key="item.id">
         <g-link
-          to="/about"
+          :to="item.link"
           class="navbar__list-link"
           active-class="navbar__list-link--active"
-          >О команде</g-link
-        >
-      </li>
-      <li class="navbar__list-item">
-        <g-link
-          to="/blog"
-          class="navbar__list-link"
-          active-class="navbar__list-link--active"
-          >Блог</g-link
-        >
-      </li>
-      <li class="navbar__list-item">
-        <g-link
-          to="/contacts"
-          class="navbar__list-link"
-          active-class="navbar__list-link--active"
-          >Контакты</g-link
+          >{{ item.title }}</g-link
         >
       </li>
     </ul>
@@ -48,6 +32,9 @@ import ClickOutside from 'vue-click-outside'
 import HeaderDropDown from '@/components/Header/HeaderDropDown/HeaderDropDown'
 export default {
   name: 'HeaderNavbar',
+  props: {
+    menu: Array
+  },
   data() {
     return {
       open: false
@@ -56,6 +43,7 @@ export default {
   components: {
     HeaderDropDown
   },
+
   methods: {
     hideDropDown() {
       this.open = false

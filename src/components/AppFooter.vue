@@ -23,11 +23,18 @@
               </div>
             </div>
           </div>
-          <div class="column column-30">
-            <footer-menu />
+          <div class="column column-30 column--hidden">
+            <footer-menu
+              class="footer__menu--hidden"
+              :title="MainMenu.title"
+              :menu="MainMenu.menu_list"
+            />
           </div>
           <div class="column column-30">
-            <footer-menu />
+            <footer-menu
+              :title="IntegrationMenu.title"
+              :menu="IntegrationMenu.menu_list"
+            />
           </div>
         </div>
         <div class="footer__docs">
@@ -66,6 +73,8 @@ query {
 </static-query>
 
 <script>
+import IntegrationMenu from '@/data/integration_menu_settings.yaml'
+import MainMenu from '@/data/menu_settings.yaml'
 import FooterMenu from '@/components/Footer/FooterMenu'
 export default {
   name: 'AppFooter',
@@ -79,6 +88,12 @@ export default {
           (as) => as.link === ap.node.id
         )
       )
+    },
+    IntegrationMenu() {
+      return IntegrationMenu
+    },
+    MainMenu() {
+      return MainMenu
     }
   }
 }
@@ -95,6 +110,16 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+  &__menu--hidden {
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  .column--hidden {
+    @media screen and (max-width: 576px) {
+      display: none;
     }
   }
   &__inner {
@@ -114,10 +139,6 @@ export default {
     margin-top: 12px;
     color: $text_color;
     font-size: 14px;
-
-    @media screen and (max-width: 576px) {
-      font-size: 25px;
-    }
   }
   &__contacts {
     display: flex;
@@ -127,18 +148,12 @@ export default {
       font-size: 15px;
       color: #232323;
       font-weight: $font_semibold;
-      @media screen and (max-width: 576px) {
-        font-size: 25px;
-      }
     }
     &-mail {
       margin-top: 13px;
       font-size: 14px;
       color: #1b1b1b;
       font-weight: $font_light;
-      @media screen and (max-width: 576px) {
-        font-size: 25px;
-      }
     }
   }
   &__docs {
@@ -149,9 +164,6 @@ export default {
       font-weight: $font_regular;
       color: #1b1b1b;
       font-size: 14px;
-      @media screen and (max-width: 576px) {
-        font-size: 20px;
-      }
       &:hover {
         color: $main_color;
       }

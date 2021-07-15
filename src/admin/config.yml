@@ -3754,12 +3754,13 @@ collections:
                       search_fields: ['title'],
                       display_fields: ['title']
                     }
-      - label: 'Настройки меню интеграции'
-        name: 'menu'
-        file: 'src/data/integration_menu_settings.yaml'
+      - label: 'Настройки основного меню'
+        name: 'main_menu'
+        file: 'src/data/menu_settings.yaml'
         fields:
+          - { label: 'Заголовок меню', name: 'title', widget: 'string' }
           - label: 'Добавить меню'
-            name: 'add_menu'
+            name: 'menu_list'
             widget: 'list'
             types:
               - label: 'Меню'
@@ -3767,13 +3768,21 @@ collections:
                 widget: list,
                 fields:
                   - { label: 'ID', name: 'id', widget: 'id' }
-                  - { label: 'Заголовок', name: 'title', widget: string }
-                  - {
-                      label: 'Ссылка',
-                      name: 'link',
-                      widget: 'relation',
-                      collection: 'products',
-                      value_field: 'id',
-                      search_fields: ['title'],
-                      display_fields: ['title']
-                    }
+                  - { label: 'Заголовок ссылки', name: 'title', widget: string }
+                  - { label: 'Ссылка', name: 'link', widget: 'string' }
+      - label: 'Настройки меню интеграции'
+        name: 'menu'
+        file: 'src/data/integration_menu_settings.yaml'
+        fields:
+          - { label: 'Заголовок меню', name: 'title', widget: 'string' }
+          - label: 'Добавить меню'
+            name: 'menu_list'
+            widget: 'list'
+            types:
+              - label: 'Меню'
+                name: 'link'
+                widget: list,
+                fields:
+                  - { label: 'ID', name: 'id', widget: 'id' }
+                  - { label: 'Заголовок ссылки', name: 'title', widget: string }
+                  - { label: 'Ссылка', name: 'link', widget: 'string' }

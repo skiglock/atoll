@@ -1,0 +1,14 @@
+title: Продукт
+menu_list:
+  - type: link
+    id: 9dc5e77d-a2e2-49a4-b6b9-378a80454625
+    title: Блог
+    link: /blog
+  - type: link
+    id: 7c2d82ce-6d3a-4057-8fef-c296657fbbb8
+    title: О команде
+    link: /about
+  - type: link
+    id: 937afb07-74c1-4216-aeb5-976a879d6edb
+    title: Контакты
+    link: /contacts
