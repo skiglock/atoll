@@ -5,8 +5,8 @@ import cards from './section/cards/cards'
 import clients from './section/clients/clients'
 import faq from './section/faq/faq'
 import plans from './section/plans/plans'
-import price from './section/price/price'
-// import results from './section/results/results'
+// import price from './section/price/price'
+import results from './section/results/results'
 // import services from './section/services/services'
 // import team from './section/team/team'
 // import consultation from './section/consultation'
@@ -75,24 +75,25 @@ export default createClass({
                 },
                 null
               )
-            } else if (layout.getIn(['data', 'name']) === 'price') {
+              // } else if (layout.getIn(['data', 'name']) === 'price') {
+              //   return h(
+              //     price,
+              //     {
+              //       title: layout.getIn(['data', 'title']),
+              //       desc: layout.getIn(['data', 'desc'])
+              //     },
+              //     null
+              //   )
+              // }
+            } else if (layout.getIn(['data', 'name']) === 'results') {
               return h(
-                price,
+                results,
                 {
-                  title: layout.getIn(['data', 'title']),
-                  desc: layout.getIn(['data', 'desc'])
+                  title: layout.getIn(['data', 'title'])
                 },
                 null
               )
             }
-            // } else if (layout.getIn(['data', 'name']) === 'results') {
-            //   return h(
-            //     results,
-            //     {
-            //       title: layout.getIn(['data', 'title'])
-            //     },
-            //     null
-            //   )
             // } else if (layout.getIn(['data', 'name']) === 'services') {
             //   return h(services, {}, null)
             // } else if (layout.getIn(['data', 'name']) === 'consultation') {
