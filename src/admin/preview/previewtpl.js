@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 import blog from './section/blog/blog'
-// import cards from './section/cards/cards'
+import cards from './section/cards/cards'
 // import clients from './section/clients/clients'
 // import faq from './section/faq/faq'
 // import plans from './section/plans/plans'
@@ -39,16 +39,18 @@ export default createClass({
                 null
               )
             }
-            // } else if (layout.getIn(['data', 'name']) === 'cards') {
-            //   return h(
-            //     cards,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       elements: layout.getIn(['data', 'elements'])
-            //     },
-            //     null
-            //   )
+            // }
+            else if (layout.getIn(['data', 'name']) === 'cards') {
+              return h(
+                cards,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  elements: layout.getIn(['data', 'elements'])
+                },
+                null
+              )
+            }
             // } else if (layout.getIn(['data', 'name']) === 'clients') {
             //   return h(
             //     clients,
