@@ -54,18 +54,18 @@ export default {
       padding: 0;
     }
   }
-  .column {
-    @media screen and (max-width: 768px) {
-      padding: 20px;
-    }
-    @media screen and (max-width: 576px) {
-      padding: 10px;
-    }
-  }
-  .column + .column {
-    @media screen and (max-width: 576px) {
-      margin-top: 20px;
-    }
-  }
+  // .column {
+  //   @media screen and (max-width: 768px) {
+  //     padding: 20px;
+  //   }
+  //   @media screen and (max-width: 576px) {
+  //     padding: 10px;
+  //   }
+  // }
+  // .column + .column {
+  //   @media screen and (max-width: 576px) {
+  //     margin-top: 20px;
+  //   }
+  // }
 }
 </style>

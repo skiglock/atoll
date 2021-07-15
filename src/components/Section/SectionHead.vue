@@ -72,7 +72,7 @@ export default {
       right: 0;
       bottom: 0;
       @media screen and (max-width: 576px) {
-        left: 0;
+        left: 15px;
       }
     }
   }

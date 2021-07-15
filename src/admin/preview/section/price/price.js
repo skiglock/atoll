@@ -3,7 +3,7 @@ import priceItem from './priceitem'
 
 export default createClass({
   render: function () {
-    const { title, desc } = this.props
+    const { title, desc, num, num_desc } = this.props
     return h(
       'section',
       { className: 'section price' },
@@ -24,8 +24,8 @@ export default createClass({
               h(
                 'div',
                 { className: 'price__card' },
-                h('h1', { className: 'price__card-title' }),
-                h('p', { className: 'price__card-desc' }),
+                h('h1', { className: 'price__card-title' }, num),
+                h('p', { className: 'price__card-desc' }, num_desc),
                 h('button', { className: 'btn price__card-btn' }, 'Выбрать')
               )
             ),

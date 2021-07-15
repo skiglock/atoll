@@ -21,6 +21,16 @@ export default {
 
 <style lang="scss">
 .cards {
+  @media screen and (max-width: 768px) {
+    .column + .column {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .column + .column {
+      margin-top: 20px;
+    }
+  }
   &__card {
     position: relative;
     padding: 52px 66px 40px 69px;
@@ -32,7 +42,13 @@ export default {
     justify-content: center;
     align-items: center;
     max-width: 442px;
-    min-height: 344px;
+    height: 344px;
+    @media screen and (max-width: 768px) {
+      padding: 35px;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 20px;
+    }
     &-icon {
       display: flex;
       justify-content: center;
@@ -54,6 +70,9 @@ export default {
     }
     &-text {
       margin-top: 33px;
+      @media screen and (max-width: 768px) {
+        margin-top: 13px;
+      }
     }
   }
 }

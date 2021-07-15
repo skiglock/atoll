@@ -4,7 +4,7 @@ import resultsItem from './resultsitem'
 
 export default createClass({
   render: function () {
-    const { title } = this.props
+    const { title, elements } = this.props
     return h(
       'section',
       { className: 'section results' },
@@ -12,7 +12,20 @@ export default createClass({
         'div',
         { className: 'container' },
         h('h1', { className: 'title' }, title),
-        h('h1', { className: 'results__inner' }, h(resultsItem, {}, null))
+        h(
+          'h1',
+          { className: 'results__inner' },
+          elements.map((el) => {
+            return h(
+              resultsItem,
+              {
+                desc: el.getIn(['desc']),
+                img: el.getIn(['img'])
+              },
+              null
+            )
+          })
+        )
       )
     )
   }

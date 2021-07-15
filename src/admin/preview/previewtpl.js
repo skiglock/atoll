@@ -80,7 +80,9 @@ export default createClass({
                 price,
                 {
                   title: layout.getIn(['data', 'title']),
-                  desc: layout.getIn(['data', 'desc'])
+                  desc: layout.getIn(['data', 'desc']),
+                  num: layout.getIn(['data', 'num']),
+                  num_desc: layout.getIn(['data', 'num_desc'])
                 },
                 null
               )
@@ -88,7 +90,8 @@ export default createClass({
               return h(
                 results,
                 {
-                  title: layout.getIn(['data', 'title'])
+                  title: layout.getIn(['data', 'title']),
+                  elements: layout.getIn(['data', 'elements'])
                 },
                 null
               )
