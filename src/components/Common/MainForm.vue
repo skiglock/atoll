@@ -128,6 +128,7 @@ export default {
         this.errors.email = this.checkEmail
       } else {
         e.preventDefault()
+        this.$store.commit('setIsModalOpen', false)
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
