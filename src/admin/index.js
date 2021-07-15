@@ -14,11 +14,14 @@ CMS.registerWidget('id', IdControl, IdPreview)
 
 CMS.registerPreviewStyle('/preview/style.css')
 
-CMS.registerPreviewTemplate('products', preview)
+var Products = preview
+CMS.registerPreviewTemplate('products', Products)
 
-CMS.registerPreviewTemplate('home', preview)
+var Home = preview
+CMS.registerPreviewTemplate('home', Home)
 
-CMS.registerPreviewTemplate('about', preview)
+var About = preview
+CMS.registerPreviewTemplate('about', About)
 
 CMS.registerPreviewTemplate('blog', blog)
 
