@@ -3,7 +3,7 @@ import priceItem from './priceitem'
 
 export default createClass({
   render: function () {
-    const { title, desc, num, num_desc } = this.props
+    const { title, desc, num, num_desc, elements } = this.props
     return h(
       'section',
       { className: 'section price' },
@@ -50,7 +50,13 @@ export default createClass({
                 'div',
                 { className: 'price__list' },
                 h('h1', { className: 'title price__list-title' }),
-                h(priceItem, {}, null)
+                elements.map((el, index) => {
+                  return h(
+                    priceItem,
+                    { title: el.getIn(['title']), number: index + 1 },
+                    null
+                  )
+                })
               )
             )
           )

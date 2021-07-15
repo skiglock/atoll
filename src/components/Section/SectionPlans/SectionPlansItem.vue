@@ -20,7 +20,7 @@ export default {
 <style lang="scss">
 .plans {
   &__item {
-    max-width: 280px;
+    max-width: 100%;
     min-height: 280px;
     border-radius: 26px;
     background-color: $white_color;

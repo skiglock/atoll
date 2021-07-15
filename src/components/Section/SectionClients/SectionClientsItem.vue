@@ -21,7 +21,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    max-width: 100%;
     max-height: 249px;
     border-radius: 28px;
     padding: 106px 85px 95px 77px;

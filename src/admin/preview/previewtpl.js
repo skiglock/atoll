@@ -82,7 +82,8 @@ export default createClass({
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
                   num: layout.getIn(['data', 'num']),
-                  num_desc: layout.getIn(['data', 'num_desc'])
+                  num_desc: layout.getIn(['data', 'num_desc']),
+                  elements: layout.getIn(['data', 'elements'])
                 },
                 null
               )

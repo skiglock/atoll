@@ -41,7 +41,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 442px;
+    max-width: 100%;
     height: 344px;
     @media screen and (max-width: 768px) {
       padding: 35px;

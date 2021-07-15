@@ -35,7 +35,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 415px;
+      max-width: 100%;
       box-shadow: 0px 5px 5px 0px rgba($black_color, 0.09);
     }
     &-answer {
