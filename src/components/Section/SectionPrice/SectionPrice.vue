@@ -18,6 +18,8 @@
                 :fontsize="11"
                 :height="40"
                 class="price__card-btn"
+                hover="#e5e5e5"
+                @click.native="setPriceModal"
                 >Выбрать</main-button
               >
             </div>
@@ -52,6 +54,11 @@ export default {
   components: {
     MainButton,
     SectionPriceItem
+  },
+  methods: {
+    setPriceModal() {
+      this.$store.commit('setIsModalOpen', true)
+    }
   }
 }
 </script>

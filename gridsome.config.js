@@ -137,7 +137,8 @@ module.exports = {
       options: {
         publicPath: '/admin',
         modulePath: 'src/admin/index.js',
-        enableIdentityWidget: true
+        enableIdentityWidget: true,
+        manualInit: true
       }
     },
     {
