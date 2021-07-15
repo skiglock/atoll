@@ -9,7 +9,7 @@ import plans from './section/plans/plans'
 import results from './section/results/results'
 import services from './section/services/services'
 // import team from './section/team/team'
-// import consultation from './section/consultation'
+import consultation from './section/consultation'
 // import contacts from './section/contacts'
 // import demonstration from './section/demonstration'
 // import head from './section/head'
@@ -95,17 +95,17 @@ export default createClass({
               )
             } else if (layout.getIn(['data', 'name']) === 'services') {
               return h(services, {}, null)
+            } else if (layout.getIn(['data', 'name']) === 'consultation') {
+              return h(
+                consultation,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc']),
+                  img: layout.getIn(['data', 'img'])
+                },
+                null
+              )
             }
-            // } else if (layout.getIn(['data', 'name']) === 'consultation') {
-            //   return h(
-            //     consultation,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc']),
-            //       img: layout.getIn(['data', 'img'])
-            //     },
-            //     null
-            //   )
             // } else if (layout.getIn(['data', 'name']) === 'contacts') {
             //   return h(contacts, {}, null)
             // } else if (layout.getIn(['data', 'name']) === 'demonstration') {
