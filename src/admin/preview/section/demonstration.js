@@ -26,8 +26,36 @@ export default createClass({
               { className: 'consultation__desc' },
               h('div', { className: 'title' }, title),
               h('div', { className: 'text' }, desc),
-              h('button', { className: 'btn' }, 'Заказать проект внедрения'),
-              h('button', { className: 'btn' }, 'Записаться на демонстрацию')
+              h(
+                'button',
+                {
+                  className: 'btn',
+                  style: {
+                    fontWeight: '600',
+                    fontSize: '20px',
+                    color: '#fff',
+                    backgroundColor: '#487bfa',
+                    borderRadius: '60px',
+                    padding: '10px 40px'
+                  }
+                },
+                'Заказать проект внедрения'
+              ),
+              h(
+                'button',
+                {
+                  className: 'btn',
+                  style: {
+                    fontWeight: '600',
+                    fontSize: '20px',
+                    color: '#000',
+                    backgroundColor: '#fff',
+                    borderRadius: '60px',
+                    padding: '10px 40px'
+                  }
+                },
+                'Записаться на демонстрацию'
+              )
             )
           )
         )

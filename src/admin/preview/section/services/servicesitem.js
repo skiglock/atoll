@@ -29,7 +29,21 @@ export default createClass({
               backgroundColor: '#e5e5e5'
             }
           }),
-          h('button', { className: 'btn services__card-btn' }, 'Подробнее')
+          h(
+            'button',
+            {
+              className: 'btn services__card-btn',
+              style: {
+                fontWeight: '600',
+                fontSize: '20px',
+                color: '#fff',
+                backgroundColor: '#487bfa',
+                borderRadius: '60px',
+                padding: '10px 40px'
+              }
+            },
+            'Подробнее'
+          )
         )
       )
     )

@@ -19,7 +19,21 @@ export default createClass({
         { className: 'form__item' },
         h('input', { className: 'form__input', placeholder: 'E-mail' })
       ),
-      h('button', { className: 'btn form__btn' }, 'Оставить заявку'),
+      h(
+        'button',
+        {
+          className: 'btn form__btn',
+          style: {
+            fontWeight: '600',
+            fontSize: '20px',
+            color: '#fff',
+            backgroundColor: '#487bfa',
+            borderRadius: '60px',
+            padding: '10px 40px'
+          }
+        },
+        'Оставить заявку'
+      ),
       h(
         'p',
         { className: 'form__agree' },

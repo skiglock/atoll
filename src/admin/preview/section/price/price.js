@@ -26,7 +26,21 @@ export default createClass({
                 { className: 'price__card' },
                 h('h1', { className: 'price__card-title' }, num),
                 h('p', { className: 'price__card-desc' }, num_desc),
-                h('button', { className: 'btn price__card-btn' }, 'Выбрать')
+                h(
+                  'button',
+                  {
+                    className: 'btn price__card-btn',
+                    style: {
+                      fontWeight: '600',
+                      fontSize: '20px',
+                      color: '#000',
+                      backgroundColor: '#fff',
+                      borderRadius: '60px',
+                      padding: '10px 40px'
+                    }
+                  },
+                  'Выбрать'
+                )
               )
             ),
             h(

@@ -10,7 +10,21 @@ export default createClass({
         'div',
         { className: 'container' },
         h('div', { className: 'title message__title' }, title),
-        h('button', { className: 'btn message__btn' }, 'Стать клиентом')
+        h(
+          'button',
+          {
+            className: 'btn message__btn',
+            style: {
+              fontWeight: '600',
+              fontSize: '20px',
+              color: '#fff',
+              backgroundColor: '#487bfa',
+              borderRadius: '60px',
+              padding: '10px 40px'
+            }
+          },
+          'Стать клиентом'
+        )
       )
     )
   }

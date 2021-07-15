@@ -25,7 +25,17 @@ export default createClass({
                 h('p', { className: 'text consultation__text' }, desc),
                 h(
                   'button',
-                  { className: 'btn consultation__btn' },
+                  {
+                    className: 'btn consultation__btn',
+                    style: {
+                      fontWeight: '600',
+                      fontSize: '20px',
+                      color: '#fff',
+                      backgroundColor: '#487bfa',
+                      borderRadius: '60px',
+                      padding: '10px 40px'
+                    }
+                  },
                   'Консультация'
                 )
               )
