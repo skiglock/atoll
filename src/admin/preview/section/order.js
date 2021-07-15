@@ -1,3 +1,5 @@
+import form from '../common/form'
+
 /* eslint-disable no-undef */
 
 export default createClass({
@@ -21,7 +23,7 @@ export default createClass({
               h('h1', { className: 'title order__title' }, title),
               h('p', { className: 'text order__text' }, desc)
             ),
-            h('div', { className: 'column column-50' })
+            h('div', { className: 'column column-50' }, h(form, {}))
           )
         )
       )
