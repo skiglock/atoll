@@ -1,6 +1,5 @@
-import priceItem from './priceItem'
-
 /* eslint-disable no-undef */
+import priceItem from './priceitem'
 
 export default createClass({
   render: function () {
