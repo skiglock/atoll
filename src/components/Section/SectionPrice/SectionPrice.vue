@@ -10,8 +10,8 @@
         <div class="row">
           <div class="column column-50">
             <div class="price__card">
-              <h1 class="price__card-title">35000 руб.</h1>
-              <p class="price__card-desc">в месяц</p>
+              <h1 class="price__card-title">{{ content.num }}</h1>
+              <p class="price__card-desc">{{ content.num_desc }}</p>
               <main-button
                 backgroundcolor="#fff"
                 color="#000"

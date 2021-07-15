@@ -21,6 +21,8 @@ query ($id: ID!) {
       desc
       variant
       img
+      num
+      num_desc
       elements {
         id
         title

@@ -14,6 +14,8 @@ layout:
     name: services
     variant: false
     id: 09011852-58ed-47ee-9a2f-57ea63f12923
+    num: ""
+    num_desc: ""
     elements:
       - type: item
         id: ""
@@ -21,14 +23,13 @@ layout:
         desc: ""
         img: ""
         link: ""
-  - type: consultation
-    name: consultation
+  - img: /uploads/consultation.png
     variant: false
+    num: ""
+    num_desc: ""
+    name: consultation
     desc: Оставьте заявку и наш эксперт расскажет обо всех возможностях развития
       вашего отдела продаж
-    id: 31e48045-b54c-4e30-addd-e9abe3a3b027
-    img: /uploads/consultation.png
-    title: С чего мне начать?
     elements:
       - type: item
         id: ""
@@ -36,13 +37,15 @@ layout:
         desc: ""
         img: ""
         link: ""
-  - type: clients
+    title: С чего мне начать?
+    type: consultation
+    id: 31e48045-b54c-4e30-addd-e9abe3a3b027
+  - img: ""
+    variant: false
+    num: ""
+    num_desc: ""
     name: clients
     desc: ""
-    img: ""
-    variant: false
-    id: 7a1624c7-6099-4893-9939-8b9b2e1abac9
-    title: Наши клиенты
     elements:
       - type: item
         id: ""
@@ -50,13 +53,15 @@ layout:
         desc: ""
         img: ""
         link: ""
-  - type: team
+    title: Наши клиенты
+    type: clients
+    id: 7a1624c7-6099-4893-9939-8b9b2e1abac9
+  - img: ""
+    variant: false
+    num: ""
+    num_desc: ""
     name: team
     desc: ""
-    img: ""
-    variant: false
-    id: 88b3acfb-e756-4245-a4ac-70969d0838e9
-    title: Наша команда экспертов
     elements:
       - type: item
         id: ""
@@ -64,12 +69,14 @@ layout:
         desc: ""
         img: ""
         link: ""
-  - type: order
-    name: order
-    img: ""
+    title: Наша команда экспертов
+    type: team
+    id: 88b3acfb-e756-4245-a4ac-70969d0838e9
+  - img: ""
     variant: false
-    id: 95f4e12e-553f-443d-ab8e-2071728e51fe
-    title: Заказать интеграцию
+    num: ""
+    num_desc: ""
+    name: order
     desc: Менеджер узнает про вашу задачу и подскажет что делать дальше
     elements:
       - type: item
@@ -78,12 +85,14 @@ layout:
         desc: ""
         img: ""
         link: ""
-  - type: blog
-    name: blog
-    img: ""
+    title: Заказать интеграцию
+    type: order
+    id: 95f4e12e-553f-443d-ab8e-2071728e51fe
+  - img: ""
     variant: false
-    id: 0505a67f-087d-4d17-91fa-e7bc8ad5c5fd
-    title: Полезные статьи в нашем блоге
+    num: ""
+    num_desc: ""
+    name: blog
     desc: Регулярно пишем статьи о системах продажах, управлении проектами и делимся
       собственным опытом трансформации процессов.
     elements:
@@ -93,4 +102,7 @@ layout:
         desc: ""
         img: ""
         link: ""
+    title: Полезные статьи в нашем блоге
+    type: blog
+    id: 0505a67f-087d-4d17-91fa-e7bc8ad5c5fd
 ---

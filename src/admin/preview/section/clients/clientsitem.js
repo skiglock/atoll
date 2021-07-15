@@ -8,7 +8,14 @@ export default createClass({
       h(
         'a',
         { className: 'card clients__item' },
-        h('img', { className: 'clients__item-img' })
+        h('img', {
+          className: 'clients__item-img',
+          style: {
+            width: '250px',
+            height: '40px',
+            backgroundColor: '#e5e5e5'
+          }
+        })
       )
     )
   }

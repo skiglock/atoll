@@ -41,6 +41,7 @@ collections:
                       default: 'services'
                     }
                   - { label: 'ID', name: 'id', widget: 'id' }
+                  ######################
                   - {
                       label: 'title',
                       name: 'title',
@@ -49,7 +50,13 @@ collections:
                     }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
-                  ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -110,6 +117,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
                   - { label: 'Картинка', name: 'img', widget: image }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -171,6 +185,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
                   - { label: 'Картинка', name: 'img', widget: image }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -233,6 +254,13 @@ collections:
                   - { label: 'Картинка', name: 'img', widget: image }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -292,6 +320,8 @@ collections:
                   - { label: 'ID', name: 'id', widget: 'id' }
                   - { label: 'Заголовок', name: 'title', widget: string }
                   - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
                   - { label: 'img', name: 'img', widget: 'hidden', default: '' }
                   - {
                       label: 'variant',
@@ -299,8 +329,13 @@ collections:
                       widget: hidden,
                       default: false
                     }
-                  ######################
-
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - label: 'elements'
                     name: 'elements'
                     widget: 'list'
@@ -362,6 +397,13 @@ collections:
                       default: false
                     }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
 
                   - label: 'elements'
                     name: 'elements'
@@ -425,6 +467,13 @@ collections:
                       default: false
                     }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - label: 'elements'
                     name: 'elements'
                     widget: 'list'
@@ -479,6 +528,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, defailt: '' }
                   - {
@@ -541,6 +597,13 @@ collections:
                   - { label: 'Текст', name: 'title', widget: markdown }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -603,6 +666,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -666,6 +736,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
                       label: 'variant',
@@ -729,6 +806,13 @@ collections:
                   - { label: 'Картинка', name: 'img', widget: image }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -788,6 +872,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -849,6 +940,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -903,6 +1001,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
                       label: 'variant',
@@ -950,7 +1055,8 @@ collections:
                   - { label: 'ID', name: 'id', widget: 'id' }
                   - { label: 'Заголовок', name: 'title', widget: string }
                   - { label: 'Описание', name: 'desc', widget: markdown }
-
+                  - { label: 'Цена', name: 'num', widget: string }
+                  - { label: 'Описание цены', name: 'num_desc', widget: string }
                   ######################
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -1006,6 +1112,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -1052,6 +1165,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -1113,6 +1233,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -1168,6 +1295,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
                   - { label: 'Картинка', name: 'img', widget: image }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -1239,6 +1373,7 @@ collections:
                       default: 'services'
                     }
                   - { label: 'ID', name: 'id', widget: 'id' }
+                  ######################
                   - {
                       label: 'title',
                       name: 'title',
@@ -1247,7 +1382,13 @@ collections:
                     }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
-                  ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -1308,6 +1449,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
                   - { label: 'Картинка', name: 'img', widget: image }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -1369,6 +1517,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
                   - { label: 'Картинка', name: 'img', widget: image }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -1431,6 +1586,13 @@ collections:
                   - { label: 'Картинка', name: 'img', widget: image }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -1490,6 +1652,8 @@ collections:
                   - { label: 'ID', name: 'id', widget: 'id' }
                   - { label: 'Заголовок', name: 'title', widget: string }
                   - { label: 'Описание', name: 'desc', widget: markdown }
+
+                  ######################
                   - { label: 'img', name: 'img', widget: 'hidden', default: '' }
                   - {
                       label: 'variant',
@@ -1497,8 +1661,13 @@ collections:
                       widget: hidden,
                       default: false
                     }
-                  ######################
-
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - label: 'elements'
                     name: 'elements'
                     widget: 'list'
@@ -1560,6 +1729,13 @@ collections:
                       default: false
                     }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
 
                   - label: 'elements'
                     name: 'elements'
@@ -1623,6 +1799,13 @@ collections:
                       default: false
                     }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - label: 'elements'
                     name: 'elements'
                     widget: 'list'
@@ -1677,6 +1860,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, defailt: '' }
                   - {
@@ -1739,6 +1929,13 @@ collections:
                   - { label: 'Текст', name: 'title', widget: markdown }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -1801,6 +1998,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -1864,6 +2068,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
                       label: 'variant',
@@ -1927,6 +2138,13 @@ collections:
                   - { label: 'Картинка', name: 'img', widget: image }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -1986,6 +2204,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -2047,6 +2272,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -2101,6 +2333,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
                       label: 'variant',
@@ -2148,7 +2387,8 @@ collections:
                   - { label: 'ID', name: 'id', widget: 'id' }
                   - { label: 'Заголовок', name: 'title', widget: string }
                   - { label: 'Описание', name: 'desc', widget: markdown }
-
+                  - { label: 'Цена', name: 'num', widget: string }
+                  - { label: 'Описание цены', name: 'num_desc', widget: string }
                   ######################
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -2204,6 +2444,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -2250,6 +2497,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -2311,6 +2565,13 @@ collections:
                   - { label: 'Заголовок', name: 'title', widget: string }
 
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - { label: 'desc', name: 'desc', widget: hidden, default: '' }
                   - { label: 'img', name: 'img', widget: hidden, default: '' }
                   - {
@@ -2366,6 +2627,13 @@ collections:
                   - { label: 'Описание', name: 'desc', widget: markdown }
                   - { label: 'Картинка', name: 'img', widget: image }
                   ######################
+                  - { label: 'num', name: 'num', widget: hidden, default: '' }
+                  - {
+                      label: 'num_desc',
+                      name: 'num_desc',
+                      widget: hidden,
+                      default: ''
+                    }
                   - {
                       label: 'variant',
                       name: 'variant',
@@ -2487,10 +2755,17 @@ collections:
                   default: 'services'
                 }
               - { label: 'ID', name: 'id', widget: 'id' }
+              ######################
               - { label: 'title', name: 'title', widget: hidden, default: '' }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
-              ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -2551,6 +2826,13 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
               - { label: 'Картинка', name: 'img', widget: image }
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -2612,6 +2894,13 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
               - { label: 'Картинка', name: 'img', widget: image }
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -2674,6 +2963,13 @@ collections:
               - { label: 'Картинка', name: 'img', widget: image }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -2733,6 +3029,8 @@ collections:
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
               - { label: 'Описание', name: 'desc', widget: markdown }
+
+              ######################
               - { label: 'img', name: 'img', widget: 'hidden', default: '' }
               - {
                   label: 'variant',
@@ -2740,8 +3038,13 @@ collections:
                   widget: hidden,
                   default: false
                 }
-              ######################
-
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - label: 'elements'
                 name: 'elements'
                 widget: 'list'
@@ -2803,6 +3106,13 @@ collections:
                   default: false
                 }
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
 
               - label: 'elements'
                 name: 'elements'
@@ -2866,6 +3176,13 @@ collections:
                   default: false
                 }
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - label: 'elements'
                 name: 'elements'
                 widget: 'list'
@@ -2920,6 +3237,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, defailt: '' }
               - {
@@ -2982,6 +3306,13 @@ collections:
               - { label: 'Текст', name: 'title', widget: markdown }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3044,6 +3375,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3107,6 +3445,13 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
@@ -3170,6 +3515,13 @@ collections:
               - { label: 'Картинка', name: 'img', widget: image }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - {
                   label: 'variant',
                   name: 'variant',
@@ -3229,6 +3581,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3290,6 +3649,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3335,6 +3701,13 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
                   label: 'variant',
@@ -3374,7 +3747,8 @@ collections:
               - { label: 'ID', name: 'id', widget: 'id' }
               - { label: 'Заголовок', name: 'title', widget: string }
               - { label: 'Описание', name: 'desc', widget: markdown }
-
+              - { label: 'Цена', name: 'num', widget: string }
+              - { label: 'Описание цены', name: 'num_desc', widget: string }
               ######################
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3430,6 +3804,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3476,6 +3857,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3537,6 +3925,13 @@ collections:
               - { label: 'Заголовок', name: 'title', widget: string }
 
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - { label: 'desc', name: 'desc', widget: hidden, default: '' }
               - { label: 'img', name: 'img', widget: hidden, default: '' }
               - {
@@ -3584,6 +3979,13 @@ collections:
               - { label: 'Описание', name: 'desc', widget: markdown }
               - { label: 'Картинка', name: 'img', widget: image }
               ######################
+              - { label: 'num', name: 'num', widget: hidden, default: '' }
+              - {
+                  label: 'num_desc',
+                  name: 'num_desc',
+                  widget: hidden,
+                  default: ''
+                }
               - {
                   label: 'variant',
                   name: 'variant',

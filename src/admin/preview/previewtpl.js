@@ -26,7 +26,7 @@ export default createClass({
     const { entry, widgetsFor } = this.props
     return h(
       'main',
-      { className: 'main' },
+      { className: 'main', style: { padding: '40px 0' } },
       entry.getIn(['data', 'layout'])
         ? widgetsFor('layout').map((layout) => {
             if (layout.getIn(['data', 'name']) === 'blog') {

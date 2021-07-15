@@ -23,7 +23,13 @@ export default createClass({
               h('p', { className: 'text blog__text' }, desc)
             )
           ),
-          h('div', { className: 'blog__body' }, h(blogItem, {}, null))
+          h(
+            'div',
+            { className: 'blog__body' },
+            h(blogItem, {}, null),
+            h(blogItem, {}, null),
+            h(blogItem, {}, null)
+          )
         )
       )
     )

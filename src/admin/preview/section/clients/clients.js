@@ -15,7 +15,12 @@ export default createClass({
           'div',
           { className: 'clients__inner' },
           h('h1', { className: 'title clients__title' }, title),
-          h('div', { className: 'row' }, h(clientsItem, {}, null))
+          h(
+            'div',
+            { className: 'row' },
+            h(clientsItem, {}, null),
+            h(clientsItem, {}, null)
+          )
         )
       )
     )

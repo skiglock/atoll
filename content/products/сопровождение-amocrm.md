@@ -76,6 +76,8 @@ layout:
         id: e16b2ac6-10d4-4ea2-923b-dd0afbaa4ebf
         title: "Персональная доска в Asana с бэклогом идей и минимум тремя задачами на
           реализацию "
+    num: 35000 руб.
+    num_desc: в месяц
   - type: other
     name: other
     id: feb9e8df-2538-4e57-b25a-0cd69da697a8
@@ -110,7 +112,7 @@ layout:
     title: Результаты сопровождения amoCRM
   - type: consultation
     name: consultation
-    desc: ""
+    desc: Нажмите кнопку чтобы получить консультацию
     id: 0171c9fa-1b9d-4369-afe4-4c29f0bf4574
     title: Примените экспертизу нашей  команды, чтобы усилить вашу системы
     elements:

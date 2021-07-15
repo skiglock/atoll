@@ -4,13 +4,17 @@
       <div
         class="head-two__inner"
         :style="{
-          background: `url(${content.img}) no-repeat`
+          background: `url(${content.img}) no-repeat`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center'
         }"
       >
-        <h1 class="title head-two__title">{{ content.title }}</h1>
-        <p class="text head-two__text">
-          {{ content.desc }}
-        </p>
+        <div class="head-two__desc">
+          <h1 class="title head-two__title">{{ content.title }}</h1>
+          <p class="text head-two__text">
+            {{ content.desc }}
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -32,12 +36,25 @@ export default {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-size: contain;
     min-height: 400px;
     width: 100%;
-    @media screen and (max-width: 576px) {
-      padding: 40px;
+    position: relative;
+    @media screen and(max-width: 576px) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($white_color, 0.6);
+        backdrop-filter: blur(10px);
+        z-index: 4;
+      }
     }
+  }
+  &__desc {
+    z-index: 5;
   }
   &__title {
   }

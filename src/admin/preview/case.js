@@ -28,7 +28,7 @@ export default createClass({
 
     return h(
       'main',
-      { className: 'main' },
+      { className: 'main', style: { padding: '40px 0' } },
       h(
         'section',
         { className: 'cases-post' },

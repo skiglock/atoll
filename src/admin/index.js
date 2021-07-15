@@ -1,12 +1,13 @@
+// CMS
 import CMS from 'netlify-cms'
-
 import { IdControl, IdPreview } from './widgets/uuid-widget'
-
 import { ru } from 'netlify-cms-locales'
-import previewtpl from './preview/previewtpl'
-import blog from './preview/blog'
 
-import cases from './preview/case'
+// PREVIEW TEMPLATE
+import previewtpl from './preview/previewtpl'
+import blogPreview from './preview/blog'
+import casesPreview from './preview/case'
+import pagesPreview from './preview/page'
 
 CMS.registerLocale('ru', ru)
 
@@ -14,15 +15,14 @@ CMS.registerWidget('id', IdControl, IdPreview)
 
 CMS.registerPreviewStyle('/preview/style.css')
 
-var Products = previewtpl
-CMS.registerPreviewTemplate('products', Products)
+CMS.registerPreviewTemplate('products', previewtpl)
 
-var Home = previewtpl
-CMS.registerPreviewTemplate('home', Home)
+CMS.registerPreviewTemplate('home', previewtpl)
 
-var About = previewtpl
-CMS.registerPreviewTemplate('about', About)
+CMS.registerPreviewTemplate('about', previewtpl)
 
-CMS.registerPreviewTemplate('blog', blog)
+CMS.registerPreviewTemplate('blog', blogPreview)
 
-CMS.registerPreviewTemplate('cases', cases)
+CMS.registerPreviewTemplate('cases', casesPreview)
+
+CMS.registerPreviewTemplate('pages', pagesPreview)
