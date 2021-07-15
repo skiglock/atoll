@@ -2,7 +2,7 @@
 
 import blog from './section/blog/blog'
 import cards from './section/cards/cards'
-// import clients from './section/clients/clients'
+import clients from './section/clients/clients'
 // import faq from './section/faq/faq'
 // import plans from './section/plans/plans'
 // import price from './section/price/price'
@@ -38,9 +38,7 @@ export default createClass({
                 },
                 null
               )
-            }
-            // }
-            else if (layout.getIn(['data', 'name']) === 'cards') {
+            } else if (layout.getIn(['data', 'name']) === 'cards') {
               return h(
                 cards,
                 {
@@ -50,16 +48,16 @@ export default createClass({
                 },
                 null
               )
+            } else if (layout.getIn(['data', 'name']) === 'clients') {
+              return h(
+                clients,
+                {
+                  title: layout.getIn(['data', 'title'])
+                },
+                null
+              )
             }
-            // } else if (layout.getIn(['data', 'name']) === 'clients') {
-            //   return h(
-            //     clients,
-            //     {
-            //       title: layout.getIn(['data', 'title'])
-            //     },
-            //     null
-            //   )
-            // } else if (layout.getIn(['data', 'name']) === 'faq') {
+            //else if (layout.getIn(['data', 'name']) === 'faq') {
             //   return h(
             //     faq,
             //     {
