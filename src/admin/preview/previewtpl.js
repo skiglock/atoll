@@ -5,7 +5,7 @@ import cards from './section/cards/cards'
 import clients from './section/clients/clients'
 import faq from './section/faq/faq'
 import plans from './section/plans/plans'
-// import price from './section/price/price'
+import price from './section/price/price'
 // import results from './section/results/results'
 // import services from './section/services/services'
 // import team from './section/team/team'
@@ -75,16 +75,16 @@ export default createClass({
                 },
                 null
               )
+            } else if (layout.getIn(['data', 'name']) === 'price') {
+              return h(
+                price,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc'])
+                },
+                null
+              )
             }
-            // } else if (layout.getIn(['data', 'name']) === 'price') {
-            //   return h(
-            //     price,
-            //     {
-            //       title: layout.getIn(['data', 'title']),
-            //       desc: layout.getIn(['data', 'desc'])
-            //     },
-            //     null
-            //   )
             // } else if (layout.getIn(['data', 'name']) === 'results') {
             //   return h(
             //     results,
