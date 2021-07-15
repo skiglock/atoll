@@ -7,7 +7,7 @@ import faq from './section/faq/faq'
 import plans from './section/plans/plans'
 // import price from './section/price/price'
 import results from './section/results/results'
-// import services from './section/services/services'
+import services from './section/services/services'
 // import team from './section/team/team'
 // import consultation from './section/consultation'
 // import contacts from './section/contacts'
@@ -93,9 +93,9 @@ export default createClass({
                 },
                 null
               )
+            } else if (layout.getIn(['data', 'name']) === 'services') {
+              return h(services, {}, null)
             }
-            // } else if (layout.getIn(['data', 'name']) === 'services') {
-            //   return h(services, {}, null)
             // } else if (layout.getIn(['data', 'name']) === 'consultation') {
             //   return h(
             //     consultation,
