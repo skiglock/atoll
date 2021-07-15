@@ -26,7 +26,7 @@ export default createClass({
                 { className: 'price__card' },
                 h('h1', { className: 'price__card-title' }),
                 h('p', { className: 'price__card-desc' }),
-                h('button', { className: 'btn price__card-btn' })
+                h('button', { className: 'btn price__card-btn' }, 'Выбрать')
               )
             ),
             h(

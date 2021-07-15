@@ -13,9 +13,6 @@
     <p hidden>
       <label> Don’t fill this out: <input name="bot-field" /> </label>
     </p>
-    <input type="hidden" name="from" v-model="formData.from" />
-    <input type="hidden" name="ref" v-model="formData.ref" />
-
     <div class="form__item">
       <input
         name="name"
@@ -46,7 +43,7 @@
     </div>
     <div class="form__item">
       <input
-        name="mail"
+        name="email"
         type="text"
         class="form__input"
         placeholder="E-mail"
@@ -58,6 +55,8 @@
         {{ errors.email }}
       </p>
     </div>
+    <input type="hidden" name="from" v-model="formData.from" />
+    <input type="hidden" name="ref" v-model="formData.ref" />
     <main-button type="submit" class="form__btn"> Оставить заявку </main-button>
     <p class="form__agree">
       Нажимая на кнопку "Оставить заявку" вы даете свое согласие на обработку
@@ -127,8 +126,14 @@ export default {
         this.errors.phone = this.checkPhone
         this.errors.email = this.checkEmail
       } else {
-        e.preventDefault()
         this.$store.commit('setIsModalOpen', false)
+        this.formData = {
+          name: '',
+          phone: '',
+          email: '',
+          from: '',
+          ref: ''
+        }
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

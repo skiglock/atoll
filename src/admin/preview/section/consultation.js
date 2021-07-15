@@ -23,7 +23,11 @@ export default createClass({
                 { className: 'consultation__left' },
                 h('h1', { className: 'title consultation__title' }, title),
                 h('p', { className: 'text consultation__text' }, desc),
-                h('button', { className: 'btn consultation__btn' })
+                h(
+                  'button',
+                  { className: 'btn consultation__btn' },
+                  'Консультация'
+                )
               )
             ),
             h(
