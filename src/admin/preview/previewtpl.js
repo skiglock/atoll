@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-// import blog from './section/blog/blog'
+import blog from './section/blog/blog'
 // import cards from './section/cards/cards'
 // import clients from './section/clients/clients'
 // import faq from './section/faq/faq'
@@ -30,15 +30,14 @@ export default createClass({
       entry.getIn(['data', 'layout'])
         ? widgetsFor('layout').map((layout) => {
             if (layout.getIn(['data', 'name']) === 'blog') {
-              // return h(
-              //   blog,
-              //   {
-              //     title: layout.getIn(['data', 'title']),
-              //     desc: layout.getIn(['data', 'desc'])
-              //   },
-              //   null
-              // )
-              return h('div', {}, 'ТЕСТ')
+              return h(
+                blog,
+                {
+                  title: layout.getIn(['data', 'title']),
+                  desc: layout.getIn(['data', 'desc'])
+                },
+                null
+              )
             }
             // } else if (layout.getIn(['data', 'name']) === 'cards') {
             //   return h(
