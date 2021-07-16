@@ -13,12 +13,9 @@ export default createClass({
         h(
           'div',
           {
-            className: 'head-two__inner',
-            style: {
-              background: `url(${img}) no-repeat`,
-              backgooundSize: '100%'
-            }
+            className: 'head-two__inner'
           },
+          h('div', { className: 'head-two__img' }, h('img', { src: img })),
           h(
             'div',
             { className: 'head-two__desc' },

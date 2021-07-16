@@ -4,7 +4,7 @@ import resultsItem from './resultsitem'
 
 export default createClass({
   render: function () {
-    const { title, elements } = this.props
+    const { title, elements, getAsset } = this.props
     return h(
       'section',
       { className: 'section results' },

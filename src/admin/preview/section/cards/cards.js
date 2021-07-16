@@ -4,7 +4,7 @@ import cardsItem from './cardsitem'
 
 export default createClass({
   render: function () {
-    const { title, desc, elements } = this.props
+    const { title, desc, elements, getAsset } = this.props
     return h(
       'section',
       { className: 'section cards' },

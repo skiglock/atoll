@@ -63,7 +63,7 @@ export default {
       }
     }
     img {
-      border-radius: 50% / 100%;
+      border-radius: 50%;
     }
   }
 }

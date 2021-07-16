@@ -16,9 +16,9 @@ collections:
     files:
       - label: 'Главная'
         name: 'home'
-        file: 'content/home.md'
         media_folder: '/static/uploads'
         public_folder: '../static/uploads'
+        file: 'content/home.md'
         fields:
           - { label: 'ID', name: 'id', widget: 'id' }
           - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
@@ -1350,9 +1350,9 @@ collections:
                             }
       - label: 'О команде'
         name: 'about'
-        file: 'content/about.md'
         media_folder: '/static/uploads'
         public_folder: '../static/uploads'
+        file: 'content/about.md'
         fields:
           - { label: 'ID', name: 'id', widget: 'id' }
           - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
@@ -4038,6 +4038,8 @@ collections:
   # --------------------Блог---------------------------
   - name: 'blog'
     label: 'Блог'
+    media_folder: '../../static/uploads'
+    public_folder: '/uploads'
     folder: 'content/blog'
     create: true
     slug: '{{slug}}'
@@ -4077,6 +4079,8 @@ collections:
   # --------------------Кейсы---------------------------
   - name: 'cases'
     label: 'Кейсы'
+    media_folder: '../../static/uploads'
+    public_folder: '/uploads'
     folder: 'content/cases'
     create: true
     slug: '{{slug}}'

@@ -24,8 +24,10 @@ function convertToHTML(markdownText) {
 
 export default createClass({
   render: function () {
-    const { entry } = this.props
+    const { entry, getAsset } = this.props
 
+    const image = entry.getIn(['data', 'logo'])
+    const img = getAsset(image)
     return h(
       'main',
       { className: 'main', style: { padding: '40px 0' } },
@@ -43,7 +45,7 @@ export default createClass({
               { className: 'cases-post__top' },
               h('img', {
                 className: 'cases-post__img',
-                src: entry.getIn(['data', 'logo'])
+                src: img
               }),
               h(
                 'div',

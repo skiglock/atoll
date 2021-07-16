@@ -44,7 +44,7 @@
     <div class="form__item">
       <input
         name="email"
-        type="text"
+        type="email"
         class="form__input"
         placeholder="E-mail"
         v-model="formData.email"
