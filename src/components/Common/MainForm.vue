@@ -134,7 +134,7 @@ export default {
             ...this.formData
           })
         })
-          .then(() => this.$router.push('/politika-konfediczialnosti'))
+          .then(() => this.$router.push('/success'))
           .catch((error) => alert(error))
         this.$store.commit('setIsModalOpen', false)
         this.formData = {
