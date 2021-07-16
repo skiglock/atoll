@@ -1,6 +1,11 @@
 <template>
   <li class="dropdown__item">
-    <g-link :to="url" class="dropdown__link">{{ title }}</g-link>
+    <g-link
+      :to="url"
+      class="dropdown__link"
+      @click.native="$emit('closeDropdown')"
+      >{{ title }}</g-link
+    >
     <p class="dropdown__desc">
       {{ desc }}
     </p>

@@ -9,12 +9,16 @@
           :title="node.title"
           :desc="node.description"
           :url="$getPath(node.path)"
+          @click.native="$emit('closeSidebar')"
         />
       </li>
       <li class="sidebar__menu-item" v-for="item in menu" :key="item.id">
-        <g-link :to="item.link" class="sidebar__menu-link">{{
-          item.title
-        }}</g-link>
+        <g-link
+          @click.native="$emit('closeSidebar')"
+          :to="item.link"
+          class="sidebar__menu-link"
+          >{{ item.title }}</g-link
+        >
       </li>
     </ul>
   </div>
@@ -75,8 +79,8 @@ export default {
     }
   }
   @media screen and (max-width: 360px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   &__menu {
     height: 100%;

@@ -1,13 +1,21 @@
 <template>
-  <ul class="dropdown">
-    <header-drop-down-item
-      v-for="{ node } in $static.allProducts.edges"
-      :key="node.id"
-      :title="node.title"
-      :desc="node.description"
-      :url="$getPath(node.path)"
-    />
-  </ul>
+  <li class="navbar__list-item">
+    <a href @click.prevent="toggleDropdown" class="navbar__list-link"
+      >Продукты</a
+    >
+    <transition name="fade">
+      <ul class="dropdown" v-if="isDropdownOpen">
+        <header-drop-down-item
+          v-for="{ node } in $static.allProducts.edges"
+          :key="node.id"
+          :title="node.title"
+          :desc="node.description"
+          :url="$getPath(node.path)"
+          @closeDropdown="isDropdownOpen = false"
+        />
+      </ul>
+    </transition>
+  </li>
 </template>
 
 <static-query>
@@ -31,6 +39,27 @@ export default {
   name: 'HeaderDropDown',
   components: {
     HeaderDropDownItem
+  },
+  data() {
+    return {
+      isDropdownOpen: false
+    }
+  },
+  methods: {
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen
+    },
+    close(e) {
+      if (!this.$el.contains(e.target)) {
+        this.isDropdownOpen = false
+      }
+    }
+  },
+  mounted() {
+    document.addEventListener('click', this.close)
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.close)
   }
 }
 </script>

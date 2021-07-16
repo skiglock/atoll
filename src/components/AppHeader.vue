@@ -7,7 +7,7 @@
           <header-sidebar
             :menu="MainMenu"
             v-if="sidebar"
-            @click.native="sidebar = false"
+            @closeSidebar="sidebar = false"
           />
         </transition>
 

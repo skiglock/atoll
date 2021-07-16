@@ -4,16 +4,7 @@
       <g-image src="@/assets/img/logo-header.png" alt="" />
     </g-link>
     <ul class="navbar__list">
-      <li
-        class="navbar__list-item"
-        @click="open = !open"
-        v-click-outside="hideDropDown"
-      >
-        <a href class="navbar__list-link">Продукты</a>
-        <transition name="fade">
-          <header-drop-down v-if="open" />
-        </transition>
-      </li>
+      <header-drop-down />
       <li class="navbar__list-item" v-for="item in menu" :key="item.id">
         <g-link
           :to="item.link"
@@ -27,30 +18,14 @@
 </template>
 
 <script>
-import ClickOutside from 'vue-click-outside'
-
 import HeaderDropDown from '@/components/Header/HeaderDropDown/HeaderDropDown'
 export default {
   name: 'HeaderNavbar',
   props: {
     menu: Array
   },
-  data() {
-    return {
-      open: false
-    }
-  },
   components: {
     HeaderDropDown
-  },
-
-  methods: {
-    hideDropDown() {
-      this.open = false
-    }
-  },
-  directives: {
-    ClickOutside
   }
 }
 </script>
