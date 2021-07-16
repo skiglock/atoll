@@ -10,7 +10,7 @@
                 src="@/assets/img/logo-footer.png"
                 alt=""
               />
-              <p class="footer__copyright">© 2021 Atollon</p>
+              <p class="footer__copyright">©2 2021 Atollon</p>
               <div class="footer__contacts">
                 <a href="tel:+74952781802" class="footer__contacts-number">{{
                   $store.state.settings.allSettings.phone
