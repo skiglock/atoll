@@ -126,14 +126,6 @@ export default {
         this.errors.phone = this.checkPhone
         this.errors.email = this.checkEmail
       } else {
-        this.$store.commit('setIsModalOpen', false)
-        this.formData = {
-          name: '',
-          phone: '',
-          email: '',
-          from: '',
-          ref: ''
-        }
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -144,6 +136,14 @@ export default {
         })
           .then(() => this.$router.push('/politika-konfediczialnosti'))
           .catch((error) => alert(error))
+        this.$store.commit('setIsModalOpen', false)
+        this.formData = {
+          name: '',
+          phone: '',
+          email: '',
+          from: '',
+          ref: ''
+        }
       }
       this.$forceUpdate()
     },
