@@ -6,7 +6,7 @@ local_backend: true
 locale: 'ru'
 
 media_folder: 'static/uploads'
-public_folder: '../../static/uploads'
+public_folder: '/uploads'
 
 collections:
   # --------------------Основные страницы---------------------------
@@ -2731,6 +2731,8 @@ collections:
   # --------------------Динамические страницы---------------------------
   - name: 'products'
     label: 'Продукты'
+    media_folder: 'static/uploads'
+    public_folder: '../../static/uploads'
     folder: 'content/products'
     create: true
     slug: '{{slug}}'

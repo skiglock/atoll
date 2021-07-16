@@ -30,7 +30,7 @@
     <div class="form__item">
       <input
         name="phone"
-        type="text"
+        type="phone"
         class="form__input"
         placeholder="Телефон"
         v-model="formData.phone"
