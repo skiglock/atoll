@@ -139,42 +139,42 @@ module.exports = {
         modulePath: 'src/admin/index.js',
         enableIdentityWidget: true
       }
-    },
-    {
-      use: 'gridsome-plugin-netlify-cms-paths',
-      options: {
-        contentTypes: ['Index', 'About', 'Products'],
-        coverField: 'img'
-      }
-    },
-    {
-      use: 'gridsome-plugin-netlify-cms-paths',
-      options: {
-        contentTypes: ['Index', 'About', 'Products'],
-        coverField: 'layout.img'
-      }
-    },
-    {
-      use: 'gridsome-plugin-netlify-cms-paths',
-      options: {
-        contentTypes: ['BlogPost', 'CasesPost'],
-        coverField: 'img'
-      }
-    },
-    {
-      use: 'gridsome-plugin-netlify-cms-paths',
-      options: {
-        contentTypes: ['CasesPost'],
-        coverField: 'logo'
-      }
-    },
-    {
-      use: 'gridsome-plugin-netlify-cms-paths',
-      options: {
-        contentTypes: ['Team'],
-        coverField: 'avatar'
-      }
     }
+    // {
+    //   use: 'gridsome-plugin-netlify-cms-paths',
+    //   options: {
+    //     contentTypes: ['Index', 'About', 'Products'],
+    //     coverField: 'img'
+    //   }
+    // },
+    // {
+    //   use: 'gridsome-plugin-netlify-cms-paths',
+    //   options: {
+    //     contentTypes: ['BlogPost', 'CasesPost'],
+    //     coverField: 'img'
+    //   }
+    // },
+    // {
+    //   use: 'gridsome-plugin-netlify-cms-paths',
+    //   options: {
+    //     contentTypes: ['CasesPost'],
+    //     coverField: 'logo'
+    //   }
+    // },
+    // {
+    //   use: 'gridsome-plugin-netlify-cms-paths',
+    //   options: {
+    //     contentTypes: ['Team'],
+    //     coverField: 'avatar'
+    //   }
+    // },
+    // {
+    //   use: 'gridsome-plugin-netlify-cms-paths',
+    //   options: {
+    //     contentTypes: ['Products'],
+    //     coverField: 'layout.img'
+    //   }
+    // }
   ],
 
   chainWebpack(config) {

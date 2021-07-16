@@ -6,7 +6,7 @@ local_backend: true
 locale: 'ru'
 
 media_folder: 'static/uploads'
-public_folder: '/uploads'
+public_folder: '../../static/uploads'
 
 collections:
   # --------------------Основные страницы---------------------------
@@ -17,6 +17,8 @@ collections:
       - label: 'Главная'
         name: 'home'
         file: 'content/home.md'
+        media_folder: '/static/uploads'
+        public_folder: '../static/uploads'
         fields:
           - { label: 'ID', name: 'id', widget: 'id' }
           - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
@@ -1349,6 +1351,8 @@ collections:
       - label: 'О команде'
         name: 'about'
         file: 'content/about.md'
+        media_folder: '/static/uploads'
+        public_folder: '../static/uploads'
         fields:
           - { label: 'ID', name: 'id', widget: 'id' }
           - { label: 'Заголовок страницы', name: 'title', widget: 'string' }
