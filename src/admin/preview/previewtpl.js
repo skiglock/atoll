@@ -23,12 +23,14 @@ import target from './section/target'
 
 export default createClass({
   render: function () {
-    const { entry, widgetsFor } = this.props
+    const { entry, widgetsFor, getAsset } = this.props
     return h(
       'main',
       { className: 'main', style: { padding: '40px 0' } },
       entry.getIn(['data', 'layout'])
         ? widgetsFor('layout').map((layout) => {
+            const image = layout.getIn(['data', 'img'])
+            const img = getAsset(image)
             if (layout.getIn(['data', 'name']) === 'blog') {
               return h(
                 blog,
@@ -104,7 +106,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )
@@ -116,7 +118,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )
@@ -126,7 +128,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )
@@ -136,7 +138,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )
@@ -146,7 +148,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )
@@ -173,7 +175,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )
@@ -185,7 +187,7 @@ export default createClass({
                 {
                   title: layout.getIn(['data', 'title']),
                   desc: layout.getIn(['data', 'desc']),
-                  img: layout.getIn(['data', 'img'])
+                  img: img
                 },
                 null
               )

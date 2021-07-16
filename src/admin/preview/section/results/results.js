@@ -16,11 +16,13 @@ export default createClass({
           'h1',
           { className: 'results__inner' },
           elements.map((el) => {
+            const image = el.getIn(['data', 'img'])
+            const img = getAsset(image)
             return h(
               resultsItem,
               {
                 desc: el.getIn(['desc']),
-                img: el.getIn(['img'])
+                img: img
               },
               null
             )

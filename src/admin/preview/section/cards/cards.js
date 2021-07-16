@@ -24,12 +24,14 @@ export default createClass({
             'div',
             { className: 'row' },
             elements.map((el) => {
+              const image = el.getIn(['data', 'img'])
+              const img = getAsset(image)
               return h(
                 cardsItem,
                 {
                   title: el.getIn(['title']),
                   desc: el.getIn(['desc']),
-                  img: el.getIn(['img'])
+                  img: img
                 },
                 null
               )
