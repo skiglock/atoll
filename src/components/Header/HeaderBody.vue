@@ -42,8 +42,11 @@ export default {
     &-img {
       max-width: 800px;
       max-height: 511px;
-      @media (max-height: 900px) and (max-width: 1440px) {
+      @media (max-height: 900px) and (min-width: 1024px) {
         max-width: 550px;
+      }
+      @media (max-height: 700px) and (min-width: 1024px) {
+        max-width: 450px;
       }
     }
     &-description {
@@ -51,6 +54,7 @@ export default {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 30px;
       .title {
         text-align: center;
         max-width: 475px;
