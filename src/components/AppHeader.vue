@@ -49,22 +49,14 @@ export default {
     MainMenu() {
       return MainMenu.menu_list
     }
-  },
-  mounted() {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', () => {
-        let vh = window.innerHeight * 0.01
-        document.documentElement.style.setProperty('--vh', `${vh}px`)
-      })
-    }
   }
 }
 </script>
 
 <style lang="scss">
 .header {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+
   &__inner {
   }
   &__top {
@@ -75,10 +67,12 @@ export default {
       align-items: center;
     }
     @media screen and (max-width: 576px) {
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
   &__body {
-    min-height: calc(100vh - 134px);
+    min-height: calc(100vh - 130px);
   }
 }
 </style>
