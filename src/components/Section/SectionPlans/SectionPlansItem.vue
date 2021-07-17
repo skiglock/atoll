@@ -1,5 +1,5 @@
 <template>
-  <div class="plans__item">
+  <div class="card plans__item">
     <h1 class="title plans__item-title">{{ title }}</h1>
     <p class="text plans__item-text">
       {{ desc }}
@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 .plans {
   &__item {
+    cursor: pointer;
     max-width: 100%;
     min-height: 280px;
     border-radius: 26px;

@@ -5,11 +5,7 @@
         <div class="row">
           <div class="column column-30">
             <div class="footer__about">
-              <img
-                class="footer__logo"
-                src="@/assets/img/logo-footer.png"
-                alt=""
-              />
+              <a class="footer__logo">Atoll</a>
               <p class="footer__copyright">© 2021 Atollon</p>
               <div class="footer__contacts">
                 <a href="tel:+74952781802" class="footer__contacts-number">{{
@@ -126,7 +122,7 @@ export default {
     padding-top: 25px;
     @media screen and (max-width: 576px) {
       display: flex;
-      align-items: center;
+      // align-items: center;
       flex-direction: column;
       justify-content: center;
       text-align: center;
@@ -134,6 +130,9 @@ export default {
   }
   &__logo {
     width: 98px;
+    font-size: 45px;
+    color: $black_color;
+    font-weight: $font_bold;
   }
   &__copyright {
     margin-top: 12px;
@@ -166,6 +165,9 @@ export default {
       font-size: 14px;
       &:hover {
         color: $main_color;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 11px;
       }
     }
   }

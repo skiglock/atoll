@@ -1,7 +1,8 @@
 <template>
   <nav class="navbar">
     <g-link class="navbar__logo" to="/" title="Atoll">
-      <g-image src="@/assets/img/logo-header.png" alt="" />
+      Atoll
+      <!-- <g-image src="@/assets/img/logo-header.png" alt="" /> -->
     </g-link>
     <ul class="navbar__list">
       <header-drop-down />
@@ -37,12 +38,33 @@ export default {
   justify-content: space-between;
   flex-flow: row nowrap;
   &__logo {
+    font-size: 45px;
+    font-weight: $font_bold;
+    position: relative;
+    color: $black_color;
+    margin-bottom: 4px;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 35px;
+      border-radius: 20px;
+      background-color: $main_color;
+      top: 4px;
+      bottom: 0;
+      right: 0;
+      left: -9px;
+      transform: rotate(21deg);
+    }
     display: inline-block;
     max-width: 113px;
     max-height: 33px;
     margin-right: 188px;
     @media screen and (max-width: 992px) {
       margin-right: 130px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
     }
     @media screen and (max-width: 576px) {
       width: 100px;

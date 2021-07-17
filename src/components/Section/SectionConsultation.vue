@@ -21,7 +21,12 @@
             </div>
           </div>
           <div class="column column-50">
-            <div :class="content.variant ? 'consultation__right' : ''">
+            <div
+              :class="
+                (content.variant ? 'consultation__right' : '',
+                content.variant ? '' : 'consultation__img--center')
+              "
+            >
               <div
                 class="consultation__img"
                 :class="content.variant ? 'consultation__img--subcircle' : ''"
@@ -94,13 +99,14 @@ export default {
     margin-top: 24px;
   }
   &__img {
-    @media screen and (max-width: 576px) {
-      display: flex;
-      justify-content: center;
+    &--center {
+      @media screen and (max-width: 576px) {
+        display: flex;
+        justify-content: center;
+      }
     }
     max-width: 330px;
     max-height: 399px;
-    align-self: center;
     position: relative;
     &--subcircle {
       &::after {

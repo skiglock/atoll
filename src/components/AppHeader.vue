@@ -66,8 +66,6 @@ export default {
       align-items: center;
     }
     @media screen and (max-width: 576px) {
-      padding-left: 5px;
-      padding-right: 5px;
     }
   }
   &__body {

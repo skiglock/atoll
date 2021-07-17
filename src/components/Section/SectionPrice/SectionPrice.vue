@@ -9,7 +9,7 @@
       <div class="price__services">
         <div class="row">
           <div class="column column-50">
-            <div class="price__card">
+            <div class="card price__card">
               <h1 class="price__card-title">{{ content.num }}</h1>
               <p class="price__card-desc">{{ content.num_desc }}</p>
               <main-button

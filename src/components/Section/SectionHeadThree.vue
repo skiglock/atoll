@@ -39,6 +39,7 @@ export default {
     margin-top: 14px;
   }
   &__subcircle {
+    margin: auto 60px;
     position: relative;
     &::after {
       position: absolute;

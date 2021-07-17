@@ -88,14 +88,13 @@ export default {
 <style lang="scss">
 .team {
   &__inner {
-    padding: 60px 0;
     @media screen and (max-width: 576px) {
       padding: 20px 0;
     }
   }
   &__title {
     text-align: center;
-    margin-bottom: 51px;
+    margin-bottom: 50px;
   }
 
   &__dots {

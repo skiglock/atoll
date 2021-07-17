@@ -1,5 +1,5 @@
 <template>
-  <div class="blog__card">
+  <g-link :to="$getPath(url)" class="blog__card">
     <div class="blog__card-inner">
       <div class="blog__card-front">
         <h2 class="title blog__card-title">
@@ -9,11 +9,11 @@
       </div>
       <div class="blog__card-back">
         <p class="text">
-          {{ desc.length > 190 ? desc.slice(0, 190) + ' [...]' : desc }}
+          {{ desc.length > 193 ? desc.slice(0, 193) + ' [...]' : desc }}
         </p>
       </div>
     </div>
-  </div>
+  </g-link>
 </template>
 
 <script>
@@ -98,11 +98,11 @@ export default {
       transform: rotateY(180deg);
     }
     &-title {
-      width: 80%;
+      width: 100%;
       line-height: 1.356;
-      @media screen and (max-width: 576px) {
-        width: 100%;
-      }
+      // @media screen and (max-width: 576px) {
+      //   width: 100%;
+      // }
     }
     &-link {
       align-self: flex-end;

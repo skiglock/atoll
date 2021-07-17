@@ -1,5 +1,6 @@
 <template>
-  <div class="results__item" :style="{ backgroundImage: `url(${img})` }">
+  <div class="results__item">
+    <g-image :src="img" class="results__item-img" />
     <div class="results__item-inner">
       <div class="results__item-logo">
         <g-image :src="logo" />
@@ -48,25 +49,30 @@ export default {
     max-width: 863px;
     height: 644px;
     box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.17);
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+    &-img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
     &::after {
       content: '';
       position: absolute;
       z-index: 10;
       background-color: $white_color;
-      top: 102px;
-      right: 313px;
+      top: 262px;
+      right: 280px;
       border-radius: 50%;
       width: 940px;
-      height: 567px;
+      height: 400px;
       img {
         border-radius: 30px;
       }
       @media screen and (max-width: 768px) {
-        top: 20px;
-        right: 193px;
+        top: 40px;
+        right: 243px;
         width: 640px;
         height: 405px;
       }

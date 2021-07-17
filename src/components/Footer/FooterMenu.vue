@@ -24,7 +24,7 @@ export default {
 <style lang="scss">
 .footer {
   &__menu {
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 500px) {
       margin-top: 20px;
     }
     &-title {

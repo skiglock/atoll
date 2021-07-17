@@ -65,7 +65,7 @@ export default {
   }
   &__title {
     text-align: center;
-    margin-bottom: 68px;
+    margin-bottom: 55px;
     @media screen and (max-width: 576px) {
       margin-bottom: 40px;
     }
