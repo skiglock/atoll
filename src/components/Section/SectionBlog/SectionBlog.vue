@@ -4,7 +4,7 @@
       <div class="blog__inner">
         <div class="blog__head">
           <blockquote>
-            <h1 class="section-title blog__title">{{ content.title }}</h1>
+            <h1 class="title blog__title">{{ content.title }}</h1>
             <p class="text blog__text">
               {{ content.desc }}
             </p>
@@ -73,9 +73,6 @@ export default {
   }
   &__head {
     margin-bottom: 10%;
-    @media screen and (max-width: 576px) {
-      text-align: center;
-    }
   }
   &__title {
   }
