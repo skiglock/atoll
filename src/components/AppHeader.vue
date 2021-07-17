@@ -63,9 +63,9 @@ export default {
 
 <style lang="scss">
 .header {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   &__inner {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
   }
   &__top {
     padding: 30px 10px 67px;
@@ -78,7 +78,7 @@ export default {
     }
   }
   &__body {
-    min-height: calc(100vh - 130px);
+    min-height: calc(100vh - 134px);
   }
 }
 </style>
