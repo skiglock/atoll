@@ -54,20 +54,16 @@ export default {
       bottom: 0;
       right: 0;
       left: -9px;
+
       transform: rotate(21deg);
     }
-    display: inline-block;
-    max-width: 113px;
-    max-height: 33px;
     margin-right: 188px;
     @media screen and (max-width: 992px) {
       margin-right: 130px;
     }
     @media screen and (max-width: 768px) {
       margin-right: 0;
-    }
-    @media screen and (max-width: 576px) {
-      width: 100px;
+      margin-left: 9px;
     }
   }
   &__list {

@@ -1,7 +1,7 @@
 <template>
   <div class="card cards__card">
     <span class="cards__card-icon"><g-image :src="img" /></span>
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="cards__card-title">{{ title }}</h1>
     <p class="text cards__card-text">
       {{ desc }}
     </p>
@@ -21,14 +21,14 @@ export default {
 
 <style lang="scss">
 .cards {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     .column + .column {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
   }
   @media screen and (max-width: 576px) {
     .column + .column {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   }
   &__card {
@@ -42,9 +42,10 @@ export default {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    height: 344px;
+    min-height: 344px;
     @media screen and (max-width: 768px) {
       padding: 35px;
+      min-height: 260px;
     }
     @media screen and (max-width: 576px) {
       padding: 20px;
@@ -72,6 +73,12 @@ export default {
       margin-top: 33px;
       @media screen and (max-width: 768px) {
         margin-top: 13px;
+      }
+    }
+    &-title {
+      font-size: 20px;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
       }
     }
   }

@@ -49,6 +49,14 @@ export default {
     MainMenu() {
       return MainMenu.menu_list
     }
+  },
+  mounted() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01
+        document.documentElement.style.setProperty('--vh', `${vh}px`)
+      })
+    }
   }
 }
 </script>
@@ -56,7 +64,8 @@ export default {
 <style lang="scss">
 .header {
   &__inner {
-    min-height: 100vh;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   }
   &__top {
     padding: 30px 10px 67px;
