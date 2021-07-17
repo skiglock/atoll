@@ -56,6 +56,9 @@ export default {
       align-items: center;
       justify-content: center;
       margin-top: 30px;
+      @media (max-height: 768px) {
+        margin-top: 0;
+      }
       .title {
         text-align: center;
         max-width: 475px;

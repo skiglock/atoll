@@ -55,9 +55,8 @@ export default {
 
 <style lang="scss">
 .header {
-  min-height: 100vh;
-
   &__inner {
+    min-height: 100vh;
   }
   &__top {
     padding: 30px 10px 67px;
