@@ -15,7 +15,7 @@
             {{ title }}
           </h1>
           <p class="text blog-page__card-text">
-            {{ desc }}
+            {{ desc.length > 285 ? desc.slice(0, 285) + ' [...]' : desc }}
           </p>
           <g-link :to="$getPath(url)" class="blog-page__card-link"
             >Читать</g-link

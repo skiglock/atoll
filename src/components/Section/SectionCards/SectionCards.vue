@@ -2,7 +2,7 @@
   <section class="section cards">
     <div class="container">
       <div class="cards__head">
-        <h1 class="title">{{ content.title }}</h1>
+        <h1 class="section-title">{{ content.title }}</h1>
         <p class="text cards__text">
           {{ content.desc }}
         </p>

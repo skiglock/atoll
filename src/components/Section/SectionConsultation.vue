@@ -5,7 +5,9 @@
         <div class="row" :class="content.variant ? 'row--variant' : ''">
           <div class="column column-50">
             <div :class="content.variant ? 'consultation__left' : ''">
-              <h1 class="title consultation__title">{{ content.title }}</h1>
+              <h1 class="title consultation__title">
+                {{ content.title }}
+              </h1>
               <p class="text consultation__text" v-if="!content.variant">
                 {{ content.desc }}
               </p>

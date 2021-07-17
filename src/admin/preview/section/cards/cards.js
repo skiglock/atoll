@@ -23,19 +23,21 @@ export default createClass({
           h(
             'div',
             { className: 'row' },
-            elements.map((el) => {
-              const image = el.getIn(['data', 'img'])
-              const img = getAsset(image)
-              return h(
-                cardsItem,
-                {
-                  title: el.getIn(['title']),
-                  desc: el.getIn(['desc']),
-                  img: img
-                },
-                null
-              )
-            })
+            elements
+              ? elements.map((el) => {
+                  const image = el.getIn(['data', 'img'])
+                  const img = getAsset(image)
+                  return h(
+                    cardsItem,
+                    {
+                      title: el.getIn(['title']),
+                      desc: el.getIn(['desc']),
+                      img: img
+                    },
+                    null
+                  )
+                })
+              : null
           )
         )
       )

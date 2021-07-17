@@ -1,7 +1,7 @@
 <template>
   <section class="section other">
     <div class="container">
-      <h1 class="title title-center" v-if="!content.variant">
+      <h1 class="section-title title-center" v-if="!content.variant">
         {{ content.title }}
       </h1>
       <div class="other__inner">

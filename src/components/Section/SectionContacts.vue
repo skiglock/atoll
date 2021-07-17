@@ -1,7 +1,7 @@
 <template>
   <section class="section contacts">
     <div class="container">
-      <h1 class="title">{{ content.title }}</h1>
+      <h1 class="section-title">{{ content.title }}</h1>
       <div class="contacts__inner">
         <div class="row">
           <div class="column column-50">

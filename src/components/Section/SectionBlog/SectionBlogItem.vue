@@ -1,12 +1,18 @@
 <template>
-  <div class="card blog__card">
-    <h2
-      class="title blog__card-title"
-      :class="first ? 'blog__card-title--first' : ''"
-    >
-      {{ title }}
-    </h2>
-    <g-link :to="$getPath(url)" class="blog__card-link">Открыть</g-link>
+  <div class="blog__card">
+    <div class="blog__card-inner">
+      <div class="blog__card-front">
+        <h2 class="title blog__card-title">
+          {{ title }}
+        </h2>
+        <g-link :to="$getPath(url)" class="blog__card-link">Открыть</g-link>
+      </div>
+      <div class="blog__card-back">
+        <p class="text">
+          {{ desc.length > 190 ? desc.slice(0, 190) + ' [...]' : desc }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,7 +22,7 @@ export default {
   props: {
     title: String,
     url: String,
-    first: Boolean
+    desc: String
   }
 }
 </script>
@@ -24,47 +30,72 @@ export default {
 <style lang="scss">
 .blog {
   &__card {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 28px 0 39px;
-    @media screen and (max-width: 576px) {
-      padding: 0 20px;
-    }
-    border-radius: 20px;
     min-height: 165px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    &:first-child {
-      justify-content: space-between;
-      .blog__card-link {
-        align-self: flex-start;
-      }
-      .blog__card-title {
-        margin-top: 100px;
-      }
-      .blog__card-title--first {
-        margin-top: 0;
-      }
-      padding: 30px 31px 31px 39px;
+    perspective: 1000px;
+    &--first {
       grid-column: span 1;
       grid-row: span 2;
-      @media screen and (max-width: 992px) {
-        justify-content: space-evenly;
-        .blog__card-link {
-          align-self: flex-end;
+      .blog__card {
+        &-link {
+          align-self: flex-start;
+          @media screen and (max-width: 992px) {
+            align-self: flex-end;
+          }
         }
-        .blog__card-title {
-          margin-top: 0;
+        &-front {
+          padding-top: 120px;
         }
-        padding: 0 28px 0 39px;
-        grid-column: inherit;
-        grid-row: inherit;
       }
-      @media screen and (max-width: 576px) {
-        padding: 0 20px;
+      @media screen and (max-width: 890px) {
+        .blog__card {
+          &-front {
+            padding: 30px 31px 31px 39px;
+          }
+        }
       }
+    }
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      .blog__card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+    &-inner {
+      height: 100%;
+      width: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      border-radius: 26px;
+      background-color: $white_color;
+      box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
+      &:hover {
+        box-shadow: 0px 5px 6px 0px rgba($black_color, 0.22);
+      }
+
+      border-radius: 20px;
+    }
+    &-front,
+    &-back {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 30px 31px 31px 39px;
+    }
+    &-front {
+      z-index: 2;
+    }
+    &-back {
+      z-index: 1;
+      transform: rotateY(180deg);
     }
     &-title {
       width: 80%;

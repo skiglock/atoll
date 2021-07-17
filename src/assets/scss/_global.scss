@@ -147,27 +147,49 @@ img {
     }
 }
 
+.section-title {
+    color: #232323;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.147;
+    @media screen and (max-width: 992px) {
+        font-size: 29px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 28px;
+    }
+    @media screen and (max-width: 576px) {
+        font-size: 27px;
+    }
+    @media screen and (max-width: 460px) {
+        font-size: 26px;
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 25px;
+    }
+}
+
 .page-title {
     text-align: center;
     color: $black_color;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 33px;
     line-height: 1.147;
     margin-bottom: 40px;
     @media screen and (max-width: 992px) {
-        font-size: 24px;
+        font-size: 32px;
     }
     @media screen and (max-width: 768px) {
-        font-size: 23px;
+        font-size: 31px;
     }
     @media screen and (max-width: 576px) {
-        font-size: 22px;
+        font-size: 30px;
     }
     @media screen and (max-width: 460px) {
-        font-size: 21px;
+        font-size: 30px;
     }
     @media screen and (max-width: 320px) {
-        font-size: 20px;
+        font-size: 29px;
     }
 }
 
@@ -201,21 +223,21 @@ img {
 }
 
 .section + .section {
-    margin-top: 100px;
+    margin-top: 60px;
     @media screen and (max-width: 992px) {
-        margin-top: 90px;
+        margin-top: 50px;
     }
     @media screen and (max-width: 768px) {
-        margin-top: 80px;
+        margin-top: 40px;
     }
     @media screen and (max-width: 576px) {
-        margin-top: 70px;
+        margin-top: 30px;
     }
     @media screen and (max-width: 460px) {
-        margin-top: 60px;
+        margin-top: 20px;
     }
     @media screen and (max-width: 320px) {
-        margin-top: 50px;
+        margin-top: 10px;
     }
 }
 
@@ -223,6 +245,10 @@ img {
     border-radius: 26px;
     background-color: $white_color;
     box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
+    transition: box-shadow 0.3s;
+    &:hover {
+        box-shadow: 0px 5px 6px 0px rgba($black_color, 0.22);
+    }
 }
 
 .overlay {

@@ -4,7 +4,7 @@
       <div class="blog__inner">
         <div class="blog__head">
           <blockquote>
-            <h1 class="title blog__title">{{ content.title }}</h1>
+            <h1 class="section-title blog__title">{{ content.title }}</h1>
             <p class="text blog__text">
               {{ content.desc }}
             </p>
@@ -12,11 +12,12 @@
         </div>
         <div class="blog__body">
           <section-blog-item
-            v-for="{ node } in $static.allBlogPost.edges"
+            v-for="({ node }, index) in $static.allBlogPost.edges"
             :key="node.id"
             :title="node.title"
             :url="node.path"
-            :first="checkBlogLength"
+            :class="setFirstBlogCardClass(index)"
+            :desc="node.desc"
           />
         </div>
       </div>
@@ -31,6 +32,7 @@ query {
       node {
         id
         title
+        desc
         path
       }
     }
@@ -50,7 +52,16 @@ export default {
   },
   computed: {
     checkBlogLength() {
-      return this.$static.allBlogPost.edges.length === 1
+      return this.$static.allBlogPost.edges.length >= 3
+    }
+  },
+  methods: {
+    setFirstBlogCardClass(idx) {
+      if (this.$static.allBlogPost.edges.length >= 3 && idx === 0) {
+        return 'blog__card--first'
+      } else {
+        return ''
+      }
     }
   }
 }

@@ -15,18 +15,20 @@ export default createClass({
         h(
           'h1',
           { className: 'results__inner' },
-          elements.map((el) => {
-            const image = el.getIn(['data', 'img'])
-            const img = getAsset(image)
-            return h(
-              resultsItem,
-              {
-                desc: el.getIn(['desc']),
-                img: img
-              },
-              null
-            )
-          })
+          elements
+            ? elements.map((el) => {
+                const image = el.getIn(['data', 'img'])
+                const img = getAsset(image)
+                return h(
+                  resultsItem,
+                  {
+                    desc: el.getIn(['desc']),
+                    img: img
+                  },
+                  null
+                )
+              })
+            : null
         )
       )
     )

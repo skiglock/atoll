@@ -2,7 +2,7 @@
   <section class="section team">
     <div class="container">
       <div class="team__inner">
-        <h1 class="title team__title">{{ content.title }}</h1>
+        <h1 class="section-title team__title">{{ content.title }}</h1>
         <ClientOnly>
           <carousel
             v-if="$route.path === '/'"

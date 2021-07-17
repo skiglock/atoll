@@ -30,6 +30,7 @@ export default createClass({
       entry.getIn(['data', 'layout'])
         ? widgetsFor('layout').map((layout) => {
             const image = layout.getIn(['data', 'img'])
+
             const img = getAsset(image)
             if (layout.getIn(['data', 'name']) === 'blog') {
               return h(

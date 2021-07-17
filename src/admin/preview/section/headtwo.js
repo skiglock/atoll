@@ -15,7 +15,19 @@ export default createClass({
           {
             className: 'head-two__inner'
           },
-          h('div', { className: 'head-two__img' }, h('img', { src: img })),
+          h(
+            'div',
+            { className: 'head-two__img' },
+            img
+              ? h('img', { src: img })
+              : h('div', {
+                  style: {
+                    backgroundColor: '#e5e5e5',
+                    width: '100%',
+                    height: '100%'
+                  }
+                })
+          ),
           h(
             'div',
             { className: 'head-two__desc' },

@@ -2744,6 +2744,7 @@ collections:
           name: 'description',
           widget: 'string'
         }
+      - { label: 'Дата', name: 'date', picker_utc: false, widget: 'datetime' }
       - { label: 'Краткое описание', name: 'desc', widget: 'markdown' }
       - label: 'Компоненты страницы'
         name: 'layout'
@@ -4131,6 +4132,7 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: 'ID', name: 'id', widget: 'id' }
+      - { label: 'Дата', name: 'date', picker_utc: false, widget: 'datetime' }
       - { label: 'Аватар', name: 'avatar', widget: 'image' }
       - { label: 'Имя', name: 'name', widget: 'string' }
       - { label: 'Должность', name: 'position', widget: 'string' }

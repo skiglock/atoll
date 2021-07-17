@@ -5,7 +5,7 @@
   >
     <div class="container">
       <div class="clients__inner">
-        <h1 class="title clients__title">{{ content.title }}</h1>
+        <h1 class="section-title clients__title">{{ content.title }}</h1>
         <div class="row">
           <div
             class="column column-50"

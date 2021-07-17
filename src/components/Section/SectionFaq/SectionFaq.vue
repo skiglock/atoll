@@ -2,7 +2,7 @@
   <section class="section faq">
     <div class="faq__inner">
       <div class="container">
-        <div class="title">{{ content.title }}</div>
+        <div class="section-title">{{ content.title }}</div>
         <div class="row">
           <div
             class="column column-50"
@@ -35,7 +35,7 @@ export default {
   &__inner {
     padding: 44px 0;
   }
-  .title {
+  .section-title {
     text-align: center;
     margin-bottom: 20px;
   }

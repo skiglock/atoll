@@ -50,13 +50,15 @@ export default createClass({
                 'div',
                 { className: 'price__list' },
                 h('h1', { className: 'title price__list-title' }),
-                elements.map((el, index) => {
-                  return h(
-                    priceItem,
-                    { title: el.getIn(['title']), number: index + 1 },
-                    null
-                  )
-                })
+                elements
+                  ? elements.map((el, index) => {
+                      return h(
+                        priceItem,
+                        { title: el.getIn(['title']), number: index + 1 },
+                        null
+                      )
+                    })
+                  : null
               )
             )
           )

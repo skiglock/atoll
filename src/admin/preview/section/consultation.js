@@ -49,7 +49,15 @@ export default createClass({
                 h(
                   'div',
                   { className: 'consultation__img' },
-                  h('img', { src: img })
+                  img
+                    ? h('img', { src: img })
+                    : h('div', {
+                        style: {
+                          backgroundColor: '#e5e5e5',
+                          width: '100%',
+                          height: '100%'
+                        }
+                      })
                 )
               )
             )

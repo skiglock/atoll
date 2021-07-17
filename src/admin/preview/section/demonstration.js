@@ -16,7 +16,19 @@ export default createClass({
           h(
             'div',
             { className: 'column column-30' },
-            h('div', { className: 'consultation__img' }, h('img', { src: img }))
+            h(
+              'div',
+              { className: 'consultation__img' },
+              img
+                ? h('img', { src: img })
+                : h('div', {
+                    style: {
+                      backgroundColor: '#e5e5e5',
+                      width: '100%',
+                      height: '100%'
+                    }
+                  })
+            )
           ),
           h(
             'div',

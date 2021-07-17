@@ -1,7 +1,7 @@
 <template>
   <section class="section price">
     <div class="container">
-      <h1 class="title price__title">{{ content.title }}</h1>
+      <h1 class="section-title price__title">{{ content.title }}</h1>
       <p class="text price__text">
         Выделенный аналитик будет планомерно развивать вашу CRM-систему и станет
         единым окном для всех возникающих проблем и вопросов.

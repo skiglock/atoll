@@ -19,7 +19,7 @@ const mdOptions = {
 
 function convertToHTML(markdownText) {
   marked.setOptions(mdOptions)
-  return marked(markdownText)
+  return markdownText ? marked(markdownText) : 'Введите что нибудь'
 }
 
 export default createClass({

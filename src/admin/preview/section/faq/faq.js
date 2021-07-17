@@ -19,13 +19,15 @@ export default createClass({
           h(
             'div',
             { className: 'row' },
-            elements.map((el) => {
-              return h(
-                faqItem,
-                { title: el.getIn(['title']), desc: el.getIn(['desc']) },
-                null
-              )
-            })
+            elements
+              ? elements.map((el) => {
+                  return h(
+                    faqItem,
+                    { title: el.getIn(['title']), desc: el.getIn(['desc']) },
+                    null
+                  )
+                })
+              : null
           )
         )
       )

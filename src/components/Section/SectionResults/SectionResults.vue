@@ -1,7 +1,7 @@
 <template>
   <section class="section results">
     <div class="container">
-      <h1 class="title">{{ content.title }}</h1>
+      <h1 class="section-title">{{ content.title }}</h1>
       <div class="results__inner">
         <section-results-item
           v-for="item in changeResultsArray[0]"
@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss">
 .results {
-  .title {
+  .section-title {
     text-align: center;
   }
   &__inner {
