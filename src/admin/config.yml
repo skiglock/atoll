@@ -3682,7 +3682,13 @@ collections:
                       - { label: 'ID', name: 'id', widget: 'id' }
                       - { label: 'title', name: 'title', widget: 'hidden', '' }
                       - { label: 'Описание', name: 'desc', widget: markdown }
-                      - { label: 'Фон', name: 'img', widget: image }
+                      - {
+                          label: 'Фон',
+                          name: 'img',
+                          widget: image,
+                          media_folder: '../../static/uploads',
+                          public_folder: '/uploads'
+                        }
                       - {
                           label: 'Кейс',
                           name: 'link',
@@ -3733,7 +3739,13 @@ collections:
                       - { label: 'ID', name: 'id', widget: 'id' }
                       - { label: 'Заголовок', name: 'title', widget: string }
                       - { label: 'Описание', name: 'desc', widget: markdown }
-                      - { label: 'Картинка', name: 'img', widget: image }
+                      - {
+                          label: 'Картинка',
+                          name: 'img',
+                          widget: image,
+                          media_folder: '../../static/uploads',
+                          public_folder: '/uploads'
+                        }
                       - {
                           label: 'link',
                           name: 'link',

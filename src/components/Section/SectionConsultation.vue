@@ -105,8 +105,8 @@ export default {
         justify-content: center;
       }
     }
-    max-width: 330px;
-    max-height: 399px;
+    max-width: 435px;
+    max-height: 605px;
     position: relative;
     &--subcircle {
       &::after {
@@ -122,10 +122,10 @@ export default {
         border-top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: -10px;
         @media screen and (max-width: 576px) {
           border-width: 10px;
-          bottom: -4px;
+          bottom: -10px;
         }
       }
     }

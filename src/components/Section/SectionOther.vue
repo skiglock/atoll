@@ -62,7 +62,7 @@ export default {
     justify-content: center;
     img {
       max-width: 359px;
-      max-height: 302px;
+      max-height: 402px;
       @media screen and (max-width: 576px) {
         max-width: 100%;
         max-height: 100%;

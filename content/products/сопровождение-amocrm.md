@@ -123,5 +123,5 @@ layout:
         desc: ""
         img: ""
     variant: true
-    img: ../../static/uploads/girl.png
+    img: ../../static/uploads/atollone23.png
 ---
