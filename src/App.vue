@@ -52,6 +52,23 @@ export default {
   },
   created() {
     this.$store.commit('setSettings', this.Settings)
+  },
+  mounted() {
+    let form = document.querySelector('.form')
+    let amoFormScript = document.createElement('script')
+    const amoForm =
+      '!function(a,m,o,c,r,m){ao+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r}(window,0,"amo_forms_","params","load");'
+    amoFormScript.innerHTML = amoForm
+    form.appendChild(amoFormScript)
+    let amoScript = document.createElement('script')
+    amoScript.setAttribute('id', 'amoforms_script_809104')
+    amoScript.setAttribute('async', 'async')
+    amoScript.setAttribute('charset', 'utf-8')
+    amoScript.setAttribute(
+      'src',
+      'https://forms.amocrm.ru/forms/assets/js/amoforms.js?1626680348'
+    )
+    form.appendChild(amoScript)
   }
 }
 </script>
