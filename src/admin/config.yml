@@ -2731,7 +2731,7 @@ collections:
   # --------------------Динамические страницы---------------------------
   - name: 'products'
     label: 'Продукты'
-    media_folder: 'static/uploads'
+    media_folder: '../../static/uploads'
     public_folder: '../../static/uploads'
     folder: 'content/products'
     create: true

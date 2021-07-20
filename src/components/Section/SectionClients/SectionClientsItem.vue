@@ -31,7 +31,6 @@ export default {
     padding: 106px 85px 95px 77px;
 
     background-color: $white_color;
-    transition: all 0.3s ease-in-out;
     &:hover {
       flex-direction: column;
       .clients__item-title {

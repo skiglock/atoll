@@ -10,7 +10,34 @@
             </p>
           </div>
           <div class="column column-50">
-            <main-form :title="content.title" class="order__form" />
+            <div class="order__form">
+              <script type="application/javascript">
+                !(function (a, m, o, c, r, m) {
+                  ;(a[o + c] = a[o + c] || {
+                    setMeta: function (p) {
+                      this.params = (this.params || []).concat([p])
+                    }
+                  }),
+                    (a[o + r] =
+                      a[o + r] ||
+                      function (f) {
+                        a[o + r].f = (a[o + r].f || []).concat([f])
+                      }),
+                    a[o + r]({
+                      id: '809104',
+                      hash: '1ddb76014be94a11cd0fb4f91a69cbfb',
+                      locale: 'ru'
+                    })
+                })(window, 0, 'amo_forms_', 'params', 'load')
+              </script>
+              <script
+                type="application/javascript"
+                id="amoforms_script_809104"
+                async="async"
+                charset="utf-8"
+                src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1626781522"
+              ></script>
+            </div>
           </div>
         </div>
       </div>
@@ -19,21 +46,19 @@
 </template>
 
 <script>
-import MainForm from '@/components/Common/MainForm'
-
 export default {
   name: 'SectionOrder',
   props: {
     content: Object
-  },
-  components: {
-    MainForm
   }
 }
 </script>
 
 <style lang="scss">
 .order {
+  .row {
+    align-items: center;
+  }
   &__inner {
   }
   &__title,
@@ -47,13 +72,14 @@ export default {
     margin-top: 21px;
   }
   &__form {
-    margin-left: 122px;
-    @media screen and (max-width: 992px) {
-      margin-left: 80px;
-    }
-    @media screen and (max-width: 768px) {
-      margin-left: 15px;
-    }
+    margin-left: 15px;
+
+    // @media screen and (max-width: 992px) {
+    //   margin-left: 80px;
+    // }
+    // @media screen and (max-width: 768px) {
+    //   margin-left: 15px;
+    // }
     @media screen and (max-width: 576px) {
       margin-left: 0;
     }
