@@ -17,7 +17,7 @@ export default createClass({
           { className: 'results__inner' },
           elements
             ? elements.map((el) => {
-                const image = el.getIn(['data', 'img'])
+                const image = el.getIn(['img'])
                 const img = getAsset(image)
                 return h(
                   resultsItem,
