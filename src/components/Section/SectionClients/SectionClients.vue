@@ -15,6 +15,7 @@
             <section-clients-item
               :logo="node.logo"
               :url="$getPath(node.path)"
+              :title="node.title"
             />
           </div>
         </div>
@@ -34,6 +35,7 @@ query {
         id
         logo
         path
+        title
       }
     }
   }

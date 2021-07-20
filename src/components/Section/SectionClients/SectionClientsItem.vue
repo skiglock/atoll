@@ -1,6 +1,9 @@
 <template>
   <g-link :to="url" class="card clients__item">
     <g-image class="clients__item-img" :src="logo" />
+    <p class="clients__item-title">
+      {{ title }}
+    </p>
   </g-link>
 </template>
 
@@ -9,7 +12,8 @@ export default {
   name: 'SectionClientsItem',
   props: {
     logo: Object,
-    url: String
+    url: String,
+    title: String
   }
 }
 </script>
@@ -27,9 +31,25 @@ export default {
     padding: 106px 85px 95px 77px;
 
     background-color: $white_color;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      flex-direction: column;
+      .clients__item-title {
+        display: inline-block;
+      }
+      .clients__item-img {
+        max-width: 102px;
+        max-height: 48px;
+      }
+    }
     &-img {
       max-width: 202px;
       max-height: 48px;
+    }
+    &-title {
+      margin-top: 20px;
+      text-align: center;
+      display: none;
     }
   }
 }

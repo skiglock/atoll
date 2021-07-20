@@ -43,8 +43,8 @@ export default function (Vue, { head, appOptions }) {
     href: ralewaybold,
     as: 'font',
     crossorigin: true
-  })
-  Vue.component('Layout', DefaultLayout)
+  }),
+    Vue.component('Layout', DefaultLayout)
   Vue.prototype.$getPath = getPath
   Vue.filter('markdown', (string) => marked(string))
   Vue.use(Vuex)
