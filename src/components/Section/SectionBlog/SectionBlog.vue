@@ -72,7 +72,7 @@ export default {
   &__inner {
   }
   &__head {
-    margin-bottom: 10%;
+    margin-bottom: 60px;
   }
   &__title {
   }

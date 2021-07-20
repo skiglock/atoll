@@ -32,8 +32,7 @@ export default {
   &__card {
     min-height: 165px;
     perspective: 1000px;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    background-color: $white_color;
     &--first {
       grid-column: span 1;
       grid-row: span 2;
@@ -72,8 +71,12 @@ export default {
       border-radius: 26px;
       background-color: $white_color;
       box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
+      -webkit-box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
+      -moz-box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
       &:hover {
         box-shadow: 0px 5px 6px 0px rgba($black_color, 0.22);
+        -webkit-box-shadow: 0px 5px 6px 0px rgba($black_color, 0.22);
+        -moz-box-shadow: 0px 5px 6px 0px rgba($black_color, 0.22);
       }
 
       border-radius: 20px;

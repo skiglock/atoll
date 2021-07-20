@@ -11,6 +11,10 @@ body {
     height: 100%;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     font-family: "Raleway", sans-serif;
     -webkit-font-smoothing: subpixel-antialiased !important;

@@ -57,6 +57,7 @@ export default {
 .header {
   &__inner {
     min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
   &__top {
     padding: 30px 10px 67px;
