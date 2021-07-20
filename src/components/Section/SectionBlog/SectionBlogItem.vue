@@ -32,6 +32,8 @@ export default {
   &__card {
     min-height: 165px;
     perspective: 1000px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     &--first {
       grid-column: span 1;
       grid-row: span 2;
@@ -85,6 +87,7 @@ export default {
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       position: absolute;
       bottom: 0;
       left: 0;
