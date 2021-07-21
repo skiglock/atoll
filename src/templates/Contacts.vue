@@ -8,21 +8,31 @@
             <div class="column column-50 contacts-page--column">
               <div class="contacts-page__adress">
                 <h1 class="title">Адрес:</h1>
-                <p class="text">
+                <a
+                  href="https://yandex.ru/maps/-/CCUiI-sj2A"
+                  target="_blank"
+                  class="text"
+                >
                   {{ this.$store.state.settings.allSettings.adress }}
-                </p>
+                </a>
               </div>
               <div class="contacts-page__phone">
                 <h1 class="title">Телефон:</h1>
-                <p class="text">
+                <a
+                  :href="`tel:${$store.state.settings.allSettings.phone}`"
+                  class="text"
+                >
                   {{ this.$store.state.settings.allSettings.phone }}
-                </p>
+                </a>
               </div>
               <div class="contacts-page__mail">
                 <h1 class="title">Почта:</h1>
-                <p class="text">
+                <a
+                  :href="`mailto:${$store.state.settings.allSettings.mail}`"
+                  class="text"
+                >
                   {{ this.$store.state.settings.allSettings.mail }}
-                </p>
+                </a>
               </div>
             </div>
             <div class="column column-50">
@@ -100,7 +110,8 @@ export default {
   }
   &__phone {
     .text {
-      font-family: 'Open Sans Bold';
+      font-family: 'Open Sans Regular';
+      font-weight: 100;
     }
   }
   &__adress,

@@ -6,6 +6,8 @@ import Vuex from 'vuex'
 import store from '~/store'
 
 import opensansbold from '@/assets/fonts/opensansbold.woff2'
+import opensansregular from '@/assets/fonts/opensansregular.woff2'
+
 import InfiniteLoading from 'vue-infinite-loading'
 import ralewaylight from '@/assets/fonts/ralewaylight.woff2'
 import ralewayregular from '@/assets/fonts/ralewayregular.woff2'
@@ -15,6 +17,12 @@ import ralewaybold from '@/assets/fonts/ralewaybold.woff2'
 
 export default function (Vue, { head, appOptions }) {
   head.htmlAttrs = { lang: 'ru' }
+  head.link.push({
+    rel: 'preload',
+    href: opensansregular,
+    as: 'font',
+    crossorigin: true
+  })
   head.link.push({
     rel: 'preload',
     href: opensansbold,

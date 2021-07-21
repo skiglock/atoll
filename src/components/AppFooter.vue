@@ -8,11 +8,13 @@
               <a class="footer__logo">Atoll</a>
               <p class="footer__copyright">© 2021 Atollon</p>
               <div class="footer__contacts">
-                <a href="tel:+74952781802" class="footer__contacts-number">{{
-                  $store.state.settings.allSettings.phone
-                }}</a>
                 <a
-                  href="mailto:hello@atollon.ru"
+                  :href="`tel:${$store.state.settings.allSettings.phone}`"
+                  class="footer__contacts-number"
+                  >{{ $store.state.settings.allSettings.phone }}</a
+                >
+                <a
+                  :href="`mailto:${$store.state.settings.allSettings.mail}`"
                   class="footer__contacts-mail"
                   >{{ $store.state.settings.allSettings.mail }}</a
                 >
