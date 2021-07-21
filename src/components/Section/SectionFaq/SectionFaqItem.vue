@@ -1,17 +1,24 @@
 <template>
   <div class="faq__item">
-    <div class="card faq__item-question">
+    <div class="card faq__item-question" @click="openFaq = !openFaq">
       <p class="text">{{ question }}</p>
     </div>
-    <div class="card faq__item-answer">
-      <p class="text">{{ answer }}</p>
-    </div>
+    <transition name="fade">
+      <div class="card faq__item-answer" v-if="openFaq">
+        <p class="text">{{ answer }}</p>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
   name: 'SectionFaqItem',
+  data() {
+    return {
+      openFaq: false
+    }
+  },
   props: {
     question: String,
     answer: String
@@ -28,6 +35,8 @@ export default {
     justify-content: center;
     flex-direction: column;
     &-question {
+      cursor: pointer;
+
       padding: 15px;
       z-index: 14;
       max-height: 76px;

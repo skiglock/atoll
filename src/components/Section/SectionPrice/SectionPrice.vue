@@ -88,6 +88,8 @@ export default {
     border-radius: 37px;
     background-color: $main_color;
     &-title {
+      font-family: 'Open Sans Bold';
+
       color: $white_color;
       font-size: 31px;
       font-weight: $font_bold;

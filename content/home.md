@@ -76,22 +76,6 @@ layout:
     variant: false
     num: ""
     num_desc: ""
-    name: order
-    desc: Менеджер узнает про вашу задачу и подскажет что делать дальше
-    elements:
-      - type: item
-        id: ""
-        title: ""
-        desc: ""
-        img: ""
-        link: ""
-    title: Заказать интеграцию
-    type: order
-    id: 95f4e12e-553f-443d-ab8e-2071728e51fe
-  - img: ""
-    variant: false
-    num: ""
-    num_desc: ""
     name: blog
     desc: Регулярно пишем статьи о системах продажах, управлении проектами и делимся
       собственным опытом трансформации процессов.
@@ -105,4 +89,20 @@ layout:
     title: Полезные статьи в нашем блоге
     type: blog
     id: 0505a67f-087d-4d17-91fa-e7bc8ad5c5fd
+  - img: ""
+    variant: false
+    num: ""
+    num_desc: ""
+    name: order
+    desc: Менеджер узнает про вашу задачу и подскажет что делать дальше
+    elements:
+      - type: item
+        id: ""
+        title: ""
+        desc: ""
+        img: ""
+        link: ""
+    title: Заказать интеграцию
+    type: order
+    id: 95f4e12e-553f-443d-ab8e-2071728e51fe
 ---

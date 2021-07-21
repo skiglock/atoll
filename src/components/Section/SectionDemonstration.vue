@@ -1,5 +1,5 @@
 <template>
-  <section class="section demonstration">
+  <section class="demonstration">
     <div class="container">
       <div class="row">
         <div class="column column-30">
@@ -57,6 +57,9 @@ export default {
 
 <style lang="scss">
 .demonstration {
+  .column {
+    padding-bottom: 0;
+  }
   &__img {
     @media screen and (max-width: 768px) {
       display: flex;

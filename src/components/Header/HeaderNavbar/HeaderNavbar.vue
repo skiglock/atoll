@@ -38,6 +38,7 @@ export default {
   justify-content: space-between;
   flex-flow: row nowrap;
   &__logo {
+    font-family: 'Open Sans Bold';
     font-size: 45px;
     font-weight: $font_bold;
     position: relative;

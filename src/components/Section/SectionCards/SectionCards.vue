@@ -48,8 +48,8 @@ export default {
     margin-top: 24px;
   }
   &__body {
-    margin-top: 47px;
-    padding: 45px 18px;
+    margin-top: 77px;
+    // padding: 45px 18px;
     @media screen and (max-width: 576px) {
       padding: 0;
     }

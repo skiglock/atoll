@@ -97,6 +97,9 @@ export default {
 
 <style lang="scss">
 .footer {
+  .row {
+    text-align: center;
+  }
   margin-top: 150px;
   @media screen and (max-width: 576px) {
     margin-top: 80px;
@@ -129,6 +132,7 @@ export default {
     }
   }
   &__logo {
+    font-family: 'Open Sans Bold';
     width: 98px;
     font-size: 45px;
     color: $black_color;
@@ -144,6 +148,7 @@ export default {
     flex-direction: column;
     margin-top: 28px;
     &-number {
+      font-family: 'Open Sans Bold';
       font-size: 15px;
       color: #232323;
       font-weight: $font_semibold;

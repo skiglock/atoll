@@ -98,6 +98,11 @@ export default {
     &-title {
     }
   }
+  &__phone {
+    .text {
+      font-family: 'Open Sans Bold';
+    }
+  }
   &__adress,
   &__phone,
   &__mail {

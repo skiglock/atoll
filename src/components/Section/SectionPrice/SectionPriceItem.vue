@@ -28,6 +28,7 @@ export default {
       justify-content: center;
     }
     &-number {
+      font-family: 'Open Sans Bold';
       display: flex;
       justify-content: center;
       align-items: center;

@@ -1,7 +1,10 @@
 <template>
   <section class="consultation" :class="$route.path === '/' ? '' : 'section'">
     <div class="container">
-      <div class="consultation__inner">
+      <div
+        class="consultation__inner"
+        :style="content.variant ? '' : { paddingTop: '55px' }"
+      >
         <div class="row" :class="content.variant ? 'row--variant' : ''">
           <div class="column column-50">
             <div :class="content.variant ? 'consultation__left' : ''">
@@ -88,7 +91,6 @@ export default {
     justify-content: center;
   }
   &__inner {
-    padding-top: 55px;
     @media screen and (max-width: 576px) {
       text-align: center;
     }
@@ -122,7 +124,7 @@ export default {
         border-top: 0;
         left: 0;
         right: 0;
-        bottom: -10px;
+        bottom: -14px;
         @media screen and (max-width: 576px) {
           border-width: 10px;
           bottom: -10px;

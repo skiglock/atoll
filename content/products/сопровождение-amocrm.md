@@ -115,7 +115,7 @@ layout:
     name: consultation
     desc: Нажмите кнопку чтобы получить консультацию
     id: 0171c9fa-1b9d-4369-afe4-4c29f0bf4574
-    title: Примените экспертизу нашей  команды, чтобы усилить вашу системы
+    title: Примените экспертизу нашей  команды, чтобы усилить вашу системы.
     elements:
       - type: item
         id: ""
@@ -123,5 +123,5 @@ layout:
         desc: ""
         img: ""
     variant: true
-    img: ../../static/uploads/atollone23.png
+    img: ../../static/uploads/atollone221-min.png
 ---
