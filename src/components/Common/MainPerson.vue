@@ -13,7 +13,7 @@
 export default {
   name: 'SectionTeamItem',
   props: {
-    avatar: Object,
+    avatar: String,
     name: String,
     position: String,
     practice: String

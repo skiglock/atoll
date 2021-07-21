@@ -56,6 +56,7 @@
 query ($id: ID!) {
   contacts (id: $id) {
     title
+    description
   }
 }
 </page-query>
@@ -69,7 +70,44 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.contacts.title
+      title: this.$page.contacts.title,
+      meta: [
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: 'Atollon - ' + this.$page.contacts.title
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Atollon - ' + this.$page.contacts.title
+        },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.contacts.description
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: this.$page.contacts.description
+        },
+        {
+          key: 'twitter:description',
+          name: 'og:description',
+          content: this.$page.contacts.description
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: 'https://atollon.ru/assets/img/logo-header.png'
+        },
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://atollon.ru/assets/img/logo-header.png'
+        }
+      ]
     }
   }
 }

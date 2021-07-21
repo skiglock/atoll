@@ -50,9 +50,9 @@ export default {
   &__body {
     margin-top: 77px;
     // padding: 45px 18px;
-    @media screen and (max-width: 576px) {
-      padding: 0;
-    }
+    // @media screen and (max-width: 576px) {
+    //   padding: 0;
+    // }
   }
   // .column {
   //   @media screen and (max-width: 768px) {

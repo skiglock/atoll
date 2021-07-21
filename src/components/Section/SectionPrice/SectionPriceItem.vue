@@ -35,8 +35,9 @@ export default {
       border-radius: 50%;
       background-color: $white_color;
       box-shadow: 0px 3px 3px 0px rgba($black_color, 0.15);
-      width: 55px;
+      width: 50px;
       height: 45px;
+      padding: 10px;
       font-size: 18px;
       color: #131313;
       font-weight: $font_light;

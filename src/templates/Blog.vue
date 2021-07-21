@@ -40,6 +40,7 @@
 query ($id: ID!, $page: Int) {
   blog (id: $id) {
     title
+    description
   }
   allBlogPost(perPage: 2, page: $page) @paginate {
     pageInfo {
@@ -93,7 +94,44 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.blog.title
+      title: this.$page.blog.title,
+      meta: [
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: 'Atollon - ' + this.$page.blog.title
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Atollon - ' + this.$page.blog.title
+        },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.blog.description
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: this.$page.blog.description
+        },
+        {
+          key: 'twitter:description',
+          name: 'og:description',
+          content: this.$page.blog.description
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: 'https://atollon.ru/assets/img/logo-header.png'
+        },
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://atollon.ru/assets/img/logo-header.png'
+        }
+      ]
     }
   }
 }

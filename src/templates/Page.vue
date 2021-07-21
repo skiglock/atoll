@@ -24,7 +24,44 @@ query ($id: ID!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.pages.title
+      title: this.$page.pages.title,
+      meta: [
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: 'Atollon - ' + this.$page.pages.title
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Atollon - ' + this.$page.pages.title
+        },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.pages.description
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: this.$page.pages.description
+        },
+        {
+          key: 'twitter:description',
+          name: 'og:description',
+          content: this.$page.pages.description
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: 'https://atollon.ru/assets/img/logo-header.png'
+        },
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://atollon.ru/assets/img/logo-header.png'
+        }
+      ]
     }
   }
 }

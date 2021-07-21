@@ -20,8 +20,10 @@
 query ($id: ID!) {
   blogPost (id: $id) {
     title
+    desc
     date
     full
+    img
   }
 }
 </page-query>
@@ -30,7 +32,44 @@ query ($id: ID!) {
 export default {
   metaInfo() {
     return {
-      title: `${this.$page.blogPost.title}`
+      title: `${this.$page.blogPost.title}`,
+      meta: [
+        {
+          key: 'og:title',
+          name: 'og:title',
+          content: 'Atollon - ' + this.$page.blogPost.title
+        },
+        {
+          key: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Atollon - ' + this.$page.blogPost.title
+        },
+        {
+          key: 'description',
+          name: 'description',
+          content: this.$page.blogPost.desc
+        },
+        {
+          key: 'og:description',
+          name: 'og:description',
+          content: this.$page.blogPost.desc
+        },
+        {
+          key: 'twitter:description',
+          name: 'og:description',
+          content: this.$page.blogPost.desc
+        },
+        {
+          key: 'og:image',
+          name: 'og:image',
+          content: 'https://atollon.ru' + this.$page.blogPost.img.src
+        },
+        {
+          key: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://atollon.ru' + this.$page.blogPost.img.src
+        }
+      ]
     }
   },
   computed: {
