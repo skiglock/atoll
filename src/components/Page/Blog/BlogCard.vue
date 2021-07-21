@@ -5,7 +5,7 @@
       <div class="column column-50">
         <div class="blog-page__card-left">
           <div class="blog-page__card-img">
-            <g-image :src="img" />
+            <g-image :src="img" :alt="title" />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <g-link :to="url" class="card clients__item">
-    <g-image class="clients__item-img" :src="logo" />
+    <g-image class="clients__item-img" :src="logo" :alt="title" />
     <p class="clients__item-title">
       {{ title }}
     </p>

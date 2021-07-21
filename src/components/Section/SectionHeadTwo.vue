@@ -3,7 +3,7 @@
     <div class="container">
       <div class="head-two__inner">
         <div class="head-two__img">
-          <g-image :src="content.img" />
+          <g-image :src="content.img" :alt="content.title" />
         </div>
         <div class="head-two__desc">
           <h1 class="title head-two__title">{{ content.title }}</h1>

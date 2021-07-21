@@ -7,7 +7,7 @@
           {{ content.desc }}
         </p>
         <div class="head-three__subcircle">
-          <g-image :src="content.img" />
+          <g-image :src="content.img" :alt="content.title" />
         </div>
       </div>
     </div>

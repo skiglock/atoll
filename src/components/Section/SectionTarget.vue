@@ -6,7 +6,7 @@
         {{ content.desc }}
       </h2>
       <div class="target__img">
-        <g-image :src="content.img" />
+        <g-image :src="content.img" :alt="content.title" />
       </div>
     </div>
   </section>

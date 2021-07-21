@@ -4,7 +4,11 @@
       <div class="container">
         <div class="cases-post__inner">
           <div class="cases-post__top">
-            <g-image :src="$page.casesPost.logo" class="cases-post__img" />
+            <g-image
+              :src="$page.casesPost.logo"
+              class="cases-post__img"
+              :alt="$page.casesPost.title"
+            />
             <div class="title cases-post__title">
               {{ $page.casesPost.title }}
             </div>

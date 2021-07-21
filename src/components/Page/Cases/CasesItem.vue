@@ -5,7 +5,7 @@
         <div class="column column-50">
           <div class="cases-page__item-left">
             <div class="cases-page__item-img">
-              <g-image :src="img" />
+              <g-image :src="img" :alt="title" />
             </div>
           </div>
         </div>
@@ -13,7 +13,7 @@
         <div class="column column-50 cases-page--column">
           <div class="cases-page__item-right">
             <div class="cases-page__item-client">
-              <g-image :src="logo" />
+              <g-image :src="logo" :alt="title" />
             </div>
             <h2 class="title cases-page__item-title">{{ category }}</h2>
             <p class="text cases-page__item-text">
@@ -34,7 +34,8 @@ export default {
     img: Object,
     logo: Object,
     desc: String,
-    url: String
+    url: String,
+    title: String
   }
 }
 </script>

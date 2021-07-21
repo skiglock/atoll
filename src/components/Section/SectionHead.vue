@@ -13,7 +13,7 @@
           </div>
           <div class="column column-30">
             <div class="head__img">
-              <g-image :src="content.img" />
+              <g-image :src="content.img" :alt="content.title" />
             </div>
           </div>
         </div>

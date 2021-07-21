@@ -11,7 +11,7 @@
         >
           <div class="column column-50">
             <div class="other__img">
-              <g-image :src="content.img" />
+              <g-image :src="content.img" :alt="content.title" />
             </div>
           </div>
           <div class="column column-50">

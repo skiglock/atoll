@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header__body">
       <div class="header__body-img">
-        <g-image src="@/assets/img/head.png" />
+        <g-image src="@/assets/img/head.png" alt="Atollon" />
       </div>
       <div class="header__body-description">
         <h1 class="title">Трансформация отдела продаж на основе amoCRM</h1>

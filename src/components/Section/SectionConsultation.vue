@@ -34,7 +34,7 @@
                 class="consultation__img"
                 :class="content.variant ? 'consultation__img--subcircle' : ''"
               >
-                <g-image :src="content.img" />
+                <g-image :src="content.img" :alt="content.title" />
               </div>
             </div>
           </div>

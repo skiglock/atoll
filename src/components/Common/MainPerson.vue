@@ -1,7 +1,7 @@
 <template>
   <div class="person">
     <div class="person__circle">
-      <g-image class="person__avatar" :src="avatar" alt="" />
+      <g-image class="person__avatar" :src="avatar" :alt="name" />
     </div>
     <h2 class="title person__name">{{ name }}</h2>
     <h3 class="person__position">{{ position }}</h3>
