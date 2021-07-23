@@ -95,7 +95,7 @@ layout:
         desc: ""
         img: ""
     variant: false
-    img: ../../static/uploads/notebook.png
+    img: ../../static/uploads/kqbhdir5m4qn8eoorduu.png
   - type: results
     name: results
     desc: ""
@@ -108,14 +108,14 @@ layout:
           до приглашения или отклонения в сообщество. Также мы внедрили цифровую
           воронку, которая позволила волонтерам не забывать о заявках и вовремя
           их обрабатывать.
-        img: /uploads/result.png
+        img: /uploads/mesto_4.jpg
         link: 2ad6af27-fdbb-4624-8a83-8ae491a6470b
     title: Результаты сопровождения amoCRM
   - type: consultation
     name: consultation
     desc: Нажмите кнопку чтобы получить консультацию
     id: 0171c9fa-1b9d-4369-afe4-4c29f0bf4574
-    title: Примените экспертизу нашей  команды, чтобы усилить вашу системы.
+    title: Примените экспертизу нашей  команды, чтобы усилить вашу систему
     elements:
       - type: item
         id: ""

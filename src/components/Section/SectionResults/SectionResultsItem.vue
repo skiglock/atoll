@@ -56,6 +56,7 @@ export default {
       bottom: 0;
       right: 0;
       left: 0;
+      border-radius: 30px;
     }
     &::after {
       content: '';
