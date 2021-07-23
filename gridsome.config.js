@@ -15,6 +15,7 @@ function addStyleResource(rule) {
 
 module.exports = {
   siteName: 'Atollon',
+  siteUrl: 'https://atollon.ru',
   templates: {
     Index: '/',
     About: '/about',
