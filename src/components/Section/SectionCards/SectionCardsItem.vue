@@ -1,8 +1,6 @@
 <template>
   <div class="card cards__card">
-    <span class="cards__card-icon"
-      ><g-image :src="img" :alt="content.title"
-    /></span>
+    <span class="cards__card-icon"><g-image :src="img" :alt="title" /></span>
     <h1 class="cards__card-title">{{ title }}</h1>
     <p class="text cards__card-text">
       {{ desc }}
