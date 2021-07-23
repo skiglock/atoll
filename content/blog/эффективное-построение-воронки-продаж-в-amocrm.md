@@ -4,7 +4,7 @@ title: Эффективное построение воронки продаж �
 date: 2021-07-08T09:45:36.922Z
 published: true
 category: Воронка продаж
-img: /uploads/blog-item.png
+img: /uploads/eaqwmktidhzm3ptwcwok.png
 desc: >-
   
 
