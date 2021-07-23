@@ -153,6 +153,31 @@ module.exports = {
         contentTypes: ['CasesPost'],
         coverField: 'logo'
       }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {
+          '/': {
+            changefreq: 'monthly'
+          },
+          '/about': {
+            changefreq: 'monthly'
+          },
+          '/contacts': {
+            changefreq: 'yearly'
+          },
+          '/blog/*': {
+            changefreq: 'weekly'
+          },
+          '/cases/*': {
+            changefreq: 'weekly'
+          },
+          '/products/*': {
+            changefreq: 'weekly'
+          }
+        }
+      }
     }
   ],
 
