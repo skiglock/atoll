@@ -101,6 +101,14 @@ export default {
   h3,
   h4,
   h5,
+  h6 {
+    color: #252525;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
   h6,
   p,
   blockquote,
@@ -118,6 +126,8 @@ export default {
   code {
     text-align: center;
     display: block;
+    font-family: 'Raleway';
+    font-size: inherit;
   }
   blockquote {
     padding: 0 0 0 10px;
