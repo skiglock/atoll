@@ -55,7 +55,6 @@ export default {
 
 <style lang="scss">
 .sidebar {
-  overflow-y: auto;
   background-color: $section_color;
   position: fixed;
   right: 0;
@@ -65,13 +64,12 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   @media screen and (min-width: 768px) {
     display: none;
   }
   @media screen and (max-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
     .dropdown__item {
       margin-top: 20px;
     }
@@ -79,16 +77,12 @@ export default {
     }
   }
   @media screen and (max-width: 360px) {
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
   &__menu {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     @media screen and (max-width: 320px) {
-      justify-content: space-between;
     }
     &-item + &-item {
       @media screen and (max-width: 576px) {
