@@ -36,18 +36,21 @@ export default {
       sidebar: false
     }
   },
-  watch: {
-    sidebar() {
-      if (this.sidebar) {
-        document.body.style.overflow = 'hidden'
-      } else {
-        document.body.style.overflow = null
-      }
-    }
-  },
   computed: {
+    isSidebar() {
+      return this.sidebar
+    },
     MainMenu() {
       return MainMenu.menu_list
+    }
+  },
+  watch: {
+    isSidebar() {
+      if (this.isSidebar) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = ''
+      }
     }
   }
 }
