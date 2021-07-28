@@ -106,7 +106,7 @@ export default {
         message: '',
         from: '',
         ref: null || 'Перешел по прямой ссылке',
-        subject: 'Пришла нового заявка с сайта'
+        subject: 'Пришла новая заявка с сайта'
       },
       errors: {}
     }
