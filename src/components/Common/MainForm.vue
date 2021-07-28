@@ -104,7 +104,7 @@ export default {
         email: '',
         message: '',
         from: '',
-        ref: ''
+        ref: '' || 'Перешел по прямой ссылке'
       },
       errors: {}
     }
