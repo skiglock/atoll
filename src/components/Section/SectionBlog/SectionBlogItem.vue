@@ -5,7 +5,7 @@
         <h2 class="title blog__card-title">
           {{ title }}
         </h2>
-        <g-link :to="$getPath(url)" class="blog__card-link">Открыть</g-link>
+        <!-- <g-link :to="$getPath(url)" class="blog__card-link">Открыть</g-link> -->
       </div>
       <div class="blog__card-back">
         <p class="text">
@@ -70,6 +70,7 @@ export default {
       position: relative;
       border-radius: 26px;
       background-color: $white_color;
+      border: 1px solid rgba($black_color, 0.15);
       box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
       -webkit-box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);
       -moz-box-shadow: 0px 5px 6px 0px rgba($black_color, 0.12);

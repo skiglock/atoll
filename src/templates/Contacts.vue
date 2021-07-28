@@ -37,7 +37,7 @@
             </div>
             <div class="column column-50">
               <div class="contacts-page__form">
-                <h1 class="contacts-page__form-title title">
+                <h1 class="title contacts-page__form-title">
                   Свяжитесь с нами!
                 </h1>
                 <div class="card contacts-page__card">
@@ -130,6 +130,7 @@ export default {
     }
   }
   &__form {
+    text-align: center;
     @media screen and (max-width: 576px) {
       margin-top: 30px;
     }
