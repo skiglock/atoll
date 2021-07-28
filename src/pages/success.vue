@@ -5,3 +5,11 @@
     </h1>
   </Layout>
 </template>
+
+<script>
+export default {
+  metaInfo: {
+    title: 'Спасибо что оставили вашу заявку'
+  }
+}
+</script>

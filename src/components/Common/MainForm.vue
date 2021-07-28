@@ -204,7 +204,7 @@ export default {
   }
   &__input {
     font-size: 14px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans Regular', sans-serif;
     width: 100%;
     font-weight: $font_light;
     color: #1b1b1b;
