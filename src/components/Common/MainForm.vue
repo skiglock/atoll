@@ -104,7 +104,8 @@ export default {
         email: '',
         message: '',
         from: '',
-        ref: '' || 'Перешел по прямой ссылке'
+        ref: null || 'Перешел по прямой ссылке',
+        subject: 'Пришла нового заявка с сайта'
       },
       errors: {}
     }
