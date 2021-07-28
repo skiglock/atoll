@@ -10,6 +10,7 @@
     autocomplete="off"
   >
     <input type="hidden" name="form-name" :value="title" />
+    <input type="hidden" name="subject" :value="subject" />
     <p hidden>
       <label> Don’t fill this out: <input name="bot-field" /> </label>
     </p>
