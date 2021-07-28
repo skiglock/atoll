@@ -158,7 +158,7 @@ export default {
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
             // eslint-disable-next-line prettier/prettier
-            subject: 'Пришлая новая заявка с сайта',
+            'subject': 'Пришлая новая заявка с сайта',
             ...this.formData
           })
         })
