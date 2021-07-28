@@ -10,7 +10,7 @@
     autocomplete="off"
   >
     <input type="hidden" name="form-name" :value="title" />
-    <input type="hidden" name="subject" value="Пришла новая заявка с сайта" />
+    <input type="hidden" name="subject" :value="subject" />
     <p hidden>
       <label> Don’t fill this out: <input name="bot-field" /> </label>
     </p>
@@ -107,6 +107,7 @@ export default {
         from: '',
         ref: null || 'Перешел по прямой ссылке'
       },
+      subject: 'Пришлая новая заявка с сайта',
       errors: {}
     }
   },
