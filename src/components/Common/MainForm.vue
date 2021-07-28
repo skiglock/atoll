@@ -10,7 +10,6 @@
     autocomplete="off"
   >
     <input type="hidden" name="form-name" :value="title" />
-    <input type="hidden" name="subject" :value="subject" />
     <p hidden>
       <label> Don’t fill this out: <input name="bot-field" /> </label>
     </p>
@@ -107,7 +106,6 @@ export default {
         from: '',
         ref: null || 'Перешел по прямой ссылке'
       },
-      subject: 'Пришлая новая заявка с сайта',
       errors: {}
     }
   },
@@ -159,6 +157,8 @@ export default {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
+            // eslint-disable-next-line prettier/prettier
+            subject: 'Пришлая новая заявка с сайта',
             ...this.formData
           })
         })
