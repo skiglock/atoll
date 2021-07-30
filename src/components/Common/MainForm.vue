@@ -19,7 +19,7 @@
         type="text"
         class="form__input"
         placeholder="Ваше имя"
-        v-model="formData.name"
+        v-model.trim="formData.name"
         @focus="clearValidation('name')"
         autocomplete="false"
       />
@@ -33,7 +33,7 @@
         type="phone"
         class="form__input"
         placeholder="Телефон"
-        v-model="formData.phone"
+        v-model.trim="formData.phone"
         @focus="clearValidation('phone')"
         autocomplete="false"
       />
@@ -47,7 +47,7 @@
         type="email"
         class="form__input"
         placeholder="E-mail"
-        v-model="formData.email"
+        v-model.trim="formData.email"
         @focus="clearValidation('email')"
         autocomplete="false"
       />
@@ -61,7 +61,7 @@
         name="message"
         class="card form__input form__input--message"
         placeholder="Сфера и название компании"
-        v-model="formData.message"
+        v-model.trim="formData.message"
         @focus="clearValidation('message')"
         autocomplete="false"
       />
