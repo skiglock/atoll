@@ -84,7 +84,7 @@ import {
   isRequired,
   isValidPhone,
   minLength,
-  isString,
+  isPeopleName,
   validEmail
 } from '@/utils/validate.js'
 import MainButton from '@/components/Common/MainButton'
@@ -104,7 +104,7 @@ export default {
         email: '',
         message: '',
         from: '',
-        ref: null || 'Перешел по прямой ссылке'
+        ref: ''
       },
       errors: {}
     }
@@ -113,7 +113,7 @@ export default {
     checkName() {
       return (
         isRequired(this.formData.name) ||
-        isString(this.formData.name) ||
+        isPeopleName(this.formData.name) ||
         minLength(this.formData.name, 2)
       )
     },
@@ -228,8 +228,7 @@ export default {
       resize: none;
     }
     &::placeholder {
-      font-weight: $font_light;
-      color: #1b1b1b;
+      color: #b9b8b8;
     }
   }
   &__btn {

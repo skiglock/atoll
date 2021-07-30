@@ -15,9 +15,12 @@ export function maxLength(value, max) {
   }
 }
 
-export function isString(value) {
-  if (value && value && value.match(/[^A-Za-zА-Яа-яЁё]/i)) {
-    return 'Поле должно состоять из символов'
+export function isPeopleName(value) {
+  if (
+    value &&
+    !value.match(/^[a-zA-Zа-яА-я]+(([',. -][a-zа-яA-ZА-я ])?[a-zа-яA-ZА-я]*)*$/)
+  ) {
+    return 'Введите правильное имя'
   }
   return undefined
 }
@@ -26,7 +29,7 @@ export function isValidPhone(value) {
   if (
     value &&
     value.match(
-      /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/
+      /^[\+]?([0-9][\s]?|[0-9]?)([(][0-9]{3}[)][\s]?|[0-9]{3}[-\s\.]?)[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
     )
   ) {
     return undefined
