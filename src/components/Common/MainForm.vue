@@ -157,8 +157,7 @@ export default {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
-            // eslint-disable-next-line prettier/prettier
-            'subject': 'Пришлая новая заявка с сайта',
+            subject: 'Пришлая новая заявка с сайта',
             ...this.formData
           })
         })
@@ -182,8 +181,14 @@ export default {
     }
   },
   mounted() {
-    this.formData.from = `https://atollon.ru${this.$route.path}`
-    this.formData.ref = document.referrer
+    if (this.$route.path) {
+      this.formData.from = `https://atollon.ru${this.$route.path}`
+    }
+    if (document.referrer) {
+      this.formData.ref = document.referrer
+    } else {
+      this.formData.ref = 'Скорее всего ввел сам'
+    }
   },
   destroyed() {
     this.errors[0] = undefined
