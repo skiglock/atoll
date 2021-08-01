@@ -51,7 +51,7 @@ export default createClass({
               },
               entry.getIn(['data', 'title'])
             ),
-            h('div', { className: 'date' }, formatDate())
+            h('div', { className: 'date' }, formatDate() ? formatDate() : '')
           ),
           h('div', {
             className: 'blog-post__body',

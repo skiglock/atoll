@@ -20,6 +20,15 @@ export default createClass({
         h('input', { className: 'form__input', placeholder: 'E-mail' })
       ),
       h(
+        'div',
+        { className: 'form__item' },
+        h('label', { className: 'form__label', for: 'message' }),
+        h('textarea', {
+          className: 'card form__input form__input--message',
+          placeholder: 'Сфера и название компании'
+        })
+      ),
+      h(
         'button',
         {
           className: 'btn form__btn',
