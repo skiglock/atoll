@@ -161,7 +161,15 @@ export default {
             ...this.formData
           })
         })
-          .then(() => this.$router.push('/success'))
+          .then(() => {
+            this.$ga.event({
+              eventCategory: 'Отправка формы с сайта',
+              eventAction: this.title,
+              eventLabel: this.formData.form,
+              eventValue: `${this.formData.name} ${this.formData.phone} ${this.formData.message}`
+            }),
+              this.$router.push('/success')
+          })
           .catch((error) => alert(error))
         this.$store.commit('setIsModalOpen', false)
         this.formData = {
