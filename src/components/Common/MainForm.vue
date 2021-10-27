@@ -165,7 +165,7 @@ export default {
             this.$ga.event({
               eventCategory: 'Отправка формы с сайта',
               eventAction: this.title,
-              eventLabel: this.formData.form,
+              eventLabel: this.formData.from,
               eventValue: `${this.formData.name} ${this.formData.phone} ${this.formData.message}`
             }),
               this.$router.push('/success')
