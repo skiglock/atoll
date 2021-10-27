@@ -141,7 +141,7 @@ export default {
         .join('&')
     },
     track() {
-      this.$gtag.event('Form', {
+      this.$gtag.event('signup_form_complete', {
         event_category: this.title,
         event_label: `${this.formData.from} ${this.formData.ref}`
       })
@@ -168,8 +168,8 @@ export default {
           })
         })
           .then(() => {
-            this.track()
             this.$router.push('/success')
+            setTimeout(() => this.track(), 1000)
           })
           .catch((error) => alert(error))
         this.$store.commit('setIsModalOpen', false)
