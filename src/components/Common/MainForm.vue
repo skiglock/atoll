@@ -168,6 +168,7 @@ export default {
           })
         })
           .then(() => {
+            this.track()
             this.$router.push('/success')
           })
           .catch((error) => alert(error))
