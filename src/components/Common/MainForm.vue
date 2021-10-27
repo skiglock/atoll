@@ -140,6 +140,12 @@ export default {
         )
         .join('&')
     },
+    track() {
+      this.$gtag.event('Form', {
+        event_category: this.title,
+        event_label: `${this.formData.from} ${this.formData.ref}`
+      })
+    },
     handleSubmit(e) {
       if (
         this.checkName ||
@@ -162,13 +168,7 @@ export default {
           })
         })
           .then(() => {
-            this.$ga.event({
-              eventCategory: 'Form',
-              eventAction: this.title,
-              eventLabel: this.formData.from
-              // eventValue: `${this.formData.name} ${this.formData.phone} ${this.formData.message}`
-            }),
-              this.$router.push('/success')
+            this.$router.push('/success')
           })
           .catch((error) => alert(error))
         this.$store.commit('setIsModalOpen', false)
