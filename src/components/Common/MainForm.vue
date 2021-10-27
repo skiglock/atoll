@@ -163,10 +163,10 @@ export default {
         })
           .then(() => {
             this.$ga.event({
-              eventCategory: 'Отправка формы с сайта',
+              eventCategory: 'Form',
               eventAction: this.title,
-              eventLabel: this.formData.from,
-              eventValue: `${this.formData.name} ${this.formData.phone} ${this.formData.message}`
+              eventLabel: this.formData.from
+              // eventValue: `${this.formData.name} ${this.formData.phone} ${this.formData.message}`
             }),
               this.$router.push('/success')
           })
