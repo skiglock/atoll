@@ -142,8 +142,8 @@ export default {
     },
     track() {
       this.$gtag.event('contact_form_complete', {
-        event_category: this.title,
-        event_label: `${this.formData.from} ${this.formData.ref}`
+        'event_category': this.title,
+        'event_label': `${this.formData.from} ${this.formData.ref}`
       })
     },
     handleSubmit(e) {
