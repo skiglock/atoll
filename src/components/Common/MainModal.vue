@@ -11,7 +11,10 @@
         <p class="text" :style="{ marginTop: '10px' }">
           Менеджер свяжется с вами в ближайшее время!
         </p>
-        <main-form title="Modal" class="modal__form modal__form--center" />
+        <main-form
+          title="Модальное окно"
+          class="modal__form modal__form--center"
+        />
       </div>
     </div>
   </div>

@@ -3,7 +3,6 @@
     :name="title"
     method="post"
     @submit.prevent="handleSubmit"
-    :action="`/success`"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
     class="form"
@@ -141,9 +140,9 @@ export default {
         .join('&')
     },
     track() {
-      this.$gtag.event('contact_form_complete', {
-        'event_category': this.title,
-        'event_label': `${this.formData.from} ${this.formData.ref}`
+      this.$gtag.event('send_contact_form', {
+        event_category: this.title,
+        event_label: `${this.formData.from} ${this.formData.ref}`
       })
     },
     handleSubmit(e) {
