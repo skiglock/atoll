@@ -197,6 +197,11 @@ export default {
     clearValidation(field) {
       this.errors[field] = undefined
       this.$forceUpdate()
+    },
+    getUtm(utm) {
+      const queryString = window.location.search
+      const urlParams = new URLSearchParams(queryString)
+      return urlParams.get(utm) ? urlParams.get(utm) : ''
     }
   },
   mounted() {
@@ -208,11 +213,9 @@ export default {
     } else {
       this.formData.ref = 'Скорее всего ввел сам'
     }
-    const queryString = window.location.search
-    const urlParams = new URLSearchParams(queryString)
-    this.formData.utm_source = urlParams.get('utm_source')
-    this.formData.utm_medium = urlParams.get('utm_medium')
-    this.formData.utm_campaign = urlParams.get('utm_campaign')
+    this.formData.utm_source = this.getUtm('utm_source')
+    this.formData.utm_medium = this.getUtm('utm_medium')
+    this.formData.utm_campaign = this.getUtm('utm_campaign')
   },
   destroyed() {
     this.errors[0] = undefined
