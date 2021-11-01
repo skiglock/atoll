@@ -70,6 +70,9 @@
     </div>
     <input type="hidden" name="from" v-model="formData.from" />
     <input type="hidden" name="ref" v-model="formData.ref" />
+    <input type="hidden" name="utm_source" v-model="formData.utm_source" />
+    <input type="hidden" name="utm_medium" v-model="formData.utm_medium" />
+    <input type="hidden" name="utm_campaign" v-model="formData.utm_campaign" />
     <main-button type="submit" class="form__btn"> Оставить заявку </main-button>
     <p class="form__agree">
       Нажимая на кнопку "Оставить заявку" вы даете свое согласие на обработку
@@ -103,7 +106,10 @@ export default {
         email: '',
         message: '',
         from: '',
-        ref: ''
+        ref: '',
+        utm_source: '',
+        utm_medium: '',
+        utm_campaign: ''
       },
       errors: {}
     }
@@ -180,7 +186,10 @@ export default {
           email: '',
           message: '',
           from: '',
-          ref: ''
+          ref: '',
+          utm_source: '',
+          utm_medium: '',
+          utm_campaign: ''
         }
       }
       this.$forceUpdate()
@@ -199,6 +208,11 @@ export default {
     } else {
       this.formData.ref = 'Скорее всего ввел сам'
     }
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    this.formData.utm_source = urlParams.get('utm_source')
+    this.formData.utm_medium = urlParams.get('utm_medium')
+    this.formData.utm_campaign = urlParams.get('utm_campaign')
   },
   destroyed() {
     this.errors[0] = undefined
