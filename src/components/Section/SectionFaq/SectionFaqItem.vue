@@ -34,11 +34,10 @@ export default {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     &-question {
       cursor: pointer;
-
       padding: 15px;
-      z-index: 14;
       max-height: 76px;
       border-radius: 80px;
       display: flex;
@@ -49,8 +48,7 @@ export default {
     }
     &-answer {
       padding: 40px 30px 10px;
-      margin-top: -20px;
-      z-index: 13;
+      margin-top: 10px;
       border-radius: 21px;
       max-width: 379px;
       min-height: 319px;
