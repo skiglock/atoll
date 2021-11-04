@@ -95,7 +95,7 @@ layout:
         desc: ""
         img: ""
     variant: false
-    img: ../../static/uploads/kqbhdir5m4qn8eoorduu.png
+    img: ../../static/uploads/sopr.png
   - type: results
     name: results
     desc: ""
