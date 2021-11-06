@@ -36,7 +36,12 @@
           </div>
         </div>
         <div class="footer__docs">
-          <div class="row">
+          <div
+            class="row"
+            :style="{
+              justifyContent: findDocsOnAllPages.length < 2 ? 'center' : ''
+            }"
+          >
             <div
               class="column column-30"
               v-for="{ node } in findDocsOnAllPages"

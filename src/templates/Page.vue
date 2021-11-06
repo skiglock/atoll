@@ -87,8 +87,7 @@ export default {
   blockquote,
   pre,
   a {
-    margin: inherit;
-    padding: inherit;
+    margin: 1em 0;
   }
   strong {
     font-weight: bold;
